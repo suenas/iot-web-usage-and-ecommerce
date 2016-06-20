@@ -1,0 +1,86 @@
+\documentclass[14pt,a4paper]{report}                                          %grandezza carattere,formato a4 (stile)
+
+\usepackage[italian]{babel}                                                 %libreria per scrivere in italiano
+\usepackage[latin1]{inputenc}                                               %libreria per accettare i caratteri digitati da tastiera
+\usepackage{fancyhdr}                                                       %libreria per impostare il documento
+\usepackage{indentfirst}                                                    %libreria per avere l'indentazione all'inizio dei capitoli
+\usepackage{graphicx}                                                       %libreria per inserire grafici
+\usepackage{newlfont}                                                       %libreria per utilizzare font particolari ad esempio \textsc{}
+%\usepackage{natbib}                                                         %libreria per la bibliografia
+\usepackage{geometry}
+\usepackage{makeidx}
+%\usepackage{natbib}  
+\geometry{a4paper,tmargin=2.5cm,bmargin=3cm,lmargin=3.5cm,rmargin=2.5cm}   %impostano i margini del documento
+
+\hyphenation{sil-la-ba-zio-ne pa-ren-te-si}                                 %serve per la sillabazione: tra parentesi vanno inserite come nell'esempio le parole che latex non riesce a tagliare nel modo giusto andando a capo.
+
+\pagestyle{fancy}\addtolength{\headwidth}{20pt}     
+\chead{}
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\familydefault}{\sfdefault}
+\linespread{1.5}  
+
+                                                   %comando per impostare l'interlinea
+
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\begin{document}    
+            
+\chead{Tesi di Laurea -  Anno Accademico 2012-2013}
+
+%%%%%%%%%%%%%%%%%%FRONTESPIZIO  
+
+   
+\input{frontespizio}
+\afterpage{\blankpage}
+\input{frontespizio}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% ABSTRACT
+
+\chapter*{\LARGE Abstract}
+\thispagestyle{empty}
+\input{abstract}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%RINGRAZIAMENTI
+
+\chapter*{\LARGE Ringraziamenti}
+\thispagestyle{empty}
+\input{ringraziamenti}
+
+
+%%%%%%%%%%%%%%%%%INDICE
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%CAPITOLI
+\input{Introduzione}
+
+
+ \input{capitolo1} 
+\clearpage
+
+ \input{capitolo2} 
+\clearpage
+
+ \input{capitolo3} 
+\clearpage
+
+ \input{capitolo4} 
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%CONCLUSIONI
+
+ \input{conclusioni} 
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%BIBLIOGRAFIA
+                                
+\input{Bibliografia}
+\clearpage
+
+\end{document}
