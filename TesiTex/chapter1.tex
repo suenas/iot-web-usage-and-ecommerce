@@ -127,6 +127,53 @@ Although the web mining process is similar to the traditional data mining one, t
 
 \section{Model-driven techniques}
 
+Software development techniques are continuously evolving while trying to solve the principal problems that still affect the building and maintenance of software: time, costs and errorproness.
 
+On this topic, one of the latest research trends in software engineering is the Model Driven Engineering (MDE) which was born as an extension of more specific approaches such as The Model-Driven Architecture (MDA) of the Object Management Group.\footnote{The Object Management Group (OMG) is an international, open membership, not-for-profit technology standards consortium, founded in 1989. OMG standards are driven by vendors, end-users, academic institutions and government agencies. } 
+
+MDE's primary goal is to define the methodologies and techniques to support the process related to the entire lifecycle of software development through the manipulation of models.
+
+Before proceeding further, it is beneficial to explain the difference between Model Driven Architecture, Model-Driven Development (MDD), Model Driven Engineering and Model-Based Engineering (MBE).
+The first is, by all mean, an OMG standard, focused on software development which uses a set of defined languages utilized for the purpose ( e.g. UML\footnote{The Unified Modeling Language (UML) is a general-purpose, developmental, modeling language in the field of software engineering, that is intended to provide a standard way to visualize the design of a system.} ). On the other hand, MDD focus is still on software development but independently of mandatory language constraints to perform its tasks.
+The Model Driven Engineering, as a superset of MDD, does not only drop the software-related restrictions but it unties itself from a particular development process to follow , therefore expediting the definition of model driven processes to facilitate  a complete software engineering process for example. 
+Finally, we use “model-based engineering” to refer to a softer version and a superset of MDE where models still play an important role but are not the central artifacts of the development process. (e.g. blueprints or sketches of the system handed out to programmers directly without automatic code generation) ( Figure \ref{fig:mda} ).
+
+\vspace{0cm}
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[height=4cm]{images/mda}
+  \caption{Relationship between the different MD* acronyms.}
+  \label{fig:mda}
+\end{figure}
+\vspace{0cm}
+
+The model is at the center of any MDE process and, to be considered as such, the modeling language which generated it needs to have a well-formalized syntax and semantic, a fundamental condition for the automatic transformation of models. In fact, the model represents the system and constitutes an abstract and conforming formalization to a particular language. Such a language is often tailored to a certain domain and is often called Domain-Specific Language (DSL). 
+
+
+The advantages of using the model driven approach consists in considering the generating language as a sort of scheme which is also fully modelable through a formal and abstract definition called the meta-model. In fact, the model must represent an abstraction of the concepts of the system which needs to be built respecting a  meta-model likewise determined by the application domain.
+
+This reasoning can be furtherly iterated up to the determination of a model for the representation of languages used to formalize other languages ( the meta-meta model).
+
+Because of the above,  model-driven approaches are often defined on models stack basis as shown on Figure \ref{fig:mde}.
+
+\vspace{0cm}
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[height=8cm]{images/mde}
+  \caption{Models stack}
+  \label{fig:mde}
+\end{figure}
+\vspace{0cm}
+
+One of the most used techniques in Model Driven Engineering is the automatic generation of models based on the definition of a set of automatic transformations defined on the starting and target languages. In a nutshell, the MDE approach consists in:
+
+\begin{itemize}
+  \item \textbf{Models generation}, based on modeling stacks definition supporting meta-modelling methods where lower-level models comply with what specified by models at an upper level.
+
+  \item \textbf{Models manipulation} performed through transformations expected to generate destination models which are conforming to destination meta-models when provided with source models conforming to source meta-models.
+\end{itemize} 
+
+In summary, model driven engineering techniques allow managing the complexity of a system by ensuring increased productivity on the one hand and quality improvements on the other by promoting a higher level of abstraction and reuse. This result is achieved through a process of engineering, both for the languages and the transformations involved: they are in fact the basis of the development process of a system because they represent the transition from higher-level models into lower-level ones until they can be made executable using either code generation or model interpretation.
 
 %\addcontentsline{toc}{chapter}{}
+
