@@ -1,0 +1,12 @@
+Capire tutti gli input e classificarli in linguaggio naturale.
+
+Dati analitici e di navigazione, classificati per tipologia, profilazione, usare letteratura cose già fatte.
+
+Associare dati (profilazione, navigazione...) con comportamenti.
+
+Mettere su store Magento su heroku, mappare tutti i dati dagli scenari dal pdf.
+
+Identificare pattern e mapparli con pattern di design
+
+Class Diagram ? modello navigazionale ?
+
