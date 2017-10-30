@@ -1,35 +1,28 @@
 % !TEX root = Tesi.tex
 \chead{}
-\chapter{An overview of the combined approach}
+\chapter{The combined approach}
 
 \section{The IFML language}
 
-The Interaction Flow Modeling Language (IFML)\cite{IFML-1,IFML-2} is designed for controlling the behavior of the front-end of software applications describing its content and user interaction. 
+The Interaction Flow Modeling Language (IFML)\cite{IFML-1, IFML-2} is designed for controlling the behavior of the front-end of software applications. 
+
+IFML brings several advantages to the development of application front-ends and its definition supporting formal specification for interface composition, user interaction and event management independently of the implementation platform. 
+The above results in an improvement of the development process by promoting the separation of concerns between roles and increasing non-technical stakeholders overall understanding.
 
 It was adopted as a standard by the Object Management Group (OMG) in March 2013.
 
-An IFML model supports the following design specifications : 
+An IFML model supports the following design specifications: 
 
 \begin{itemize}
-  \item \textbf{The view structure} 
+  \item \textbf{The view structure} describes \textit{ViewContainers}, their nesting relationships, their visibility and their reachability.
+  
+  \item \textbf{The view content} manages \textit{ViewComponents}, i.e., content and data entry elements contained within ViewContainers.
+  
+  \item \textbf{The events} defines the \textit{Events} that may affect the state of the user interface. \textit{Events} can be produced by the user’s interaction, by the application, or by an external system; 
 
-  It defines view containers, their nesting relationships, their visibility, and their reachability.
-  
-  \item \textbf{The view content} 
-  
-  It describes \textit{ViewComponents}, i.e., content and data entry elements contained within ViewContainers.
-  
-  \item \textbf{The events} 
+  \item \textbf{The event transition} indicates the effect of an Event on the user interface. 
 
-  It consist of the definition of \textit{Events} that may affect the state of the user interface. \textit{Events} can be produced by the user’s interaction, by the application, or by an extsernal system; 
-
-  \item \textbf{The event transition} 
-  
-  This specification defines the effect of an Event on the user interface; 
-
-  \item \textbf{The parameter binding} 
-  
-  It illustrates the input-output dependencies between \textit{ViewComponents} and between \textit{ViewComponents} and \textit{Actions}; 
+  \item \textbf{The parameter binding} illustrates the input-output dependencies between \textit{ViewComponents} and between \textit{ViewComponents} and \textit{Actions}. 
 
   \item \textbf{The actions} triggered by the user’s events. The effect of an \textit{Event} is represented by an \textit{InteractionFlow} connection, which connects the event to the \textit{ViewContainer} or \textit{ViewComponent} affected by the \textit{Event}. The \textit{InteractionFlow} expresses a change of state of the user interface: the occurrence of the event triggers a change in the state that produces a transition in the user interface.
 
@@ -38,8 +31,8 @@ An IFML model supports the following design specifications :
 \vspace{0.5cm}
 \begin{figure}[htbp]
   \centering
-    \includegraphics[height=14cm]{images/ifml.jpg}
-  \caption{IFML example: product search, listing and deletion. The model consists of a ViewContainer Products which contains two ViewComponents (Product Search form and ProductResultList list); and Product Deletion Action triggered once the user selects the Delete Event associated to ProductResultList}
+    \includegraphics[height=10cm]{images/ifml.jpg}
+  \caption{Main IFML concepts and notations.}
   \label{fig:ifml}
 \end{figure}
 \vspace{0.5cm}
