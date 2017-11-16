@@ -37,3 +37,4 @@
 
 .vscode/
 *.vscodeLog
+.DS_Store
