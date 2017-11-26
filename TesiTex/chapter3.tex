@@ -1,6 +1,8 @@
 % !TEX root = Tesi.tex
 \chead{}
-\chapter{The combined approach}
+\chapter{Combining approaches}
+
+Before we can efficiently express content visualized on user interfaces, navigation paths and user-triggered events on a web application, we need to take a little detour describing a standard modeling language capable of modeling such interactions in detail.
 
 \section{The IFML language}
 
@@ -35,7 +37,7 @@ IFML supports the following concepts:
 \end{figure}
 \vspace{0.5cm}
 
-\section{User interaction flow modeling for an eCommerce website}
+\section{Behavioural modeling}
 
 eCommerce website front ends are usually built using shared and reusable components (forms, list views, detail views, etc.) which have a specific and expected behavior.
 For example, Product lists and grids show record details for the user to view and interact with an action on these, "Add To Cart" call-to-action buttons are presented within product pages to trigger a different response and so on.
@@ -58,13 +60,13 @@ Madison Island presents all the features of a typical eCommerce digital store in
 
 Figure \ref{fig:home} shows the home page of the website. In this section, the user can select one of the product categories, access his customer area, switch the language of the website, search for an item or go directly to the shopping cart. 
 
-In the following subsections, we analyze a few of these navigational behaviors showing their respective IFML notation representation.
+In the following subsections, we analyze a couple of these navigational behaviors showing both their Web application models specified in IFML notation and their actual representation as Application Server logs.
 
 \subsection{Navigational Behaviours}
 
 \subsubsection{The Product Detail Journey}
 
-Starting from the homepage the user can interact with the navigation menu to either select one of the product categories directly or browse the macro category page.  (Figure \ref{fig:navigation})
+Starting from the homepage the user can interact with the navigation menu to select from a set of categories available.  (Figure \ref{fig:navigation})
 
 \vspace{0.1cm}
 \begin{figure}[htbp]
@@ -75,58 +77,57 @@ Starting from the homepage the user can interact with the navigation menu to eit
 \end{figure}
 \vspace{0.1cm}
 
-In the case of a macro category selection, the user is brought to an intermediary landing page listing all the subcategories belonging to that specific parent category (Figure \ref{fig:category-cms}). 
+Depending on the category display mode, a category page can either list CMS content showing a list of links to children categories or present its products directly with the first scenario representing an intermediary transition toward the second one (Figure \ref{fig:category-display-modes})
+
 
 \vspace{0.1cm}
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=12cm]{images/madison/category-cms.png}
-  \caption{Macro category page}
-  \label{fig:category-cms}
+  \subfloat[Category listing]{{\includegraphics[width=7cm]{images/madison/category-cms.png} }}%
+  \qquad
+  \subfloat[Product listing]{{\includegraphics[width=7cm]{images/madison/products-list.png} }}%
+  \caption{Different category page view modes}%
+  \label{fig:category-display-modes}%
 \end{figure}
 \vspace{0.1cm}
 
-Whether the user chooses a category from a macro category page or directly from the main entry point on the homepage menu, he is presented with a list of items belonging to that category. (Figure \ref{fig:products-list})
+Finally, from the product listing screen the user can access any of the product detail pages clicking on the call to action "View Details" below the product image thumbnail. (Figure \ref{fig:product-detail})
 
 \vspace{0.1cm}
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=12cm]{images/madison/products-list.png}
-  \caption{Products listing}
-  \label{fig:products-list}
-\end{figure}
-\vspace{0.1cm}
-
-From the product listing screen, the user can access any of the product detail pages clicking on the call to action "View Details" below the product image thumbnail. (Figure \ref{fig:product-detail})
-
-\vspace{0.1cm}
-\begin{figure}[htbp]
-  \centering
-    \includegraphics[width=12cm]{images/madison/product-detail.png}
+    \includegraphics[height=8cm]{images/madison/product-detail.png}
   \caption{Product detail page}
   \label{fig:product-detail}
 \end{figure}
 \vspace{0.1cm}
 
-The whole interaction, from the homepage to the product detail page, can be represented using IFML with the following model  :
+The end to end interaction from the homepage to the product detail page can be represented with a model using the following IFML notation :
+
+\vspace{0.1cm}
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=12cm]{images/madison/ifml1.png}
+  \caption{IFML representation of the Product Detail interaction}
+  \label{fig:ifml1}
+\end{figure}
+\vspace{0.1cm}
+
+
+
+\subsubsection{Association and Correlation Analysis}
+
+
+
+
+\subsection{IoT Behaviours}
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-\section{Pattern recognition}
+\section{Analysis and Pattern recognition}
 
 
 
