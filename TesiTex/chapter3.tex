@@ -29,7 +29,7 @@ IFML supports the following concepts:
 \vspace{0.5cm}
 \begin{figure}[htbp]
   \centering
-    \includegraphics[height=10cm]{images/ifml.jpg}
+    \includegraphics[width=10cm]{images/ifml.jpg}
   \caption{Main IFML concepts and notations.}
   \label{fig:ifml}
 \end{figure}
@@ -46,14 +46,14 @@ To demonstrate the versatility and adaptability of this modeling language we int
 Madison Island presents all the features of a typical eCommerce digital store including navigation and browsing of its catalog, product searching, customer account section, shopping cart and order processing. 
 
 
-\vspace{0.5cm}
+\vspace{0.1cm}
 \begin{figure}[htbp]
   \centering
-    \includegraphics[height=8cm]{images/home.png}
+    \includegraphics[width=12cm]{images/home.png}
   \caption{Madison Island digital store homepage}
   \label{fig:home}
 \end{figure}
-\vspace{0.5cm}
+\vspace{0.1cm}
 
 
 Figure \ref{fig:home} shows the home page of the website. In this section, the user can select one of the product categories, access his customer area, switch the language of the website, search for an item or go directly to the shopping cart. 
@@ -66,38 +66,50 @@ In the following subsections, we analyze a few of these navigational behaviors s
 
 Starting from the homepage the user can interact with the navigation menu to either select one of the product categories directly or browse the macro category page.  (Figure \ref{fig:navigation})
 
-\vspace{0.5cm}
+\vspace{0.1cm}
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=12cm]{images/madison/navigation.png}
-  \caption{Madison Island Navigation menu}
+  \caption{Navigation menu}
   \label{fig:navigation}
 \end{figure}
-\vspace{0.5cm}
+\vspace{0.1cm}
 
-In the case of a macro category selection, the user is brought to a landing page listing all the subcategories belonging to that specific parent category (Figure \ref{fig:category-cms})
+In the case of a macro category selection, the user is brought to an intermediary landing page listing all the subcategories belonging to that specific parent category (Figure \ref{fig:category-cms}). 
 
-\vspace{0.5cm}
+\vspace{0.1cm}
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=12cm]{images/madison/category-cms.png}
-  \caption{Madison Island macro category page}
+  \caption{Macro category page}
   \label{fig:category-cms}
 \end{figure}
-\vspace{0.5cm}
+\vspace{0.1cm}
 
-Alternatively, when in the case the user decides to select a specific category from the main entry point on the homepage menu he is immediately presented with a list of items belonging to that category. (Figure \ref{fig:products-list})
+Whether the user chooses a category from a macro category page or directly from the main entry point on the homepage menu, he is presented with a list of items belonging to that category. (Figure \ref{fig:products-list})
 
-\vspace{0.5cm}
+\vspace{0.1cm}
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=12cm]{images/madison/products-list.png}
-  \caption{Madison Island products listing}
+  \caption{Products listing}
   \label{fig:products-list}
 \end{figure}
-\vspace{0.5cm}
+\vspace{0.1cm}
 
-This behavior is represented in IFML with the following scheme :
+From the product listing screen, the user can access any of the product detail pages clicking on the call to action "View Details" below the product image thumbnail. (Figure \ref{fig:product-detail})
+
+\vspace{0.1cm}
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=12cm]{images/madison/product-detail.png}
+  \caption{Product detail page}
+  \label{fig:product-detail}
+\end{figure}
+\vspace{0.1cm}
+
+The whole interaction, from the homepage to the product detail page, can be represented using IFML with the following model  :
+
 
 
 
