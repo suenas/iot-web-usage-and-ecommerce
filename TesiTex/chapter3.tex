@@ -2,7 +2,7 @@
 \chead{}
 \chapter{Combining approaches}
 
-Before we can efficiently express content visualized on user interfaces, navigation paths and user-triggered events on a web application, we need to take a little detour describing a standard modeling language capable of modeling such interactions in detail.
+Before we can efficiently represent content visualized on user interfaces, navigation paths and user-triggered events on a web application, we need to take a little detour describing a standard modeling language capable of modeling such interactions in detail.
 
 \section{The IFML language}
 
@@ -71,13 +71,14 @@ Starting from the homepage the user can interact with the navigation menu to sel
 \vspace{0.1cm}
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=12cm]{images/madison/navigation.png}
+    \includegraphics[width=9cm]{images/madison/navigation.png}
   \caption{Navigation menu}
   \label{fig:navigation}
 \end{figure}
 \vspace{0.1cm}
 
-Depending on the category display mode, a category page can either list CMS content showing a list of links to children categories or present its products directly with the first scenario representing an intermediary transition toward the second one (Figure \ref{fig:category-display-modes})
+Depending on the category display mode, a category page can either list CMS content showing a list of links to children categories serving as an intermediary transitional page or directly present its products to the user.
+(Figure \ref{fig:category-display-modes})
 
 
 \vspace{0.1cm}
@@ -91,7 +92,7 @@ Depending on the category display mode, a category page can either list CMS cont
 \end{figure}
 \vspace{0.1cm}
 
-Finally, from the product listing screen the user can access any of the product detail pages clicking on the call to action "View Details" below the product image thumbnail. (Figure \ref{fig:product-detail})
+Finally, from the product listing screen, the user can access any of the product detail pages clicking on the call to action "View Details" below the selected product image thumbnail. (Figure \ref{fig:product-detail})
 
 \vspace{0.1cm}
 \begin{figure}[htbp]
@@ -102,7 +103,7 @@ Finally, from the product listing screen the user can access any of the product 
 \end{figure}
 \vspace{0.1cm}
 
-The end to end interaction from the homepage to the product detail page can be represented with a model using the following IFML notation :
+The end to end interaction from the homepage to the product detail page can be represented with a model using the following IFML notation:
 
 \vspace{0.1cm}
 \begin{figure}[htbp]
@@ -112,6 +113,26 @@ The end to end interaction from the homepage to the product detail page can be r
   \label{fig:ifml1}
 \end{figure}
 \vspace{0.1cm}
+
+The very same interaction is stored in the Application Server access logs which goal is to record all the requests processed by the website. This is an example of log lines for the steps we just seen above :
+
+\begin{center}
+  \begin{tabular}{|l|c|p{6cm}|}
+  \hline
+  \multicolumn{3}{|c|}{Application Server Access Log}\\ \hline
+  \textbf{Page ID}&\textbf{IFML View Container}&\textbf{Log Entry}   \\ \hline
+  Home Page&Home Page&\em[29/Nov/2017:06:30:45 +0000] "GET /" 200 0 - 29505 \\ \hline
+  \textit{"View All Men"} Category&Category List&\em[29/Nov/2017:06:49:38 +0000] "GET /men.html 200 0 - 29505 
+  \\ \hline
+  \textit{"Shirts"} Category &Product List&\em[29/Nov/2017:07:04:15 +0000] "GET /men/shirts.html" 200 0 - 29505
+  \\ \hline
+  \textit{"Plaid Cotton Shirt"} Product &Product Page&\em[29/Nov/2017:07:08:40 +0000] "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
+  \\ \hline
+  \end{tabular}
+  \end{center}
+
+
+
 
 
 
