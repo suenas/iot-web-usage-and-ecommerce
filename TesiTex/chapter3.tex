@@ -2,8 +2,7 @@
 \chead{}
 \chapter{Combining approaches}
 
-The evolution of the Internet and the amount of data available from web usage mining and IoT devices  has led to an enormous proliferation of the available
-information as per described in the previous sections, in this chapter we focus on the actual process of modeling the collected behavioral data, analyzing it and proceed to a pattern detection investigation that will lead to a personalization of the presented content in the next chapter.
+The evolution of the Internet and the amount of data available from web usage mining and IoT devices has led to an enormous proliferation of the accessible information as per described in the previous sections.  In this chapter, we focus on the actual process of modeling the collected behavioral data from these two sources, the analysis of the associated log records and the discovery of usage patterns with the goal of addressing some of the weaknesses of the standard approaches for web personalization.
 
 Before we can efficiently represent content visualized on user interfaces, navigation paths and user-triggered events on a web application, we need to take a little detour describing a standard modeling language capable of modeling such interactions in detail.
 
@@ -32,7 +31,7 @@ IFML supports the following concepts:
 \end{itemize} 
 
 \vspace{0.5cm}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
     \includegraphics[width=10cm]{images/ifml.jpg}
   \caption{Main IFML concepts and notations.}
@@ -40,7 +39,9 @@ IFML supports the following concepts:
 \end{figure}
 \vspace{0.5cm}
 
-\section{Behavioural modeling}
+\newpage
+
+\section{Navigational modeling for the Web}
 
 eCommerce website front ends are usually built using shared and reusable components (forms, list views, detail views, etc.) which have a specific and expected behavior.
 For example, Product lists and grids show record details for the user to view and interact with an action on these, "Add To Cart" call-to-action buttons are presented within product pages to trigger a different response and so on.
@@ -63,16 +64,15 @@ Madison Island presents all the features of a typical eCommerce digital store in
 
 Figure \ref{fig:home} shows the home page of the website. In this section, the user can select one of the product categories, access his customer area, switch the language of the website, search for an item or go directly to the shopping cart. 
 
-In the following subsections, we analyze a couple of these navigational behaviors showing both their Web application models specified in IFML notation and their actual representation as raw  Application Server log data.
+In the following subsections, we analyze a couple of scenarios related to users navigational behaviors exposing both their representation in IFML notation and the associated server log entries in the application server.
 
-\subsection{Navigational Behaviours}
-
-\subsubsection{The Product Detail Journey}
+\newpage
+\subsection{The product page journey}
 
 Starting from the homepage the user can interact with the navigation menu to select from a set of categories available.  (Figure \ref{fig:navigation})
 
 \vspace{0.1cm}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
     \includegraphics[width=9cm]{images/madison/navigation.png}
   \caption{Navigation menu}
@@ -85,7 +85,7 @@ Depending on the category display mode, a category page can either list CMS cont
 
 
 \vspace{0.1cm}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \subfloat[Category listing]{{\includegraphics[width=7cm]{images/madison/category-cms.png} }}%
   \qquad
@@ -95,10 +95,10 @@ Depending on the category display mode, a category page can either list CMS cont
 \end{figure}
 \vspace{0.1cm}
 
-Finally, from the product listing screen, the user can access any of the product detail pages clicking on the call to action "View Details" below the selected product image thumbnail. (Figure \ref{fig:product-detail})
+Finally, from the product listing screen, the user can access any of the product detail pages clicking on the call to action \textit{te"View Details"} below the selected product image thumbnail. (Figure \ref{fig:product-detail})
 
 \vspace{0.1cm}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
     \includegraphics[height=8cm]{images/madison/product-detail.png}
   \caption{Product detail page}
@@ -109,7 +109,7 @@ Finally, from the product listing screen, the user can access any of the product
 The end to end interaction from the homepage to the product detail page can be represented with a model using the following IFML notation:
 
 \vspace{0.1cm}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
     \includegraphics[width=12cm]{images/madison/ifml1.png}
   \caption{IFML representation of the Product Detail interaction}
@@ -117,7 +117,7 @@ The end to end interaction from the homepage to the product detail page can be r
 \end{figure}
 \vspace{0.1cm}
 
-The very same interaction is stored in the Application Server access logs which goal is to record all the requests processed by the website. This is an example of log lines for the steps we just seen above :
+The very same interaction can be expressed as a stream of records in the application server access logs which aim is to track all the requests processed by the web platform. Here's an example of  the very same user journey we just outlined above :
 
 \begin{center}
   \begin{tabular}{|l|c|p{6cm}|}
@@ -134,17 +134,24 @@ The very same interaction is stored in the Application Server access logs which 
   \end{tabular}
   \end{center}
 
+\subsection{Products association and correlation}
+
+In this scenario, we analyze the set of actions that can possibly generate page views among different product pages on the Madison Island website. 
+
+Using as a starting point the same product page for the "Plaid Cotton Shirt" article of the previous navigational behavior analysis,the customer is presented with a \textit{"Related Products"} widget just below the \textit{"Add To Cart"} segment. The principal purpose of this section is to provide the user with some suggestions about products that can be linked in some way to the current one and generate customer's interest.(Figure \ref{fig:related-products})
+
+\vspace{0.1cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=8cm]{images/madison/related-products.png}
+  \caption{Related products section}
+  \label{fig:related-products}
+\end{figure}
+\vspace{0.1cm}
 
 
 
-
-
-\subsubsection{Association and Correlation Analysis}
-
-
-
-
-\subsection{IoT Behaviours}
+\section{IoT behavioral modeling}
 
 
 
