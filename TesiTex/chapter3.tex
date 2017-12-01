@@ -95,7 +95,8 @@ Depending on the category display mode, a category page can either list CMS cont
 \end{figure}
 \vspace{0.1cm}
 
-Finally, from the product listing screen, the user can access any of the product detail pages clicking on the call to action \textit{te"View Details"} below the selected product image thumbnail. (Figure \ref{fig:product-detail})
+Finally, from the product listing screen, the user can potentially access any of the product detail pages clicking on the call to action \textit{te"View Details"} below the selected product image thumbnail, let's assume he chooses the \textit{"Plaid Cotton Shirt"} in this case.  
+(Figure \ref{fig:product-detail})
 
 \vspace{0.1cm}
 \begin{figure}[H]
@@ -138,7 +139,7 @@ The very same interaction can be expressed as a stream of records in the applica
 
 In this scenario, we analyze the set of actions that can possibly generate page views among different product pages on the Madison Island website. 
 
-Using as a starting point the same product page for the "Plaid Cotton Shirt" article of the previous navigational behavior analysis,the customer is presented with a \textit{"Related Products"} widget just below the \textit{"Add To Cart"} segment. The principal purpose of this section is to provide the user with some suggestions about products that can be linked in some way to the current one and generate customer's interest.(Figure \ref{fig:related-products})
+Using as a starting point the same product page for the \textit{"Plaid Cotton Shirt"} article of the previous navigational behavior analysis,the customer is presented with a \textit{"Related Products"} widget just below the \textit{"Add To Cart"} segment. The principal purpose of this section is to provide the user with some suggestions about products that can be linked in some way to the current one and generate customer's interest.(Figure \ref{fig:related-products})
 
 \vspace{0.1cm}
 \begin{figure}[H]
@@ -149,7 +150,40 @@ Using as a starting point the same product page for the "Plaid Cotton Shirt" art
 \end{figure}
 \vspace{0.1cm}
 
+Clicking either on the product name or its thumbnail the user is brought to the related product page. In this case, we assume his interest goes for the \textit{"Core Striped Sport Shirt"} item presented in the list. (Figure \ref{fig:product-detail2})
 
+\vspace{0.1cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=8cm]{images/madison/product-detail2.png}
+  \caption{A related product page}
+  \label{fig:product-detail2}
+\end{figure}
+\vspace{0.1cm}
+
+Besides the simple navigational shortcut offered by the related products section, the user can potentially reach a product page in many other alternative ways on the website, the tracking of these interactions could potentially bring benefits for establishing a correlation pattern among the items.  For instance, he can quickly go back with the back button of his browser to the previous category listing page and choose a different item to check, use the navigatoin menu to browse another category or use the search bar on the top bar to perform a global product search. For the sake of this example, we pretend he searches for blazers writing the \textit{"blazer"} word on the previously mentioned search bar from within the current product page. (Figure \ref{fig:product-search})
+
+\vspace{0.1cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=8cm]{images/madison/search.png}
+  \caption{Product search bar}
+  \label{fig:product-search}
+\end{figure}
+\vspace{0.1cm}
+
+When the search is performed, the user is taken to the search result page which shows a list of products matching the word he searched for. From within this screen, the user can freely browse to any of the available product pages similarly to what we already described for the category listing page. (Figure \ref{fig:search-results})
+
+\vspace{0.1cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=8cm]{images/madison/search-results.png}
+  \caption{Search results page}
+  \label{fig:search-results}
+\end{figure}
+\vspace{0.1cm}
+
+At this point, we can extend the IFML model shown previously in Figure \ref{fig:ifml1} accordingly to the new notions and interactions that have been described. 
 
 \section{IoT behavioral modeling}
 
