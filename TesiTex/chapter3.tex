@@ -52,14 +52,14 @@ To demonstrate the versatility and adaptability of this modeling language we int
 Madison Island presents all the features of a typical eCommerce digital store including navigation and browsing of its catalog, product searching, customer account section, shopping cart and order processing. 
 
 
-\vspace{0.1cm}
+\vspace{0.5cm}
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=12cm]{images/home.png}
   \caption{Madison Island digital store homepage}
   \label{fig:home}
 \end{figure}
-\vspace{0.1cm}
+\vspace{0.5cm}
 
 
 Figure \ref{fig:home} shows the home page of the website. In this section, the user can select one of the product categories, access his customer area, switch the language of the website, search for an item or go directly to the shopping cart. 
@@ -71,20 +71,20 @@ In the following subsections, we analyze a couple of scenarios related to users 
 
 Starting from the homepage the user can interact with the navigation menu to select from a set of categories available.  (Figure \ref{fig:navigation})
 
-\vspace{0.1cm}
+\vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[width=9cm]{images/madison/navigation.png}
   \caption{Navigation menu}
   \label{fig:navigation}
 \end{figure}
-\vspace{0.1cm}
+\vspace{0.5cm}
 
 Depending on the category display mode, a category page can either list CMS content showing a list of links to children categories serving as an intermediary transitional page or directly present its products to the user.
 (Figure \ref{fig:category-display-modes})
 
 
-\vspace{0.1cm}
+\vspace{0.5cm}
 \begin{figure}[H]
   \centering
   \subfloat[Category listing]{{\includegraphics[width=7cm]{images/madison/category-cms.png} }}%
@@ -93,47 +93,52 @@ Depending on the category display mode, a category page can either list CMS cont
   \caption{Different category page view modes}%
   \label{fig:category-display-modes}%
 \end{figure}
-\vspace{0.1cm}
+\vspace{0.5cm}
 
 Finally, from the product listing screen, the user can potentially access any of the product detail pages clicking on the call to action \textit{te"View Details"} below the selected product image thumbnail, let's assume he chooses the \textit{"Plaid Cotton Shirt"} in this case.  
 (Figure \ref{fig:product-detail})
 
-\vspace{0.1cm}
+\vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[height=8cm]{images/madison/product-detail.png}
   \caption{Product detail page}
   \label{fig:product-detail}
 \end{figure}
-\vspace{0.1cm}
+\vspace{0.5cm}
 
 The end to end interaction from the homepage to the product detail page can be represented with a model using the following IFML notation:
 
-\vspace{0.1cm}
+\vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[width=12cm]{images/madison/ifml1.png}
   \caption{IFML representation of the Product Detail interaction}
   \label{fig:ifml1}
 \end{figure}
-\vspace{0.1cm}
+\vspace{0.5cm}
 
 The very same interaction can be expressed as a stream of records in the application server access logs which aim is to track all the requests processed by the web platform. Here's an example of  the very same user journey we just outlined above :
 
+\vspace{0.5cm}
 \begin{center}
-  \begin{tabular}{|l|c|p{6cm}|}
+  \begin{tabular}{|c|p{3cm}|c|p{6cm}|}
   \hline
-  \multicolumn{3}{|c|}{Application Server Access Log}\\ \hline
-  \textbf{Page ID}&\textbf{IFML View Container}&\textbf{Log Entry}   \\ \hline
-  Home Page&Home Page&\em[29/Nov/2017:06:30:45 +0000] "GET /" 200 0 - 29505 \\ \hline
-  \textit{"View All Men"} Category&Category List&\em[29/Nov/2017:06:49:38 +0000] "GET /men.html 200 0 - 29505 
+  \multicolumn{4}{|c|}{Application Server Access Log}\\ \hline
+  \textbf{ID}&\textbf{Page}&\textbf{IFML}&\textbf{Log Entry}   \\ \hline
+  1&Home Page&Home&\em[29/Nov/2017:06:30:45 +0000] "GET /" 200 0 - 29505 \\ \hline
+  2&\textit{"View All Men"} Category Page &Category&\em[29/Nov/2017:06:49:38 +0000] "GET /men.html 200 0 - 29505 
   \\ \hline
-  \textit{"Shirts"} Category &Product List&\em[29/Nov/2017:07:04:15 +0000] "GET /men/shirts.html" 200 0 - 29505
+  3&\textit{"Shirts"} Category Page &Category&\em[29/Nov/2017:07:04:15 +0000] "GET /men/shirts.html" 200 0 - 29505
   \\ \hline
-  \textit{"Plaid Cotton Shirt"} Product &Product Page&\em[29/Nov/2017:07:08:40 +0000] "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
+  4&\textit{"Plaid Cotton Shirt"} Product Page &Product&\em[29/Nov/2017:07:08:40 +0000] "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
   \\ \hline
   \end{tabular}
   \end{center}
+  \vspace{0.5cm}
+
+  As noticeable from this table, both entries 2 and 3 record a \textit{"Category Page"} pageview action logging their associated URLs. The entry 4, on the other side, tracks a \textit{"Product Page"} visit by logging a specific URL into the system concatenating the product URL key and the category path for the product itself to flag its direct access from a Category Page.
+
 
 \subsection{Products association and correlation}
 
@@ -141,58 +146,88 @@ In this scenario, we analyze the set of actions that can possibly generate page 
 
 Using as a starting point the same product page for the \textit{"Plaid Cotton Shirt"} article of the previous navigational behavior analysis,the customer is presented with a \textit{"Related Products"} widget just below the \textit{"Add To Cart"} segment. The principal purpose of this section is to provide the user with some suggestions about products that can be linked in some way to the current one and generate customer's interest.(Figure \ref{fig:related-products})
 
-\vspace{0.1cm}
+\vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[width=8cm]{images/madison/related-products.png}
   \caption{Related products section}
   \label{fig:related-products}
 \end{figure}
-\vspace{0.1cm}
+\vspace{0.5cm}
 
 Clicking either on the product name or its thumbnail the user is brought to the related product page. In this case, we assume his interest goes for the \textit{"Core Striped Sport Shirt"} item presented in the list. (Figure \ref{fig:product-detail2})
 
-\vspace{0.1cm}
+\vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[height=8cm]{images/madison/product-detail2.png}
   \caption{A related product page}
   \label{fig:product-detail2}
 \end{figure}
-\vspace{0.1cm}
+\vspace{0.5cm}
 
 Besides the simple navigational shortcut offered by the related products section, the user can potentially reach a product page in many other alternative ways on the website, the tracking of these interactions could potentially bring benefits for establishing a correlation pattern among the items.  For instance, he can quickly go back with the back button of his browser to the previous category listing page and choose a different item to check, use the navigatoin menu to browse another category or use the search bar on the top bar to perform a global product search. For the sake of this example, we pretend he searches for blazers writing the \textit{"blazer"} word on the previously mentioned search bar from within the current product page. (Figure \ref{fig:product-search})
 
-\vspace{0.1cm}
+\vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[height=8cm]{images/madison/search.png}
   \caption{Product search bar}
   \label{fig:product-search}
 \end{figure}
-\vspace{0.1cm}
+\vspace{0.5cm}
 
 When the search is performed, the user is taken to the search result page which shows a list of products matching the word he searched for. From within this screen, the user can freely browse to any of the available product pages similarly to what we already described for the category listing page. (Figure \ref{fig:search-results})
 
-\vspace{0.1cm}
+\vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[height=8cm]{images/madison/search-results.png}
   \caption{Search results page}
   \label{fig:search-results}
 \end{figure}
-\vspace{0.1cm}
+\vspace{0.5cm}
 
 At this point, we can update and extend the IFML model shown previously in Figure \ref{fig:ifml1} accordingly to the new notions and interactions that have been described just above.
 
-\vspace{0.1cm}
+\vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[width=16cm]{images/madison/ifml2.png}
   \caption{Updated IFML representation of the navigational behavious}
   \label{fig:ifml2}
 \end{figure}
-\vspace{0.1cm}
+\vspace{0.5cm}
+
+For what it concerns the web access logs we would have these entries representing these new navigational paths : 
+
+\vspace{0.5cm}
+\begin{center}
+  \begin{tabular}{|c|p{3cm}|c|p{6cm}|}
+  \hline
+  \multicolumn{4}{|c|}{Application Server Access Log}\\ \hline
+  \textbf{ID}&\textbf{Page}&\textbf{IFML}&\textbf{Log Entry}   \\ \hline
+  1&\textit{"Plaid Cotton Shirt"} Product Page&Product&\em[04/Dec/2017:06:37:06 +0000] 
+  "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
+  \\ \hline
+  2&\textit{"Core Striped Sport Shirt"} Product Page &Product&\em [04/Dec/2017:06:37:15 +0000] "GET /core-striped-sport-shirt-551.html" 200 0 - 29505
+  \\ \hline
+  3&\textit{"Plaid Cotton Shirt"} Product Page &Product&\em[04/Dec/2017:06:37:06 +0000] "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
+  \\ \hline
+  4&\textit{"Core Striped Sport Shirt"} Product Page &Product&\em[04/Dec/2017:06:37:15 +0000] "GET /core-striped-sport-shirt-551.html" 200 0 - 29505
+  \\ \hline
+  5&\textit{"Tees Knits And Polos"} Category Page &Category&\em[04/Dec/2017:06:38:06 +0000] "GET /men/tees-knits-and-polos.html" 200 0 - 29505
+  \\ \hline
+  6&\textit{"Blazer"} Search By Term&Search Results&\em[04/Dec/2017:06:38:20 +0000] "GET /catalogsearch/result/?q=blazer" 200 0 - 29505
+  \\ \hline
+  7&\textit{"Stretch Cotton Blazer"} Product Page &Product&\em[04/Dec/2017:06:38:43 +0000] "GET /stretch-cotton-blazer-587.html" 200 0 - 29505
+  \\ \hline
+  \end{tabular}
+  \end{center}
+\vspace{0.5cm}
+
+The sequence of actions recorded from the access logs reveal the user browsing from one product to another taking advantage of the related product links available (ID 2); in fact, the target URL does not include any category path beside the URL key associated with the product indicating a direct access. The entries 3 and 4 illustrate the journey of the user clicking on its back button on the browser and performing the very same actions again. The last three actions recorded show a direct access to a category page through the usage of the navigational menu, a search by the \textit{"blazer"} term as per the previous example and the related redirection to the product page respectively.
+
 
 \section{IoT behavioral modeling}
 
