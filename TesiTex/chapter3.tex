@@ -231,14 +231,35 @@ The sequence of actions recorded from the access logs reveal the user browsed fr
 \newpage
 \section{IoT behavioral modeling}
 
-With mobile surpassing desktop as the most critical influencer for customers to make purchase decisions and track behaviors, location-based tracking is proving to be a valuable tool for brands and stores.  In these two next subsections, we analyze two possible scenarios of customer interaction in the real world based on IoT devices recording and reporting capabilities. The data coming from IoT devices would then be collected in conjunction with the web-based one described previously to form a combined behavioral data source model which will be used to perform a pattern detection analysis in the last section of this chapter.
+With mobile surpassing desktop as the most critical influencer for customers to make purchase decisions and track behaviors, location and proximity tracking is proving to be a valuable tool for brands and stores.  In these two next subsections, we analyze two possible scenarios of customer interaction in the real world based on IoT devices recording and reporting capabilities. The data coming from IoT devices would then be collected in conjunction with the web-based one described previously to form a combined behavioral data source model which will be used to perform a pattern detection analysis in the last section of this chapter.
 
-\subsection{Proximity Marketing and how to record it}
+\subsection{Proximity Marketing}
+
+Proximity Marketing is an efficient tool to involve and discover new potential customers or target better the already existing ones. This marketing technique operates in a given physical location leveraging technologies offered by the IoT ecosystem to promote the sale of products and services.  This communication channel acts on a clear consumer target: all the customers who are in the vicinity or within a given area, covered by the diffusion devices.
+
+This innovative form of relationship marketing aims to activate and involve users by capturing attention at the right time and in the right place, making it experience a more intense and stimulating shopping experience.
+
+In the context of this thesis work, we will focus on a basic scenario where the customer proximity recognition happening in the real world does not directly trigger any immediate action to grab customer attention but it limits itself to silently track the event sending a communication to a listening web server.
+
+The IoT device of choice to illustrate this example would be the Beacon, specifically the Estimote Beacons which are using Apple iBeacon tehcnology and are compatible with iBeacon-enabled Apple products and applications.
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=16cm]{images/ibeacon.png}
+  \caption{An Estimote iBeacon device}
+  \label{fig:ifml2}
+\end{figure}
+\vspace{0.5cm}
 
 
+As per previously described in \ref{beacons} the beacon can simply be seen as a lighthouse broadcasting information leveraging Low Energy Bluetooth connection. In the case of iBeacons the information sent to listening mobile devices would contain:
+
+The Universal Unique ID (UUID) is globally unique. Example: de2b45ae-ed98-11e4-3432-78616d6f6f6d
+The Major ID uniquely identifies our customer’s system: e.g. 51314
+The Minor ID reports the exact location or object (in our case, the spot): e.g. 23369
 
 
-IoT-driven personalization turns shoppers into loyal customers faster. In-store IoT devices allow you to reach customers with relevant content in the store, which increases their spending and drives return visits. For example, if a customer has been browsing for an item online, you could nudge them toward the final purchase by offering them a special pricing when they reach the store. If they have something in their virtual shopping cart, a beacon could direct them to the aisle where they can find it.
 
 Poichè i beacon raccolgono dati importanti sull’attività dei consumatori in-store, si potrebbero realizzare anche offerte altamente personalizzate e mirate, che rafforzeranno i programmi di cui sopra. Abitudini e movimenti stessi dei clienti nel negozio potranno aiutare i retailer a colpire i loro target con offerte personalizzate anche in base alla loro posizione in un negozio, oppure sui “classici” comportamento d’acquisto. Alcuni rivenditori già oggi invitano i clienti esplicitamente a utilizzare determinate promozioni per incoraggiare i clienti a scaricare applicazioni.
 
