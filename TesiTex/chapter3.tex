@@ -231,7 +231,33 @@ The sequence of actions recorded from the access logs reveal the user browsed fr
 \newpage
 \section{IoT behavioral modeling}
 
-With mobile surpassing desktop as the most critical influencer for customers to make purchase decisions and track behaviors, location and proximity tracking is proving to be a valuable tool for brands and stores.  In these two next subsections, we analyze two possible scenarios of customer interaction in the real world based on IoT devices recording and reporting capabilities. The data coming from IoT devices would then be collected in conjunction with the web-based one described previously to form a combined behavioral data source model which will be used to perform a pattern detection analysis in the last section of this chapter.
+With mobile surpassing desktop as the most critical influencer for customers to make purchase decisions and track behaviors, location and proximity tracking is proving to be a valuable tool for brands and stores.  In these two next subsections, we analyze two possible scenarios of customer interaction in the real world based on IoT devices recording and reporting capabilities. The data coming from IoT devices would then be collected in conjunction with the web-based one described previously to form a combined behavioral data source model which will be finally used to perform a pattern detection analysis in the last section of this chapter.
+
+\subsection{Apple iBeacon technology and Estimote Beacons overview}
+
+The IoT device of choice to illustrate the scenarios related to the behavioral modeling would be the Estimote Beacons which are using Apple iBeacon technology and are compatible with iBeacon-enabled Apple products and applications.
+
+The company from Cupertino jumped first on the beacon bandwagon publishing a detailed specification (IDs, transmission intervals, etc.) in 2013 developing the iBeacon protocol and unlocking vendors, such as Estimote, to ship iBeacon-compatible hardware transmitters.
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=16cm]{images/ibeacon.png}
+  \caption{An Estimote iBeacon compatible device}
+  \label{fig:ifml2}
+\end{figure}
+\vspace{0.5cm}
+
+As per previously described in \ref{beacons} a beacon can simply be seen as a lighthouse broadcasting information in certain intervals and at a defined power leveraging Low Energy Bluetooth connection. In the case of iBeacons the information sent to listening mobile devices would contain:
+
+
+\begin{itemize}
+  \item The Universal Unique ID (UUID) is globally unique. Example: de2b45ae-ed98-11e4-3432-78616d6f6f6d
+  \item The Major ID uniquely identifies our customer’s system: e.g. 51314
+  \item The Minor ID reports the exact location or object (in our case, the spot): e.g. 23369
+\end{itemize}
+
+To receive this 1-way data stream the customer needs to have an app installed on his phone unlike QR and NFC communication. Technically, the app obeys only to "its" iBeacons, those with fitting UUID, Major and Minor IDs looking for a match, when this happens the app can react accordingly. This mechanism ensures that only the installed app can track users as they passively walk around the transmitters.
 
 \subsection{Proximity Marketing}
 
@@ -239,31 +265,26 @@ Proximity Marketing is an efficient tool to involve and discover new potential c
 
 This innovative form of relationship marketing aims to activate and involve users by capturing attention at the right time and in the right place, making it experience a more intense and stimulating shopping experience.
 
-In the context of this thesis work, we will focus on a basic scenario where the customer proximity recognition happening in the real world does not directly trigger any immediate action to grab customer attention but it limits itself to silently track the event sending a communication to a listening web server.
+In the context of this thesis work, we will focus on a basic scenario where the customer proximity recognition happening in the real world does not directly trigger any immediate action to grab customer attention but it limits itself to silently track the event collecting and sending a communication to a listening web server.
 
-The IoT device of choice to illustrate this example would be the Beacon, specifically the Estimote Beacons which are using Apple iBeacon tehcnology and are compatible with iBeacon-enabled Apple products and applications.
+This map describes a potential iBeacon allocation for a physical Madison Island retail store which would mirror the catalog hierarchy in its web form. 
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=16cm]{images/ibeacon.png}
-  \caption{An Estimote iBeacon device}
+    \includegraphics[width=16cm]{images/madison/retail-map.jpg}
+  \caption{Madison Island retail store with iBeacon allocation}
   \label{fig:ifml2}
 \end{figure}
 \vspace{0.5cm}
 
+As the customer walks around the shop, proximity events would be recorded from its Madison Island mobile app containing data about each iBeacon detected along the way and their distance when the match has occurred.
 
-As per previously described in \ref{beacons} the beacon can simply be seen as a lighthouse broadcasting information leveraging Low Energy Bluetooth connection. In the case of iBeacons the information sent to listening mobile devices would contain:
+Depending on the business use case the app can wether send an event to the listening server whenever a new beacon identifier is first detected along with the distance at that time or submit an event periodically every 10 minutes with a full list of beacons seen during that period along with their minimum/maximum proximities.
 
-The Universal Unique ID (UUID) is globally unique. Example: de2b45ae-ed98-11e4-3432-78616d6f6f6d
-The Major ID uniquely identifies our customer’s system: e.g. 51314
-The Minor ID reports the exact location or object (in our case, the spot): e.g. 23369
+Considering the behavioral profiling nature of this activity, we assume the app behaves like the latter and performs a data push to the web server at regular intervals.
 
-
-
-Poichè i beacon raccolgono dati importanti sull’attività dei consumatori in-store, si potrebbero realizzare anche offerte altamente personalizzate e mirate, che rafforzeranno i programmi di cui sopra. Abitudini e movimenti stessi dei clienti nel negozio potranno aiutare i retailer a colpire i loro target con offerte personalizzate anche in base alla loro posizione in un negozio, oppure sui “classici” comportamento d’acquisto. Alcuni rivenditori già oggi invitano i clienti esplicitamente a utilizzare determinate promozioni per incoraggiare i clienti a scaricare applicazioni.
-
--- clipboard --
+The gathered data would eventually have this form :
 
 \subsection{Customer Rewards and how to record it}
 
