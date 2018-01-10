@@ -267,16 +267,27 @@ This innovative form of relationship marketing aims to activate and involve user
 
 In the context of this thesis work, we will focus on a basic scenario where the customer proximity recognition happening in the real world does not directly trigger any immediate action to grab customer attention but it limits itself to silently track the event collecting and sending a communication to a listening web server.
 
-This map describes a potential iBeacon allocation for a physical Madison Island retail store which would mirror the catalog hierarchy in its web form. 
+We start defining a possible allocation of items for a "Madison Island" retail store which resembles the catalog presented on its website.
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[width=16cm]{images/madison/retail-map.jpg}
-  \caption{Madison Island retail store with iBeacon allocation}
-  \label{fig:ifml2}
+  \caption{Madison Island retail store}
+  \label{fig:retail-map}
 \end{figure}
 \vspace{0.5cm}
+
+Each label described in \ref{fig:retail-map} represents a specific category of the website whereas the color of the label itself indicates the parent category the items belong to. In more detail :
+
+\begin{itemize}
+  \item Red categories belong to the \textbf{Women} category mapping the content available at \textbf{/women.html}. 
+  \item Blue categories belong to the \textbf{Men} category mapping the content available at \textbf{/men.html}.
+  \item Purple categories belong to the \textbf{Home \& Decor} category mapping the content available at \textbf{/home-decor.html}. 
+  \item Orange categories belong to the \textbf{Accessories} category mapping the content available at \textbf{/accessories.html}. 
+\end{itemize}
+
+
 
 As the customer walks around the shop, proximity events would be recorded from its Madison Island mobile app containing data about each iBeacon detected along the way and their distance when the match has occurred.
 
@@ -286,7 +297,7 @@ Considering the behavioral profiling nature of this activity, we assume the app 
 
 The gathered data would eventually have this form :
 
-\subsection{Customer Rewards and how to record it}
+\subsection{Customer Rewards and how to record it }
 
 
 -- clipboard --
