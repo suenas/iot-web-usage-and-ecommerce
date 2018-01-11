@@ -273,7 +273,7 @@ We start defining a possible allocation of items for a "Madison Island" retail s
 \begin{figure}[H]
   \centering
     \includegraphics[width=16cm]{images/madison/retail-map.jpg}
-  \caption{Madison Island retail store}
+  \caption{Madison Island retail store map}
   \label{fig:retail-map}
 \end{figure}
 \vspace{0.5cm}
@@ -287,13 +287,20 @@ Each label described in \ref{fig:retail-map} represents a specific category of t
   \item Orange categories belong to the \textbf{Accessories} category mapping the content available at \textbf{/accessories.html}. 
 \end{itemize}
 
+As the customer walks around the shop, proximity events must be recorded from its Madison Island mobile app containing data about each iBeacon detected along the way and its relative distance when the match has occurred indicating which aisles customers visited and which not.
 
+Considering the above, the following would be a suitable Estimote beacons allocation for the store :
 
-As the customer walks around the shop, proximity events would be recorded from its Madison Island mobile app containing data about each iBeacon detected along the way and their distance when the match has occurred.
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=16cm]{images/madison/retail-map-beacon.jpg}
+  \caption{Madison Island retail store with Estimote beacons allocation}
+  \label{fig:beacons-map}
+\end{figure}
+\vspace{0.5cm}
 
-Depending on the business use case the app can wether send an event to the listening server whenever a new beacon identifier is first detected along with the distance at that time or submit an event periodically every 10 minutes with a full list of beacons seen during that period along with their minimum/maximum proximities.
-
-Considering the behavioral profiling nature of this activity, we assume the app behaves like the latter and performs a data push to the web server at regular intervals.
+Depending on the business use case the Madison Island app can wether send an event to the listening server whenever a new beacon identifier is first detected along with the distance at that time or submit a single event with a full list of beacons detected during the staying along with their minimum/maximum proximities.Due to the behavioral profiling nature of this activity, we assume the app behaves like the latter and performs a data push to the web server when the shoppers leave the store.
 
 The gathered data would eventually have this form :
 
