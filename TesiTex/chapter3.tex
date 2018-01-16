@@ -257,7 +257,9 @@ As per previously described in \ref{beacons} a beacon can simply be seen as a li
   \item The Minor ID reports the exact location or object (in our case, the spot): e.g. 23369
 \end{itemize}
 
-To receive this 1-way data stream the customer needs to have an app installed on his phone unlike QR and NFC communication. Technically, the app obeys only to "its" iBeacons, those with fitting UUID, Major and Minor IDs looking for a match, when this happens the app can react accordingly. This mechanism ensures that only the installed app can track users as they passively walk around the transmitters.
+To receive this 1-way data stream the customer needs to have an app installed on his phone unlike QR and NFC communication. Technically, the app obeys only to "its" iBeacons, those with fitting UUID, Major and Minor IDs looking for a match, when this happens the app can react accordingly. This mechanism ensures that only the installed app can track users as they passively walk around the transmitters. 
+
+In detail, the phone OS will keep listening for beacons at all times—even if the app is not running or it was closed, and even if the phone is locked or rebooted. Once an “enter” or “exit” happens, the OS will launch the app into the background (if needed) and let it execute some code for a few seconds to handle the event.
 
 \subsection{Proximity Marketing}
 
@@ -287,9 +289,9 @@ Each label described in \ref{fig:retail-map} represents a specific category of t
   \item Orange categories belong to the \textbf{Accessories} category mapping the content available at \textbf{/accessories.html}. 
 \end{itemize}
 
-As the customer walks around the shop, proximity events must be recorded from its Madison Island mobile app containing data about each iBeacon detected along the way and its relative distance when the match has occurred indicating which aisles customers visited and which not.
+As the customer walks around the shop, the Madison Island mobile app will scan for a predefined set of beacons and register proximity data whenever the device enters and exits the range of each one of them efficiently tracking which aisles (regions) customers visited and which not.
 
-Considering the above, the following would be a suitable Estimote beacons allocation for the store :
+Considering the above, the following would be a suitable Estimote beacon allocation for the store :
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -300,9 +302,10 @@ Considering the above, the following would be a suitable Estimote beacons alloca
 \end{figure}
 \vspace{0.5cm}
 
-Depending on the business use case the Madison Island app can wether send an event to the listening server whenever a new beacon identifier is first detected along with the distance at that time or submit a single event with a full list of beacons detected during the staying along with their minimum/maximum proximities.Due to the behavioral profiling nature of this activity, we assume the app behaves like the latter and performs a data push to the web server when the shoppers leave the store.
+Depending on the business use case, the mobile app can wether send an event to the listening server whenever the user enters within each region boundary or submit a single event with a full list of regions detected during the staying along with their minimum proximities. Due to the behavioral profiling nature of this activity, we assume the app behaves like the latter and monitors all the \textit{didEnterRegion} and \textit{didExitRegion} events while collecting proximity information but performs a single data push to the web server when the shoppers leave the store only.
 
-The gathered data would eventually have this form :
+
+The gathered data would eventually have a form similar to this :
 
 \subsection{Customer Rewards and how to record it }
 
