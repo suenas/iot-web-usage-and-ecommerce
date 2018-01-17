@@ -289,7 +289,7 @@ Each label described in \ref{fig:retail-map} represents a specific category of t
   \item Orange categories belong to the \textbf{Accessories} category mapping the content available at \textbf{/accessories.html}. 
 \end{itemize}
 
-As the customer walks around the shop, the Madison Island mobile app will scan for a predefined set of beacons and register proximity data whenever the device enters and exits the range of each one of them efficiently tracking which aisles (regions) customers visited and which not.
+As the customer walks around the shop, the Madison Island mobile app will scan for a predefined set of beacon regions and register proximity data whenever the device enters and exits from each one of them efficiently tracking which aisles (regions) customers visited and which not. 
 
 Considering the above, the following would be a suitable Estimote beacon allocation for the store :
 
@@ -302,7 +302,11 @@ Considering the above, the following would be a suitable Estimote beacon allocat
 \end{figure}
 \vspace{0.5cm}
 
-Depending on the business use case, the mobile app can wether send an event to the listening server whenever the user enters within each region boundary or submit a single event with a full list of regions detected during the staying along with their minimum proximities. Due to the behavioral profiling nature of this activity, we assume the app behaves like the latter and monitors all the \textit{didEnterRegion} and \textit{didExitRegion} events while collecting proximity information but performs a single data push to the web server when the shoppers leave the store only.
+Depending on the business use case, the mobile app can wether send an event to the listening server whenever the user enters within each region boundary or submit a single event with a full list of regions detected during the staying along with their minimum proximities. 
+
+Due to the behavioral profiling nature of this activity, we assume the app behaves like the latter and monitors all the \textit{didEnterRegion} and \textit{didExitRegion} events activating a \textita{ranging} procedure aimed to detect proximity information based on the strenght of the Bluetooth signal. \cite{region-monitoring-apple}
+
+The performs a single data push to the web server when the shoppers leave the store only.
 
 
 The gathered data would eventually have a form similar to this :
