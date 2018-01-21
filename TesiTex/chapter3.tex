@@ -244,7 +244,7 @@ The company from Cupertino jumped first on the beacon bandwagon publishing a det
   \centering
     \includegraphics[width=16cm]{images/ibeacon.png}
   \caption{An Estimote iBeacon compatible device}
-  \label{fig:ifml2}
+  \label{fig:estimote-beacon}
 \end{figure}
 \vspace{0.5cm}
 
@@ -304,12 +304,34 @@ Considering the above, the following would be a suitable Estimote beacon allocat
 
 Depending on the business use case, the mobile app can wether send an event to the listening server whenever the user enters within each region boundary or submit a single event with a full list of regions detected during the staying along with their minimum proximities. 
 
-Due to the behavioral profiling nature of this activity, we assume the app behaves like the latter and monitors all the \textit{didEnterRegion} and \textit{didExitRegion} events activating a \textita{ranging} procedure aimed to detect proximity information based on the strenght of the Bluetooth signal. \cite{region-monitoring-apple}
+Due to the behavioral profiling nature of this activity, we assume the app behaves like the latter and monitors all the \textit{didEnterRegion} and \textit{didExitRegion} events activating a \textit{ranging} procedure aimed to detect proximity information based on the strenght of the Bluetooth signal. \cite{region-monitoring-apple} 
 
-The performs a single data push to the web server when the shoppers leave the store only.
+Once the shoppers leaves the retail store the app performs a single data push to a listening web server with all the tracked data.
+
+From a technical perspective, all these operations are accomplished leveraging the Estimote iOS-SDK \cite{estimote-ios-sdk} which allows the developer to define regions and ranges for each beacon quickly and facilitates the ranging process to track the actual proximity to them.
+
+The transmitted data would eventually have this structure in JSON notation:
+
+\vspace{0.5cm}
+\begin{lstlisting}[language=json,firstnumber=1]
+  {"menu": {
+    "id": "file",
+    "value": "File",
+    "popup": {
+      "menuitem": [
+        {"value": "New", "onclick": "CreateNewDoc()"},
+        {"value": "Open", "onclick": "OpenDoc()"},
+        {"value": "Close", "onclick": "CloseDoc()"}
+      ]
+    }
+  }}
+  
+  \end{lstlisting}
+\vspace{0.5cm}
 
 
-The gathered data would eventually have a form similar to this :
+
+
 
 \subsection{Customer Rewards and how to record it }
 
