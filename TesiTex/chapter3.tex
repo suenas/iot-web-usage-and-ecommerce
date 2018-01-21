@@ -304,28 +304,93 @@ Considering the above, the following would be a suitable Estimote beacon allocat
 
 Depending on the business use case, the mobile app can wether send an event to the listening server whenever the user enters within each region boundary or submit a single event with a full list of regions detected during the staying along with their minimum proximities. 
 
-Due to the behavioral profiling nature of this activity, we assume the app behaves like the latter and monitors all the \textit{didEnterRegion} and \textit{didExitRegion} events activating a \textit{ranging} procedure aimed to detect proximity information based on the strenght of the Bluetooth signal. \cite{region-monitoring-apple} 
+Due to the behavioral profiling nature of this activity, we assume the app behaves like the latter and detects all the events entering or leaving each virtual fence activating a \textit{ranging} procedure aimed to detect proximity information based on the strenght of the Bluetooth signal. \cite{region-monitoring-apple}.
 
-Once the shoppers leaves the retail store the app performs a single data push to a listening web server with all the tracked data.
+Once the shoppers leaves the retail store the app performs a single data push to a REST API with all the tracked data.
 
 From a technical perspective, all these operations are accomplished leveraging the Estimote iOS-SDK \cite{estimote-ios-sdk} which allows the developer to define regions and ranges for each beacon quickly and facilitates the ranging process to track the actual proximity to them.
 
-The transmitted data would eventually have this structure in JSON notation:
+The JSON payload sent from the app to the server would have this structure :
+
 
 \vspace{0.5cm}
 \begin{lstlisting}[language=json,firstnumber=1]
-  {"menu": {
-    "id": "file",
-    "value": "File",
-    "popup": {
-      "menuitem": [
-        {"value": "New", "onclick": "CreateNewDoc()"},
-        {"value": "Open", "onclick": "OpenDoc()"},
-        {"value": "Close", "onclick": "CloseDoc()"}
-      ]
+  {
+    "data":{
+       "storeCode":"Madison",
+       "customerId":3045678,
+       "trackedSession":{
+          "visitedRegion":[
+             {
+                "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                "majorId":1,
+                "minorId":0,
+                "regionLabel":"store-entrance",
+                "detectionCount":2,
+                "maxTimeInRegion":"00:00:05",
+                "maxProximity":"unknown",
+                "firstDetectionTimestamp":"2018-02-21T18:09:07Z",
+                "lastDetectionTimestamp":"2018-02-21T18:16:02Z"
+             },
+             {
+                "uuid":"0686ab22-fed6-11e7-8be5-0ed5f89f718b",
+                "majorId":1,
+                "minorId":0,
+                "regionLabel":"shoes",
+                "detectionCount":1,
+                "maxTimeInRegion":"00:00:24",
+                "maxProximity":"near",
+                "firstDetectionTimestamp":"2018-02-21T18:09:20Z",
+                "lastDetectionTimestamp":"2018-02-21T18:09:20Z"
+             },
+             {
+                "uuid":"0686ac6c-fed6-11e7-8be5-0ed5f89f718b",
+                "majorId":1,
+                "minorId":0,
+                "regionLabel":"jewelry",
+                "detectionCount":1,
+                "maxTimeInRegion":"00:00:15",
+                "maxProximity":"far",
+                "firstDetectionTimestamp":"2018-02-21T18:10:15Z",
+                "lastDetectionTimestamp":"2018-02-21T18:10:15Z"
+             },
+             {
+                "uuid":"0686ad98-fed6-11e7-8be5-0ed5f89f718b",
+                "majorId":1,
+                "minorId":0,
+                "regionLabel":"blazers",
+                "detectionCount":1,
+                "maxTimeInRegion":"00:03:15",
+                "maxProximity":"immediate",
+                "firstDetectionTimestamp":"2018-02-21T18:11:01Z",
+                "lastDetectionTimestamp":"2018-02-21T18:11:01Z"
+             },
+             {
+                "uuid":"0686b126-fed6-11e7-8be5-0ed5f89f718b",
+                "majorId":1,
+                "minorId":0,
+                "regionLabel":"tees-knits-polos",
+                "detectionCount":1,
+                "maxTimeInRegion":"00:00:10",
+                "maxProximity":"far",
+                "firstDetectionTimestamp":"2018-02-21T18:14:56Z",
+                "lastDetectionTimestamp":"2018-02-21T18:14:56Z"
+             },
+             {
+                "uuid":"0686b270-fed6-11e7-8be5-0ed5f89f718b",
+                "majorId":1,
+                "minorId":0,
+                "regionLabel":"bags-and-luggage",
+                "detectionCount":1,
+                "maxTimeInRegion":"00:00:07",
+                "maxProximity":"far",
+                "firstDetectionTimestamp":"2018-02-21T18:15:12Z",
+                "lastDetectionTimestamp":"2018-02-21T18:15:12Z"
+             }
+          ]
+       }
     }
-  }}
-  
+ }
   \end{lstlisting}
 \vspace{0.5cm}
 
