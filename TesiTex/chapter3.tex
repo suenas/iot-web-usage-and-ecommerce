@@ -310,7 +310,7 @@ Once the shoppers leaves the retail store the app performs a single data push to
 
 From a technical perspective, all these operations are accomplished leveraging the Estimote iOS-SDK \cite{estimote-ios-sdk} which allows the developer to define regions and ranges for each beacon quickly and facilitates the ranging process to track the actual proximity to them.
 
-The JSON payload sent from the app to the server would have this structure :
+The JSON payload sent from the app to the server for analysis would have this structure :
 
 
 \vspace{0.5cm}
@@ -394,22 +394,21 @@ The JSON payload sent from the app to the server would have this structure :
   \end{lstlisting}
 \vspace{0.5cm}
 
-The trace above indicates an evident interest in "Blazer" items by the customer where the region beacon registered both a session lasted more than 3 minutes and the highest proximity to a beacon. Besides this a slight interest in "Shoes" has been recorded as well.
+
+The above example session shows an evident preference in "Blazer" items by the customer and a slight interest in the "Shoes" items. More precisely, the "Blazer" region registered a session lasted more than 3 minutes and the highest proximity to a beacon.  
+
+The tracked data collected and sent to the servers for each one of the customers using the mobile app in the retail store will constitute the foundation of the analysis work for pattern detection described in chapter \ref{data-analysis} which in turn will improve personalized offers on the Madison Island website. 
 
 
-\subsection{Customer Rewards and how to record it }
+\subsection{Customer Rewards}
 
+Besides Proximity based marketing, Beacon technology can also be applied to reward customers for particular actions based on geolocalization improving the overall quality of the brand loyalty program which are key to cultivating lasting customer relationships. 
 
--- clipboard --
+This result is achievable expanding the set of actions which would allow customers to earn bonuses and discounts on the website (newsletter subscriptions, minimum order amount, etc..) to activities performed in the real world, including the simple act of visiting and walking around the store for example.
 
-Beacon e applicazioni di fidelizzazione potrebbero essere utilizzati insieme per premiare i clienti per tutti i tipi di azioni basate sulla localizzazione, anche il solo camminare in un negozio, ma azioni che nella loro semplicità permetteranno ai negozi di utilizzare le tecnologie e applicazioni di pagamento mobile e in-store per stabilire programmi online e offline di fidelizzazione integrati tra i propri clienti.
-
-Finally, IoT technology helps you take your loyalty program to the next level. IoT-driven CRM not only provides loyalty members with VIP deals when they visit the store, but it senses how customers navigate the store IoT and CRM solutions as well. This additional data gives you a better idea of customer preferences – like the departments they spend the most time in or the days of the week they like to visit stores – which in turn improves personalized offers. For example, if your data shows a customer spent a significant amount of time in the luggage aisle but left empty-handed, you can use that insight to retarget them online or during their next store visit. Loyalty programs are key to cultivating lasting customer relationships, and IoT-based CRM gives you means to make your program stand out from the competition.
-
--- clipboard --
 
 \section{Analysis and Pattern recognition}
-
+\label{data-analysis}
 Software esistenti per il big data analysis
 
 
