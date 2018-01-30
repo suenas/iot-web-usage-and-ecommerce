@@ -317,8 +317,10 @@ The JSON payload sent from the app to the server for analysis would have this st
 \begin{lstlisting}[language=json,firstnumber=1]
   {
     "data":{
-       "storeCode":"Madison",
+       "storeCode":"Madison1",
        "customerId":3045678,
+       "totalVisitTime" : "00:06:55",
+       "sessionDate": "2018-02-21",
        "trackedSession":{
           "visitedRegion":[
              {
@@ -402,9 +404,29 @@ The tracked data collected and sent to the servers for each one of the customers
 
 \subsection{Customer Rewards}
 
-Besides Proximity based marketing, Beacon technology can also be applied to reward customers for particular actions based on geolocalization improving the overall quality of the brand loyalty program which are key to cultivating lasting customer relationships. 
+Besides Proximity based marketing, Beacon technology can also be used to reward customers for particular actions based on geolocalization data improving the overall quality of the brand loyalty program which is key to cultivating lasting customer relationships. 
 
-This result is achievable expanding the set of actions which would allow customers to earn bonuses and discounts on the website (newsletter subscriptions, minimum order amount, etc..) to activities performed in the real world, including the simple act of visiting and walking around the store for example.
+Achieving such result is possible by expanding the set of actions that enable customers to earn bonuses and discounts on the website (newsletter subscriptions, minimum order amount, etc..) to additional activities performed in the real world, including the simple act of visiting and walking around the store.
+
+For example, the brand can rank customers by the amount of time spent at each Madison Retail shop and reward them with tailored offers every month, or it can focus on offering special offers on the website to those customers that visited a retail store in a specific time span such as Christmas Time.
+
+For our Madison Island example, we are considering a use case scenario where customers get rewarded if they manage to scan three products barcodes from the store to earn a fixed amount of reward points on their online account.
+
+In particular, when the beacon detects their entrance into the store, the mobile app pushes a notification to the lock screen presenting a CheckPoints message to the customer inviting him to scan actual items available in the store. After each valid scan, the mobile app pushes the information about the scanned product to the same REST API used in the previous chapter which is responsible for storing the data.
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=8cm]{images/madison-push-reward-points.jpg}
+  \caption{Madison Island mobile app push notification example}
+  \label{fig:retail-map}
+\end{figure}
+\vspace{0.5cm}
+
+
+The JSON payload sent to the server for analysis would then have this structure :
+
+
 
 
 \section{Analysis and Pattern recognition}
