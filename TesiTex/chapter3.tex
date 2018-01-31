@@ -262,6 +262,7 @@ To receive this 1-way data stream the customer needs to have an app installed on
 In detail, the phone OS will keep listening for beacons at all times—even if the app is not running or it was closed, and even if the phone is locked or rebooted. Once an “enter” or “exit” happens, the OS will launch the app into the background (if needed) and let it execute some code for a few seconds to handle the event.
 
 \subsection{Proximity Marketing}
+\label{ssection:proximity-marketing}
 
 Proximity Marketing is an efficient tool to involve and discover new potential customers or target better the already existing ones. This marketing technique operates in a given physical location leveraging technologies offered by the IoT ecosystem to promote the sale of products and services.  This communication channel acts on a clear consumer target: all the customers who are in the vicinity or within a given area, covered by the diffusion devices.
 
@@ -306,11 +307,11 @@ Depending on the business use case, the mobile app can wether send an event to t
 
 Due to the behavioral profiling nature of this activity, we assume the app behaves like the latter and detects all the events entering or leaving each virtual fence activating a \textit{ranging} procedure aimed to detect proximity information based on the strenght of the Bluetooth signal. \cite{region-monitoring-apple}.
 
-Once the shoppers leaves the retail store the app performs a single data push to a REST API with all the tracked data.
+Once the shoppers leaves the retail store the app performs a single data push to a REST API endpoint with all the tracked data.
 
 From a technical perspective, all these operations are accomplished leveraging the Estimote iOS-SDK \cite{estimote-ios-sdk} which allows the developer to define regions and ranges for each beacon quickly and facilitates the ranging process to track the actual proximity to them.
 
-The JSON payload sent from the app to the server for analysis would have this structure :
+The JSON payload sent from the app to the REST endpoint for customer 3045678 (e.g. \textbf{POST /users/3045678/sessions}) for analysis would have this structure:
 
 
 \vspace{0.5cm}
@@ -320,6 +321,7 @@ The JSON payload sent from the app to the server for analysis would have this st
        "storeCode":"Madison1",
        "customerId":3045678,
        "totalVisitTime" : "00:06:55",
+       "sessionID" : "89376f84-065b-11e8-ba89-0ed5f89f718b"
        "sessionDate": "2018-02-21",
        "trackedSession":{
           "visitedRegion":[
@@ -410,9 +412,7 @@ Achieving such result is possible by expanding the set of actions that enable cu
 
 For example, the brand can rank customers by the amount of time spent at each Madison Retail shop and reward them with tailored offers every month, or it can focus on offering special offers on the website to those customers that visited a retail store in a specific time span such as Christmas Time.
 
-For our Madison Island example, we are considering a use case scenario where customers get rewarded if they manage to scan three products barcodes from the store to earn a fixed amount of reward points on their online account.
-
-In particular, when the beacon detects their entrance into the store, the mobile app pushes a notification to the lock screen presenting a CheckPoints message to the customer inviting him to scan actual items available in the store. After each valid scan, the mobile app pushes the information about the scanned product to the same REST API used in the previous chapter which is responsible for storing the data.
+For our Madison Island example, we are considering a use case scenario where customers get rewarded if they manage to scan three products QR codes from the store to earn a fixed amount of reward points on their online account. In particular, when the beacon detects their entrance into the store, the mobile app pushes a notification to the lock screen presenting a CheckPoints message to the customer inviting him to scan codes of actual items available in the shop. After each valid scan, the mobile app pushes the information about the scanned product to the same REST API used in the previous chapter which is responsible for storing the data.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -424,10 +424,37 @@ In particular, when the beacon detects their entrance into the store, the mobile
 \vspace{0.5cm}
 
 
-The JSON payload sent to the server for analysis would then have this structure :
+The JSON payload sent to the server (e.g. \textbf{POST /users/3045678/scans}) after each succesful scan would then have a structure similar to this :
 
+\vspace{0.5cm}
+\begin{lstlisting}[language=json,firstnumber=1]
+  {
+    "data":{
+       "storeCode":"Madison1",
+       "customerId":3045678,
+       "sessionID" : "89376f84-065b-11e8-ba89-0ed5f89f718b"
+       "timestamp": "2018-02-21T18:11:02Z",
+       "scannedProduct":
+        {
+          "barcode":"042100005264",
+          "name" : "ELIZABETH KNIT TOP"
+          "SKU": "wbk012c"    
+       }
+    }
+ }
+  \end{lstlisting}
+\vspace{0.5cm}
 
+Similarly to the process outlined in \ref{ssection:proximity-marketing} the data collected by the server about each one of the single product scans performed by the customers during their sessions in the retail store will eventually convert in reward points attributions to use on the website for the customers. 
 
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=12cm]{images/loyalty-reward-points.png}
+  \caption{Madison Island loyalty program usage during checkout}
+  \label{fig:loyalty-points}
+\end{figure}
+\vspace{0.5cm}
 
 \section{Analysis and Pattern recognition}
 \label{data-analysis}
