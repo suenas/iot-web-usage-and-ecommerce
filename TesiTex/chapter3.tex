@@ -231,7 +231,7 @@ The sequence of actions recorded from the access logs reveal the user browsed fr
 \newpage
 \section{IoT behavioral modeling}
 
-With mobile surpassing desktop as the most critical influencer for customers to make purchase decisions and track behaviors, location and proximity tracking is proving to be a valuable tool for brands and stores.  In these two next subsections, we analyze two possible scenarios of customer interaction in the real world based on IoT devices recording and reporting capabilities. The data coming from IoT devices would then be collected in conjunction with the web-based one described previously to form a combined behavioral data source  to leverage for generating tailored customizations of the Madison eCommerce webportal as per described in the next chapters.
+With mobile surpassing desktop as the most critical influencer for customers to make purchase decisions and track behaviors, location and proximity tracking is proving to be a valuable tool for brands and stores.  In these two next subsections, we analyze two possible scenarios of customer interaction in the real world based on IoT devices recording and reporting capabilities. The data coming from IoT devices would then be collected in conjunction with the web-based one described previously to form a combined behavioral data stream to leverage for generating tailored customizations of the Madison eCommerce webportal.
 
 \subsection{Apple iBeacon technology and Estimote Beacons overview}
 
@@ -318,81 +318,98 @@ The JSON payload sent from the app to the REST endpoint for customer 3045678 (e.
 \begin{lstlisting}[language=json,firstnumber=1]
   {
     "data":{
-       "storeCode":"Madison1",
        "customerId":3045678,
-       "totalVisitTime" : "00:06:55",
-       "sessionID" : "89376f84-065b-11e8-ba89-0ed5f89f718b"
+       "storeId":8784,
+       "storeLabel" : "Madison1",
+       "sessionId" : "89376f84-065b-11e8-ba89-0ed5f89f718b"
        "sessionDate": "2018-02-21",
-       "trackedSession":{
-          "visitedRegion":[
+       "sessionDuration" : 345,
+       "sessionRegions":[
              {
-                "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                "majorId":2553,
-                "minorId":79,
+                "regionId: : 156,
                 "regionLabel":"store-entrance",
                 "detectionCount":2,
-                "maxTimeInRegion":"00:00:05",
+                "maxSecondsInRegion": 5,
                 "maxProximity":"unknown",
                 "firstDetectionTimestamp":"2018-02-21T18:09:07Z",
-                "lastDetectionTimestamp":"2018-02-21T18:16:02Z"
+                "lastDetectionTimestamp":"2018-02-21T18:16:02Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":2553,
+                  "minorId":79
+                }
              },
              {
-                "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                "majorId":19029,
-                "minorId":49,
+                "regionId: : 645,
                 "regionLabel":"shoes",
                 "detectionCount":1,
-                "maxTimeInRegion":"00:00:24",
+                "maxSecondsInRegion": 24,
                 "maxProximity":"near",
                 "firstDetectionTimestamp":"2018-02-21T18:09:20Z",
-                "lastDetectionTimestamp":"2018-02-21T18:09:20Z"
+                "lastDetectionTimestamp":"2018-02-21T18:09:20Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":19029,
+                  "minorId":49
+                }
              },
              {
-                "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                "majorId":38415,
-                "minorId":59,
+                "regionId" : 6875,
                 "regionLabel":"jewelry",
                 "detectionCount":1,
-                "maxTimeInRegion":"00:00:15",
+                "maxSecondsInRegion": 15,
                 "maxProximity":"far",
                 "firstDetectionTimestamp":"2018-02-21T18:10:15Z",
-                "lastDetectionTimestamp":"2018-02-21T18:10:15Z"
+                "lastDetectionTimestamp":"2018-02-21T18:10:15Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":38415,
+                  "minorId":59
+                }
              },
              {
-                "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                "majorId":25911,
-                "minorId":27,
+                "regionId" : 6875,
                 "regionLabel":"blazers",
                 "detectionCount":1,
-                "maxTimeInRegion":"00:03:15",
+                "maxSecondsInRegion": 195,
                 "maxProximity":"immediate",
                 "firstDetectionTimestamp":"2018-02-21T18:11:01Z",
-                "lastDetectionTimestamp":"2018-02-21T18:11:01Z"
+                "lastDetectionTimestamp":"2018-02-21T18:11:01Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":25911,
+                  "minorId":27
+                }
              },
              {
-                "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                "majorId":42037,
-                "minorId":36,
+                "regionId" : 456,
                 "regionLabel":"tees-knits-polos",
                 "detectionCount":1,
-                "maxTimeInRegion":"00:00:10",
+                "maxSecondsInRegion": 10,
                 "maxProximity":"far",
                 "firstDetectionTimestamp":"2018-02-21T18:14:56Z",
-                "lastDetectionTimestamp":"2018-02-21T18:14:56Z"
+                "lastDetectionTimestamp":"2018-02-21T18:14:56Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":42037,
+                  "minorId":36
+                }
              },
              {
-                "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                "majorId":37931,
-                "minorId": 85,
+                "regionId" : 998,
                 "regionLabel":"bags-and-luggage",
                 "detectionCount":1,
-                "maxTimeInRegion":"00:00:07",
+                "maxSecondsInRegion": 7,
                 "maxProximity":"far",
                 "firstDetectionTimestamp":"2018-02-21T18:15:12Z",
-                "lastDetectionTimestamp":"2018-02-21T18:15:12Z"
+                "lastDetectionTimestamp":"2018-02-21T18:15:12Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":37931,
+                  "minorId": 85
+                }
              }
           ]
-       }
     }
  }
   \end{lstlisting}
@@ -427,10 +444,11 @@ The JSON payload sent to the server (e.g. \textbf{POST /users/3045678/scans}) af
 \begin{lstlisting}[language=json,firstnumber=1]
   {
     "data":{
-       "storeCode":"Madison1",
        "customerId":3045678,
-       "sessionID" : "89376f84-065b-11e8-ba89-0ed5f89f718b"
-       "timestamp": "2018-02-21T18:11:02Z",
+       "storeId":8784,
+       "storeLabel" : "Madison1",
+       "sessionId" : "89376f84-065b-11e8-ba89-0ed5f89f718b"
+       "eventTime": "2018-02-21T18:11:02Z",
        "scannedProduct":
         {
           "barcode":"042100005264",
