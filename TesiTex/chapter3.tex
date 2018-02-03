@@ -1,8 +1,8 @@
 % !TEX root = Tesi.tex
 \chead{}
-\chapter{Combining approaches}
+\chapter{Combining data acquisition channels}
 
-The evolution of the Internet and the amount of data available from web usage mining and IoT devices has led to an enormous proliferation of the accessible information as per described in the previous sections.  In this chapter, we focus on the actual process of modeling the collected behavioral data from these two sources, the analysis of the associated log records and the discovery of usage patterns with the goal of addressing some of the weaknesses of the standard approaches for web personalization.
+The evolution of the Internet and the amount of data available from web usage mining and IoT devices has led to an enormous proliferation of the accessible information as per described in the previous sections.  In this chapter, we focus on describing the possible channels of adquisition of customer behavioral data both in the virtual and the physical world. This valuable information represent the milestone of the journey towards the enhancement of the eCommerce experience for its usesr and aims to address some of the weaknesses of the standard approaches for web personalization.
 
 Before we can efficiently represent content visualized on user interfaces, navigation paths and user-triggered events on a web application, we need to take a little detour describing a standard modeling language capable of modeling such interactions in detail.
 
@@ -231,7 +231,7 @@ The sequence of actions recorded from the access logs reveal the user browsed fr
 \newpage
 \section{IoT behavioral modeling}
 
-With mobile surpassing desktop as the most critical influencer for customers to make purchase decisions and track behaviors, location and proximity tracking is proving to be a valuable tool for brands and stores.  In these two next subsections, we analyze two possible scenarios of customer interaction in the real world based on IoT devices recording and reporting capabilities. The data coming from IoT devices would then be collected in conjunction with the web-based one described previously to form a combined behavioral data source model which will be finally used to perform a pattern detection analysis in the last section of this chapter.
+With mobile surpassing desktop as the most critical influencer for customers to make purchase decisions and track behaviors, location and proximity tracking is proving to be a valuable tool for brands and stores.  In these two next subsections, we analyze two possible scenarios of customer interaction in the real world based on IoT devices recording and reporting capabilities. The data coming from IoT devices would then be collected in conjunction with the web-based one described previously to form a combined behavioral data source  to leverage for generating tailored customizations of the Madison eCommerce webportal as per described in the next chapters.
 
 \subsection{Apple iBeacon technology and Estimote Beacons overview}
 
@@ -401,9 +401,6 @@ The JSON payload sent from the app to the REST endpoint for customer 3045678 (e.
 
 The above example session shows an evident preference in "Blazer" items by the customer and a slight interest in the "Shoes" items. More precisely, the "Blazer" region registered a session lasted more than 3 minutes and the highest proximity to a beacon.  
 
-The tracked data collected and sent to the servers for each one of the customers using the mobile app in the retail store will constitute the foundation of the analysis work for pattern detection described in chapter \ref{data-analysis} which in turn will improve personalized offers on the Madison Island website. 
-
-
 \subsection{Customer Rewards}
 
 Besides Proximity based marketing, Beacon technology can also be used to reward customers for particular actions based on geolocalization data improving the overall quality of the brand loyalty program which is key to cultivating lasting customer relationships. 
@@ -456,9 +453,7 @@ Similarly to the process outlined in \ref{ssection:proximity-marketing} the data
 \end{figure}
 \vspace{0.5cm}
 
-\section{Analysis and Pattern recognition}
-\label{data-analysis}
-Software esistenti per il big data analysis
+
 
 
 
