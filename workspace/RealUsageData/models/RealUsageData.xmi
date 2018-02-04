@@ -1,3 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RealUsageData:Dataset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:RealUsageData="RealUsageData" xsi:schemaLocation="RealUsageData ../metamodels/RealUsageData.ecore"/>
+<RealUsageData:Dataset
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:RealUsageData="RealUsageData"
+    xsi:schemaLocation="RealUsageData ../metamodels/RealUsageData.ecore"
+    ID="1" name="Main">
+  <data xsi:type="RealUsageData:WebData"
+      ID="1"
+      name="AccessLog"
+      userID="3045678"
+      date="2018-02-21T18:15:12.000+0100"
+      container="Homepage"
+      component="Homepage"
+      logEntry="”GET /”200 0 - 29505"/>
+  <data xsi:type="RealUsageData:WebData"
+      ID="2"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-11-29T17:06:49.000+0100"
+      container="Category"
+      component="CategoryList"
+      logEntry="”GET/men.html /” 200 0 - 29505"/>
+  <data xsi:type="RealUsageData:WebData"
+      ID="3"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-11-29T17:07:04.150+0100"
+      container="Category"
+      component="ProductList"
+      logEntry="”GET /men/shirts.html” 200 0 - 29505"/>
+  <data xsi:type="RealUsageData:WebData"
+      ID="4"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-11-29T07:08:40.150+0100"
+      container="Product"
+      component="ProductDetails"
+      logEntry="”GET /men/shirts/plaid-cotton-shirt- 476.html” 200 0 - 29505"/>
+</RealUsageData:Dataset>
