@@ -25,15 +25,16 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProximityData" eSuperTypes="#//IoTData">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sessionDuration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sessionRegions" lowerBound="1"
-        upperBound="-1" eType="#//SessionRegion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sessionRegions" upperBound="-1"
+        eType="#//SessionRegion" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SessionRegion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="regionId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="regionLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="detectionCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxSecondsInRegion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxProximity" eType="#//ProximityType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxProximity" eType="#//ProximityType"
+        defaultValueLiteral="unknown"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstDetectionTimeStamp"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastDetectionTimeStamp"
@@ -54,13 +55,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActionData" eSuperTypes="#//IoTData">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
-        eType="#//Action" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sessionActions" upperBound="-1"
+        eType="#//UserAction" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Action" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ScannedProduct" eSuperTypes="#//Action">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="productName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="barcode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SKU" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UserAction" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userAgent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ScannedItems" eSuperTypes="#//UserAction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="barcode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sku" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -449,12 +449,15 @@ The JSON payload sent to the server (e.g. \textbf{POST /users/3045678/scans}) af
        "storeLabel" : "Madison1",
        "sessionId" : "89376f84-065b-11e8-ba89-0ed5f89f718b"
        "eventTime": "2018-02-21T18:11:02Z",
-       "scannedProduct":
-        {
-          "barcode":"042100005264",
-          "name" : "ELIZABETH KNIT TOP"
-          "SKU": "wbk012c"    
-       }
+       "sessionActions": [{
+          "userAgent" : "Iphone 6s",
+          "scannedItems":
+            {
+              "barcode":"042100005264",
+              "name" : "ELIZABETH KNIT TOP"
+              "sku": "wbk012c"    
+          }
+      }]
     }
  }
   \end{lstlisting}
