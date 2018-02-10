@@ -15,7 +15,7 @@
       viewComponent="TopMenu"
       eventType="click"
       parameterBindingGroup="Category/5"
-      logEntry="”GET/men.html /” 200 0 - 29505"/>
+      logEntry="GET /men.html / 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID="2"
       name="AccessLog"
@@ -25,7 +25,7 @@
       viewComponent="CategoryList"
       eventType="click"
       parameterBindingGroup="Category/15"
-      logEntry="”GET /men/shirts.html” 200 0 - 29505"/>
+      logEntry="GET /men/shirts.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID="3"
       name="AccessLog"
@@ -35,7 +35,7 @@
       viewComponent="ProductList"
       eventType="click"
       parameterBindingGroup="Product/404"
-      logEntry="”GET /men/shirts/plaid-cotton-shirt-476.html” 200 0 - 29505"/>
+      logEntry="GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID="4"
       name="AccessLog"
@@ -45,7 +45,7 @@
       viewComponent="RelatedProductList"
       eventType="click"
       parameterBindingGroup="Product/413"
-      logEntry="”GET /core-striped-sport-shirt-551.html” 200 0 - 29505"/>
+      logEntry="GET /core-striped-sport-shirt-551.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID="5"
       name="AccessLog"
@@ -55,7 +55,7 @@
       viewComponent=""
       eventType="backButton"
       parameterBindingGroup=""
-      logEntry="”GET /men/shirts/plaid-cotton-shirt-476.html” 200 0 - 29505"/>
+      logEntry="GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID="6"
       name="AccessLog"
@@ -65,7 +65,7 @@
       viewComponent="TopMenu"
       eventType="click"
       parameterBindingGroup="Category/16"
-      logEntry="”GET /men/tees-knits-and-polos.html” 200 0 - 29505"/>
+      logEntry="GET /men/tees-knits-and-polos.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID="7"
       name="AccessLog"
@@ -75,7 +75,7 @@
       viewComponent="TopSearch"
       eventType="submit"
       parameterBindingGroup="SearchText/blazer"
-      logEntry="”GET /catalogsearch/result/?q=blazer” 200 0 - 29505"/>
+      logEntry="GET /catalogsearch/result/?q=blazer 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID="8"
       name="AccessLog"
@@ -85,7 +85,7 @@
       viewComponent="ProductList"
       eventType="click"
       parameterBindingGroup="Product/407"
-      logEntry="”GET /stretch-cotton-blazer-587.html” 200 0 - 29505"/>
+      logEntry="GET /stretch-cotton-blazer-587.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:ProximityData"
       ID="9"
       name="Session"
