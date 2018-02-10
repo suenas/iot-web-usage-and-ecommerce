@@ -90,7 +90,7 @@
       ID="9"
       name="Session"
       userID="3045678"
-      date="2018-02-21T00:00:00.000+0100"
+      date="2018-02-21T18:16:07.000+0100"
       storeId="8784"
       storeLabel="Madison1"
       sessionId="89376f84-065b -11e8- ba89-0ed5f89f718b"
@@ -107,5 +107,95 @@
           majorId="2553"
           minorId="79"/>
     </sessionRegions>
+    <sessionRegions
+        regionId="645"
+        regionLabel="shoes"
+        detectionCount="1"
+        maxSecondsInRegion="24"
+        maxProximity="near"
+        firstDetectionTimeStamp="2018-02-21T18:09:20.000+0100"
+        lastDetectionTimeStamp="2018-02-21T18:09:20.000+0100">
+      <beaconData
+          uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+          majorId="19029"
+          minorId="49"/>
+    </sessionRegions>
+    <sessionRegions
+        regionId="6875"
+        regionLabel="jewelry"
+        detectionCount="1"
+        maxSecondsInRegion="15"
+        maxProximity="far"
+        firstDetectionTimeStamp="2018-02-21T18:10:15.000+0100"
+        lastDetectionTimeStamp="2018-02-21T18:10:15.000+0100">
+      <beaconData
+          uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+          majorId="38415"
+          minorId="59"/>
+    </sessionRegions>
+    <sessionRegions
+        regionId="2563"
+        regionLabel="blazers"
+        detectionCount="1"
+        maxSecondsInRegion="195"
+        maxProximity="immediate"
+        firstDetectionTimeStamp="2018-02-21T18:11:01.000+0100"
+        lastDetectionTimeStamp="2018-02-21T18:11:01.000+0100">
+      <beaconData
+          uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+          majorId="25911"
+          minorId="27"/>
+    </sessionRegions>
+    <sessionRegions
+        regionId="456"
+        regionLabel="tees-knits-polos"
+        detectionCount="1"
+        maxSecondsInRegion="10"
+        maxProximity="immediate"
+        firstDetectionTimeStamp="2018-02-21T18:14:56.000+0100"
+        lastDetectionTimeStamp="2018-02-21T18:14:56.000+0100">
+      <beaconData
+          uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+          majorId="42037"
+          minorId="36"/>
+    </sessionRegions>
+    <sessionRegions
+        regionId="998"
+        regionLabel="bags-and-luggage"
+        detectionCount="1"
+        maxSecondsInRegion="7"
+        maxProximity="far"
+        firstDetectionTimeStamp="2018-02-21T18:15:12.000+0100"
+        lastDetectionTimeStamp="2018-02-21T18:15:12.000+0100">
+      <beaconData
+          uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+          majorId="37931"
+          minorId="85"/>
+    </sessionRegions>
+  </data>
+  <data xsi:type="RealUsageData:ActionData"
+      ID="10"
+      name="Session"
+      userID="3045678"
+      date="2018-02-22T15:27:09.000+0100"
+      storeId="8784"
+      storeLabel="Madison1"
+      sessionId="89376f84-065b-11e8-ba89-0ed5f89f718b"
+      sessionDuration="456">
+    <sessionActions
+        userAgent="iPhone 6S">
+      <scannedItems
+          barcode="042100005264"
+          name="Elizabeth Knit Top-Red-S"
+          sku="wbk012c-Red-S"/>
+      <scannedItems
+          barcode="042100005931"
+          name="Plaid Cotton Shirt-Khaki-L"
+          sku="msj006c-Khaki-L"/>
+      <scannedItems
+          barcode="042100007717"
+          name="Broad St Saddle Shoes"
+          sku="shm00110"/>
+    </sessionActions>
   </data>
 </RealUsageData:Dataset>

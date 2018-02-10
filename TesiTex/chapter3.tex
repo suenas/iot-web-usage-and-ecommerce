@@ -320,8 +320,7 @@ The JSON payload sent from the app to the REST endpoint for customer 3045678 (e.
        "storeId":8784,
        "storeLabel" : "Madison1",
        "sessionId" : "89376f84-065b-11e8-ba89-0ed5f89f718b"
-       "sessionDate": "2018-02-21",
-       "sessionDuration" : 345,
+
        "sessionRegions":[
              {
                 "regionId: : 156,
@@ -366,7 +365,7 @@ The JSON payload sent from the app to the REST endpoint for customer 3045678 (e.
                 }
              },
              {
-                "regionId" : 6875,
+                "regionId" : 2563,
                 "regionLabel":"blazers",
                 "detectionCount":1,
                 "maxSecondsInRegion": 195,
@@ -424,7 +423,7 @@ Achieving such result is possible by expanding the set of actions that enable cu
 
 For example, the brand can rank customers by the amount of time spent at each Madison Retail shop and reward them with tailored offers every month depening on their purchases, or it can focus on offering special offers on the website to those customers that visited a retail store in a specific time span such as Christmas Time.
 
-For our Madison Island example, we are considering a use case scenario where customers get rewarded if they manage to scan three products QR codes from the store to earn a fixed amount of reward points on their online account. Specifically, when the beacon detects their entrance into the store, the mobile app pushes a notification to the lock screen presenting a CheckPoints message to the customer inviting him to scan codes of actual items available in the shop. After each valid scan, the mobile app pushes the information about the scanned product to the same REST API used in the previous chapter which is responsible for storing the data.
+For our Madison Island example, we are considering a use case scenario where customers get rewarded if they manage to scan three products QR codes from the store to earn a fixed amount of reward points on their online account. Specifically, when the beacon detects their entrance into the store, the mobile app pushes a notification to the lock screen presenting a CheckPoints message to the customer inviting him to scan codes of actual items available in the shop. Once the valid product scans are collected within a session, the mobile app pushes the information to the same REST API used in the previous chapter which is responsible for storing the data.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -446,15 +445,26 @@ The JSON payload sent to the server (e.g. \textbf{POST /users/3045678/scans}) af
        "storeId":8784,
        "storeLabel" : "Madison1",
        "sessionId" : "89376f84-065b-11e8-ba89-0ed5f89f718b"
-       "eventTime": "2018-02-21T18:11:02Z",
+       "sessionDuration" : 456,
        "sessionActions": [{
           "userAgent" : "Iphone 6s",
           "scannedItems":
-            {
+            [{
               "barcode":"042100005264",
-              "name" : "ELIZABETH KNIT TOP"
-              "sku": "wbk012c"    
-          }
+              "name" : "Elizabeth Knit Top-Red-S"
+              "sku": "wbk012c-Red-S"    
+            },
+            {
+              "barcode":"042100005931",
+              "name" : "Plaid Cotton Shirt-Khaki-L"
+              "sku": "msj006c-Khaki-L"    
+            },
+            {
+              "barcode":"042100007717",
+              "name" : "Broad St Saddle Shoes"
+              "sku": "shm00110"    
+            }
+            ]
       }]
     }
  }
