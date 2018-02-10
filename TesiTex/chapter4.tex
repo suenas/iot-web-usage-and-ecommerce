@@ -2,10 +2,16 @@
 \chead{}
 \chapter{Our approach}
 
+After summarily describing three different streams of real usage data obtained both from the physical and the virtual world in the last chapter, we now focus on expanding those representations in a more detailed way with the help of the Model Driven Engineering techniques briefly described in \ref{1.3). 
+Concretely, the first two section objectives are to illustrate the defining languages (metamodels) for both the real usage data and the eCommerce platform used in the previous examples and generate actual models based upon them representing the very same information.
+Finally, in the last section of this chapter, we will be using the very same generation technique for updating the previously instantiated models leveraging model transformation techniques based upon usage pattern detection resulting from the Big Data analysis.
+
+
 
 \section{Representing Real Usage Data }
 
 \subsection{Metamodel}
+
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -228,7 +234,35 @@
 
 \section{Representing our web application with IFML}
 
-\subsection{Metamodel}
+\subsection{IFML Metamodel}
+
+As per briefly introduced in \ref{the-ifml-language}, the IFML language is designed for expressing the content, user interaction and control behavior of the front-end applications. The IFML metamodel is organized in three main packages: the Core package, the Extension package and the DataTypes
+package. 
+
+The high-level description of the IFML metamodel  is structured into the following areas :
+
+\begin{itemize}
+  \item IFML Model
+  \item Interaction Flow Model
+  \item Interaction Flow Elements
+  \item View Elements
+  \item Events
+  \item Specific Events and View Components
+  \item Parameters
+  \item Expressions
+  \item ContentBinding
+\end{itemize}
+
+Figure \ref{fig:simple-ifml-core-model} shows an excerpt of the IFML metamodel. As can be seen, IFMLModel is the top-level container of all the model elements and represents an IFML model. It contains an InteractionFlowModel which is the user view of an application. The concepts extending ViewContainer, ViewComponets, ViewComponentPart, and ViewElementEvent represent the visual elements of an IFML model.
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=12cm]{images/diagrams/ifml-metamodel.png}
+  \caption{Simple Ecore model of an IFML subset.}
+  \label{fig:simple-ifml-core-model}
+\end{figure}
+\vspace{0.5cm}
 
 \subsection{Model}
 
