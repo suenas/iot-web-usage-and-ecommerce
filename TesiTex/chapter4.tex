@@ -8,24 +8,34 @@ Finally, in the last section of this chapter, we will be using the very same gen
 
 \section{Representing Real Usage Data}
 
-
-
 \subsection{Metamodel}
 
+The representation of the real usage data starts from the definition of the metamodel which defines the languages and processes from which to form a model without making statements about its content. In fact, a metamodel is itself a model that is used to describe another model using a modeling language and at a different level of abstraction.  
+
+The figure in \ref{fig:real-usage-data-metamodel-diagram} describes the processed metamodel as a UML Class Diagram accordingly to the data retrieved for our real usage data analysis.
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=12cm]{images/diagrams/RealUsageDataMetamodel.jpg}
+    \includegraphics[height=19cm]{images/diagrams/RealUsageDataMetamodel.jpg}
   \caption{Real Usage Data Metamodel Diagram Class}
-  \label{fig:real-usage-data-metamodel-diagram-class}
+  \label{fig:real-usage-data-metamodel-diagram}
 \end{figure}
 \vspace{0.5cm}
 
-
+\newpage
 \subsection{Model}
 
+The RealUsageData metamodel defined above allow us to create dynamic instances which precisely map the real usage data collected from the web mining process and the IoT devices tracking. Figure \ref{fig:real-usage-data-model} illustrates this processed model in its eCore representation form in Eclipse and it is followed by the corrisponding XMI file content.
 
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=12cm]{images/diagrams/RealUsageDataModel.png}
+  \caption{Real Usage Data Model}
+  \label{fig:real-usage-data-model}
+\end{figure}
+\vspace{0.5cm}
 
 \lstset{language=XML}
 \begin{lstlisting} 
@@ -232,7 +242,7 @@ Finally, in the last section of this chapter, we will be using the very same gen
 </RealUsageData:Dataset>
 \end{lstlisting}
 
-\section{Representing our web application with IFML}
+\section{Representing our eCommerce application with IFML}
 
 \subsection{IFML Metamodel}
 
