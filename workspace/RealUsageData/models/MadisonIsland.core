@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="ASCII"?>
-<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_uB1T4A8gEeiZ14TmPBeBNA">
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_uB1T4A8gEeiZ14TmPBeBNA">
   <interactionFlowModel id="_1ZuugA8gEeiZ14TmPBeBNA">
-    <interactionFlowModelElements xsi:type="core:ViewContainer" id="_1Z3RYA8gEeiZ14TmPBeBNA" name="ViewContainer">
-      <viewElements xsi:type="core:ViewComponent" id="_4-BUoA8gEeiZ14TmPBeBNA" name="ViewComponent"/>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="_1Z3RYA8gEeiZ14TmPBeBNA" name="Homepage" isLandmark="true">
+      <viewElements xsi:type="ext:Form" id="_fK5kwA80EeiZ14TmPBeBNA" name="NewsletterSubscription">
+        <viewComponentParts xsi:type="ext:SimpleField" id="_opxS8A80EeiZ14TmPBeBNA" name="emailField">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+      </viewElements>
+      <viewElements xsi:type="ext:List" id="_jNepYA80EeiZ14TmPBeBNA" name="FooterLinks"/>
+      <viewElements xsi:type="ext:List" id="_OWapAA82EeiZ14TmPBeBNA" name="NewProducts"/>
+      <viewElements xsi:type="ext:List" id="_UUZDUA82EeiZ14TmPBeBNA" name="OtherCategories"/>
+      <viewElements xsi:type="ext:IFMLWindow" id="_iMsP4A82EeiZ14TmPBeBNA" name="HighlightedCategoriesCarousel" isXOR="true">
+        <viewElements xsi:type="core:ViewContainer" id="_0D5iAA82EeiZ14TmPBeBNA" name="HightlightedCategory1" isLandmark="true" isDefault="true">
+          <viewElements xsi:type="ext:Details" id="_j2RnYA83EeiZ14TmPBeBNA" name="CategoryBanner"/>
+        </viewElements>
+        <viewElements xsi:type="core:ViewContainer" id="_0D5iAA82EeiZ14TmPBeBNA" name="HightlightedCategory2" isLandmark="true">
+          <viewElements xsi:type="ext:Details" id="_j2RnYA83EeiZ14TmPBeBNA" name="CategoryBanner"/>
+        </viewElements>
+        <viewElements xsi:type="core:ViewContainer" id="_0D5iAA82EeiZ14TmPBeBNA" name="HightlightedCategory3" isLandmark="true">
+          <viewElements xsi:type="ext:Details" id="_j2RnYA83EeiZ14TmPBeBNA" name="CategoryBanner"/>
+        </viewElements>
+      </viewElements>
     </interactionFlowModelElements>
   </interactionFlowModel>
   <domainModel id="_uB1T4Q8gEeiZ14TmPBeBNA">

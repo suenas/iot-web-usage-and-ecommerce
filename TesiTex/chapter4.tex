@@ -3,8 +3,8 @@
 \chapter{Our approach}
 
 After summarily describing three different streams of real usage data obtained both from the physical and the virtual world in the last chapter, we now focus on expanding those representations in a more detailed way with the help of the Model Driven Engineering techniques briefly described in \ref{model-driven-techniques}. 
-Concretely, the first two section objectives are to illustrate the defining languages (metamodels) for both the real usage data and the eCommerce platform used in the previous examples and generate actual models based upon them representing the very same information.
-Finally, in the last section of this chapter, we will be using the very same generation technique for updating the previously instantiated models leveraging model transformation techniques based upon usage pattern detection resulting from the Big Data analysis.
+Concretely, the first two section objectives are to illustrate the defining languages (metamodels) for both the real usage data and the eCommerce platform interactions used in the previous examples and generate actual models based upon them representing the very same information.
+Finally, in the last section of this chapter, we will be using the very same generation for updating the previously instantiated models leveraging model transformation techniques based upon usage pattern detection resulting from the Big Data analysis.
 
 \section{Representing Real Usage Data}
 
@@ -25,7 +25,7 @@ The figure in \ref{fig:real-usage-data-metamodel-diagram} describes the processe
 
 \newpage
 \subsection{Model}
-
+\label{real-usage-data-model}
 The RealUsageData metamodel defined above allow us to create dynamic instances which precisely map the real usage data collected from the web mining process and the IoT devices tracking. Figure \ref{fig:real-usage-data-model} illustrates this processed model in its eCore representation form in Eclipse and it is followed by the corrisponding XMI file content.
 
 \vspace{0.5cm}
@@ -275,6 +275,8 @@ Figure \ref{fig:simple-ifml-core-model} shows an excerpt of the IFML metamodel. 
 \vspace{0.5cm}
 
 \subsection{Model}
+
+Although some partial IFML model representations for the Madison Island eCommerce platform have been already summarily introduced in \ref{navigational-modeling-for-the-web}, in this subsection we examine them in more detail and with a more global approach not strictly related to the navigational modeling. The final goal is to model, taking advantage of the IFML metamodel described just above, an IFML instance which would represent the main pages and interactions of the website on top of which we would perform transformations dictated by the Real Usage Data models illustrated in \ref{real-usage-data-model}
 
 \section{Updating the web models through real usage data}
 
