@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_uB1T4A8gEeiZ14TmPBeBNA">
+  <interactionFlowModel id="_1ZuugA8gEeiZ14TmPBeBNA">
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="_1Z3RYA8gEeiZ14TmPBeBNA" name="ViewContainer">
+      <viewElements xsi:type="core:ViewComponent" id="_4-BUoA8gEeiZ14TmPBeBNA" name="ViewComponent"/>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_uB1T4Q8gEeiZ14TmPBeBNA">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_uB2iAA8gEeiZ14TmPBeBNA" name="Movie">
+      <classifier xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_uB2iAQ8gEeiZ14TmPBeBNA" name="title">
+      <structuralFeature xsi:type="uml:Property" href="model.uml#_jEpi8J6QEeGdnpRmAZh-dQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_uB2iAg8gEeiZ14TmPBeBNA" name="year">
+      <structuralFeature xsi:type="uml:Property" href="model.uml#_jm9l0J6QEeGdnpRmAZh-dQ"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>

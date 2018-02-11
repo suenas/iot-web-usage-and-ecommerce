@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis xmi:id="_QN8RIAd8EeiYVKeecowg_w" selectedViews="_p-k4IAjxEeinCrQh3V9JlA _p-2k8AjxEeinCrQh3V9JlA _p-95sAjxEeinCrQh3V9JlA _p_BkEAjxEeinCrQh3V9JlA" version="12.1.0.201708031200">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis xmi:id="_QN8RIAd8EeiYVKeecowg_w" selectedViews="_p-k4IAjxEeinCrQh3V9JlA _p_BkEAjxEeinCrQh3V9JlA _c0ESQA8eEeiSsv0FhntRAw" version="12.1.0.201708031200">
     <semanticResources>metamodels/RealUsageData.ecore</semanticResources>
     <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
     <semanticResources>models/RealUsageData.xmi</semanticResources>
     <semanticResources>metamodels/IFML.ecore</semanticResources>
+    <semanticResources>models/madison.core</semanticResources>
+    <semanticResources>models/My.core</semanticResources>
+    <semanticResources>models/MadisonIsland.core</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_p-k4IAjxEeinCrQh3V9JlA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_AKZfBg5hEeib75FRyPNqCA" name="RealUsageData class diagram" repPath="#_AKUmgA5hEeib75FRyPNqCA">
@@ -20,6 +23,13 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_p_BkEAjxEeinCrQh3V9JlA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Generation']"/>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_c0ESQA8eEeiSsv0FhntRAw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_xERxMA8gEeiZ14TmPBeBNA" name="Homepage" repPath="#_xDu-oA8gEeiZ14TmPBeBNA">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']"/>
+        <target xmi:type="core:IFMLModel" href="models/MadisonIsland.core#/"/>
+      </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
   <diagram:DSemanticDiagram xmi:id="_AKY38A5hEeib75FRyPNqCA" name="RealUsageData class diagram" uid="_AKUmgA5hEeib75FRyPNqCA">
@@ -932,7 +942,60 @@
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
     <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
     <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
-    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Archetype']/@ownedRepresentationExtensions[name='Entities%20With%20Archetypes']/@layers[name='Archetypes']"/>
     <target xmi:type="ecore:EPackage" href="metamodels/RealUsageData.ecore#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram xmi:id="_xERKIA8gEeiZ14TmPBeBNA" name="Homepage" uid="_xDu-oA8gEeiZ14TmPBeBNA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_xERKIQ8gEeiZ14TmPBeBNA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_xERKIg8gEeiZ14TmPBeBNA"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_xERxMQ8gEeiZ14TmPBeBNA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_xERxMg8gEeiZ14TmPBeBNA" type="Sirius" element="_xERKIA8gEeiZ14TmPBeBNA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_1ayecA8gEeiZ14TmPBeBNA" type="2002" element="_1aAbUA8gEeiZ14TmPBeBNA">
+          <children xmi:type="notation:Node" xmi:id="_1azFgA8gEeiZ14TmPBeBNA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_1azFgQ8gEeiZ14TmPBeBNA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_4_svoA8gEeiZ14TmPBeBNA" type="3008" element="_4-TogA8gEeiZ14TmPBeBNA">
+              <children xmi:type="notation:Node" xmi:id="_4_tWsA8gEeiZ14TmPBeBNA" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_4_t9wA8gEeiZ14TmPBeBNA" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_4_t9wQ8gEeiZ14TmPBeBNA"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_4_t9wg8gEeiZ14TmPBeBNA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_4_svoQ8gEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4_svog8gEeiZ14TmPBeBNA" x="75" y="78" width="250" height="120"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_1azFgg8gEeiZ14TmPBeBNA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_1azFgw8gEeiZ14TmPBeBNA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_1ayecQ8gEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1ayecg8gEeiZ14TmPBeBNA" x="416" y="224"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_xERxMw8gEeiZ14TmPBeBNA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_1aAbUA8gEeiZ14TmPBeBNA" name=" ViewContainer">
+      <target xmi:type="core:ViewContainer" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0"/>
+      <semanticElements xmi:type="core:ViewContainer" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_1aLacA8gEeiZ14TmPBeBNA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" workspacePath="/IFMLEditorDesign/img/components/ViewContainer.png">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_4-TogA8gEeiZ14TmPBeBNA" name="«ViewComponent» ViewComponent" width="25" height="12">
+        <target xmi:type="core:ViewComponent" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0"/>
+        <semanticElements xmi:type="core:ViewComponent" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4-eAkA8gEeiZ14TmPBeBNA" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="209,209,209" backgroundColor="209,209,209">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='ViewComponent']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='ViewComponent']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_xERKJA8gEeiZ14TmPBeBNA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer"/>
+    <target xmi:type="core:IFMLModel" href="models/MadisonIsland.core#/"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>
