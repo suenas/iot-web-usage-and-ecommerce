@@ -244,12 +244,16 @@ The RealUsageData metamodel defined above allow us to create dynamic instances w
 
 \section{Representing our eCommerce application with IFML}
 
+As per briefly introduced in \ref{the-ifml-language}, interaction flow models are platform independent-level models which can be used to define the interactions between the users of an application and the application itself. They describe the user interface components required at the front-end of the
+application, without specifying layout details of these elements enhancing the separation of concerns among developers and UX designers where the latter build the user interface accordingly to an interaction flow model. Besides defining components of the User Interface, the interaction flow model explains how data flows among different sections of the application upon triggering events and introduces the business logic carried out using this data.
+
 \subsection{IFML Metamodel}
 
-As per briefly introduced in \ref{the-ifml-language}, the IFML language is designed for expressing the content, user interaction and control behavior of the front-end applications. The IFML metamodel is organized in three main packages: the Core package, the Extension package and the DataTypes
-package. 
+The IFML metamodel is organized into three packages: the Core package, the Extension package and the DataTypes package. The Core package contains the concepts that build up the interaction infrastructure of the language concerning InteractionFlowElements, InteractionFlows and Parameters. The Extension package extends the Core package components with more complex behaviors. The DataTypes package contains the custom data types defined by IFML.
 
-The high-level description of the IFML metamodel  is structured into the following areas :
+By using the primitive data types from the UML metamodel and a UML representation for the IFML Domain Model, the IFML metamodel specifies a set of UML metaclasses as the foundation for the IFML metaclasses.
+
+The following is the structure of the high-level representation of the IFML metamodel and its areas of concern:
 
 \begin{itemize}
   \item IFML Model
@@ -263,7 +267,7 @@ The high-level description of the IFML metamodel  is structured into the followi
   \item ContentBinding
 \end{itemize}
 
-Figure \ref{fig:simple-ifml-core-model} shows an excerpt of the IFML metamodel. As can be seen, IFMLModel is the top-level container of all the model elements and represents an IFML model. It contains an InteractionFlowModel which is the user view of an application. The concepts extending ViewContainer, ViewComponets, ViewComponentPart, and ViewElementEvent represent the visual elements of an IFML model.
+Figure \ref{fig:simple-ifml-core-model} shows an excerpt of the IFML metamodel. As can be seen, IFMLModel is the top-level container of all the model elements and represents an IFML model. It contains an InteractionFlowModel which is the user view of an application, a DomainModel represented in UML and optionally ViewPoints. The concepts extending ViewContainer, ViewComponets, ViewComponentPart, and ViewElementEvent represent the visual elements of an IFML model.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -276,7 +280,20 @@ Figure \ref{fig:simple-ifml-core-model} shows an excerpt of the IFML metamodel. 
 
 \subsection{Model}
 
-Although some partial IFML model representations for the Madison Island eCommerce platform have been already summarily introduced in \ref{navigational-modeling-for-the-web}, in this subsection we examine them in more detail and with a more global approach not strictly related to the navigational modeling. The final goal is to model, taking advantage of the IFML metamodel described just above, an IFML instance which would represent the main pages and interactions of the website on top of which we would perform transformations dictated by the Real Usage Data models illustrated in \ref{real-usage-data-model}
+As per mentioned in the last subsection, interaction flow models are described using the Interaction Flow Modelling Language and, together with the domain model and optionally viewpoints, they form the core of the IFML model.
+
+To complete the picture we may state the domain model objective is essentially offering to the interaction flow references about the content available. An example of a domain model for an e-commerce website is given in figure \ref{fig:domain-model-uml-ecommerce}  
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=12cm]{images/diagrams/domain-model-uml-ecommerce.png}
+  \caption{Domain Model UML Class Diagram ecommerce example.}
+  \label{fig:domain-model-uml-ecommerce}
+\end{figure}
+\vspace{0.5cm}
+
+Although some partial IFML model representations for the Madison Island eCommerce platform have been already summarily introduced in \ref{navigational-modeling-for-the-web}, in this subsection we examine them in more detail and with a more global approach not strictly related to the navigational modeling. The final goal is to model, taking advantage of the IFML metamodel described just above, an IFML model which would represent the main pages and interactions of the website on top of which we would perform transformations dictated by the Real Usage Data models illustrated in \ref{real-usage-data-model}
 
 \section{Updating the web models through real usage data}
 
