@@ -957,14 +957,23 @@
             <children xmi:type="notation:Node" xmi:id="_OXdK0A82EeiZ14TmPBeBNA" type="3008" element="_OWgvoA82EeiZ14TmPBeBNA">
               <children xmi:type="notation:Node" xmi:id="_OXdx4A82EeiZ14TmPBeBNA" type="5005"/>
               <children xmi:type="notation:Node" xmi:id="_OXdx4Q82EeiZ14TmPBeBNA" type="7002">
-                <children xmi:type="notation:Node" xmi:id="_iWEIIA9TEeiZ14TmPBeBNA" type="3008" element="_iVuJ4A9TEeiZ14TmPBeBNA">
-                  <children xmi:type="notation:Node" xmi:id="_iWEvMA9TEeiZ14TmPBeBNA" type="5005"/>
-                  <children xmi:type="notation:Node" xmi:id="_iWEvMQ9TEeiZ14TmPBeBNA" type="7002">
-                    <styles xmi:type="notation:SortingStyle" xmi:id="_iWEvMg9TEeiZ14TmPBeBNA"/>
-                    <styles xmi:type="notation:FilteringStyle" xmi:id="_iWEvMw9TEeiZ14TmPBeBNA"/>
+                <children xmi:type="notation:Node" xmi:id="_ej1FsBFNEeiZ14TmPBeBNA" type="3008" element="_ejtw8BFNEeiZ14TmPBeBNA">
+                  <children xmi:type="notation:Node" xmi:id="_ej1FsxFNEeiZ14TmPBeBNA" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_ej1swBFNEeiZ14TmPBeBNA" type="7002">
+                    <children xmi:type="notation:Node" xmi:id="_lK5OYBFPEeiZ14TmPBeBNA" type="3008" element="_lKqk4BFPEeiZ14TmPBeBNA">
+                      <children xmi:type="notation:Node" xmi:id="_lK51cBFPEeiZ14TmPBeBNA" type="5005"/>
+                      <children xmi:type="notation:Node" xmi:id="_lK51cRFPEeiZ14TmPBeBNA" type="7002">
+                        <styles xmi:type="notation:SortingStyle" xmi:id="_lK51chFPEeiZ14TmPBeBNA"/>
+                        <styles xmi:type="notation:FilteringStyle" xmi:id="_lK51cxFPEeiZ14TmPBeBNA"/>
+                      </children>
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_lK5OYRFPEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lK5OYhFPEeiZ14TmPBeBNA" width="250" height="120"/>
+                    </children>
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_ej1swRFNEeiZ14TmPBeBNA"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_ej1swhFNEeiZ14TmPBeBNA"/>
                   </children>
-                  <styles xmi:type="notation:ShapeStyle" xmi:id="_iWEIIQ9TEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWEIIg9TEeiZ14TmPBeBNA" x="32" y="32" width="200" height="30"/>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_ej1FsRFNEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ej1FshFNEeiZ14TmPBeBNA" x="-198" y="-30" width="200" height="30"/>
                 </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_OXdx4g82EeiZ14TmPBeBNA"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_OXdx4w82EeiZ14TmPBeBNA"/>
@@ -996,14 +1005,14 @@
                 <children xmi:type="notation:Node" xmi:id="_v3vCkA9BEeiZ14TmPBeBNA" type="3008" element="_v00RcA9BEeiZ14TmPBeBNA">
                   <children xmi:type="notation:Node" xmi:id="_v3vCkw9BEeiZ14TmPBeBNA" type="5005"/>
                   <children xmi:type="notation:Node" xmi:id="_v3vClA9BEeiZ14TmPBeBNA" type="7002">
-                    <children xmi:type="notation:Node" xmi:id="_41ZRYA9SEeiZ14TmPBeBNA" type="3008" element="_41MdEA9SEeiZ14TmPBeBNA">
-                      <children xmi:type="notation:Node" xmi:id="_41ZRYw9SEeiZ14TmPBeBNA" type="5005"/>
-                      <children xmi:type="notation:Node" xmi:id="_41ZRZA9SEeiZ14TmPBeBNA" type="7002">
-                        <styles xmi:type="notation:SortingStyle" xmi:id="_41ZRZQ9SEeiZ14TmPBeBNA"/>
-                        <styles xmi:type="notation:FilteringStyle" xmi:id="_41ZRZg9SEeiZ14TmPBeBNA"/>
+                    <children xmi:type="notation:Node" xmi:id="_ixss8BFQEeiZ14TmPBeBNA" type="3008" element="_ixaZEBFQEeiZ14TmPBeBNA">
+                      <children xmi:type="notation:Node" xmi:id="_ixtUABFQEeiZ14TmPBeBNA" type="5005"/>
+                      <children xmi:type="notation:Node" xmi:id="_ixtUARFQEeiZ14TmPBeBNA" type="7002">
+                        <styles xmi:type="notation:SortingStyle" xmi:id="_ixtUAhFQEeiZ14TmPBeBNA"/>
+                        <styles xmi:type="notation:FilteringStyle" xmi:id="_ixtUAxFQEeiZ14TmPBeBNA"/>
                       </children>
-                      <styles xmi:type="notation:ShapeStyle" xmi:id="_41ZRYQ9SEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41ZRYg9SEeiZ14TmPBeBNA" x="399" y="34" width="200" height="30"/>
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_ixss8RFQEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ixss8hFQEeiZ14TmPBeBNA" width="200" height="30"/>
                     </children>
                     <styles xmi:type="notation:SortingStyle" xmi:id="_v3vClQ9BEeiZ14TmPBeBNA"/>
                     <styles xmi:type="notation:FilteringStyle" xmi:id="_v3vClg9BEeiZ14TmPBeBNA"/>
@@ -1014,15 +1023,6 @@
                 <children xmi:type="notation:Node" xmi:id="_MCGbAA9MEeiZ14TmPBeBNA" type="3008" element="_MBmrwA9MEeiZ14TmPBeBNA">
                   <children xmi:type="notation:Node" xmi:id="_MCHCEA9MEeiZ14TmPBeBNA" type="5005"/>
                   <children xmi:type="notation:Node" xmi:id="_MCHCEQ9MEeiZ14TmPBeBNA" type="7002">
-                    <children xmi:type="notation:Node" xmi:id="_41ZRZw9SEeiZ14TmPBeBNA" type="3008" element="_41NEIQ9SEeiZ14TmPBeBNA">
-                      <children xmi:type="notation:Node" xmi:id="_41ZRag9SEeiZ14TmPBeBNA" type="5005"/>
-                      <children xmi:type="notation:Node" xmi:id="_41ZRaw9SEeiZ14TmPBeBNA" type="7002">
-                        <styles xmi:type="notation:SortingStyle" xmi:id="_41ZRbA9SEeiZ14TmPBeBNA"/>
-                        <styles xmi:type="notation:FilteringStyle" xmi:id="_41ZRbQ9SEeiZ14TmPBeBNA"/>
-                      </children>
-                      <styles xmi:type="notation:ShapeStyle" xmi:id="_41ZRaA9SEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont"/>
-                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41ZRaQ9SEeiZ14TmPBeBNA" x="115" y="42" width="200" height="30"/>
-                    </children>
                     <styles xmi:type="notation:SortingStyle" xmi:id="_MCHCEg9MEeiZ14TmPBeBNA"/>
                     <styles xmi:type="notation:FilteringStyle" xmi:id="_MCHCEw9MEeiZ14TmPBeBNA"/>
                   </children>
@@ -1117,19 +1117,19 @@
                                 <styles xmi:type="notation:FilteringStyle" xmi:id="_lcsF0xFLEeiZ14TmPBeBNA"/>
                               </children>
                               <styles xmi:type="notation:ShapeStyle" xmi:id="_lcrexRFLEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-                              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lcrexhFLEeiZ14TmPBeBNA" x="43" y="18" width="247" height="23"/>
+                              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lcrexhFLEeiZ14TmPBeBNA" x="47" y="33" height="30"/>
                             </children>
                             <styles xmi:type="notation:SortingStyle" xmi:id="_lcrewhFLEeiZ14TmPBeBNA"/>
                             <styles xmi:type="notation:FilteringStyle" xmi:id="_lcrewxFLEeiZ14TmPBeBNA"/>
                           </children>
                           <styles xmi:type="notation:ShapeStyle" xmi:id="_lcq3sRFLEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-                          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lcq3shFLEeiZ14TmPBeBNA" x="11" y="21" width="351" height="172"/>
+                          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lcq3shFLEeiZ14TmPBeBNA" x="31" y="31"/>
                         </children>
                         <styles xmi:type="notation:SortingStyle" xmi:id="_41btrA9SEeiZ14TmPBeBNA"/>
                         <styles xmi:type="notation:FilteringStyle" xmi:id="_41btrQ9SEeiZ14TmPBeBNA"/>
                       </children>
                       <styles xmi:type="notation:ShapeStyle" xmi:id="_41btqA9SEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont"/>
-                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41btqQ9SEeiZ14TmPBeBNA" x="2" y="38" width="375" height="203"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41btqQ9SEeiZ14TmPBeBNA" x="6" y="54"/>
                     </children>
                     <styles xmi:type="notation:SortingStyle" xmi:id="_41bGlQ9SEeiZ14TmPBeBNA"/>
                     <styles xmi:type="notation:FilteringStyle" xmi:id="_41bGlg9SEeiZ14TmPBeBNA"/>
@@ -1143,26 +1143,35 @@
                     <children xmi:type="notation:Node" xmi:id="_41cUsA9SEeiZ14TmPBeBNA" type="3008" element="_41KA0A9SEeiZ14TmPBeBNA">
                       <children xmi:type="notation:Node" xmi:id="_41cUsw9SEeiZ14TmPBeBNA" type="5005"/>
                       <children xmi:type="notation:Node" xmi:id="_41cUtA9SEeiZ14TmPBeBNA" type="7002">
-                        <children xmi:type="notation:Node" xmi:id="_41cUtw9SEeiZ14TmPBeBNA" type="3008" element="_41KA0g9SEeiZ14TmPBeBNA">
-                          <children xmi:type="notation:Node" xmi:id="_41cUug9SEeiZ14TmPBeBNA" type="5005"/>
-                          <children xmi:type="notation:Node" xmi:id="_41cUuw9SEeiZ14TmPBeBNA" type="7002">
-                            <styles xmi:type="notation:SortingStyle" xmi:id="_41cUvA9SEeiZ14TmPBeBNA"/>
-                            <styles xmi:type="notation:FilteringStyle" xmi:id="_41cUvQ9SEeiZ14TmPBeBNA"/>
+                        <children xmi:type="notation:Node" xmi:id="_loFBABFMEeiZ14TmPBeBNA" type="3008" element="_ln5a0BFMEeiZ14TmPBeBNA">
+                          <children xmi:type="notation:Node" xmi:id="_loFoEBFMEeiZ14TmPBeBNA" type="5005"/>
+                          <children xmi:type="notation:Node" xmi:id="_loFoERFMEeiZ14TmPBeBNA" type="7002">
+                            <children xmi:type="notation:Node" xmi:id="_loFoFBFMEeiZ14TmPBeBNA" type="3008" element="_ln6o8BFMEeiZ14TmPBeBNA">
+                              <children xmi:type="notation:Node" xmi:id="_loFoFxFMEeiZ14TmPBeBNA" type="5005"/>
+                              <children xmi:type="notation:Node" xmi:id="_loFoGBFMEeiZ14TmPBeBNA" type="7002">
+                                <styles xmi:type="notation:SortingStyle" xmi:id="_loFoGRFMEeiZ14TmPBeBNA"/>
+                                <styles xmi:type="notation:FilteringStyle" xmi:id="_loFoGhFMEeiZ14TmPBeBNA"/>
+                              </children>
+                              <styles xmi:type="notation:ShapeStyle" xmi:id="_loFoFRFMEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_loFoFhFMEeiZ14TmPBeBNA" x="23" y="22" width="306" height="35"/>
+                            </children>
+                            <styles xmi:type="notation:SortingStyle" xmi:id="_loFoEhFMEeiZ14TmPBeBNA"/>
+                            <styles xmi:type="notation:FilteringStyle" xmi:id="_loFoExFMEeiZ14TmPBeBNA"/>
                           </children>
-                          <styles xmi:type="notation:ShapeStyle" xmi:id="_41cUuA9SEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-                          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41cUuQ9SEeiZ14TmPBeBNA" x="28" y="28"/>
+                          <styles xmi:type="notation:ShapeStyle" xmi:id="_loFBARFMEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_loFBAhFMEeiZ14TmPBeBNA" x="7" y="22" width="351" height="127"/>
                         </children>
                         <styles xmi:type="notation:SortingStyle" xmi:id="_41cUtQ9SEeiZ14TmPBeBNA"/>
                         <styles xmi:type="notation:FilteringStyle" xmi:id="_41cUtg9SEeiZ14TmPBeBNA"/>
                       </children>
                       <styles xmi:type="notation:ShapeStyle" xmi:id="_41cUsQ9SEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont"/>
-                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41cUsg9SEeiZ14TmPBeBNA" x="79" y="66"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41cUsg9SEeiZ14TmPBeBNA" x="4" y="58" width="371" height="163"/>
                     </children>
                     <styles xmi:type="notation:SortingStyle" xmi:id="_41bGnA9SEeiZ14TmPBeBNA"/>
                     <styles xmi:type="notation:FilteringStyle" xmi:id="_41bGnQ9SEeiZ14TmPBeBNA"/>
                   </children>
                   <styles xmi:type="notation:ShapeStyle" xmi:id="_41bGmA9SEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41bGmQ9SEeiZ14TmPBeBNA" x="467" y="118" width="388" height="258"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41bGmQ9SEeiZ14TmPBeBNA" x="466" y="118" width="388" height="258"/>
                 </children>
                 <children xmi:type="notation:Node" xmi:id="_41btoA9SEeiZ14TmPBeBNA" type="3008" element="_41ILpA9SEeiZ14TmPBeBNA">
                   <children xmi:type="notation:Node" xmi:id="_41btow9SEeiZ14TmPBeBNA" type="5005"/>
@@ -1170,20 +1179,29 @@
                     <children xmi:type="notation:Node" xmi:id="_41cUvg9SEeiZ14TmPBeBNA" type="3008" element="_41Kn4Q9SEeiZ14TmPBeBNA">
                       <children xmi:type="notation:Node" xmi:id="_41cUwQ9SEeiZ14TmPBeBNA" type="5005"/>
                       <children xmi:type="notation:Node" xmi:id="_41c7wA9SEeiZ14TmPBeBNA" type="7002">
-                        <children xmi:type="notation:Node" xmi:id="_41c7ww9SEeiZ14TmPBeBNA" type="3008" element="_41LO8A9SEeiZ14TmPBeBNA">
-                          <children xmi:type="notation:Node" xmi:id="_41c7xg9SEeiZ14TmPBeBNA" type="5005"/>
-                          <children xmi:type="notation:Node" xmi:id="_41c7xw9SEeiZ14TmPBeBNA" type="7002">
-                            <styles xmi:type="notation:SortingStyle" xmi:id="_41c7yA9SEeiZ14TmPBeBNA"/>
-                            <styles xmi:type="notation:FilteringStyle" xmi:id="_41c7yQ9SEeiZ14TmPBeBNA"/>
+                        <children xmi:type="notation:Node" xmi:id="_ej1swxFNEeiZ14TmPBeBNA" type="3008" element="_ejqGkBFNEeiZ14TmPBeBNA">
+                          <children xmi:type="notation:Node" xmi:id="_ej1sxhFNEeiZ14TmPBeBNA" type="5005"/>
+                          <children xmi:type="notation:Node" xmi:id="_ej1sxxFNEeiZ14TmPBeBNA" type="7002">
+                            <children xmi:type="notation:Node" xmi:id="_ej1syhFNEeiZ14TmPBeBNA" type="3008" element="_ejqtoRFNEeiZ14TmPBeBNA">
+                              <children xmi:type="notation:Node" xmi:id="_ej1szRFNEeiZ14TmPBeBNA" type="5005"/>
+                              <children xmi:type="notation:Node" xmi:id="_ej1szhFNEeiZ14TmPBeBNA" type="7002">
+                                <styles xmi:type="notation:SortingStyle" xmi:id="_ej1szxFNEeiZ14TmPBeBNA"/>
+                                <styles xmi:type="notation:FilteringStyle" xmi:id="_ej1s0BFNEeiZ14TmPBeBNA"/>
+                              </children>
+                              <styles xmi:type="notation:ShapeStyle" xmi:id="_ej1syxFNEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ej1szBFNEeiZ14TmPBeBNA" x="39" y="18" width="245" height="40"/>
+                            </children>
+                            <styles xmi:type="notation:SortingStyle" xmi:id="_ej1syBFNEeiZ14TmPBeBNA"/>
+                            <styles xmi:type="notation:FilteringStyle" xmi:id="_ej1syRFNEeiZ14TmPBeBNA"/>
                           </children>
-                          <styles xmi:type="notation:ShapeStyle" xmi:id="_41c7xA9SEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-                          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41c7xQ9SEeiZ14TmPBeBNA" x="28" y="28"/>
+                          <styles xmi:type="notation:ShapeStyle" xmi:id="_ej1sxBFNEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+                          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ej1sxRFNEeiZ14TmPBeBNA" x="31" y="30"/>
                         </children>
                         <styles xmi:type="notation:SortingStyle" xmi:id="_41c7wQ9SEeiZ14TmPBeBNA"/>
                         <styles xmi:type="notation:FilteringStyle" xmi:id="_41c7wg9SEeiZ14TmPBeBNA"/>
                       </children>
                       <styles xmi:type="notation:ShapeStyle" xmi:id="_41cUvw9SEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont"/>
-                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41cUwA9SEeiZ14TmPBeBNA" x="63" y="66"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41cUwA9SEeiZ14TmPBeBNA" x="14" y="66" width="359" height="151"/>
                     </children>
                     <styles xmi:type="notation:SortingStyle" xmi:id="_41btpQ9SEeiZ14TmPBeBNA"/>
                     <styles xmi:type="notation:FilteringStyle" xmi:id="_41btpg9SEeiZ14TmPBeBNA"/>
@@ -1195,7 +1213,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_41YqWg9SEeiZ14TmPBeBNA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_41YqVQ9SEeiZ14TmPBeBNA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41YqVg9SEeiZ14TmPBeBNA" x="412" y="586" width="1403" height="436"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41YqVg9SEeiZ14TmPBeBNA" x="412" y="586" width="1407" height="436"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_1azFgg8gEeiZ14TmPBeBNA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_1azFgw8gEeiZ14TmPBeBNA"/>
@@ -1222,7 +1240,7 @@
         <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_OWgvoA82EeiZ14TmPBeBNA" name="«Details» Homepage CMS Content" width="25" height="12">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_OWgvoA82EeiZ14TmPBeBNA" name="«Details» Homepage Promos" width="25" height="12">
         <target xmi:type="ext:Details" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2"/>
         <semanticElements xmi:type="ext:Details" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1234,13 +1252,21 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='ViewComponent']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='ViewComponent']"/>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_iVuJ4A9TEeiZ14TmPBeBNA" name="«Parameter»Homepage Content CMS Block ID: Invalid Type Homepage Content CMS Block ID" width="20" height="3">
-          <target xmi:type="core:IFMLParameter" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@parameters.0"/>
-          <semanticElements xmi:type="core:IFMLParameter" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@parameters.0"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_iVuJ4Q9TEeiZ14TmPBeBNA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='ViewComponent']/@subContainerMappings[name='IFMLParameter']/@style"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ejtw8BFNEeiZ14TmPBeBNA" name="«DataBinding»  CMS Block" width="20" height="3">
+          <target xmi:type="core:DataBinding" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewComponentParts.0"/>
+          <semanticElements xmi:type="core:DataBinding" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewComponentParts.0"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ejtw8RFNEeiZ14TmPBeBNA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='ViewComponent']/@subContainerMappings[name='ViewComponentPart']/@style"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='ViewComponent']/@subContainerMappings[name='IFMLParameter']"/>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='ViewComponent']/@subContainerMappings[name='ViewComponentPart']"/>
+          <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_lKqk4BFPEeiZ14TmPBeBNA" name="«ConditionalExpression»  Homepage_promos" width="25" height="12">
+            <target xmi:type="core:ConditionalExpression" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewComponentParts.0/@subViewComponentParts.0"/>
+            <semanticElements xmi:type="core:ConditionalExpression" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewComponentParts.0/@subViewComponentParts.0"/>
+            <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_lKrL8BFPEeiZ14TmPBeBNA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+              <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='ViewComponent']/@subContainerMappings[name='ViewComponentPart']/@subContainerMappings[name='InternalViewComponentPart']/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='ViewComponent']/@subContainerMappings[name='ViewComponentPart']/@subContainerMappings[name='InternalViewComponentPart']"/>
+          </ownedDiagramElements>
         </ownedDiagramElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_UUZqYA82EeiZ14TmPBeBNA" name="«List» NewProducts" width="25" height="12">
@@ -1277,9 +1303,9 @@
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']"/>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_v00RcA9BEeiZ14TmPBeBNA" name="«Details» Footer Links" width="25" height="12">
-          <target xmi:type="ext:Details" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.0"/>
-          <semanticElements xmi:type="ext:Details" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.0"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_v00RcA9BEeiZ14TmPBeBNA" name="«Form» NewsletterSubscription" width="25" height="12">
+          <target xmi:type="ext:Form" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.0"/>
+          <semanticElements xmi:type="ext:Form" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.0"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1289,21 +1315,18 @@
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='InternalViewComponent']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='InternalViewComponent']"/>
-          <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_41MdEA9SEeiZ14TmPBeBNA" name="«Parameter»Footer Links CMS Block ID: Invalid Type Footer Links CMS Block ID" width="20" height="3">
-            <target xmi:type="core:IFMLParameter" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.0/@parameters.0"/>
-            <semanticElements xmi:type="core:IFMLParameter" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.0/@parameters.0"/>
-            <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-            <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-            <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-            <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_41NEIA9SEeiZ14TmPBeBNA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-              <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='InternalViewComponent']/@subContainerMappings[name='IFMLParameter']/@style"/>
+          <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ixaZEBFQEeiZ14TmPBeBNA" name="«SimpleField»emailField: String" width="20" height="3">
+            <target xmi:type="ext:SimpleField" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.0/@viewComponentParts.0"/>
+            <semanticElements xmi:type="ext:SimpleField" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.0/@viewComponentParts.0"/>
+            <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ixbnMBFQEeiZ14TmPBeBNA" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+              <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='InternalViewComponent']/@subContainerMappings[name='ViewComponentPart']/@conditionnalStyles.0/@style"/>
             </ownedStyle>
-            <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='InternalViewComponent']/@subContainerMappings[name='IFMLParameter']"/>
+            <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='InternalViewComponent']/@subContainerMappings[name='ViewComponentPart']"/>
           </ownedDiagramElements>
         </ownedDiagramElements>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_MBmrwA9MEeiZ14TmPBeBNA" name="«Form» NewsletterSubscription" width="25" height="12">
-          <target xmi:type="ext:Form" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.1"/>
-          <semanticElements xmi:type="ext:Form" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.1"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_MBmrwA9MEeiZ14TmPBeBNA" name="«ViewComponent» FooterLinks" width="25" height="12">
+          <target xmi:type="core:ViewComponent" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.1"/>
+          <semanticElements xmi:type="core:ViewComponent" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.1"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1311,17 +1334,6 @@
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='InternalViewComponent']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='InternalViewComponent']"/>
-          <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_41NEIQ9SEeiZ14TmPBeBNA" name="«SimpleField»emailField: String" width="20" height="3">
-            <target xmi:type="ext:SimpleField" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.1/@viewComponentParts.0"/>
-            <semanticElements xmi:type="ext:SimpleField" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.4/@viewElements.1/@viewComponentParts.0"/>
-            <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-            <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-            <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-            <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_41NrMA9SEeiZ14TmPBeBNA" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-              <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='InternalViewComponent']/@subContainerMappings[name='ViewComponentPart']/@conditionnalStyles.0/@style"/>
-            </ownedStyle>
-            <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='InternalViewComponent']/@subContainerMappings[name='ViewComponentPart']"/>
-          </ownedDiagramElements>
         </ownedDiagramElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_41D6MA9SEeiZ14TmPBeBNA" name="[L] Header">
@@ -1435,7 +1447,7 @@
                 <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='ViewComponentPart']/@style"/>
               </ownedStyle>
               <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='ViewComponentPart']"/>
-              <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_lZXsEBFLEeiZ14TmPBeBNA" name="«ConditionalExpression»  " width="25" height="12">
+              <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_lZXsEBFLEeiZ14TmPBeBNA" name="«ConditionalExpression»  Eyewear" width="25" height="12">
                 <target xmi:type="core:ConditionalExpression" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.0/@viewElements.0/@viewComponentParts.0/@subViewComponentParts.0"/>
                 <semanticElements xmi:type="core:ConditionalExpression" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.0/@viewElements.0/@viewComponentParts.0/@subViewComponentParts.0"/>
                 <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1469,13 +1481,27 @@
               <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']"/>
-            <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_41KA0g9SEeiZ14TmPBeBNA" name="«Parameter»Category ID: Category Category ID" width="20" height="3">
-              <target xmi:type="core:IFMLParameter" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.1/@viewElements.0/@parameters.0"/>
-              <semanticElements xmi:type="core:IFMLParameter" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.1/@viewElements.0/@parameters.0"/>
-              <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_41Kn4A9SEeiZ14TmPBeBNA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-                <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='IFMLParameter']/@style"/>
+            <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ln5a0BFMEeiZ14TmPBeBNA" name="«DataBinding»  Category" width="20" height="3">
+              <target xmi:type="core:DataBinding" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.1/@viewElements.0/@viewComponentParts.0"/>
+              <semanticElements xmi:type="core:DataBinding" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.1/@viewElements.0/@viewComponentParts.0"/>
+              <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+              <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+              <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+              <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ln6B4BFMEeiZ14TmPBeBNA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+                <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='ViewComponentPart']/@style"/>
               </ownedStyle>
-              <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='IFMLParameter']"/>
+              <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='ViewComponentPart']"/>
+              <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ln6o8BFMEeiZ14TmPBeBNA" name="«ConditionalExpression»  Women" width="25" height="12">
+                <target xmi:type="core:ConditionalExpression" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.1/@viewElements.0/@viewComponentParts.0/@subViewComponentParts.0"/>
+                <semanticElements xmi:type="core:ConditionalExpression" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.1/@viewElements.0/@viewComponentParts.0/@subViewComponentParts.0"/>
+                <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+                <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+                <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+                <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ln7QABFMEeiZ14TmPBeBNA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+                  <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='ViewComponentPart']/@subContainerMappings[name='InternalViewComponentPart']/@style"/>
+                </ownedStyle>
+                <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='ViewComponentPart']/@subContainerMappings[name='InternalViewComponentPart']"/>
+              </ownedDiagramElements>
             </ownedDiagramElements>
           </ownedDiagramElements>
         </ownedDiagramElements>
@@ -1499,13 +1525,24 @@
               <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']"/>
-            <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_41LO8A9SEeiZ14TmPBeBNA" name="«Parameter»Category ID: Category Category ID" width="20" height="3">
-              <target xmi:type="core:IFMLParameter" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.2/@viewElements.0/@parameters.0"/>
-              <semanticElements xmi:type="core:IFMLParameter" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.2/@viewElements.0/@parameters.0"/>
-              <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_41LO8Q9SEeiZ14TmPBeBNA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
-                <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='IFMLParameter']/@style"/>
+            <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ejqGkBFNEeiZ14TmPBeBNA" name="«DataBinding»  Category" width="20" height="3">
+              <target xmi:type="core:DataBinding" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.2/@viewElements.0/@viewComponentParts.0"/>
+              <semanticElements xmi:type="core:DataBinding" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.2/@viewElements.0/@viewComponentParts.0"/>
+              <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ejqtoBFNEeiZ14TmPBeBNA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+                <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='ViewComponentPart']/@style"/>
               </ownedStyle>
-              <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='IFMLParameter']"/>
+              <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='ViewComponentPart']"/>
+              <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ejqtoRFNEeiZ14TmPBeBNA" name="«ConditionalExpression»  Men" width="25" height="12">
+                <target xmi:type="core:ConditionalExpression" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.2/@viewElements.0/@viewComponentParts.0/@subViewComponentParts.0"/>
+                <semanticElements xmi:type="core:ConditionalExpression" href="models/MadisonIsland.core#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.2/@viewElements.0/@viewComponentParts.0/@subViewComponentParts.0"/>
+                <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+                <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+                <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+                <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ejqtohFNEeiZ14TmPBeBNA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+                  <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='ViewComponentPart']/@subContainerMappings[name='InternalViewComponentPart']/@style"/>
+                </ownedStyle>
+                <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='InternalViewContainer']/@subContainerMappings[name='DoubleInternalViewContainer']/@subContainerMappings[name='DoubleInternalViewComponent']/@subContainerMappings[name='ViewComponentPart']/@subContainerMappings[name='InternalViewComponentPart']"/>
+              </ownedDiagramElements>
             </ownedDiagramElements>
           </ownedDiagramElements>
         </ownedDiagramElements>
