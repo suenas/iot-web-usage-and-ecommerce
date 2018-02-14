@@ -14,29 +14,29 @@
       </viewElements>
       <viewElements xsi:type="ext:IFMLWindow" id="_5-vt0A9MEeiZ14TmPBeBNA" name="HighlightedCategoriesCarousel" isXOR="true">
         <viewElements xsi:type="ext:IFMLWindow" id="_Gp5KwA9NEeiZ14TmPBeBNA" name="HighlightedCategoryBanner #1" isLandmark="true" isDefault="true">
-          <viewElements xsi:type="ext:Details" id="_JWyO0A9NEeiZ14TmPBeBNA" name="Category">
-            <parameters id="_Xx834A9NEeiZ14TmPBeBNA" name="Category ID">
-              <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
-            </parameters>
+          <viewElements xsi:type="ext:Details" id="_JWyO0A9NEeiZ14TmPBeBNA" name="CategoryDetail">
+            <viewComponentParts xsi:type="core:DataBinding" id="_eCOFvREGEeiZ14TmPBeBNA" name="Category" uniformResourceIdentifier="" domainConcept="//@domainModel/@domainElements.0">
+              <subViewComponentParts xsi:type="core:ConditionalExpression" id="_M7MF_hFLEeiZ14TmPBeBNA" language="" body="CategoryId=18" name="Eyewear #18"/>
+            </viewComponentParts>
           </viewElements>
         </viewElements>
         <viewElements xsi:type="ext:IFMLWindow" id="_Gp5KwA9NEeiZ14TmPBeBNA" name="HighlightedCategoryBanner #2" isLandmark="true">
-          <viewElements xsi:type="ext:Details" id="_JWyO0A9NEeiZ14TmPBeBNA" name="Category">
-            <parameters id="_Xx834A9NEeiZ14TmPBeBNA" name="Category ID">
-              <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
-            </parameters>
+          <viewElements xsi:type="ext:Details" id="_JWyO0A9NEeiZ14TmPBeBNA" name="CategoryDetail">
+            <viewComponentParts xsi:type="core:DataBinding" id="_TbvzfRFMEeiZ14TmPBeBNA" name="Category">
+              <subViewComponentParts xsi:type="core:ConditionalExpression" id="_M7MF_hFLEeiZ14TmPBeBNA" language="" body="CategoryId=4" name="Women #4"/>
+            </viewComponentParts>
           </viewElements>
         </viewElements>
         <viewElements xsi:type="ext:IFMLWindow" id="_Gp5KwA9NEeiZ14TmPBeBNA" name="HighlightedCategoryBanner #3" isLandmark="true">
-          <viewElements xsi:type="ext:Details" id="_JWyO0A9NEeiZ14TmPBeBNA" name="Category">
-            <parameters id="_Xx834A9NEeiZ14TmPBeBNA" name="Category ID">
-              <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
-            </parameters>
+          <viewElements xsi:type="ext:Details" id="_JWyO0A9NEeiZ14TmPBeBNA" name="CategoryDetail">
+            <viewComponentParts xsi:type="core:DataBinding" id="_TbvzfRFMEeiZ14TmPBeBNA" name="Category">
+              <subViewComponentParts xsi:type="core:ConditionalExpression" id="_M7MF_hFLEeiZ14TmPBeBNA" language="" body="CategoryId=5" name="Men #5"/>
+            </viewComponentParts>
           </viewElements>
         </viewElements>
       </viewElements>
       <viewElements xsi:type="ext:Details" id="_AatdAA9TEeiZ14TmPBeBNA" name="Homepage CMS Content">
-        <parameters id="_Esc-8g9TEeiZ14TmPBeBNA" name="Homepage Content CMS Block ID"/>
+        <viewComponentParts xsi:type="core:DataBinding" id="_AYVXfRFNEeiZ14TmPBeBNA"/>
       </viewElements>
       <viewElements xsi:type="ext:List" id="_OWapAA82EeiZ14TmPBeBNA" name="NewProducts">
         <viewComponentParts xsi:type="core:DataBinding" id="_UkrroA9CEeiZ14TmPBeBNA" name="Product"/>
@@ -54,7 +54,7 @@
     </interactionFlowModelElements>
   </interactionFlowModel>
   <domainModel id="_uB1T4Q8gEeiZ14TmPBeBNA">
-    <domainElements xsi:type="core:UMLDomainConcept" id="_uB2iAA8gEeiZ14TmPBeBNA" name="Category">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_uB2iAA8gEeiZ14TmPBeBNA" name="Category" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.0/@viewElements.0/@viewComponentParts.0">
       <classifier xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
     </domainElements>
     <domainElements xsi:type="core:UMLStructuralFeature" id="_uB2iAQ8gEeiZ14TmPBeBNA" name="title">
