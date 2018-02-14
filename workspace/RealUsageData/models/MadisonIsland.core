@@ -6,7 +6,7 @@
         <viewElements xsi:type="ext:List" id="_v0p5YA9BEeiZ14TmPBeBNA" name="NavigationMenu">
           <viewComponentParts xsi:type="core:DataBinding" id="__mcXIA9BEeiZ14TmPBeBNA" name="CategoryList"/>
         </viewElements>
-        <viewElements xsi:type="ext:Form" id="_YWvrMA9GEeiZ14TmPBeBNA" name="SearchForm">
+        <viewElements xsi:type="ext:Form" id="_YWvrMA9GEeiZ14TmPBeBNA" name="Search">
           <viewComponentParts xsi:type="ext:SimpleField" id="_lWoCAA9GEeiZ14TmPBeBNA" name="Simple Field"/>
         </viewElements>
         <viewElements xsi:type="core:ViewComponent" id="_aQFfjQ9TEeiZ14TmPBeBNA" name="TopLinks"/>
@@ -41,7 +41,7 @@
         </viewComponentParts>
       </viewElements>
       <viewElements xsi:type="ext:List" id="_OWapAA82EeiZ14TmPBeBNA" name="NewProducts">
-        <viewComponentParts xsi:type="core:DataBinding" id="_UkrroA9CEeiZ14TmPBeBNA" name="Product" domainConcept="//@domainModel/@domainElements.3"/>
+        <viewComponentParts xsi:type="core:DataBinding" id="_UkrroA9CEeiZ14TmPBeBNA" name="ProductList" domainConcept="//@domainModel/@domainElements.3"/>
       </viewElements>
       <viewElements xsi:type="ext:IFMLWindow" id="_SmQ5YQ9REeiZ14TmPBeBNA" name="Footer">
         <viewElements xsi:type="ext:Form" id="_fK5kwA80EeiZ14TmPBeBNA" name="NewsletterSubscription">
@@ -52,6 +52,8 @@
         <viewElements xsi:type="core:ViewComponent" id="_dczr7RFQEeiZ14TmPBeBNA" name="FooterLinks"/>
       </viewElements>
     </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:IFMLAction" id="_K73xMBFZEeiZ14TmPBeBNA" name="Subscribe"/>
+    <interactionFlowModelElements xsi:type="core:IFMLAction" id="_5HZNgBFZEeiZ14TmPBeBNA" name="Action"/>
   </interactionFlowModel>
   <domainModel id="_uB1T4Q8gEeiZ14TmPBeBNA">
     <domainElements xsi:type="core:UMLDomainConcept" id="_uB2iAA8gEeiZ14TmPBeBNA" name="Category" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.0/@viewElements.0/@viewComponentParts.0">
