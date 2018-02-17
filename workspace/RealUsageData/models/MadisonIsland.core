@@ -86,7 +86,6 @@
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:IFMLAction" id="_K73xMBFZEeiZ14TmPBeBNA" name="Subscribe" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.8/@viewElementEvents.0/@outInteractionFlows.0">
       <parameters id="__7wCwhO1EeijSslFDgCgZA" name="Email"/>
-      <actionEvents id="_IcyPsBO2EeijSslFDgCgZA"/>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:IFMLAction" id="_5HZNgBFZEeiZ14TmPBeBNA" name="SearchKeyword" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.5/@viewElementEvents.0/@outInteractionFlows.0">
       <parameters id="_qH07AhIWEeijSslFDgCgZA" name="Keyword">
