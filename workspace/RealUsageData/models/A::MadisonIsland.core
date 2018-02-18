@@ -8,7 +8,7 @@
             <parameters id="_k3AFIhIXEeijSslFDgCgZA" name="CategoryId">
               <type xsi:type="uml:PrimitiveType" href="model.uml#_YGTmEJ6QEeGdnpRmAZh-dQ"/>
             </parameters>
-            <viewComponentParts xsi:type="core:DataBinding" id="_eCOFvREGEeiZ14TmPBeBNA" name="Category" uniformResourceIdentifier="" domainConcept="//@domainModel/@domainElements.0">
+            <viewComponentParts xsi:type="core:DataBinding" id="_eCOFvREGEeiZ14TmPBeBNA" name="Category" uniformResourceIdentifier="">
               <subViewComponentParts xsi:type="core:ConditionalExpression" id="_M7MF_hFLEeiZ14TmPBeBNA" language="" body="CategoryId=18" name="Eyewear"/>
             </viewComponentParts>
             <viewComponentParts xsi:type="core:VisualizationAttribute" id="_xz4LTxIXEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.4"/>
@@ -123,15 +123,18 @@
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.8"/>
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Price" featureConcept="//@domainModel/@domainElements.9"/>
         </viewElements>
-        <viewElements xsi:type="core:ViewComponent" id="_LK63wBSkEei3TrqMA9Bdvw" name="Product Filter Sidebar" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.9"/>
+        <viewElements xsi:type="core:ViewComponent" id="_LK63wBSkEei3TrqMA9Bdvw" name="Product Filter Sidebar">
+          <viewComponentParts xsi:type="core:DataBinding" id="_NCsBIBTlEei3TrqMA9Bdvw" name="Category" domainConcept="//@domainModel/@domainElements.0">
+            <subViewComponentParts xsi:type="core:ConditionalExpression" id="_7p4iThTkEei3TrqMA9Bdvw" body="Category.isAnchor==true" name="isAnchor==true"/>
+          </viewComponentParts>
+        </viewElements>
       </viewElements>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:ActivationExpression" id="_AnFe7xSfEei3TrqMA9Bdvw" language="Category.DisplayMode==PAGE" body="Category.DisplayMode==PAGE"/>
     <interactionFlowModelElements xsi:type="core:ActivationExpression" id="_DmcrrxSiEei3TrqMA9Bdvw" language="Category.DisplayMode==PRODUCTS" body="Category.DisplayMode==PRODUCTS"/>
-    <interactionFlowModelElements xsi:type="core:ActivationExpression" id="_PvPiFBSlEei3TrqMA9Bdvw" language="Category.isAnchor==true" body="Category.isAnchor==true"/>
   </interactionFlowModel>
   <domainModel id="_uB1T4Q8gEeiZ14TmPBeBNA" name="MadisonIsland">
-    <domainElements xsi:type="core:UMLDomainConcept" id="_uB2iAA8gEeiZ14TmPBeBNA" name="Category" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0/@viewElements.0/@viewComponentParts.0">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_uB2iAA8gEeiZ14TmPBeBNA" name="Category" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.1/@viewComponentParts.0">
       <classifier xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
     </domainElements>
     <domainElements xsi:type="core:UMLDomainConcept" id="_uY7guRFOEeiZ14TmPBeBNA" name="CMS Page">
