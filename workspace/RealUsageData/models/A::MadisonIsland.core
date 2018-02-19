@@ -105,9 +105,6 @@
       <viewElements xsi:type="core:ViewComponent" id="_dczr7RFQEeiZ14TmPBeBNA" name="FooterLinks"/>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_OMAw0BQNEei3TrqMA9Bdvw" name="Category" isXOR="true">
-      <parameters id="_fvSfQBSaEei3TrqMA9Bdvw" name="CategoryId">
-        <type xsi:type="uml:PrimitiveType" href="model.uml#_YGTmEJ6QEeGdnpRmAZh-dQ"/>
-      </parameters>
       <viewElements xsi:type="ext:IFMLWindow" id="_4SQZ0BQNEei3TrqMA9Bdvw" name="Category List" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.7">
         <viewElements xsi:type="ext:Details" id="_ZDhx4BSaEei3TrqMA9Bdvw" name="Subcategories CMS Block">
           <viewComponentParts xsi:type="core:DataBinding" id="_mC_5ABSaEei3TrqMA9Bdvw" name="CMS Block" domainConcept="//@domainModel/@domainElements.2">
@@ -124,17 +121,23 @@
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Price" featureConcept="//@domainModel/@domainElements.9"/>
         </viewElements>
         <viewElements xsi:type="core:ViewComponent" id="_LK63wBSkEei3TrqMA9Bdvw" name="Product Filter Sidebar">
-          <viewComponentParts xsi:type="core:DataBinding" id="_NCsBIBTlEei3TrqMA9Bdvw" name="Category" domainConcept="//@domainModel/@domainElements.0">
-            <subViewComponentParts xsi:type="core:ConditionalExpression" id="_7p4iThTkEei3TrqMA9Bdvw" body="Category.isAnchor==true" name="isAnchor==true"/>
-          </viewComponentParts>
+          <viewComponentParts xsi:type="core:DataBinding" id="_NCsBIBTlEei3TrqMA9Bdvw" name="Category"/>
         </viewElements>
       </viewElements>
+      <viewElements xsi:type="ext:Details" id="_3-CpYBU2Eeiwv_tcuWPBHQ" name="CategoryDetails">
+        <viewComponentParts xsi:type="core:DataBinding" id="_AZWBwBU3Eeiwv_tcuWPBHQ" name="Category" domainConcept="//@domainModel/@domainElements.0"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_ONpfIBU3Eeiwv_tcuWPBHQ" name="Name" featureConcept="//@domainModel/@domainElements.5"/>
+      </viewElements>
     </interactionFlowModelElements>
-    <interactionFlowModelElements xsi:type="core:ActivationExpression" id="_AnFe7xSfEei3TrqMA9Bdvw" language="Category.DisplayMode==PAGE" body="Category.DisplayMode==PAGE"/>
-    <interactionFlowModelElements xsi:type="core:ActivationExpression" id="_DmcrrxSiEei3TrqMA9Bdvw" language="Category.DisplayMode==PRODUCTS" body="Category.DisplayMode==PRODUCTS"/>
+    <interactionFlowModelElements xsi:type="core:ActivationExpression" id="_AnFe7xSfEei3TrqMA9Bdvw" language="Category.DisplayMode==PAGE" body="Category.DisplayMode==PAGE">
+      <annotations text="Category.DisplayMode==PAGE"/>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ActivationExpression" id="_DmcrrxSiEei3TrqMA9Bdvw" language="Category.DisplayMode==PRODUCTS" body="Category.DisplayMode==PRODUCTS">
+      <annotations text="Category.DisplayMode==PRODUCTS"/>
+    </interactionFlowModelElements>
   </interactionFlowModel>
   <domainModel id="_uB1T4Q8gEeiZ14TmPBeBNA" name="MadisonIsland">
-    <domainElements xsi:type="core:UMLDomainConcept" id="_uB2iAA8gEeiZ14TmPBeBNA" name="Category" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.1/@viewComponentParts.0">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_uB2iAA8gEeiZ14TmPBeBNA" name="Category" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.2/@viewComponentParts.0">
       <classifier xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
     </domainElements>
     <domainElements xsi:type="core:UMLDomainConcept" id="_uY7guRFOEeiZ14TmPBeBNA" name="CMS Page">
