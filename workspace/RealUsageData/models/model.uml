@@ -13,8 +13,14 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_nyxiEA9LEeiZ14TmPBeBNA" name="Product">
         <ownedAttribute xmi:id="_mvmNQBFNEeiZ14TmPBeBNA" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
         <ownedAttribute xmi:id="_XACYgBIbEeijSslFDgCgZA" name="Name" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        <ownedAttribute xmi:id="_uz3E4BVOEeirPYyfYcGcTQ" name="Description" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
         <ownedAttribute xmi:id="_b7aGUBIbEeijSslFDgCgZA" name="Price" type="_2toLoBIbEeijSslFDgCgZA"/>
         <ownedAttribute xmi:id="_dGbH8BIbEeijSslFDgCgZA" name="Image" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        <ownedAttribute xmi:id="_kv33cBVOEeirPYyfYcGcTQ" name="Stock" type="_YGTmEJ6QEeGdnpRmAZh-dQ"/>
+        <ownedAttribute xmi:id="_bzaA0BVQEeirPYyfYcGcTQ" name="Reviews" type="_kM6pcBVQEeirPYyfYcGcTQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A2DNEBVREeirPYyfYcGcTQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-MYcIBVQEeirPYyfYcGcTQ" value="*"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_sV2rsA9LEeiZ14TmPBeBNA" name="CMS Block">
         <ownedAttribute xmi:id="_m7JV8BFNEeiZ14TmPBeBNA" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
@@ -24,6 +30,7 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_uhy-0A9LEeiZ14TmPBeBNA" name="CMS Page">
         <ownedAttribute xmi:id="_nD3NEBFNEeiZ14TmPBeBNA" name="ID" isID="true"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:AssociationClass" xmi:id="_kM6pcBVQEeirPYyfYcGcTQ" name="Reviews"/>
     </packagedElement>
   </packagedElement>
 </uml:Model>

@@ -54,11 +54,12 @@
       </viewElements>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_LkRmfRPQEei3TrqMA9Bdvw" name="Product">
-      <viewElements xsi:type="ext:Details" id="_JFuo8BQMEei3TrqMA9Bdvw" name="ProductDetail">
-        <parameters id="_ZoAvghQMEei3TrqMA9Bdvw" name="ProductId">
-          <type xsi:type="uml:PrimitiveType" href="model.uml#_YGTmEJ6QEeGdnpRmAZh-dQ"/>
-        </parameters>
-        <viewComponentParts xsi:type="core:DataBinding" id="_pnec7RQMEei3TrqMA9Bdvw" name="Product" uniformResourceIdentifier=""/>
+      <viewElements xsi:type="ext:Details" id="_JFuo8BQMEei3TrqMA9Bdvw" name="ProductDetails">
+        <viewComponentParts xsi:type="core:DataBinding" id="_pnec7RQMEei3TrqMA9Bdvw" name="Product" uniformResourceIdentifier="">
+          <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+        </viewComponentParts>
       </viewElements>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:IFMLAction" id="_K73xMBFZEeiZ14TmPBeBNA" name="Subscribe" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
