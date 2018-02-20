@@ -53,12 +53,27 @@
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Price" featureConcept="//@domainModel/@domainElements.9"/>
       </viewElements>
     </interactionFlowModelElements>
-    <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_LkRmfRPQEei3TrqMA9Bdvw" name="Product">
+    <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_LkRmfRPQEei3TrqMA9Bdvw" name="Product" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.9/@actionEvents.0/@outInteractionFlows.0">
       <viewElements xsi:type="ext:Details" id="_JFuo8BQMEei3TrqMA9Bdvw" name="ProductDetails">
         <viewComponentParts xsi:type="core:DataBinding" id="_pnec7RQMEei3TrqMA9Bdvw" name="Product" uniformResourceIdentifier="">
           <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Price" featureConcept="//@domainModel/@domainElements.9"/>
           <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.7"/>
           <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_A92b8BYGEei8K98eudnXLw" name="Description" featureConcept="//@domainModel/@domainElements.10"/>
+        </viewComponentParts>
+      </viewElements>
+      <viewElements xsi:type="ext:Form" id="_TlvkIBYGEei8K98eudnXLw" name="AddToCartForm">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_8hNmoBYHEei8K98eudnXLw" name="OnSubmit Event">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_CSx8oBYIEei8K98eudnXLw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.9"/>
+        </viewElementEvents>
+        <viewComponentParts xsi:type="ext:SelectionField" id="_kAjJsBYGEei8K98eudnXLw" name="Color">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SelectionField" id="_qmgxEBYGEei8K98eudnXLw" name="Size">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SimpleField" id="_ufP9MBYGEei8K98eudnXLw" name="Quantity">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_YGTmEJ6QEeGdnpRmAZh-dQ"/>
         </viewComponentParts>
       </viewElements>
     </interactionFlowModelElements>
@@ -136,6 +151,11 @@
     <interactionFlowModelElements xsi:type="core:ActivationExpression" id="_DmcrrxSiEei3TrqMA9Bdvw" language="Category.DisplayMode==PRODUCTS" body="Category.DisplayMode==PRODUCTS">
       <annotations text="Category.DisplayMode==PRODUCTS"/>
     </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:IFMLAction" id="__4fEcBYHEei8K98eudnXLw" name="Add To Cart" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0">
+      <actionEvents id="_OxijYBYIEei8K98eudnXLw" name="OK">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_Fw30IBYIEei8K98eudnXLw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1"/>
+      </actionEvents>
+    </interactionFlowModelElements>
   </interactionFlowModel>
   <domainModel id="_uB1T4Q8gEeiZ14TmPBeBNA" name="MadisonIsland">
     <domainElements xsi:type="core:UMLDomainConcept" id="_uB2iAA8gEeiZ14TmPBeBNA" name="Category" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.2/@viewComponentParts.0">
@@ -167,6 +187,9 @@
     </domainElements>
     <domainElements xsi:type="core:UMLStructuralFeature" id="_Eri02hIYEeijSslFDgCgZA" name="ProductPrice">
       <structuralFeature xsi:type="uml:Property" href="model.uml#_b7aGUBIbEeijSslFDgCgZA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_Eri02hIYEeijSslFDgCgZA" name="ProductDescription">
+      <structuralFeature xsi:type="uml:Property" href="model.uml#_uz3E4BVOEeirPYyfYcGcTQ"/>
     </domainElements>
   </domainModel>
 </core:IFMLModel>

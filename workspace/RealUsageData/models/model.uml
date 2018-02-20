@@ -7,7 +7,7 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_h37GQNs8EeOsnrVUDdvbPA" name="magento" URI="">
       <packagedElement xmi:type="uml:Class" xmi:id="__W1boJ6PEeGdnpRmAZh-dQ" name="Category">
         <ownedAttribute xmi:id="_jEpi8J6QEeGdnpRmAZh-dQ" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
-        <ownedAttribute xmi:id="_bOD_gBIYEeijSslFDgCgZA" name="Image" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        <ownedAttribute xmi:id="_bOD_gBIYEeijSslFDgCgZA" name="Image" type="_AY4RMBYHEei8K98eudnXLw"/>
         <ownedAttribute xmi:id="__JPNYBIYEeijSslFDgCgZA" name="Name" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_nyxiEA9LEeiZ14TmPBeBNA" name="Product">
@@ -15,12 +15,7 @@
         <ownedAttribute xmi:id="_XACYgBIbEeijSslFDgCgZA" name="Name" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
         <ownedAttribute xmi:id="_uz3E4BVOEeirPYyfYcGcTQ" name="Description" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
         <ownedAttribute xmi:id="_b7aGUBIbEeijSslFDgCgZA" name="Price" type="_2toLoBIbEeijSslFDgCgZA"/>
-        <ownedAttribute xmi:id="_dGbH8BIbEeijSslFDgCgZA" name="Image" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
-        <ownedAttribute xmi:id="_kv33cBVOEeirPYyfYcGcTQ" name="Stock" type="_YGTmEJ6QEeGdnpRmAZh-dQ"/>
-        <ownedAttribute xmi:id="_bzaA0BVQEeirPYyfYcGcTQ" name="Reviews" type="_kM6pcBVQEeirPYyfYcGcTQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A2DNEBVREeirPYyfYcGcTQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-MYcIBVQEeirPYyfYcGcTQ" value="*"/>
-        </ownedAttribute>
+        <ownedAttribute xmi:id="_dGbH8BIbEeijSslFDgCgZA" name="Image"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_sV2rsA9LEeiZ14TmPBeBNA" name="CMS Block">
         <ownedAttribute xmi:id="_m7JV8BFNEeiZ14TmPBeBNA" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
@@ -30,7 +25,10 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_uhy-0A9LEeiZ14TmPBeBNA" name="CMS Page">
         <ownedAttribute xmi:id="_nD3NEBFNEeiZ14TmPBeBNA" name="ID" isID="true"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:AssociationClass" xmi:id="_kM6pcBVQEeirPYyfYcGcTQ" name="Reviews"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_AY4RMBYHEei8K98eudnXLw" name="Image">
+        <ownedAttribute xmi:id="_DWwXkBYHEei8K98eudnXLw" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
+        <ownedAttribute xmi:id="_F8sfEBYHEei8K98eudnXLw" name="Filename" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+      </packagedElement>
     </packagedElement>
   </packagedElement>
 </uml:Model>
