@@ -223,9 +223,65 @@
         <viewComponentParts xsi:type="ext:SelectionField" id="_3olX4BYUEei7CeUmDWw_LA" name="CategoryFilter"/>
       </viewElements>
     </interactionFlowModelElements>
-    <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_sPdD0BYREei7CeUmDWw_LA" name="Cart Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.9/@outInteractionFlows.0" isLandmark="true"/>
+    <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_sPdD0BYREei7CeUmDWw_LA" name="Shopping Cart" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.9/@outInteractionFlows.0" isLandmark="true">
+      <viewElements xsi:type="ext:List" id="_d0KBUBelEeiSW7o0_NEi-w" name="Products List" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.13/@actionEvents.0/@outInteractionFlows.1 //@interactionFlowModel/@interactionFlowModelElements.14/@actionEvents.0/@outInteractionFlows.0">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_3d9GABelEeiSW7o0_NEi-w" name="Update cart">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_WGVIEBenEeiSW7o0_NEi-w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.14"/>
+        </viewElementEvents>
+        <viewElementEvents id="_STHKmBemEeiSW7o0_NEi-w" name="Empty cart">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_rInEgBemEeiSW7o0_NEi-w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.13"/>
+        </viewElementEvents>
+        <viewComponentParts xsi:type="core:DataBinding" id="_gruEUBelEeiSW7o0_NEi-w" name="Quote Items" domainConcept="//@domainModel/@domainElements.12"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+        <viewComponentParts xsi:type="ext:SimpleField" id="_JP9dIBeoEeiSW7o0_NEi-w" name="Quantities" direction="inout">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_YGTmEJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+      </viewElements>
+      <viewElements xsi:type="ext:Form" id="_DgrmIBeoEeiSW7o0_NEi-w" name="Discount Code">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_MHU2YBepEeiSW7o0_NEi-w" name="Apply"/>
+        <viewComponentParts xsi:type="ext:SimpleField" id="_FpQcMBeoEeiSW7o0_NEi-w" name="Discount Field" direction="out">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+      </viewElements>
+      <viewElements xsi:type="ext:Form" id="_US3w8BeoEeiSW7o0_NEi-w" name="Estimate Shipping And Tax">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_HzzywBepEeiSW7o0_NEi-w" name="Estimate"/>
+        <viewComponentParts xsi:type="ext:SelectionField" id="_WmicsBeoEeiSW7o0_NEi-w" name="Country">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SimpleField" id="_bq3SMBeoEeiSW7o0_NEi-w" name="State/Province" direction="out">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SimpleField" id="_kP_U8BeoEeiSW7o0_NEi-w" name="City" direction="out">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SimpleField" id="_nEHCYBeoEeiSW7o0_NEi-w" name="Zip Code" direction="out">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+      </viewElements>
+      <viewElements xsi:type="core:ViewComponent" id="_v0mAkBeoEeiSW7o0_NEi-w" name="Cart Summary">
+        <viewElementEvents id="_AxZf8BepEeiSW7o0_NEi-w" name="Proceed To Checkout"/>
+        <viewComponentParts xsi:type="core:DataBinding" id="_yzpLoBeoEeiSW7o0_NEi-w" name="Quote" domainConcept="//@domainModel/@domainElements.11"/>
+      </viewElements>
+    </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:IFMLAction" id="_wNYKkBYUEei7CeUmDWw_LA" name="FilterByCategory" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0">
       <outInteractionFlows xsi:type="core:NavigationFlow" id="_03QfwBYUEei7CeUmDWw_LA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.10"/>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:IFMLAction" id="_kiazoBemEeiSW7o0_NEi-w" name="Empty Cart" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0/@viewElementEvents.1/@outInteractionFlows.0">
+      <actionEvents id="_sHuYIBemEeiSW7o0_NEi-w">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_9GjQwBemEeiSW7o0_NEi-w"/>
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_Ig3X8BenEeiSW7o0_NEi-w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0"/>
+      </actionEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:IFMLAction" id="_S4FqcBenEeiSW7o0_NEi-w" name="Update the quantities" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <actionEvents id="_XazAoBenEeiSW7o0_NEi-w">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_ZBGQEBenEeiSW7o0_NEi-w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0">
+          <parameterBindingGroup id="_dQdzghenEeiSW7o0_NEi-w">
+            <parameterBindings id="_d_I3YhenEeiSW7o0_NEi-w" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0/@viewComponentParts.4" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0/@viewComponentParts.4"/>
+          </parameterBindingGroup>
+        </outInteractionFlows>
+      </actionEvents>
     </interactionFlowModelElements>
   </interactionFlowModel>
   <domainModel id="_uB1T4Q8gEeiZ14TmPBeBNA" name="MadisonIsland">
@@ -262,5 +318,7 @@
     <domainElements xsi:type="core:UMLStructuralFeature" id="_Eri02hIYEeijSslFDgCgZA" name="ProductDescription">
       <structuralFeature xsi:type="uml:Property" href="model.uml#_uz3E4BVOEeirPYyfYcGcTQ"/>
     </domainElements>
+    <domainElements xsi:type="core:DomainConcept" id="_3Gx0wxeoEeiSW7o0_NEi-w" name="Quote" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.3/@viewComponentParts.0"/>
+    <domainElements xsi:type="core:DomainConcept" id="_7B18IxeoEeiSW7o0_NEi-w" name="Quote Item" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0/@viewComponentParts.0"/>
   </domainModel>
 </core:IFMLModel>
