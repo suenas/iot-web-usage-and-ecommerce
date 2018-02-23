@@ -47,7 +47,7 @@
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_yX6lHxIaEeijSslFDgCgZA" name="Content" featureConcept="//@domainModel/@domainElements.6"/>
       </viewElements>
       <viewElements xsi:type="ext:List" id="_OWapAA82EeiZ14TmPBeBNA" name="NewProducts">
-        <viewElementEvents xsi:type="ext:OnSelectEvent" id="_HLfeYBYQEei7CeUmDWw_LA" name="Product Selected">
+        <viewElementEvents xsi:type="ext:OnSelectEvent" id="_HLfeYBYQEei7CeUmDWw_LA" name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_MHeQMBYQEei7CeUmDWw_LA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
             <parameterBindingGroup id="_jzFfAhYSEei7CeUmDWw_LA">
               <parameterBindings id="_kf2eYhYSEei7CeUmDWw_LA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
@@ -77,7 +77,7 @@
         </viewComponentParts>
       </viewElements>
       <viewElements xsi:type="ext:Form" id="_TlvkIBYGEei8K98eudnXLw" name="AddToCartForm">
-        <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_8hNmoBYHEei8K98eudnXLw" name="Add To Cart">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_8hNmoBYHEei8K98eudnXLw" name="Add To Cart" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_CSx8oBYIEei8K98eudnXLw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.9">
             <parameterBindingGroup id="_LEjy8hYWEei7CeUmDWw_LA">
               <parameterBindings id="_LrpoIhYWEei7CeUmDWw_LA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewComponentParts.2" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewComponentParts.2"/>
@@ -95,7 +95,7 @@
         </viewComponentParts>
       </viewElements>
       <viewElements xsi:type="ext:List" id="_SbJfoBYOEei7CeUmDWw_LA" name="RelatedProductList">
-        <viewElementEvents xsi:type="ext:OnSelectEvent" id="_Xj1bQBYPEei7CeUmDWw_LA" name="Product Selected">
+        <viewElementEvents xsi:type="ext:OnSelectEvent" id="_Xj1bQBYPEei7CeUmDWw_LA" name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_cHKcgBYPEei7CeUmDWw_LA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
             <parameterBindingGroup id="_kYhKghYWEei7CeUmDWw_LA">
               <parameterBindings id="_kuWQkhYWEei7CeUmDWw_LA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
@@ -110,7 +110,7 @@
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:IFMLAction" id="_K73xMBFZEeiZ14TmPBeBNA" name="Subscribe" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
       <parameters id="__7wCwhO1EeijSslFDgCgZA" name="Email"/>
-      <actionEvents id="_9tp84BYNEei7CeUmDWw_LA"/>
+      <actionEvents id="_9tp84BYNEei7CeUmDWw_LA" name="Subscribed"/>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:IFMLAction" id="_5HZNgBFZEeiZ14TmPBeBNA" name="SearchKeyword" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0">
       <parameters id="_qH07AhIWEeijSslFDgCgZA" name="Keyword">
@@ -157,19 +157,33 @@
       <parameters id="_MXrIABYTEei7CeUmDWw_LA" name="Category">
         <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
       </parameters>
-      <viewElements xsi:type="ext:IFMLWindow" id="_4SQZ0BQNEei3TrqMA9Bdvw" name="Category List" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.7">
+      <viewElements xsi:type="ext:IFMLWindow" id="_4SQZ0BQNEei3TrqMA9Bdvw" name="Category List" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.7">
         <viewElements xsi:type="ext:Details" id="_ZDhx4BSaEei3TrqMA9Bdvw" name="Subcategories CMS Block">
-          <viewElementEvents xsi:type="ext:OnSelectEvent" id="_uv8VgBYPEei7CeUmDWw_LA" name="Category Selected"/>
+          <viewElementEvents xsi:type="ext:OnSelectEvent" id="_uv8VgBYPEei7CeUmDWw_LA" name="Category Selected">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_cvL5FxhwEeiVYrwhmOBoTw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0">
+              <parameterBindingGroup id="_W9X2AhhxEeiVYrwhmOBoTw">
+                <parameterBindings id="_Y9ALchhxEeiVYrwhmOBoTw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
           <viewComponentParts xsi:type="core:DataBinding" id="_mC_5ABSaEei3TrqMA9Bdvw" name="CMS Block" domainConcept="//@domainModel/@domainElements.2">
-            <subViewComponentParts xsi:type="core:ConditionalExpression" id="_0JAKbhSaEei3TrqMA9Bdvw" body="ID=Category.landing_page" name="Category.landing_page"/>
+            <subViewComponentParts xsi:type="core:ConditionalExpression" id="_0JAKbhSaEei3TrqMA9Bdvw" body="CmsBlockId=Category.landing_page" name="CmsBlockId=Category.landing_page"/>
           </viewComponentParts>
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_3wf1jxSaEei3TrqMA9Bdvw" name="content" featureConcept="//@domainModel/@domainElements.6"/>
         </viewElements>
       </viewElements>
       <viewElements xsi:type="ext:IFMLWindow" id="_5xnTwBQNEei3TrqMA9Bdvw" name="Product List">
         <viewElements xsi:type="ext:List" id="_0Q5ogBSiEei3TrqMA9Bdvw" name="Category Products">
-          <viewElementEvents xsi:type="ext:OnSelectEvent" id="_qi34IBYPEei7CeUmDWw_LA" name="Product Selected"/>
-          <viewComponentParts xsi:type="core:DataBinding" id="__nUuMBSiEei3TrqMA9Bdvw" name="Product" domainConcept="//@domainModel/@domainElements.3"/>
+          <viewElementEvents xsi:type="ext:OnSelectEvent" id="_qi34IBYPEei7CeUmDWw_LA" name="Product Selected">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_VocqdxhxEeiVYrwhmOBoTw">
+              <parameterBindingGroup id="_fh6p8hhxEeiVYrwhmOBoTw">
+                <parameterBindings id="_gCY5whhxEeiVYrwhmOBoTw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="core:DataBinding" id="__nUuMBSiEei3TrqMA9Bdvw" name="Product" domainConcept="//@domainModel/@domainElements.3">
+            <conditionalExpression id="_1A-pExhwEeiVYrwhmOBoTw" body="Category IN Product.Categories" name="Category IN Product.Categories"/>
+          </viewComponentParts>
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.7"/>
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.8"/>
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Price" featureConcept="//@domainModel/@domainElements.9"/>
@@ -318,7 +332,7 @@
     <domainElements xsi:type="core:UMLStructuralFeature" id="_Eri02hIYEeijSslFDgCgZA" name="ProductDescription">
       <structuralFeature xsi:type="uml:Property" href="model.uml#_uz3E4BVOEeirPYyfYcGcTQ"/>
     </domainElements>
-    <domainElements xsi:type="core:DomainConcept" id="_3Gx0wxeoEeiSW7o0_NEi-w" name="Quote" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.3/@viewComponentParts.0"/>
-    <domainElements xsi:type="core:DomainConcept" id="_7B18IxeoEeiSW7o0_NEi-w" name="Quote Item" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0/@viewComponentParts.0"/>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_Jxe4-RhwEeiVYrwhmOBoTw" name="Quote" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.3/@viewComponentParts.0"/>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_L1D6SRhwEeiVYrwhmOBoTw" name="Quote Item" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0/@viewComponentParts.0"/>
   </domainModel>
 </core:IFMLModel>
