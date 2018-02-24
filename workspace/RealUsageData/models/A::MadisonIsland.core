@@ -29,7 +29,7 @@
               <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
             </parameters>
             <viewElementEvents xsi:type="ext:OnSelectEvent" id="__OwTcBlTEei9lfhE3hacCg" name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.1">
-              <outInteractionFlows xsi:type="core:NavigationFlow" id="_jtrupxlUEei9lfhE3hacCg">
+              <outInteractionFlows xsi:type="core:NavigationFlow" id="_jtrupxlUEei9lfhE3hacCg" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6">
                 <parameterBindingGroup id="_negU4hlUEei9lfhE3hacRg">
                   <parameterBindings id="_n_sWYhlUEei9lfhE3hacCg" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@parameters.0"/>
                 </parameterBindingGroup>
@@ -47,7 +47,7 @@
               <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
             </parameters>
             <viewElementEvents xsi:type="ext:OnSelectEvent" id="_NybYQBlUEei9lfhE3hacCg" name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.2">
-              <outInteractionFlows xsi:type="core:NavigationFlow" id="_jtrupxlUEei9lfhE3hacCg">
+              <outInteractionFlows xsi:type="core:NavigationFlow" id="_jtrupxlUEei9lfhE3hacCg" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6">
                 <parameterBindingGroup id="_negU4hlUEei9lfeE3hacCg">
                   <parameterBindings id="_n_sWYhlUEei9lfhE3hacCg" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.2/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@parameters.0"/>
                 </parameterBindingGroup>
@@ -67,7 +67,7 @@
         <parameters id="_OJMdAhlVEei9lfhE3hacCg" name="SelectedCategory" direction="out">
           <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
         </parameters>
-        <viewElementEvents xsi:type="ext:OnSelectEvent" id="_2wYjgBlUEei9lfhE3hacCg" name="Details">
+        <viewElementEvents xsi:type="ext:OnSelectEvent" id="_2wYjgBlUEei9lfhE3hacCg" name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_5fnJ4BlUEei9lfhE3hacCg" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6">
             <parameterBindingGroup id="_GrXZghlVEei9lfhE3hacCg">
               <parameterBindings id="_HgwJYhlVEei9lfhE3hacCg" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@parameters.1" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.10/@parameters.0"/>
@@ -186,7 +186,7 @@
       </viewElements>
       <viewElements xsi:type="core:ViewComponent" id="_dczr7RFQEeiZ14TmPBeBNA" name="FooterLinks"/>
     </interactionFlowModelElements>
-    <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_OMAw0BQNEei3TrqMA9Bdvw" name="Category" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" isXOR="true">
+    <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_OMAw0BQNEei3TrqMA9Bdvw" name="Category" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.2/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0" isXOR="true">
       <parameters id="_MXrIABYTEei7CeUmDWw_LA" name="Category">
         <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
       </parameters>
