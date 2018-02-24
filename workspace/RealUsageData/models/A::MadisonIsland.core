@@ -247,7 +247,7 @@
         <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
       </parameters>
       <viewElements xsi:type="ext:List" id="_0Q5ogBSiEei3TrqMA9Bdvw" name="Category Products">
-        <viewElementEvents xsi:type="ext:OnSelectEvent" id="_qi34IBYPEei7CeUmDWw_LA" name="OnSelect Event" viewElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0">
+        <viewElementEvents xsi:type="ext:OnSelectEvent" id="_qi34IBYPEei7CeUmDWw_LA" name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TJ5NRxYUEei7CeUmDWw_LA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
             <parameterBindingGroup id="_U-q9kBYUEei7CeUmDWw_LA">
               <parameterBindings id="_VyiDchYUEei7CeUmDWw_LA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
