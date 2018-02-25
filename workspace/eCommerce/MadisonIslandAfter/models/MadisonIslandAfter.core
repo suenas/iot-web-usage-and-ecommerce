@@ -137,7 +137,9 @@
             </parameterBindingGroup>
           </outInteractionFlows>
         </viewElementEvents>
-        <viewComponentParts xsi:type="core:DataBinding" id="_XAghMBYOEei7CeUmDWw_LA" name="Product"/>
+        <viewComponentParts xsi:type="core:DataBinding" id="_XAghMBYOEei7CeUmDWw_LA" name="Product">
+          <subViewComponentParts xsi:type="core:ConditionalExpression" id="_FNGxThpREei1nozxvUPcjg" language="SQL" body="Product.ID IN getCustomizedRelatedProducts()" name="Product.ID IN getCustomizedRelatedProducts" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.17"/>
+        </viewComponentParts>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.7"/>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.8"/>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Price" featureConcept="//@domainModel/@domainElements.9"/>
@@ -245,7 +247,7 @@
           </outInteractionFlows>
         </viewElementEvents>
         <viewComponentParts xsi:type="core:DataBinding" id="__nUuMBSiEei3TrqMA9Bdvw" name="Product">
-          <subViewComponentParts xsi:type="core:ConditionalExpression" id="_1A-pExhwEeiVYrwhmOBoTw" language="SQL" body="Product.ID IN GetRecentlyViewedProducts()" name="Product.ID IN GetRecentlyViewedProducts()"/>
+          <subViewComponentParts xsi:type="core:ConditionalExpression" id="_1A-pExhwEeiVYrwhmOBoTw" language="SQL" body="Product.ID IN (407,413,404)" name="Product.ID IN (407,413,404)"/>
         </viewComponentParts>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.7"/>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.8"/>
@@ -359,6 +361,9 @@
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:ActivationExpression" id="CartIsEmpty" language="SQL" body="CartIsEmpty()">
       <annotations text="Cart.isEmpty()"/>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ActivationExpression" id="CurrentProduct.hasCustomizedRelatedProduct" language="SQL" body="CurrentProduct.hasCustomizedRelatedProduct()">
+      <annotations text="CurrentProduct.hasCustomizedRelatedProduct()"/>
     </interactionFlowModelElements>
   </interactionFlowModel>
   <domainModel id="_uB1T4Q8gEeiZ14TmPBeBNA" name="MadisonIsland">
