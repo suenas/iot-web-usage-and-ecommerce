@@ -96,7 +96,7 @@
       sessionId="89376f84-065b -11e8- ba89-0ed5f89f718b"
       sessionDuration="345">
     <sessionRegions
-        regionId="156"
+        regionId="0"
         regionLabel="store-entrance"
         detectionCount="2"
         maxSecondsInRegion="5"
@@ -108,7 +108,7 @@
           minorId="79"/>
     </sessionRegions>
     <sessionRegions
-        regionId="645"
+        regionId="20"
         regionLabel="shoes"
         detectionCount="1"
         maxSecondsInRegion="24"
@@ -121,7 +121,7 @@
           minorId="49"/>
     </sessionRegions>
     <sessionRegions
-        regionId="6875"
+        regionId="19"
         regionLabel="jewelry"
         detectionCount="1"
         maxSecondsInRegion="15"
@@ -134,7 +134,7 @@
           minorId="59"/>
     </sessionRegions>
     <sessionRegions
-        regionId="2563"
+        regionId="40"
         regionLabel="blazers"
         detectionCount="1"
         maxSecondsInRegion="195"
@@ -147,7 +147,7 @@
           minorId="27"/>
     </sessionRegions>
     <sessionRegions
-        regionId="456"
+        regionId="16"
         regionLabel="tees-knits-polos"
         detectionCount="1"
         maxSecondsInRegion="10"
@@ -160,7 +160,7 @@
           minorId="36"/>
     </sessionRegions>
     <sessionRegions
-        regionId="998"
+        regionId="21"
         regionLabel="bags-and-luggage"
         detectionCount="1"
         maxSecondsInRegion="7"

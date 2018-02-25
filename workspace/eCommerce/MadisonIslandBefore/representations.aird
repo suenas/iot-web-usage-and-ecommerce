@@ -3334,13 +3334,35 @@
         </ownedDiagramElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_wNnbIBYUEei7CeUmDWw_LA" name="«Action» FilterByCategory" outgoingEdges="_03WmYBYUEei7CeUmDWw_LA" incomingEdges="_zNY-8BYUEei7CeUmDWw_LA" width="-1" height="-1" resizeKind="NSEW">
-      <target xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.12"/>
-      <semanticElements xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.12"/>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="__4rRsBYHEei8K98eudnXLw" name="«Action» Add To Cart" outgoingEdges="_4xiukBYVEei7CeUmDWw_LA" incomingEdges="_CTXLcBYIEei8K98eudnXLw" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.9"/>
+      <semanticElements xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.9"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_wNuv4BYUEei7CeUmDWw_LA" labelSize="9" showIcon="false" labelPosition="node" workspacePath="/IFMLEditorDesign/img/components/Action.png">
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="__4wxQBYHEei8K98eudnXLw" labelSize="9" showIcon="false" labelPosition="node" workspacePath="/IFMLEditorDesign/img/components/Action.png">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_kiynEBemEeiSW7o0_NEi-w" name="«Action» Empty Cart" incomingEdges="_rJSZ8BemEeiSW7o0_NEi-w" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.13"/>
+      <semanticElements xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.13"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_sH1s4BemEeiSW7o0_NEi-w" outgoingEdges="_fW288BjTEeihmu35TgofEw" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="core:ActionEvent" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.13/@actionEvents.0"/>
+        <semanticElements xmi:type="core:ActionEvent" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.13/@actionEvents.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_sH1s4RemEeiSW7o0_NEi-w" labelSize="9" showIcon="false" labelAlignment="LEFT" workspacePath="/IFMLEditorDesign/img/components/ActionEvent.png">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']/@borderedNodeMappings[name='ActionEvent']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']/@borderedNodeMappings[name='ActionEvent']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_ki570BemEeiSW7o0_NEi-w" labelSize="9" showIcon="false" labelPosition="node" workspacePath="/IFMLEditorDesign/img/components/Action.png">
         <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']"/>
@@ -3400,35 +3422,13 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_kiynEBemEeiSW7o0_NEi-w" name="«Action» Empty Cart" incomingEdges="_rJSZ8BemEeiSW7o0_NEi-w" width="-1" height="-1" resizeKind="NSEW">
-      <target xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.13"/>
-      <semanticElements xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.13"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_sH1s4BemEeiSW7o0_NEi-w" outgoingEdges="_fW288BjTEeihmu35TgofEw" width="-1" height="-1" resizeKind="NSEW">
-        <target xmi:type="core:ActionEvent" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.13/@actionEvents.0"/>
-        <semanticElements xmi:type="core:ActionEvent" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.13/@actionEvents.0"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_sH1s4RemEeiSW7o0_NEi-w" labelSize="9" showIcon="false" labelAlignment="LEFT" workspacePath="/IFMLEditorDesign/img/components/ActionEvent.png">
-          <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']/@borderedNodeMappings[name='ActionEvent']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']/@borderedNodeMappings[name='ActionEvent']"/>
-      </ownedBorderedNodes>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_wNnbIBYUEei7CeUmDWw_LA" name="«Action» FilterByCategory" outgoingEdges="_03WmYBYUEei7CeUmDWw_LA" incomingEdges="_zNY-8BYUEei7CeUmDWw_LA" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.12"/>
+      <semanticElements xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.12"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_ki570BemEeiSW7o0_NEi-w" labelSize="9" showIcon="false" labelPosition="node" workspacePath="/IFMLEditorDesign/img/components/Action.png">
-        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="__4rRsBYHEei8K98eudnXLw" name="«Action» Add To Cart" outgoingEdges="_4xiukBYVEei7CeUmDWw_LA" incomingEdges="_CTXLcBYIEei8K98eudnXLw" width="-1" height="-1" resizeKind="NSEW">
-      <target xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.9"/>
-      <semanticElements xmi:type="core:IFMLAction" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.9"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="__4wxQBYHEei8K98eudnXLw" labelSize="9" showIcon="false" labelPosition="node" workspacePath="/IFMLEditorDesign/img/components/Action.png">
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_wNuv4BYUEei7CeUmDWw_LA" labelSize="9" showIcon="false" labelPosition="node" workspacePath="/IFMLEditorDesign/img/components/Action.png">
         <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='Action']"/>
@@ -4119,18 +4119,6 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@containerMappings[name='ViewContainer']/@subContainerMappings[name='IFMLParameter']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Inim8BSiEei3TrqMA9Bdvw" name="«Activation Expression»" outgoingEdges="_dnG8cBU3Eeiwv_tcuWPBHQ" width="12" height="5" resizeKind="NSEW">
-      <target xmi:type="core:ActivationExpression" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.8"/>
-      <semanticElements xmi:type="core:ActivationExpression" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.8"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Square" xmi:id="_Inim8RSiEei3TrqMA9Bdvw" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="166,193,152">
-        <customFeatures>color</customFeatures>
-        <description xmi:type="style:SquareDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='ActivationExpression']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='ActivationExpression']"/>
-    </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_IXNL4Bk3Eei9lfhE3hacCg" name="«Activation Expression»" outgoingEdges="_KAQ0YBk3Eei9lfhE3hacCg" width="12" height="5" resizeKind="NSEW">
       <target xmi:type="core:ActivationExpression" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.16"/>
       <semanticElements xmi:type="core:ActivationExpression" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.16"/>
@@ -4163,6 +4151,18 @@
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" xmi:id="_xv80IBjTEeihmu35TgofEw" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="166,193,152">
+        <customFeatures>color</customFeatures>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='ActivationExpression']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='ActivationExpression']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Inim8BSiEei3TrqMA9Bdvw" name="«Activation Expression»" outgoingEdges="_dnG8cBU3Eeiwv_tcuWPBHQ" width="12" height="5" resizeKind="NSEW">
+      <target xmi:type="core:ActivationExpression" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.8"/>
+      <semanticElements xmi:type="core:ActivationExpression" href="models/MadisonIslandBefore.core#//@interactionFlowModel/@interactionFlowModelElements.8"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" xmi:id="_Inim8RSiEei3TrqMA9Bdvw" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" width="12" height="5" color="166,193,152">
         <customFeatures>color</customFeatures>
         <description xmi:type="style:SquareDescription" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']/@ownedRepresentations[name='IFMLDiagram']/@defaultLayer/@nodeMappings[name='ActivationExpression']/@style"/>
       </ownedStyle>

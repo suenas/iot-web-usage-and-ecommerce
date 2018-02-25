@@ -6,7 +6,7 @@
         <viewElements xsi:type="ext:IFMLWindow" id="_Gp5KwA9NEeiZ14TmPBeBNA" name="HighlightedCategoryBanner #1" isLandmark="true" isDefault="true">
           <viewElements xsi:type="ext:Details" id="_JWyO0A9NEeiZ14TmPBeBNA" name="CategoryDetail">
             <parameters id="_k3AFIhIXEeijSslFDgCgZA" name="Highlighted Category #1" direction="inout">
-              <constraints id="_wbdzYBlVEei9lfhE3hacCg" language="SQL" body="Category.ID=18"/>
+              <constraints id="_wbdzYBlVEei9lfhE3hacCg" language="SQL" body="Category.ID=40"/>
               <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
             </parameters>
             <viewElementEvents xsi:type="ext:OnSelectEvent" id="_HPi6EBlUEei9lfhE3hacCg" name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0">
@@ -17,7 +17,7 @@
               </outInteractionFlows>
             </viewElementEvents>
             <viewComponentParts xsi:type="core:DataBinding" id="_eCOFvREGEeiZ14TmPBeBNA" name="Category" uniformResourceIdentifier="">
-              <subViewComponentParts xsi:type="core:ConditionalExpression" id="_M7MF_hFLEeiZ14TmPBeBNA" language="SQL" body="Category.ID=18" name="Eyewear"/>
+              <subViewComponentParts xsi:type="core:ConditionalExpression" id="_M7MF_hFLEeiZ14TmPBeBNA" language="SQL" body="Category.ID=40" name="Blazers"/>
             </viewComponentParts>
             <viewComponentParts xsi:type="core:VisualizationAttribute" id="_xz4LTxIXEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.4"/>
           </viewElements>
@@ -25,7 +25,7 @@
         <viewElements xsi:type="ext:IFMLWindow" id="_Gp5KwA9NEeiZ14TmPBeBNA" name="HighlightedCategoryBanner #2" isLandmark="true">
           <viewElements xsi:type="ext:Details" id="_JWyO0A9NEeiZ14TmPBeBNA" name="CategoryDetail">
             <parameters id="_k3AFIhIXEeijSslFDgCgZA" name="Highlighted Category #2" direction="inout">
-              <constraints id="_0SlZcBlWEei9lfhE3hacCg" language="SQL" body="Category.ID=4"/>
+              <constraints id="_0SlZcBlWEei9lfhE3hacCg" language="SQL" body="Category.ID=16"/>
               <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
             </parameters>
             <viewElementEvents xsi:type="ext:OnSelectEvent" id="__OwTcBlTEei9lfhE3hacCg" name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.1">
@@ -36,7 +36,7 @@
               </outInteractionFlows>
             </viewElementEvents>
             <viewComponentParts xsi:type="core:DataBinding" id="_TbvzfRFMEeiZ14TmPBeBNA" name="Category">
-              <subViewComponentParts xsi:type="core:ConditionalExpression" id="_M7MF_hFLEeiZ14TmPBeBNA" language="SQL" body="Category.ID=4" name="Women"/>
+              <subViewComponentParts xsi:type="core:ConditionalExpression" id="_M7MF_hFLEeiZ14TmPBeBNA" language="SQL" body="Category.ID=16" name="Tees, Knits and Polos"/>
             </viewComponentParts>
             <viewComponentParts xsi:type="core:VisualizationAttribute" id="_xz4LTxIXEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.4"/>
           </viewElements>
@@ -44,6 +44,7 @@
         <viewElements xsi:type="ext:IFMLWindow" id="_Gp5KwA9NEeiZ14TmPBeBNA" name="HighlightedCategoryBanner #3" isLandmark="true">
           <viewElements xsi:type="ext:Details" id="_JWyO0A9NEeiZ14TmPBeBNA" name="CategoryDetail">
             <parameters id="_k3AFIhIXEeijSslFDgCgZA" name="Highlighted Category #3" direction="inout">
+              <constraints id="_2IVpABo5Eei1nozxvUPcjg" language="SQL" body="Category.ID=20"/>
               <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
             </parameters>
             <viewElementEvents xsi:type="ext:OnSelectEvent" id="_NybYQBlUEei9lfhE3hacCg" name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.2">
@@ -54,7 +55,7 @@
               </outInteractionFlows>
             </viewElementEvents>
             <viewComponentParts xsi:type="core:DataBinding" id="_TbvzfRFMEeiZ14TmPBeBNA" name="Category">
-              <subViewComponentParts xsi:type="core:ConditionalExpression" id="_M7MF_hFLEeiZ14TmPBeBNA" language="SQL" body="Category.ID=5" name="Men"/>
+              <subViewComponentParts xsi:type="core:ConditionalExpression" id="_M7MF_hFLEeiZ14TmPBeBNA" language="SQL" body="Category.ID=20" name="Shoes"/>
             </viewComponentParts>
             <viewComponentParts xsi:type="core:VisualizationAttribute" id="_xz4LTxIXEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.4"/>
           </viewElements>

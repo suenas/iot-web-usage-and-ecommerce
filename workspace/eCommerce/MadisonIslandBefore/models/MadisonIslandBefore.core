@@ -44,6 +44,7 @@
         <viewElements xsi:type="ext:IFMLWindow" id="_Gp5KwA9NEeiZ14TmPBeBNA" name="HighlightedCategoryBanner #3" isLandmark="true">
           <viewElements xsi:type="ext:Details" id="_JWyO0A9NEeiZ14TmPBeBNA" name="CategoryDetail">
             <parameters id="_k3AFIhIXEeijSslFDgCgZA" name="Highlighted Category #3" direction="inout">
+              <constraints id="_wMwbYBo5Eei1nozxvUPcjg" language="SQL" body="Category.ID=5"/>
               <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
             </parameters>
             <viewElementEvents xsi:type="ext:OnSelectEvent" id="_NybYQBlUEei9lfhE3hacCg" name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.2">
