@@ -294,7 +294,7 @@
         <viewComponentParts xsi:type="ext:SelectionField" id="_3olX4BYUEei7CeUmDWw_LA" name="CategoryFilter"/>
       </viewElements>
     </interactionFlowModelElements>
-    <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_sPdD0BYREei7CeUmDWw_LA" name="Shopping Cart" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.9/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.13/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.14/@actionEvents.0/@outInteractionFlows.0" isLandmark="true">
+    <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_sPdD0BYREei7CeUmDWw_LA" name="Shopping Cart" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.9/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.13/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.14/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.18/@actionEvents.0/@outInteractionFlows.0" isLandmark="true">
       <viewElements xsi:type="ext:List" id="_d0KBUBelEeiSW7o0_NEi-w" name="Products List" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.15">
         <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_3d9GABelEeiSW7o0_NEi-w" name="Update cart" viewElement="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_WGVIEBenEeiSW7o0_NEi-w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.14"/>
@@ -337,6 +337,13 @@
             <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
           </viewComponentParts>
         </viewElements>
+        <viewElements xsi:type="core:ViewComponent" id="_F9MJYBpcEei1nozxvUPcjg" name="Applicable Reward Points">
+          <viewElementEvents xsi:type="ext:OnSelectEvent" id="_X0jMgBpcEei1nozxvUPcjg" name="Apply Reward Points" viewElement="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.2/@viewElements.3">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_t76FNxpcEei1nozxvUPcjg" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.18/@actionEvents.0"/>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="core:DataBinding" id="_NqdXEBpcEei1nozxvUPcjg" name="Reward"/>
+          <viewComponentParts xsi:type="core:VisualizationAttribute" id="_ec4LYBpcEei1nozxvUPcjg" name="Available Reward Points" featureConcept="//@domainModel/@domainElements.14"/>
+        </viewElements>
       </viewElements>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:IFMLAction" id="_wNYKkBYUEei7CeUmDWw_LA" name="FilterByCategory" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0">
@@ -364,6 +371,11 @@
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:ActivationExpression" id="CurrentProduct.hasCustomizedRelatedProduct" language="SQL" body="CurrentProduct.hasCustomizedRelatedProduct()">
       <annotations text="CurrentProduct.hasCustomizedRelatedProduct()"/>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:IFMLAction" id="_5Pkx4hpcEei1nozxvUPcjg" name="Apply AvailableReward Points">
+      <actionEvents id="_8HINyBpcEei1nozxvUPcjg" name="Reward Points Applied" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.2/@viewElements.3/@viewElementEvents.0/@outInteractionFlows.0">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="__sqKBxpcEei1nozxvUPcjg" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.11"/>
+      </actionEvents>
     </interactionFlowModelElements>
   </interactionFlowModel>
   <domainModel id="_uB1T4Q8gEeiZ14TmPBeBNA" name="MadisonIsland">
