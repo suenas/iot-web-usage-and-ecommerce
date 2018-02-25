@@ -76,7 +76,7 @@
           </outInteractionFlows>
         </viewElementEvents>
         <viewComponentParts xsi:type="core:DataBinding" id="_AYVXfRFNEeiZ14TmPBeBNA" name="CMS Block">
-          <subViewComponentParts xsi:type="core:ConditionalExpression" id="__S6VnhFOEeiZ14TmPBeBNA" language="" body="ID=homepage_promos" name="Homepage_promos"/>
+          <subViewComponentParts xsi:type="core:ConditionalExpression" id="__S6VnhFOEeiZ14TmPBeBNA" language="SQL" body="CmsBlock.ID=homepage_promos" name="Homepage Promos CMS Block"/>
         </viewComponentParts>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_yX6lHxIaEeijSslFDgCgZA" name="Content" featureConcept="//@domainModel/@domainElements.6"/>
       </viewElements>
@@ -200,7 +200,7 @@
             </outInteractionFlows>
           </viewElementEvents>
           <viewComponentParts xsi:type="core:DataBinding" id="_mC_5ABSaEei3TrqMA9Bdvw" name="CMS Block" domainConcept="//@domainModel/@domainElements.2">
-            <subViewComponentParts xsi:type="core:ConditionalExpression" id="_0JAKbhSaEei3TrqMA9Bdvw" language="SQL" body="CmsBlockId=Category.landing_page" name="CmsBlockId=Category.landing_page"/>
+            <subViewComponentParts xsi:type="core:ConditionalExpression" id="_0JAKbhSaEei3TrqMA9Bdvw" language="SQL" body="CmsBlock.ID=Category.landing_page" name="Category Landing Page"/>
           </viewComponentParts>
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_3wf1jxSaEei3TrqMA9Bdvw" name="content" featureConcept="//@domainModel/@domainElements.6"/>
         </viewElements>
@@ -215,7 +215,7 @@
             </outInteractionFlows>
           </viewElementEvents>
           <viewComponentParts xsi:type="core:DataBinding" id="__nUuMBSiEei3TrqMA9Bdvw" name="Product" domainConcept="//@domainModel/@domainElements.3">
-            <conditionalExpression id="_1A-pExhwEeiVYrwhmOBoTw" language="SQL" body="Category IN Product.Categories" name="Category IN Product.Categories"/>
+            <conditionalExpression id="_1A-pExhwEeiVYrwhmOBoTw" language="SQL" body="Category IN Product.Categories" name="Category Products"/>
           </viewComponentParts>
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.7"/>
           <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.8"/>

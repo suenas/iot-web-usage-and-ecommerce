@@ -29,6 +29,11 @@
         <ownedAttribute xmi:id="_DWwXkBYHEei8K98eudnXLw" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
         <ownedAttribute xmi:id="_F8sfEBYHEei8K98eudnXLw" name="Filename" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NZH30BpOEei1nozxvUPcjg" name="Rewards">
+        <ownedAttribute xmi:id="_a4u3kBpOEei1nozxvUPcjg" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
+        <ownedAttribute xmi:id="_eHCmoBpOEei1nozxvUPcjg" name="Action Name" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        <ownedAttribute xmi:id="_kUMFYBpOEei1nozxvUPcjg" name="Points" type="_YGTmEJ6QEeGdnpRmAZh-dQ"/>
+      </packagedElement>
     </packagedElement>
   </packagedElement>
 </uml:Model>

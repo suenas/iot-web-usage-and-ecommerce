@@ -76,7 +76,7 @@
           </outInteractionFlows>
         </viewElementEvents>
         <viewComponentParts xsi:type="core:DataBinding" id="_AYVXfRFNEeiZ14TmPBeBNA" name="CMS Block">
-          <subViewComponentParts xsi:type="core:ConditionalExpression" id="__S6VnhFOEeiZ14TmPBeBNA" language="" body="ID=homepage_promos" name="Homepage_promos"/>
+          <subViewComponentParts xsi:type="core:ConditionalExpression" id="__S6VnhFOEeiZ14TmPBeBNA" language="SQL" body="CmsBlock.ID=homepage_promos" name="Homepage Promos CMS Block"/>
         </viewComponentParts>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_yX6lHxIaEeijSslFDgCgZA" name="Content" featureConcept="//@domainModel/@domainElements.6"/>
       </viewElements>
@@ -173,10 +173,9 @@
       <viewElements xsi:type="core:ViewComponent" id="_aQFfjQ9TEeiZ14TmPBeBNA" name="TopLinks"/>
       <viewElements xsi:type="core:ViewComponent" id="_ezXdfQ9TEeiZ14TmPBeBNA" name="LanguageSwitch"/>
       <viewElements xsi:type="ext:List" id="_gidZ0BpGEei1nozxvUPcjg" name="RecentRewardActions">
-        <viewComponentParts xsi:type="core:DataBinding" id="_p7-t8BpGEei1nozxvUPcjg" name="Rewards"/>
-        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_vXpFYBpGEei1nozxvUPcjg" name="Action Name"/>
-        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_BfeNcBpHEei1nozxvUPcjg" name="Points Attribution"/>
-        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_UC9WwBpHEei1nozxvUPcjg" name="Reward Points Total"/>
+        <viewComponentParts xsi:type="core:DataBinding" id="_p7-t8BpGEei1nozxvUPcjg" name="Rewards" domainConcept="//@domainModel/@domainElements.13"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_vXpFYBpGEei1nozxvUPcjg" name="Action Name" featureConcept="//@domainModel/@domainElements.15"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_BfeNcBpHEei1nozxvUPcjg" name="Points Attribution" featureConcept="//@domainModel/@domainElements.14"/>
       </viewElements>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_tTcDMBQKEei3TrqMA9Bdvw" name="Footer" isLandmark="true">
@@ -398,5 +397,12 @@
     </domainElements>
     <domainElements xsi:type="core:UMLDomainConcept" id="_Jxe4-RhwEeiVYrwhmOBoTw" name="Quote" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.2/@viewElements.0/@viewComponentParts.0"/>
     <domainElements xsi:type="core:UMLDomainConcept" id="_L1D6SRhwEeiVYrwhmOBoTw" name="Quote Item" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0/@viewComponentParts.0"/>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_UOemEhpOEei1nozxvUPcjg" name="Rewards" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.4/@viewComponentParts.0"/>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_xh-VWhpOEei1nozxvUPcjg" name="RewardPoints" visualizationAttribute="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.4/@viewComponentParts.2">
+      <structuralFeature xsi:type="uml:Property" href="model.uml#_kUMFYBpOEei1nozxvUPcjg"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_4kQFShpOEei1nozxvUPcjg" name="RewardName">
+      <structuralFeature xsi:type="uml:Property" href="model.uml#_XACYgBIbEeijSslFDgCgZA"/>
+    </domainElements>
   </domainModel>
 </core:IFMLModel>
