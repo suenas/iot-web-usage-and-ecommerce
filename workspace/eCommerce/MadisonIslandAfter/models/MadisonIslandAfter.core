@@ -80,25 +80,26 @@
         </viewComponentParts>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_yX6lHxIaEeijSslFDgCgZA" name="Content" featureConcept="//@domainModel/@domainElements.6"/>
       </viewElements>
-      <viewElements xsi:type="ext:List" id="_OWapAA82EeiZ14TmPBeBNA" name="NewProducts">
+      <viewElements xsi:type="ext:List" id="_OWapAA82EeiZ14TmPBeBNB" name="InteractedWithProducts">
+        <parameters id="_1CkCwhYSEei7CeUmDWw_LA" name="SelectedProduct">
+          <type xsi:type="uml:Class" href="model.uml#_nyxiEA9LEeiZ14TmPBeBNA"/>
+        </parameters>
         <viewElementEvents xsi:type="ext:OnSelectEvent" id="_HLfeYBYQEei7CeUmDWw_LA" name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_MHeQMBYQEei7CeUmDWw_LA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
             <parameterBindingGroup id="_jzFfAhYSEei7CeUmDWw_LA">
-              <parameterBindings id="_kf2eYhYSEei7CeUmDWw_LA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
+              <parameterBindings id="_kf2eYhYSEei7CeUmDWw_LA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
             </parameterBindingGroup>
           </outInteractionFlows>
         </viewElementEvents>
         <viewComponentParts xsi:type="core:DataBinding" id="_UkrroA9CEeiZ14TmPBeBNA" name="Product">
-          <parameters id="_1CkCwhYSEei7CeUmDWw_LA" name="SelectedProduct">
-            <type xsi:type="uml:Class" href="model.uml#_nyxiEA9LEeiZ14TmPBeBNA"/>
-          </parameters>
+          <subViewComponentParts xsi:type="core:ConditionalExpression" id="_xfNFUxo6Eei1nozxvUPcjg" language="SQL" body="Product.sku IN ('wbk012c-Red-S','msj006c-Khaki-L','shm00110')" name="Product.sku IN ('wbk012c-Red-S','msj006c-Khaki-L','shm00110')"/>
         </viewComponentParts>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.7"/>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.8"/>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Price" featureConcept="//@domainModel/@domainElements.9"/>
       </viewElements>
     </interactionFlowModelElements>
-    <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_LkRmfRPQEei3TrqMA9Bdvw" name="Product" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+    <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_LkRmfRPQEei3TrqMA9Bdvw" name="Product" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.3/@viewElementEvents.0/@outInteractionFlows.0">
       <parameters id="_EMxjIBYTEei7CeUmDWw_LA" name="Product">
         <type xsi:type="uml:Class" href="model.uml#_nyxiEA9LEeiZ14TmPBeBNA"/>
       </parameters>
@@ -132,7 +133,7 @@
         <viewElementEvents xsi:type="ext:OnSelectEvent" id="_Xj1bQBYPEei7CeUmDWw_LA" name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_cHKcgBYPEei7CeUmDWw_LA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
             <parameterBindingGroup id="_kYhKghYWEei7CeUmDWw_LA">
-              <parameterBindings id="_kuWQkhYWEei7CeUmDWw_LA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
+              <parameterBindings id="_kuWQkhYWEei7CeUmDWw_LA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
             </parameterBindingGroup>
           </outInteractionFlows>
         </viewElementEvents>
@@ -230,6 +231,21 @@
         <viewComponentParts xsi:type="core:DataBinding" id="_AZWBwBU3Eeiwv_tcuWPBHQ" name="Category" domainConcept="//@domainModel/@domainElements.0"/>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_ONpfIBU3Eeiwv_tcuWPBHQ" name="Name" featureConcept="//@domainModel/@domainElements.5"/>
       </viewElements>
+      <viewElements xsi:type="ext:List" id="_0Q5ogBSiEei3TrqMA9Bdvw" name="RecentlyViewedProducts">
+        <viewElementEvents xsi:type="ext:OnSelectEvent" id="_ID6cwBpFEei1nozxvUPcjg" name="Product Selected">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TIj18BpFEei1nozxvUPcjg" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
+            <parameterBindingGroup id="_Zjy0AhpFEei1nozxvUPcjg">
+              <parameterBindings id="_aDSMYhpFEei1nozxvUPcjg" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </viewElementEvents>
+        <viewComponentParts xsi:type="core:DataBinding" id="__nUuMBSiEei3TrqMA9Bdvw" name="Product">
+          <subViewComponentParts xsi:type="core:ConditionalExpression" id="_1A-pExhwEeiVYrwhmOBoTw" language="SQL" body="Product.ID IN GetRecentlyViewedProducts()" name="Product.ID IN GetRecentlyViewedProducts()"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_jeQzzxIbEeijSslFDgCgZA" name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+      </viewElements>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:ActivationExpression" id="CategoryDisplayModeIsPage" language="Category.DisplayMode==PAGE" body="Category.DisplayMode==PAGE">
       <annotations text="Category.DisplayMode==PAGE"/>
@@ -251,7 +267,7 @@
         <viewElementEvents xsi:type="ext:OnSelectEvent" id="_qi34IBYPEei7CeUmDWw_LA" name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TJ5NRxYUEei7CeUmDWw_LA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
             <parameterBindingGroup id="_U-q9kBYUEei7CeUmDWw_LA">
-              <parameterBindings id="_VyiDchYUEei7CeUmDWw_LA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewComponentParts.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
+              <parameterBindings id="_VyiDchYUEei7CeUmDWw_LA" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
             </parameterBindingGroup>
           </outInteractionFlows>
         </viewElementEvents>
