@@ -237,7 +237,7 @@
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_ONpfIBU3Eeiwv_tcuWPBHQ" name="Name" featureConcept="//@domainModel/@domainElements.5"/>
       </viewElements>
       <viewElements xsi:type="ext:List" id="_0Q5ogBSiEei3TrqMA9Bdvw" name="RecentlyViewedProducts">
-        <viewElementEvents xsi:type="ext:OnSelectEvent" id="_ID6cwBpFEei1nozxvUPcjg" name="Product Selected">
+        <viewElementEvents xsi:type="ext:OnSelectEvent" id="_ID6cwBpFEei1nozxvUPcjg" name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.3">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_TIj18BpFEei1nozxvUPcjg" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
             <parameterBindingGroup id="_Zjy0AhpFEei1nozxvUPcjg">
               <parameterBindings id="_aDSMYhpFEei1nozxvUPcjg" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
