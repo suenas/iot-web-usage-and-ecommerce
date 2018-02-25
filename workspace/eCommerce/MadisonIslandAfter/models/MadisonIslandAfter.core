@@ -80,7 +80,7 @@
         </viewComponentParts>
         <viewComponentParts xsi:type="core:VisualizationAttribute" id="_yX6lHxIaEeijSslFDgCgZA" name="Content" featureConcept="//@domainModel/@domainElements.6"/>
       </viewElements>
-      <viewElements xsi:type="ext:List" id="_OWapAA82EeiZ14TmPBeBNB" name="InteractedWithProducts">
+      <viewElements xsi:type="ext:List" id="_OWapAA82EeiZ14TmPBeBNB" name="RecentlyInteractedProducts">
         <parameters id="_1CkCwhYSEei7CeUmDWw_LA" name="SelectedProduct">
           <type xsi:type="uml:Class" href="model.uml#_nyxiEA9LEeiZ14TmPBeBNA"/>
         </parameters>
@@ -172,6 +172,12 @@
       </viewElements>
       <viewElements xsi:type="core:ViewComponent" id="_aQFfjQ9TEeiZ14TmPBeBNA" name="TopLinks"/>
       <viewElements xsi:type="core:ViewComponent" id="_ezXdfQ9TEeiZ14TmPBeBNA" name="LanguageSwitch"/>
+      <viewElements xsi:type="ext:List" id="_gidZ0BpGEei1nozxvUPcjg" name="RecentRewardActions">
+        <viewComponentParts xsi:type="core:DataBinding" id="_p7-t8BpGEei1nozxvUPcjg" name="Rewards"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_vXpFYBpGEei1nozxvUPcjg" name="Action Name"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_BfeNcBpHEei1nozxvUPcjg" name="Points Attribution"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute" id="_UC9WwBpHEei1nozxvUPcjg" name="Reward Points Total"/>
+      </viewElements>
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_tTcDMBQKEei3TrqMA9Bdvw" name="Footer" isLandmark="true">
       <viewElements xsi:type="ext:Form" id="_fK5kwA80EeiZ14TmPBeBNA" name="NewsletterSubscriptionForm">
