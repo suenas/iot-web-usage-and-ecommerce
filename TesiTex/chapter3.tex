@@ -68,6 +68,7 @@ In the following subsections, we analyse some scenarios related to users navigat
 
 \newpage
 \subsection{The product page journey}
+\label{the-product-page-journey}
 
 Starting from the homepage, the user can interact with the navigation menu by choosing from a set of available categories.  (Figure \ref{fig:navigation})
 
@@ -136,14 +137,14 @@ The same sequence of actions can be expressed as a stream of records in the acce
   \end{center}
   \vspace{0.5cm}
 
-  It is important to notice that both entries 2 and 3 record a \textit{"Category Page"} pageview action by logging their related URLs. The entry 4, on its turn, tracks a \textit{"Product Page"} visit by logging a specific URL that concatenates the product URL key and the category path. \textcolor{red}{This concatenation indicates that the product was accessed directly from a category page.}
+  It is important to notice that both entries 2 and 3 record a \textit{"Category Page"} pageview action by logging their related URLs. The entry 4, on its turn, tracks a \textit{"Product Page"} visit happened after visiting a category page by logging a specific URL that concatenates the product URL key and the category path. 
 
 
 \subsection{Products association and correlation}
 
 In this section, we analyze the set of actions that can generate pageviews among different product pages on the Madison Island website. 
 
-For doing so, we consider a \textit{"Plaid Cotton Shirt"} widget presented to customers just below the \textit{"Add to Cat"} button on the \textit{"Plaid Cotton Shirt"} discussed on \textcolor{red}{3.2.1}.
+For doing so, we consider a \textit{"Related Products"} widget presented to customers just below the \textit{"Add to Cart"} button on the \textit{"Plaid Cotton Shirt"} page discussed on \ref{the-product-page-journey}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -165,7 +166,9 @@ By clicking either on the product name or on its thumbnail, the user is directed
 \end{figure}
 \vspace{0.5cm}
 
-Besides using the simple navigational shortcut available on the related products section, the user can reach a product page in several other ways. The tracking of user interactions could help in establishing a correlation pattern among \textcolor{red}{products}. For instance, users can click on the "back" button in their browser to quickly go to the previous category page and to choose a different item. They can also reach the navigation menu to browser another category, or use the search function on the top bar to perform a global product search. 
+Besides using the simple navigational shortcut available on the related products section, the user can reach a product page in several other ways. For instance, users can click on the "back" button in their browser to quickly go to the previous category page and to choose a different item. They can also reach the navigation menu to browse another category, or use the search function on the top bar to perform a global product search.
+Consequently, the tracking of all these possible user interactions can help in establishing a correlation pattern among different products on the website.
+
 Figure \ref{fig:product-search} illustrates the result of the search by the term "blazer" on the search bar within a given product page.
 
 \vspace{0.5cm}
@@ -177,7 +180,7 @@ Figure \ref{fig:product-search} illustrates the result of the search by the term
 \end{figure}
 \vspace{0.5cm}
 
-When the search is performed, the user is taken to the search result page, which lists the products matching searched term. From there, the user can freely browse to any of the available product pages, similarly to the navigation process described for the category listing page. (Figure \ref{fig:search-results})
+When the search is performed, the user is taken to the search result page, which lists the products matching the searched term. From there, the user can freely browse to any of the available product pages, similarly to the navigation process described for the category listing page. (Figure \ref{fig:search-results})
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -255,7 +258,7 @@ As described in Section \ref{beacons}, a beacon can simply be seen as a lighthou
   \item The Minor ID, which reports the exact location or object (in our case, the spot): e.g. 23369
 \end{itemize}
 
-Unlike QR and NFC communication, the customer needs to have an app installed on his phone to receive this one-way data stream. Technically, the app obeys only to "its" iBeacons, i.e., those with fitting UUID, Major and Minor IDs \textcolor{red}{looking for a match}. When that happens, the app can react accordingly. Such mechanism ensures that only the installed app can track users as they passively walk around the transmitters. 
+Unlike QR and NFC communication, the customer needs to have an app installed on his phone to receive this one-way data stream. Technically, the app obeys only to iBeacons with UUID, Major and Minor IDs matching to predefined values. When that happens, the app can react accordingly. Such mechanism ensures that only the installed app can track users as they passively walk around the transmitters. 
 
 In other words, the phone OS will keep listening for beacons even if the app is not running, and even if the phone is locked or rebooted. Once either an “enter” or and “exit” event happens, the OS will launch the app into the background (if needed) and let it execute, for a few seconds, some code to handle the event.
 
