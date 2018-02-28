@@ -42,7 +42,7 @@ IFML supports the following concepts:
 
 \newpage
 
-\section{Navigational modeling for the Web}
+\section{Web navigation profiling}
 \label{navigational-modeling-for-the-web}
 The front-end of eCommerce websites is usually built using shared and reusable components (forms, list views, detail views, etc.), which have a specific and expected behavior.
 For example, product lists and grids show users record details and create possibilities for interaction. Similarly, "add to cart" buttons are placed on strategic points within product pages to trigger a specific user action.
@@ -51,7 +51,6 @@ These interactions and any other user action withing the website can be represen
 To demonstrate the versatility and adaptability of this modeling language, we introduce a real-life example which will serve as reference from this chapter forward: an online boutique website called \textit{"Madison Island"} and specialized in fashion items running on an eCommerce platform.
 
 Madison Island presents all the features of a typical digital store including catalog navigation, product searching, customer account, shopping cart, and order processing. 
-
 
 \vspace{0.5cm}
 \begin{figure}[htbp]
@@ -228,7 +227,7 @@ These new navigational paths are represented in the application server access lo
 The sequence of actions as seen in this log reveals that the user browsed from one product to another, taking advantage of the related product links (ID 2). In fact, the target URL does not include any category path beside the URL key related to the product, which indicates a direct access. The entries 3 and 4 illustrate the journey of an user who has clicked on the browser back button and has performed the same actions again. The last three recorded actions show, respectively, a direct access to a category page through the navigational menu, a search by the \textit{"blazer"} term as per the previous example, and the related redirection to the product page.
 
 \newpage
-\section{IoT behavioral modeling}
+\section{IoT behavior profiling}
 
 As mobile devices surpass desktop computers in driving purchases and in enriching behaviour data, location and proximity tracking becomes a valuable tool for brands and stores. In the following subsections, we analyse two possible scenarios of customer interaction in the physical world based on the recording and reporting capabilities of IoT devices. Such data would then be collected together with other web-based information \ref{beacons} to form a comprehensive behavioral data stream that could leverage for generating tailored customizations of the Madison eCommerce portal.
 
