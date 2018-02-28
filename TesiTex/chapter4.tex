@@ -6,7 +6,7 @@ After summarily describing three different streams of real usage data obtained b
 Concretely, the first two section objectives are to illustrate the defining languages (metamodels) for both the real usage data and the eCommerce platform interactions used in the previous examples and generate actual models based upon them representing the very same information.
 Finally, in the last section of this chapter, we will be using the very same generation for updating the previously instantiated models leveraging model transformation techniques based upon usage pattern detection resulting from the Big Data analysis.
 
-\section{Representing Real Usage Data}
+\section{Real usage data modeling}
 
 \subsection{Metamodel}
 
@@ -242,7 +242,7 @@ The RealUsageData metamodel defined above allow us to create dynamic instances w
 </RealUsageData:Dataset>
 \end{lstlisting}
 
-\section{Representing our eCommerce application with IFML}
+\section{eCommerce application modeling}
 
 As per briefly introduced in \ref{the-ifml-language}, interaction flow models are platform independent-level models which can be used to define the interactions between the users of an application and the application itself. They describe the user interface components required at the front-end of the
 application, without specifying layout details of these elements enhancing the separation of concerns among developers and UX designers where the latter build the user interface accordingly to an interaction flow model. Besides defining components of the User Interface, the interaction flow model explains how data flows among different sections of the application upon triggering events and introduces the business logic carried out using this data.
@@ -295,8 +295,8 @@ Essentially, the domain model objective is offering to the interaction flow refe
 
 Although some partial IFML model representations for the Madison Island eCommerce platform have been already summarily introduced in \ref{navigational-modeling-for-the-web}, in this subsection we examine them in more detail and with a more global approach not strictly related to the navigational modeling. The final goal is to model, taking advantage of the IFML metamodel described just above, an IFML model which would represent the main pages and interactions of the website on top of which we would perform transformations dictated by the Real Usage Data models illustrated in \ref{real-usage-data-model}.
 
-\section{Updating the web models through real usage data}
+\section{Models combination}
 
 \subsection{Transformation}
 
-\subsection{Updated Models}
+\subsection{Updated web models}
