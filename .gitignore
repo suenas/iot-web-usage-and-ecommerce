@@ -38,3 +38,4 @@
 .vscode/
 *.vscodeLog
 .DS_Store
+.idea

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:IFMLModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:core="http://www.omg.org/spec/IFML/core"
+    xmlns:ext="http://www.omg.org/spec/IFML/ext"
+    xsi:schemaLocation="http://www.omg.org/spec/IFML/core ../metamodels/IFML.ecore#/0/core http://www.omg.org/spec/IFML/ext ../metamodels/IFML.ecore#/0/extensions">
+  <interactionFlowModel>
+    <interactionFlowModelElements
+        xsi:type="ext:Window"/>
+  </interactionFlowModel>
+</core:IFMLModel>
