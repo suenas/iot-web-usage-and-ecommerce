@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_5ATRMIPREeGsVZAesWUgWw" name="UML Model" URI="">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_VK2hkJ6QEeGdnpRmAZh-dQ" name="String"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_YGTmEJ6QEeGdnpRmAZh-dQ" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_2toLoBIbEeijSslFDgCgZA" name="Float"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_d3ZQENs8EeOsnrVUDdvbPA" name="org" URI="">
+    <packagedElement xmi:type="uml:Package" xmi:id="_h37GQNs8EeOsnrVUDdvbPA" name="magento" URI="">
+      <packagedElement xmi:type="uml:Class" xmi:id="__W1boJ6PEeGdnpRmAZh-dQ" name="Category">
+        <ownedAttribute xmi:id="_jEpi8J6QEeGdnpRmAZh-dQ" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
+        <ownedAttribute xmi:id="_bOD_gBIYEeijSslFDgCgZA" name="Image" type="_AY4RMBYHEei8K98eudnXLw"/>
+        <ownedAttribute xmi:id="__JPNYBIYEeijSslFDgCgZA" name="Name" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_nyxiEA9LEeiZ14TmPBeBNA" name="Product">
+        <ownedAttribute xmi:id="_mvmNQBFNEeiZ14TmPBeBNA" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
+        <ownedAttribute xmi:id="_XACYgBIbEeijSslFDgCgZA" name="Name" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        <ownedAttribute xmi:id="_uz3E4BVOEeirPYyfYcGcTQ" name="Description" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        <ownedAttribute xmi:id="_b7aGUBIbEeijSslFDgCgZA" name="Price" type="_2toLoBIbEeijSslFDgCgZA"/>
+        <ownedAttribute xmi:id="_dGbH8BIbEeijSslFDgCgZA" name="Image"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sV2rsA9LEeiZ14TmPBeBNA" name="CMS Block">
+        <ownedAttribute xmi:id="_m7JV8BFNEeiZ14TmPBeBNA" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
+        <ownedAttribute xmi:id="_zW2WwBFPEeiZ14TmPBeBNA" name="Identifier" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        <ownedAttribute xmi:id="_qdN_YBIaEeijSslFDgCgZA" name="Content" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_uhy-0A9LEeiZ14TmPBeBNA" name="CMS Page">
+        <ownedAttribute xmi:id="_nD3NEBFNEeiZ14TmPBeBNA" name="ID" isID="true"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_AY4RMBYHEei8K98eudnXLw" name="Image">
+        <ownedAttribute xmi:id="_DWwXkBYHEei8K98eudnXLw" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
+        <ownedAttribute xmi:id="_F8sfEBYHEei8K98eudnXLw" name="Filename" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NZH30BpOEei1nozxvUPcjg" name="Rewards">
+        <ownedAttribute xmi:id="_a4u3kBpOEei1nozxvUPcjg" name="ID" type="_YGTmEJ6QEeGdnpRmAZh-dQ" isID="true"/>
+        <ownedAttribute xmi:id="_eHCmoBpOEei1nozxvUPcjg" name="Action Name" type="_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        <ownedAttribute xmi:id="_kUMFYBpOEei1nozxvUPcjg" name="Points" type="_YGTmEJ6QEeGdnpRmAZh-dQ"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

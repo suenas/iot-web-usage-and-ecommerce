@@ -6,7 +6,7 @@
                 <viewElements xsi:type="ext:IFMLWindow" name="HighlightedCategoryBanner #1" isLandmark="true" isDefault="true">
                     <viewElements xsi:type="ext:Details" name="CategoryDetail">
                         <parameters name="Highlighted Category #1" direction="inout">
-                            <constraints language="SQL" body="Category.ID=18" />
+                            <constraints language="SQL" body="Category.ID=40" />
                             <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ" />
                         </parameters>
                         <viewElementEvents xsi:type="ext:OnSelectEvent" name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0">
@@ -17,7 +17,7 @@
                             </outInteractionFlows>
                         </viewElementEvents>
                         <viewComponentParts xsi:type="core:DataBinding" name="Category" uniformResourceIdentifier="">
-                            <subViewComponentParts xsi:type="core:ConditionalExpression" language="SQL" body="Category.ID=18" name="Eyewear" />
+                            <subViewComponentParts xsi:type="core:ConditionalExpression" language="SQL" body="Category.ID=40" name="Blazers" />
                         </viewComponentParts>
                         <viewComponentParts xsi:type="core:VisualizationAttribute" name="Image" featureConcept="//@domainModel/@domainElements.4" />
                     </viewElements>
@@ -25,7 +25,7 @@
                 <viewElements xsi:type="ext:IFMLWindow" name="HighlightedCategoryBanner #2" isLandmark="true">
                     <viewElements xsi:type="ext:Details" name="CategoryDetail">
                         <parameters name="Highlighted Category #2" direction="inout">
-                            <constraints language="SQL" body="Category.ID=4" />
+                            <constraints language="SQL" body="Category.ID=16" />
                             <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ" />
                         </parameters>
                         <viewElementEvents xsi:type="ext:OnSelectEvent" name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.1">
@@ -36,7 +36,7 @@
                             </outInteractionFlows>
                         </viewElementEvents>
                         <viewComponentParts xsi:type="core:DataBinding" name="Category">
-                            <subViewComponentParts xsi:type="core:ConditionalExpression" language="SQL" body="Category.ID=4" name="Women" />
+                            <subViewComponentParts xsi:type="core:ConditionalExpression" language="SQL" body="Category.ID=16" name="Tees, Knits and Polos" />
                         </viewComponentParts>
                         <viewComponentParts xsi:type="core:VisualizationAttribute" name="Image" featureConcept="//@domainModel/@domainElements.4" />
                     </viewElements>
@@ -44,7 +44,7 @@
                 <viewElements xsi:type="ext:IFMLWindow" name="HighlightedCategoryBanner #3" isLandmark="true">
                     <viewElements xsi:type="ext:Details" name="CategoryDetail">
                         <parameters name="Highlighted Category #3" direction="inout">
-                            <constraints language="SQL" body="Category.ID=5" />
+                            <constraints language="SQL" body="Category.ID=20" />
                             <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ" />
                         </parameters>
                         <viewElementEvents xsi:type="ext:OnSelectEvent" name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.2">
@@ -55,7 +55,7 @@
                             </outInteractionFlows>
                         </viewElementEvents>
                         <viewComponentParts xsi:type="core:DataBinding" name="Category">
-                            <subViewComponentParts xsi:type="core:ConditionalExpression" language="SQL" body="Category.ID=5" name="Men" />
+                            <subViewComponentParts xsi:type="core:ConditionalExpression" language="SQL" body="Category.ID=20" name="Shoes" />
                         </viewComponentParts>
                         <viewComponentParts xsi:type="core:VisualizationAttribute" name="Image" featureConcept="//@domainModel/@domainElements.4" />
                     </viewElements>
@@ -80,7 +80,7 @@
                 </viewComponentParts>
                 <viewComponentParts xsi:type="core:VisualizationAttribute" name="Content" featureConcept="//@domainModel/@domainElements.6" />
             </viewElements>
-            <viewElements xsi:type="ext:List" name="NewProducts">
+            <viewElements xsi:type="ext:List" name="RecentlyInteractedProducts">
                 <parameters name="SelectedProduct">
                     <type xsi:type="uml:Class" href="model.uml#_nyxiEA9LEeiZ14TmPBeBNA" />
                 </parameters>
@@ -91,13 +91,15 @@
                         </parameterBindingGroup>
                     </outInteractionFlows>
                 </viewElementEvents>
-                <viewComponentParts xsi:type="core:DataBinding" name="Product" />
+                <viewComponentParts xsi:type="core:DataBinding" name="Product">
+                    <subViewComponentParts xsi:type="core:ConditionalExpression" language="SQL" body="Product.sku IN ('wbk012c-Red-S','msj006c-Khaki-L','shm00110')" name="Product.sku IN ('wbk012c-Red-S','msj006c-Khaki-L','shm00110')" />
+                </viewComponentParts>
                 <viewComponentParts xsi:type="core:VisualizationAttribute" name="Image" featureConcept="//@domainModel/@domainElements.7" />
                 <viewComponentParts xsi:type="core:VisualizationAttribute" name="Name" featureConcept="//@domainModel/@domainElements.8" />
                 <viewComponentParts xsi:type="core:VisualizationAttribute" name="Price" featureConcept="//@domainModel/@domainElements.9" />
             </viewElements>
         </interactionFlowModelElements>
-        <interactionFlowModelElements xsi:type="ext:IFMLWindow" name="Product" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <interactionFlowModelElements xsi:type="ext:IFMLWindow" name="Product" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.3/@viewElementEvents.0/@outInteractionFlows.0">
             <parameters name="Product">
                 <type xsi:type="uml:Class" href="model.uml#_nyxiEA9LEeiZ14TmPBeBNA" />
             </parameters>
@@ -135,7 +137,9 @@
                         </parameterBindingGroup>
                     </outInteractionFlows>
                 </viewElementEvents>
-                <viewComponentParts xsi:type="core:DataBinding" name="Product" />
+                <viewComponentParts xsi:type="core:DataBinding" name="Product">
+                    <subViewComponentParts xsi:type="core:ConditionalExpression" language="SQL" body="Product.ID IN getCustomizedRelatedProducts()" name="Product.ID IN getCustomizedRelatedProducts" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.17" />
+                </viewComponentParts>
                 <viewComponentParts xsi:type="core:VisualizationAttribute" name="Image" featureConcept="//@domainModel/@domainElements.7" />
                 <viewComponentParts xsi:type="core:VisualizationAttribute" name="Name" featureConcept="//@domainModel/@domainElements.8" />
                 <viewComponentParts xsi:type="core:VisualizationAttribute" name="Price" featureConcept="//@domainModel/@domainElements.9" />
@@ -170,6 +174,11 @@
             </viewElements>
             <viewElements xsi:type="core:ViewComponent" name="TopLinks" />
             <viewElements xsi:type="core:ViewComponent" name="LanguageSwitch" />
+            <viewElements xsi:type="ext:List" name="RecentRewardActions">
+                <viewComponentParts xsi:type="core:DataBinding" name="Rewards" domainConcept="//@domainModel/@domainElements.13" />
+                <viewComponentParts xsi:type="core:VisualizationAttribute" name="Action Name" featureConcept="//@domainModel/@domainElements.15" />
+                <viewComponentParts xsi:type="core:VisualizationAttribute" name="Points Attribution" featureConcept="//@domainModel/@domainElements.14" />
+            </viewElements>
         </interactionFlowModelElements>
         <interactionFlowModelElements xsi:type="ext:IFMLWindow" name="Footer" isLandmark="true">
             <viewElements xsi:type="ext:Form" name="NewsletterSubscriptionForm">
@@ -200,7 +209,7 @@
                         </outInteractionFlows>
                     </viewElementEvents>
                     <viewComponentParts xsi:type="core:DataBinding" name="CMS Block" domainConcept="//@domainModel/@domainElements.2">
-                        <subViewComponentParts xsi:type="core:ConditionalExpression" language="SQL" body="CmsBlock.ID=Category.landing_page" name="Category Landing Page" />
+                        <subViewComponentParts xsi:type="core:ConditionalExpression" language="SQL" body="CmsBlockId=Category.landing_page" name="CmsBlockId=Category.landing_page" />
                     </viewComponentParts>
                     <viewComponentParts xsi:type="core:VisualizationAttribute" name="content" featureConcept="//@domainModel/@domainElements.6" />
                 </viewElements>
@@ -215,7 +224,7 @@
                         </outInteractionFlows>
                     </viewElementEvents>
                     <viewComponentParts xsi:type="core:DataBinding" name="Product" domainConcept="//@domainModel/@domainElements.3">
-                        <conditionalExpression language="SQL" body="Category IN Product.Categories" name="Category Products" />
+                        <conditionalExpression language="SQL" body="Category IN Product.Categories" name="Category IN Product.Categories" />
                     </viewComponentParts>
                     <viewComponentParts xsi:type="core:VisualizationAttribute" name="Image" featureConcept="//@domainModel/@domainElements.7" />
                     <viewComponentParts xsi:type="core:VisualizationAttribute" name="Name" featureConcept="//@domainModel/@domainElements.8" />
@@ -228,6 +237,21 @@
             <viewElements xsi:type="ext:Details" name="CategoryDetails">
                 <viewComponentParts xsi:type="core:DataBinding" name="Category" domainConcept="//@domainModel/@domainElements.0" />
                 <viewComponentParts xsi:type="core:VisualizationAttribute" name="Name" featureConcept="//@domainModel/@domainElements.5" />
+            </viewElements>
+            <viewElements xsi:type="ext:List" name="RecentlyViewedProducts">
+                <viewElementEvents xsi:type="ext:OnSelectEvent" name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.3">
+                    <outInteractionFlows xsi:type="core:NavigationFlow" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
+                        <parameterBindingGroup>
+                            <parameterBindings sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0" />
+                        </parameterBindingGroup>
+                    </outInteractionFlows>
+                </viewElementEvents>
+                <viewComponentParts xsi:type="core:DataBinding" name="Product">
+                    <subViewComponentParts xsi:type="core:ConditionalExpression" language="SQL" body="Product.ID IN (407,413,404)" name="Product.ID IN (407,413,404)" />
+                </viewComponentParts>
+                <viewComponentParts xsi:type="core:VisualizationAttribute" name="Image" featureConcept="//@domainModel/@domainElements.7" />
+                <viewComponentParts xsi:type="core:VisualizationAttribute" name="Name" featureConcept="//@domainModel/@domainElements.8" />
+                <viewComponentParts xsi:type="core:VisualizationAttribute" name="Price" featureConcept="//@domainModel/@domainElements.9" />
             </viewElements>
         </interactionFlowModelElements>
         <interactionFlowModelElements xsi:type="core:ActivationExpression" id="CategoryDisplayModeIsPage" language="Category.DisplayMode==PAGE" body="Category.DisplayMode==PAGE">
@@ -270,7 +294,7 @@
                 <viewComponentParts xsi:type="ext:SelectionField" name="CategoryFilter" />
             </viewElements>
         </interactionFlowModelElements>
-        <interactionFlowModelElements xsi:type="ext:IFMLWindow" name="Shopping Cart" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.9/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.13/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.14/@actionEvents.0/@outInteractionFlows.0" isLandmark="true">
+        <interactionFlowModelElements xsi:type="ext:IFMLWindow" name="Shopping Cart" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.9/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.13/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.14/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.18/@actionEvents.0/@outInteractionFlows.0" isLandmark="true">
             <viewElements xsi:type="ext:List" name="Products List" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.15">
                 <viewElementEvents xsi:type="ext:OnSubmitEvent" name="Update cart" viewElement="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0">
                     <outInteractionFlows xsi:type="core:NavigationFlow" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.14" />
@@ -313,6 +337,13 @@
                         <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ" />
                     </viewComponentParts>
                 </viewElements>
+                <viewElements xsi:type="core:ViewComponent" name="Applicable Reward Points">
+                    <viewElementEvents xsi:type="ext:OnSelectEvent" name="Apply Reward Points" viewElement="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.2/@viewElements.3">
+                        <outInteractionFlows xsi:type="core:NavigationFlow" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.18/@actionEvents.0" />
+                    </viewElementEvents>
+                    <viewComponentParts xsi:type="core:DataBinding" name="Reward" />
+                    <viewComponentParts xsi:type="core:VisualizationAttribute" name="Available Reward Points" featureConcept="//@domainModel/@domainElements.14" />
+                </viewElements>
             </viewElements>
         </interactionFlowModelElements>
         <interactionFlowModelElements xsi:type="core:IFMLAction" name="FilterByCategory" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0">
@@ -337,6 +368,14 @@
         </interactionFlowModelElements>
         <interactionFlowModelElements xsi:type="core:ActivationExpression" id="CartIsEmpty" language="SQL" body="CartIsEmpty()">
             <annotations text="Cart.isEmpty()" />
+        </interactionFlowModelElements>
+        <interactionFlowModelElements xsi:type="core:ActivationExpression" id="CurrentProduct.hasCustomizedRelatedProduct" language="SQL" body="CurrentProduct.hasCustomizedRelatedProduct()">
+            <annotations text="CurrentProduct.hasCustomizedRelatedProduct()" />
+        </interactionFlowModelElements>
+        <interactionFlowModelElements xsi:type="core:IFMLAction" name="Apply AvailableReward Points">
+            <actionEvents name="Reward Points Applied" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.2/@viewElements.3/@viewElementEvents.0/@outInteractionFlows.0">
+                <outInteractionFlows xsi:type="core:NavigationFlow" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.11" />
+            </actionEvents>
         </interactionFlowModelElements>
     </interactionFlowModel>
     <domainModel name="MadisonIsland">
@@ -375,5 +414,12 @@
         </domainElements>
         <domainElements xsi:type="core:UMLDomainConcept" name="Quote" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.2/@viewElements.0/@viewComponentParts.0" />
         <domainElements xsi:type="core:UMLDomainConcept" name="Quote Item" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.0/@viewComponentParts.0" />
+        <domainElements xsi:type="core:UMLDomainConcept" name="Rewards" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.4/@viewComponentParts.0" />
+        <domainElements xsi:type="core:UMLStructuralFeature" name="RewardPoints" visualizationAttribute="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.4/@viewComponentParts.2">
+            <structuralFeature xsi:type="uml:Property" href="model.uml#_kUMFYBpOEei1nozxvUPcjg" />
+        </domainElements>
+        <domainElements xsi:type="core:UMLStructuralFeature" name="RewardName">
+            <structuralFeature xsi:type="uml:Property" href="model.uml#_XACYgBIbEeijSslFDgCgZA" />
+        </domainElements>
     </domainModel>
 </core:IFMLModel>

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" xmi:id="_dPFC4B87EeiCZ8DrRd5Asw" selectedViews="_lUkRYB89EeiCZ8DrRd5Asw _9fq58B9-EeiCZ8DrRd5Asw _9hfe4B9-EeiCZ8DrRd5Asw _9ilrEB9-EeiCZ8DrRd5Asw _9jJEsB9-EeiCZ8DrRd5Asw" version="12.1.0.201708031200">
-  <semanticResources>metamodels/IFML.ecore</semanticResources>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" xmi:id="_dPFC4B87EeiCZ8DrRd5Asw" selectedViews="_9jJEsB9-EeiCZ8DrRd5Asw" version="12.1.0.201708031200">
   <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
   <semanticResources>metamodels/RealUsageData.ecore</semanticResources>
   <semanticResources>models/RealUsageData.xmi</semanticResources>
+  <semanticResources>metamodels/IFML.ecore</semanticResources>
+  <semanticResources>models/model.uml</semanticResources>
   <semanticResources>models/MadisonIslandBefore.xmi</semanticResources>
+  <semanticResources>models/MadisonIslandAfter.xmi</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_lUkRYB89EeiCZ8DrRd5Asw">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']"/>
   </ownedViews>
