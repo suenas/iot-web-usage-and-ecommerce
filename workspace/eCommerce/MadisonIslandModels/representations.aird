@@ -3,10 +3,13 @@
   <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
   <semanticResources>metamodels/RealUsageData.ecore</semanticResources>
   <semanticResources>models/RealUsageData.xmi</semanticResources>
-  <semanticResources>metamodels/IFML.ecore</semanticResources>
   <semanticResources>models/model.uml</semanticResources>
-  <semanticResources>models/MadisonIslandBefore.xmi</semanticResources>
   <semanticResources>models/MadisonIslandAfter.xmi</semanticResources>
+  <semanticResources>platform:/resource/org.eclipse.uml2.uml/model/UML.ecore</semanticResources>
+  <semanticResources>platform:/plugin/org.eclipse.uml2.types/model/Types.ecore</semanticResources>
+  <semanticResources>platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore</semanticResources>
+  <semanticResources>metamodels/IFML.ecore</semanticResources>
+  <semanticResources>models/sandbox.xmi</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_lUkRYB89EeiCZ8DrRd5Asw">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/IFMLEditorDesign/description/IFML.odesign#//@ownedViewpoints[name='IFML%20Core']"/>
   </ownedViews>

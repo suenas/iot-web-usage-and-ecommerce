@@ -8,6 +8,9 @@
     <semanticResources>models/model.uml</semanticResources>
     <semanticResources>models/MadisonIslandBefore.core.core</semanticResources>
     <semanticResources>models/MadisonIslandBefore.core</semanticResources>
+    <semanticResources>platform:/resource/org.eclipse.uml2.uml/model/UML.ecore</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.uml2.types/model/Types.ecore</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_p-k4IAjxEeinCrQh3V9JlA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_AKZfBg5hEeib75FRyPNqCA" name="RealUsageData class diagram" repPath="#_AKUmgA5hEeib75FRyPNqCA">
