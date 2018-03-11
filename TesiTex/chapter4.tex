@@ -307,7 +307,7 @@ Essentially, the domain model objective is offering to the interaction flow refe
 
 Although some partial IFML model representations for the Madison Island eCommerce platform have been already summarily introduced in \ref{navigational-modeling-for-the-web}, in this subsection we examine the most important ones in more detail and with a more global approach not strictly related to the navigational modeling. The final goal is to model, taking advantage of the IFML metamodel described just above, an IFML model which would represent the main pages and interactions of the website.
 
-\subsubsection{Madison Island Homepage}
+\subsubsection{Homepage}
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -364,7 +364,7 @@ The above snippet belongs to a more complex IFML model hierarchy as shown in \re
 \end{figure}
 \vspace{0.5cm}
 
-\subsubsection{Madison Island Category Page}
+\subsubsection{Category Page}
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -426,7 +426,7 @@ The full expanded model hierarchy for the IFML Window Category element is shown 
 \vspace{0.5cm}
 
 
-\subsubsection{Madison Island Product Page}
+\subsubsection{Product Page}
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -447,7 +447,7 @@ The full expanded model hierarchy for the IFML Window Category element is shown 
 
 The Madison Island Interaction Model for the Product page (Figure \ref{fig:desktop-before-product} and \ref{fig:ifml-before-product}) is mainly built with a single IFMLWindow element containing different types of \textbf{"View Components"} with the main one being a Detail one bound to the current product data entity. The other two elements are the single \textbf{"Form"} view component descibing the Add to Cart section and its possible interactions and a \textbf{"List"} view component holding the information for the Related Product widget.
 
-As per shown in \ref{fig:ifml-before-hierarchy-product}, the Interaction Flow model representing the product page has the following form:
+The hierarchy described above has the following form as IFML Model :
 
 \lstset{language=XML}
 \begin{lstlisting} 
@@ -508,9 +508,91 @@ The Model representation of this Product page structure is shown in \ref{fig:ifm
 \end{figure}
 \vspace{0.5cm}
 
+\newpage
+\subsubsection{Shopping Cart Page}
 
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=12cm]{images/diagrams/before/desktop-shoppingcart.png}
+  \caption{Shopping Cart Page Desktop Version}
+  \label{fig:desktop-before-shoppingcart}
+\end{figure}
 
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=9cm]{images/diagrams/before/ifml-shoppingcart.png}
+  \caption{Shopping Cart Page IFML Diagram}
+  \label{fig:ifml-before-shoppingcart}
+\end{figure}
+\vspace{0.5cm}
 
+The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig:desktop-before-shoppingcart} and \ref{fig:ifml-before-shoppingcart}) is mainly built with a single IFMLWindow element containing different types of \textbf{"View Components"} with the main one being a Detail one bound to the current product data entity. The other two elements are the single \textbf{"Form"} view component descibing the Add to Cart section and its possible interactions and a \textbf{"List"} view component holding the information for the Related Product widget.
+
+As per shown in \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interaction Flow model representing the product page has the following form:
+
+\lstset{language=XML}
+\begin{lstlisting} 
+    <interactionFlowModelElements xsi:type="ext:IFMLWindow"  name="Product" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <parameters  name="Product">
+        <type xsi:type="uml:Class" href="model.uml#_nyxiEA9LEeiZ14TmPBeBNA"/>
+      </parameters>
+      <viewElements xsi:type="ext:Details"  name="ProductDetails">
+        <viewComponentParts xsi:type="core:DataBinding"  name="Product" uniformResourceIdentifier="">
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Description" featureConcept="//@domainModel/@domainElements.10"/>
+        </viewComponentParts>
+      </viewElements>
+      <viewElements xsi:type="ext:Form"  name="AddToCartForm">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent"  name="Add To Cart" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1">
+          <outInteractionFlows xsi:type="core:NavigationFlow"  targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.9">
+            <parameterBindingGroup >
+              <parameterBindings  sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewComponentParts.2" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewComponentParts.2"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </viewElementEvents>
+        <viewComponentParts xsi:type="ext:SelectionField"  name="Color">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SelectionField"  name="Size">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SimpleField"  name="Quantity">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_YGTmEJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+      </viewElements>
+      <viewElements xsi:type="ext:List"  name="RelatedProductList">
+        <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
+          <outInteractionFlows xsi:type="core:NavigationFlow"  targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
+            <parameterBindingGroup >
+              <parameterBindings  sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </viewElementEvents>
+        <viewComponentParts xsi:type="core:DataBinding"  name="Product"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+      </viewElements>
+    </interactionFlowModelElements>
+\end{lstlisting}
+
+The Model representation of this Product page structure is shown in \ref{fig:ifml-before-hierarchy-shoppingcart}
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=10cm]{images/diagrams/before/ifml-hierarchy-product.png}
+  \caption{Expanded Interaction Flow Product Model Hierarchy}
+  \label{fig:ifml-before-hierarchy-shoppingcart}
+\end{figure}
+\vspace{0.5cm}
+
+\newpage
+\subsubsection{Shared Elements and Interactions}
 
 
 
