@@ -245,9 +245,9 @@ The RealUsageData metamodel defined above allow us to create dynamic instances w
 \section{eCommerce application modeling}
 
 As per briefly introduced in \ref{the-ifml-language}, IFML is used to design platform independent-level models which can be used to define the interactions between the users of an application and the application itself. 
-At its core, IFML is meant to be flexible and straightforward, but perhaps more importantly, the language is intended to be abstract to provide the possibility of defining the main traits of an application’s front end making as few visual commitments as possible. Furthermore, its extendibility  allows modelers and designers to specialize specific components to enrich the semantics of their models and make the diagrams more readable.
+At its core, IFML is meant to be flexible and straightforward, but perhaps more importantly, the language is intended to be abstract to provide the possibility of defining the main traits of an application front end making as few visual commitments as possible. Furthermore, its extendibility  allows modelers and designers to specialize specific components enriching the semantics of their models and making the diagrams more readable.
 
-In fact, the models generated using the Interaction Flow language describe the user interface components required at the front-end of the application, without specifying layout details of these elements enhancing the separation of concerns among developers and UX designers where the latter build the user interface accordingly to an interaction flow model. Besides defining components of the User Interface, these models explain how data flows among different sections of the application upon triggering events and introduces the business logic carried out using this data.
+In fact, the models generated using IFML describe the user interface components required at the front-end of the application, without specifying layout details of these elements enhancing the separation of concerns among developers and UX designers where the latter build the user interface accordingly to an interaction flow model. Besides defining components of the User Interface, these models explain how data flows among different sections of the application upon triggering events and introduces the business logic carried out using this data.
 
 \subsection{IFML Metamodel}
 
@@ -257,11 +257,10 @@ The IFML metamodel is organized into three packages: the Core package, the Exten
 \begin{figure}[H]
   \centering
     \includegraphics[width=14cm]{images/diagrams/ifml-ecore.png}
-  \caption{IFML Ecore representation}
+  \caption{IFML eCore representation}
   \label{fig:ifml-ecore-representation}
 \end{figure}
 \vspace{0.5cm}
-
 
 By using the primitive data types from the UML metamodel and a UML representation for the IFML Domain Model, the IFML metamodel specifies a set of UML metaclasses as the foundation for the IFML metaclasses.
 
@@ -285,7 +284,7 @@ Figure \ref{fig:simple-ifml-core-model} shows an excerpt of the IFML metamodel. 
 \begin{figure}[H]
   \centering
     \includegraphics[width=12cm]{images/diagrams/ifml-metamodel.png}
-  \caption{Simple Ecore model of an IFML subset.}
+  \caption{Simple eCore model of an IFML subset.}
   \label{fig:simple-ifml-core-model}
 \end{figure}
 \vspace{0.5cm}
@@ -305,9 +304,11 @@ Essentially, the domain model objective is offering to the interaction flow refe
 \end{figure}
 \vspace{0.5cm}
 
-Although some partial IFML model representations for the Madison Island eCommerce platform have been already summarily introduced in \ref{navigational-modeling-for-the-web}, in this subsection we examine the most important ones in more detail and with a more global approach not strictly related to the navigational modeling. The final goal is to model, taking advantage of the IFML metamodel described just above, an IFML model which would represent the main pages and interactions of the website.
+Although some partial IFML model representations for the Madison Island eCommerce platform have been already summarily introduced in \ref{navigational-modeling-for-the-web}, in this subsection we examine the most important ones in more detail and with a more global approach not strictly related to the navigational modeling. The final goal is to model, taking advantage of the IFML metamodel described just above, an IFML model which would represent the main pages and website interactions.
 
-\subsubsection{Homepage}
+\subsubsection{Homepage overview}
+
+The Madison Island Interaction Model for the Homepage (Figure \ref{fig:desktop-before-homepage} and \ref{fig:ifml-before-homepage}) is composed by a parent \textit{IFMLWindow} element which contains three children elements: respectively another \textit{IFMLWindow} for the Highlighted Categories Carousel, a \textit{Detail View Component} for the Homepage promos CMS Block and a \textit{List View Component} for the New Products sections bound to the Product Entity of the domain model. The HighlightedCategoriesCarousel Window is in \textit{XOR mode} representing three possible scenarios for the category to promote with the highest priority within the carousel mechanism. Each data binding within all these view containers is limited by a \textit{Conditional Expressions} defining the instance of the content to show.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -326,10 +327,8 @@ Although some partial IFML model representations for the Madison Island eCommerc
 \end{figure}
 \vspace{0.5cm}
 
-The Madison Island Interaction Model for the Homepage (Figure \ref{fig:desktop-before-homepage} and \ref{fig:ifml-before-homepage}) is composed by a parent IFMLWindow element which contains three children elements: respectively an IFMLWindow for the Highlighted Categories Carousel, a Detail View Component for the Homepage promos CMS Block and a \textbf{"List View Component"} for the New Products sections bound to the Product Entity of the domain model. The HighlightedCategoriesCarousel Window is in \textbf{"XOR mode"} representing three possible scenarios for the category to promote with the highest priority within the carousel mechanism. Each data binding within all these view containers is limited by a \textbf{"Conditional Expressions"} defining the instance of the content to show. 
-
-The following is an extract from the IFML Model for the first \textit{HighlighedCategoryBanner View Container} element: 
-
+\newpage
+The following snippet of code is an extract from the IFML Model for the first \textit{HighlighedCategoryBanner View Container} element: 
 
 \lstset{language=XML}
 \begin{lstlisting} 
@@ -353,18 +352,21 @@ The following is an extract from the IFML Model for the first \textit{Highlighed
     </viewElements>
 \end{lstlisting}
 
+\newpage
 The above snippet belongs to a more complex IFML model hierarchy as shown in \ref{fig:ifml-before-hierarchy-homepage}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[width=10cm]{images/diagrams/before/ifml-hierarchy-homepage.png}
-  \caption{Expanded Interaction Flow Homepage Model Hierarchy}
+  \caption{Interaction Flow Homepage Model eCore representation}
   \label{fig:ifml-before-hierarchy-homepage}
 \end{figure}
 \vspace{0.5cm}
 
-\subsubsection{Category Page}
+\subsubsection{Category Page overview}
+
+The Madison Island Interaction Model for the Category Page (Figure \ref{fig:desktop-before-category} and \ref{fig:ifml-before-category}) is composed by a parent \textit{IFMLWindow} element in \textit{XOR mode} which presents information about the current category on the top of the page. Depending on the display mode property for the Category Entity, the user can be presented with two different \textit{View Containers} that are respectively activated using different \textit{Activation Expressions} based on the value of the property itself. Whilst the first scenario presents a \textit{Detail View Component} attached to a linked CMS Block, the second option shows two children view components representing both the filter sidebar and the products listing section with this last one having multiple \textit{Visualization Attribute} children nodes indicating the user is presented with an image used as thumbnail, a name and a price for each product belonging to the category shown.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -385,10 +387,8 @@ The above snippet belongs to a more complex IFML model hierarchy as shown in \re
 \end{figure}
 \vspace{0.5cm}
 
-The Madison Island Interaction Model for the Category Page (Figure \ref{fig:desktop-before-category} and \ref{fig:ifml-before-category}) is composed by a parent IFMLWindow element in \textbf{"XOR mode"} which presents information about the current category on the top of the page. Depending on the display mode property for the Category Entity the user can be presented with two different View Containers that are activated using different \textbf{"Activation Expressions"} based on the property itself. Whilst the first scenario presents a Details type View Component attached to a linked CMS Block ,the second option shows two children view components representing both the filter sidebar and the products listing section with this last one having multiple \textbf{"Visualization Attribute"} children indicating the user is presented with a thumbnail, a name and a price for each product belonging to the current category.
-
-The following is an extract from the IFML Model for the first \textit{Category Products List} element we just described: 
-
+\newpage
+The IFML Model code for the first \textit{Category Products List} element we just described has this form: 
 
 \lstset{language=XML}
 \begin{lstlisting} 
@@ -413,20 +413,22 @@ The following is an extract from the IFML Model for the first \textit{Category P
 </viewElements>
 \end{lstlisting}
 
-The full expanded model hierarchy for the IFML Window Category element is shown in \ref{fig:ifml-before-hierarchy-category}.
-
+\newpage
+The full expanded model hierarchy for the \textit{IFMLWindow} Category element is shown in \ref{fig:ifml-before-hierarchy-category}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[width=13cm]{images/diagrams/before/ifml-hierarchy-category.png}
-  \caption{Expanded Interaction Flow Category Model Hierarchy}
+  \caption{Interaction Flow Category Model eCore representation}
   \label{fig:ifml-before-hierarchy-category}
 \end{figure}
 \vspace{0.5cm}
 
 
-\subsubsection{Product Page}
+\subsubsection{Product Page overview}
+
+The Madison Island Interaction Model for the Product page (Figure \ref{fig:desktop-before-product} and \ref{fig:ifml-before-product}) is mainly built with a single \textit{IFMLWindow} element containing different types of \textit{View Component} nodes with the main one being a Detail type one bound to the current product data entity. The other two elements are the single \textit{Form View Component} descibing the Add to Cart section and its possible interactions and the \textit{List View Component} holding the information for the Related Product widget.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -445,9 +447,8 @@ The full expanded model hierarchy for the IFML Window Category element is shown 
 \end{figure}
 \vspace{0.5cm}
 
-The Madison Island Interaction Model for the Product page (Figure \ref{fig:desktop-before-product} and \ref{fig:ifml-before-product}) is mainly built with a single IFMLWindow element containing different types of \textbf{"View Components"} with the main one being a Detail one bound to the current product data entity. The other two elements are the single \textbf{"Form"} view component descibing the Add to Cart section and its possible interactions and a \textbf{"List"} view component holding the information for the Related Product widget.
-
-The hierarchy described above has the following form as IFML Model :
+\newpage
+The structure of the model just outlined produces the following IFMLModel code:
 
 \lstset{language=XML}
 \begin{lstlisting} 
@@ -497,19 +498,21 @@ The hierarchy described above has the following form as IFML Model :
     </interactionFlowModelElements>
 \end{lstlisting}
 
-The Model representation of this Product page structure is shown in \ref{fig:ifml-before-hierarchy-product}
+\newpage
+The model representation of this Product page structure is shown in \ref{fig:ifml-before-hierarchy-product}
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=10cm]{images/diagrams/before/ifml-hierarchy-product.png}
-  \caption{Expanded Interaction Flow Product Model Hierarchy}
+    \includegraphics[width=13cm]{images/diagrams/before/ifml-hierarchy-product.png}
+  \caption{Interaction Flow Product Model eCore representation}
   \label{fig:ifml-before-hierarchy-product}
 \end{figure}
 \vspace{0.5cm}
 
-\newpage
-\subsubsection{Shopping Cart Page}
+\subsubsection{Shopping Cart Page overview}
+
+The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig:desktop-before-shoppingcart} and \ref{fig:ifml-before-shoppingcart}) is  built with a single \textit{IFMLWindow} landmark container (flagging it as accessible from everywhere) including multiple \textit{Form View Component} instances representing the sidebar interactions with the discount codes and shipping estimation widgets. Besides the sidebar, the area with the cart status and the items in the cart is shown with another \textit{Form View Component} controlled by the \textit{Activation Condition} responsible for showing items when cart is not empty only. The area is modeled with a Form component because of the Qty input text fields which allow the user to update the related item quantities or empty the whole cart at any time. Both these interactions are controlled with specific \textit{Action} elements triggered on these \textit{Events}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -528,9 +531,8 @@ The Model representation of this Product page structure is shown in \ref{fig:ifm
 \end{figure}
 \vspace{0.5cm}
 
-The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig:desktop-before-shoppingcart} and \ref{fig:ifml-before-shoppingcart}) is mainly built with a single IFMLWindow element containing different types of \textbf{"View Components"} with the main one being a Detail one bound to the current product data entity. The other two elements are the single \textbf{"Form"} view component descibing the Add to Cart section and its possible interactions and a \textbf{"List"} view component holding the information for the Related Product widget.
-
-As per shown in \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interaction Flow model representing the product page has the following form:
+\newpage
+As per shown in \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interaction Flow model representing the shopping page has the following form:
 
 \lstset{language=XML}
 \begin{lstlisting} 
@@ -580,19 +582,21 @@ As per shown in \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interaction Fl
     </interactionFlowModelElements>
 \end{lstlisting}
 
-The Model representation of this Product page structure is shown in \ref{fig:ifml-before-hierarchy-shoppingcart}
+\newpage
+The Model representation of the Shopping Cart page structure is shown in \ref{fig:ifml-before-hierarchy-shoppingcart}
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=10cm]{images/diagrams/before/ifml-hierarchy-product.png}
-  \caption{Expanded Interaction Flow Product Model Hierarchy}
+    \includegraphics[width=13cm]{images/diagrams/before/ifml-hierarchy-shoppingcart.png}
+  \caption{Interaction Flow Shopping Cart Model eCore representation}
   \label{fig:ifml-before-hierarchy-shoppingcart}
 \end{figure}
 \vspace{0.5cm}
 
 \newpage
 \subsubsection{Shared Elements and Interactions}
+
 
 
 
