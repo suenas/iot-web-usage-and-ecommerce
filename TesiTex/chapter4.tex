@@ -310,10 +310,11 @@ Although some partial IFML model representations for the Madison Island eCommerc
 
 The Madison Island Interaction Model for the Homepage (Figure \ref{fig:desktop-before-homepage} and \ref{fig:ifml-before-homepage}) is composed by a parent \textit{IFMLWindow} element which contains three children elements: respectively another \textit{IFMLWindow} for the Highlighted Categories Carousel, a \textit{Detail View Component} for the Homepage promos CMS Block and a \textit{List View Component} for the New Products sections bound to the Product Entity of the domain model. The HighlightedCategoriesCarousel Window is in \textit{XOR mode} representing three possible scenarios for the category to promote with the highest priority within the carousel mechanism. Each data binding within all these view containers is limited by a \textit{Conditional Expressions} defining the instance of the content to show.
 
+\newpage
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=11cm]{images/diagrams/before/desktop-homepage.png}
+    \includegraphics[height=10cm]{images/diagrams/before/desktop-homepage.png}
   \caption{Homepage Desktop Version}
   \label{fig:desktop-before-homepage}
 \end{figure}
@@ -321,7 +322,7 @@ The Madison Island Interaction Model for the Homepage (Figure \ref{fig:desktop-b
 
 \begin{figure}[H]
   \centering
-    \includegraphics[height=9cm]{images/diagrams/before/ifml-homepage.png}
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-homepage.png}
   \caption{Homepage IFML Diagram}
   \label{fig:ifml-before-homepage}
 \end{figure}
@@ -358,7 +359,7 @@ The above snippet belongs to a more complex IFML model hierarchy as shown in \re
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=10cm]{images/diagrams/before/ifml-hierarchy-homepage.png}
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-hierarchy-homepage.png}
   \caption{Interaction Flow Homepage Model eCore representation}
   \label{fig:ifml-before-hierarchy-homepage}
 \end{figure}
@@ -377,17 +378,15 @@ The Madison Island Interaction Model for the Category Page (Figure \ref{fig:desk
   \caption{Category Desktop Versions}%
   \label{fig:desktop-before-category}%
 \end{figure}
-\vspace{0.5cm}
 
 \begin{figure}[H]
   \centering
-    \includegraphics[height=9cm]{images/diagrams/before/ifml-category.png}
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-category.png}
   \caption{Category IFML Diagram}
   \label{fig:ifml-before-category}
 \end{figure}
 \vspace{0.5cm}
 
-\newpage
 The IFML Model code for the first \textit{Category Products List} element we just described has this form: 
 
 \lstset{language=XML}
@@ -430,10 +429,11 @@ The full expanded model hierarchy for the \textit{IFMLWindow} Category element i
 
 The Madison Island Interaction Model for the Product page (Figure \ref{fig:desktop-before-product} and \ref{fig:ifml-before-product}) is mainly built with a single \textit{IFMLWindow} element containing different types of \textit{View Component} nodes with the main one being a Detail type one bound to the current product data entity. The other two elements are the single \textit{Form View Component} descibing the Add to Cart section and its possible interactions and the \textit{List View Component} holding the information for the Related Product widget.
 
+\newpage
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=10cm]{images/diagrams/before/desktop-product.png}
+    \includegraphics[height=10cm]{images/diagrams/before/desktop-product.png}
   \caption{Product Page Desktop Version}
   \label{fig:desktop-before-product}
 \end{figure}
@@ -441,7 +441,7 @@ The Madison Island Interaction Model for the Product page (Figure \ref{fig:deskt
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[height=9cm]{images/diagrams/before/ifml-product.png}
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-product.png}
   \caption{Product Page IFML Diagram}
   \label{fig:ifml-before-product}
 \end{figure}
@@ -514,10 +514,11 @@ The model representation of this Product page structure is shown in \ref{fig:ifm
 
 The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig:desktop-before-shoppingcart} and \ref{fig:ifml-before-shoppingcart}) is  built with a single \textit{IFMLWindow} landmark container (flagging it as accessible from everywhere) including multiple \textit{Form View Component} instances representing the sidebar interactions with the discount codes and shipping estimation widgets. Besides the sidebar, the area with the cart status and the items in the cart is shown with another \textit{Form View Component} controlled by the \textit{Activation Condition} responsible for showing items when cart is not empty only. The area is modeled with a Form component because of the Qty input text fields which allow the user to update the related item quantities or empty the whole cart at any time. Both these interactions are controlled with specific \textit{Action} elements triggered on these \textit{Events}.
 
+\newpage
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=12cm]{images/diagrams/before/desktop-shoppingcart.png}
+    \includegraphics[height=10cm]{images/diagrams/before/desktop-shoppingcart.png}
   \caption{Shopping Cart Page Desktop Version}
   \label{fig:desktop-before-shoppingcart}
 \end{figure}
@@ -525,7 +526,7 @@ The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[height=9cm]{images/diagrams/before/ifml-shoppingcart.png}
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-shoppingcart.png}
   \caption{Shopping Cart Page IFML Diagram}
   \label{fig:ifml-before-shoppingcart}
 \end{figure}
@@ -588,13 +589,12 @@ The Model representation of the Shopping Cart page structure is shown in \ref{fi
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=13cm]{images/diagrams/before/ifml-hierarchy-shoppingcart.png}
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-hierarchy-shoppingcart.png}
   \caption{Interaction Flow Shopping Cart Model eCore representation}
   \label{fig:ifml-before-hierarchy-shoppingcart}
 \end{figure}
 \vspace{0.5cm}
 
-\newpage
 \subsubsection{Shared Elements and Interactions}
 
 
