@@ -293,7 +293,7 @@ Figure \ref{fig:simple-ifml-core-model} shows an excerpt of the IFML metamodel. 
 
 As per mentioned in the last subsection, interaction flow models are described using the Interaction Flow Modelling Language and, together with the domain model and optionally viewpoints, they form the core of the IFML model.
 
-Essentially, the domain model objective is offering to the interaction flow references about the content available. An example of a domain model for an e-commerce website is given in figure \ref{fig:domain-model-uml-ecommerce}   
+Essentially, the domain model objective is offering to the interaction flow references about the content available. An example of a domain model for an e-commerce website is given in Figure \ref{fig:domain-model-uml-ecommerce}   
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -308,7 +308,7 @@ Although some partial IFML model representations for the Madison Island eCommerc
 
 \subsubsection{Global overview}
 
-The Madison Island Interaction Model is formed by a different combination of \textit{IFMLWindow} elements connected through IFML \textit{Actions} reacting to distinct IFML \textit{Events} and  \textit{ParameterBindings}. The detail of the modeling is contextual to the purpose of this thesis work; consequently, not all the possible interactions and elements presented on the website have been added to the IFMLModel in order to keep the model design lightweight and reduce the complexity. Overall, the principal \textit{IFMLWindow} nodes have been described with more detail as standalone components compared to others shared \textit{ViewContainer} elements, such as the Header and the Footer. In   \ref{fig:ifml-before-global} a visual representation of the IFMLDiagram corresponding to the main \textit{IFMLModel} for the Madison Island eCommerce platform is presented.
+The Madison Island Interaction Model is formed by a different combination of \textit{IFMLWindow} elements connected through \textit{IFMLAction}s reacting to distinct \textit{Events} with different \textit{ParameterBindings}. The detail of the modeling is contextual to the purpose of this thesis work; consequently, not all the possible interactions and elements presented on the website have been added to the IFMLModel in order to keep the model design lightweight and reduce its complexity. Overall, the principal \textit{IFMLWindow} standalone nodes have been described with more detail compared to others shared \textit{ViewContainer} elements, such as the Header and the Footer. In Figure \ref{fig:ifml-before-global} a visual representation of the IFMLDiagram corresponding to the main \textit{IFMLModel} for the Madison Island eCommerce platform is presented.
 
 \begin{figure}[H]
   \centering
@@ -423,7 +423,7 @@ The IFML Model code for the first \textit{Category Products List} element we jus
 \end{lstlisting}
 
 \newpage
-The full expanded model hierarchy for the \textit{IFMLWindow} Category element is shown in \ref{fig:ifml-before-hierarchy-category}.
+The full expanded model hierarchy for the \textit{IFMLWindow} Category element is shown in Figure \ref{fig:ifml-before-hierarchy-category}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -509,7 +509,7 @@ The structure of the model just outlined produces the following IFMLModel code:
 \end{lstlisting}
 
 \newpage
-The model representation of this Product page structure is shown in \ref{fig:ifml-before-hierarchy-product}
+The model representation of this Product page structure is shown in Figure \ref{fig:ifml-before-hierarchy-product}
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -522,7 +522,7 @@ The model representation of this Product page structure is shown in \ref{fig:ifm
 
 \subsubsection{Shopping Cart Page overview}
 
-The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig:desktop-before-shoppingcart} and \ref{fig:ifml-before-shoppingcart}) is  built with a single \textit{IFMLWindow} landmark container (flagging it as accessible from everywhere) including multiple \textit{Form View Component} instances representing the sidebar interactions with the discount codes and shipping estimation widgets. Besides the sidebar, the area with the cart status and the items in the cart is shown with another \textit{Form View Component} controlled by the \textit{Activation Condition} responsible for showing items when cart is not empty only. The area is modeled with a Form component because of the Qty input text fields which allow the user to update the related item quantities or empty the whole cart at any time. Both these interactions are controlled with specific \textit{Action} elements triggered on these \textit{Events}.
+The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig:desktop-before-shoppingcart} and \ref{fig:ifml-before-shoppingcart}) is  built with a single \textit{IFMLWindow} landmark container (flagging it as accessible from everywhere) including multiple \textit{Form View Component} instances representing the sidebar interactions with the discount codes and shipping estimation widgets. Besides the sidebar, the area with the cart status and the items in the cart is shown with another \textit{Form View Component} controlled by the \textit{Activation Condition} responsible for showing items when cart is not empty only. The area is modeled with a Form component because of the Qty input text fields which allow the user to update the related item quantities or empty the whole cart at any time. Both these interactions are controlled with specific \textit{IFMLAction} elements triggered on these \textit{Events}.
 
 \newpage
 \vspace{0.5cm}
@@ -543,7 +543,7 @@ The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig
 \vspace{0.5cm}
 
 \newpage
-As per shown in \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interaction Flow model representing the shopping page has the following form:
+As per shown in Figure \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interaction Flow model representing the shopping page has the following form:
 
 \lstset{language=XML}
 \begin{lstlisting} 
@@ -594,7 +594,7 @@ As per shown in \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interaction Fl
 \end{lstlisting}
 
 \newpage
-The Model representation of the Shopping Cart page structure is shown in \ref{fig:ifml-before-hierarchy-shoppingcart}
+The Model representation of the Shopping Cart page structure is shown in Figure \ref{fig:ifml-before-hierarchy-shoppingcart}
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -607,9 +607,63 @@ The Model representation of the Shopping Cart page structure is shown in \ref{fi
 
 \subsubsection{Shared Elements and Interactions}
 
+As per previously mentioned, shared sections of the platform such as the Header and the Footer have been modeled as \textit{IFMLWindow} nodes reachable from any other area of the website, thus their \textit{Landmark} attribute set to true.
+In more detail, the Header section contains a Navigation Menu in the form of a \textit{List View Component} with a children \textit{DataBinding} component correlated to the Category domain model and a simple \textit{Form View Component} for the search mechanism. When the user performs a search submitting a keyword the \textit{SearchKeyword} is triggered and the Search Keyword, based on the parameters held in the associated \textit{ParameterBinding} element, \textit{IFMLAction} is executed.  The resulting Search Results page, which presents a sidebar for filtering and a list of items matching the search, is another \textit{IFMLWindow} which structure resembles the "Product List Mode" for a Category Page described earlier (Figure \ref{fig:ifml-before-header-search}).
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-header-search.png}
+  \caption{Header and Search sections IFML Diagrams}
+  \label{fig:ifml-before-header-search}
+\end{figure}
+\vspace{0.5cm}
+
+The Footer \textit{IFMLWindow} model is quite straightforward, it retains the information about the footer links presented on the bottom of all the pages of the website in the form of a simple \textit{ViewComponent} and a Newsletter subscription \textit{Form View Component} reacting to SubscribeNewsletter submit \textit{Events}. Like for the header case we just described, the email passed as an argument from the \textit{Event} is carried to the \textit{IFMLAction} which, in this specific case, performs the actual Customer subscription and redirects to the current page.(Figure \ref{fig:ifml-before-footer}).
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=12cm]{images/diagrams/before/ifml-footer.png}
+  \caption{Footer section IFML Diagram}
+  \label{fig:ifml-before-footer}
+\end{figure}
+\vspace{0.5cm}
+
+We conclude this chapter with a snippet of the Header \textit{IFMLWindow} element code coming from the \textit{IFMLModel} and an excerpt of the eCore diagram for the areas of the website we described in this subsection (Figure \ref{fig:ifml-before-hierarchy-headersearchfooter}).
+
+\lstset{language=XML}
+\begin{lstlisting} 
+  <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_LvuL0BPREei3TrqMA9Bdvw" name="Header" isLandmark="true">
+  <viewElements xsi:type="ext:List" id="_v0p5YA9BEeiZ14TmPBeBNA" name="NavigationMenu">
+    <viewComponentParts xsi:type="core:DataBinding" id="__mcXIA9BEeiZ14TmPBeBNA" name="Category"/>
+    <viewComponentParts xsi:type="core:VisualizationAttribute" id="_Kbzt3xIZEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.5"/>
+  </viewElements>
+  <viewElements xsi:type="ext:Form" id="_YWvrMA9GEeiZ14TmPBeBNA" name="SearchForm">
+    <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_ULm7WRIWEeijSslFDgCgZA" name="SearchKeyword" viewElement="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1">
+      <outInteractionFlows xsi:type="core:NavigationFlow" id="_Y6uV1xIWEeijSslFDgCgZA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3">
+        <parameterBindingGroup id="_yCY84hPOEei3TrqMA9Bdvw">
+          <parameterBindings id="_y5vbohPOEei3TrqMA9Bdvw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewComponentParts.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.3/@parameters.0"/>
+        </parameterBindingGroup>
+      </outInteractionFlows>
+    </viewElementEvents>
+    <viewComponentParts xsi:type="ext:SimpleField" id="_lWoCAA9GEeiZ14TmPBeBNA" name="Keyword" direction="out">
+      <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+    </viewComponentParts>
+  </viewElements>
+  <viewElements xsi:type="core:ViewComponent" id="_aQFfjQ9TEeiZ14TmPBeBNA" name="TopLinks"/>
+  <viewElements xsi:type="core:ViewComponent" id="_ezXdfQ9TEeiZ14TmPBeBNA" name="LanguageSwitch"/>
+</interactionFlowModelElements>
+\end{lstlisting}
 
 
 
-
-
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-hierarchy-headersearchfooter.png}
+  \caption{Interaction Flow eCore representation for the shared elements}
+  \label{fig:ifml-before-hierarchy-headersearchfooter}
+\end{figure}
+\vspace{0.5cm}
 
