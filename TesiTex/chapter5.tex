@@ -6,7 +6,11 @@
 
 \section{Transformation}
 
+In the last chapter, after describing both metamodels for the Real Usage Data and the Interaction Flow Modeling Language,  we proceeded to create dynamic instances for both models respectively describing the actual input data available for the personalization process and the initial IFMLModel of the eCommerce Madison Island website. In this chapter, we illustrate a possible model transformation for this model based on the Real Usage instance data with the goal of creating an upgraded version which takes into account the customer preferences and his actions.
+
 \subsection{Homepage Model}
+
+Considering the data coming from the Proximity sensors within the actual Madison Island retail store we are aware of a set of regions corresponding to categories the user prefers over the others, this information will be used to change the content, and therefore the IFMLModel, for the Homepage carousel.
 
 - L’affinità proveniente dai sensori di prossimità (Proximity Data Session) definisce le ConditionalExpressions per i carousel in homepage nello scenario AFTER
 - Nello scenario AFTER il viewcomponent dei prodotti più recenti viene rimpiazzato con quello dei prodotti con i quali si è interagito recentemente e ha una conditional expression basata sulle actions ricevute dal RealUsageData.xmi sugli Action Data Session registrati.
