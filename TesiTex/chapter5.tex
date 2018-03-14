@@ -4,8 +4,379 @@
 \chapter{Enhancing web models via model transformations}
 \label{enhancing-web-models-via-model-transformations}
 
-\subsection{Transformation}
+\section{Transformation}
 
-\subsection{Updated web models}
+\subsection{Homepage Model}
+
+- L’affinità proveniente dai sensori di prossimità (Proximity Data Session) definisce le ConditionalExpressions per i carousel in homepage nello scenario AFTER
+- Nello scenario AFTER il viewcomponent dei prodotti più recenti viene rimpiazzato con quello dei prodotti con i quali si è interagito recentemente e ha una conditional expression basata sulle actions ricevute dal RealUsageData.xmi sugli Action Data Session registrati.
+
+\subsection{Header Model}
+
+- Nello scenario AFTER un ViewComponent che descrive le ultime azioni che hanno generato un reward nel mondo fisico vengono presentate e popolate dai dati provenienti dall’ Action Data Session del RealUsageData. Questo componente non è presente nello scenario BEFORE.
+
+\subsection{Category Page Model}
+
+- Nello scenario AFTER un ViewComponent di tipo Lista è aggiunto alla pagina (indipendentemente dalla tipologia di Categoria) dove vengono presentati i prodotti recentemente visitati, il DataBinding di prodotti ha la condition expression proveniente precisamente dall’istanza dei Web Data AccessLog del modello del RealUsageData
+
+\subsection{Product Page Model}
+
+- Qui, a differenza del modello dello scenario Before, i RelatedProducts sono popolati con i dati dei WebAccessLog computati ed una condizione di getCustomizedRelatedProducts è aggiunta sul DataBinding, c’è anche una Activaction Expression che indica che questa condizione esiste solo qualora esistano effettivamente dei pattern individuati di navigazione per il prodotto corrente.
+
+\subsection{Shopping Cart Model}
+
+- Nello scenario AFTER un ViewComponent per l’applicazione dei Reward Points è mostrato nella sidebar e permette di applicare i reward points accumulati tramite le Action Data Sessions sul quote (carrello) corrente.
+
+\section{Updated web models}
 
 %\addcontentsline{toc}{chapter}{}
+
+\subsubsection{Homepage overview}
+
+The Madison Island Interaction Model for the Homepage (Figure \ref{fig:desktop-before-homepage} and \ref{fig:ifml-before-homepage}) is composed by a parent \textit{IFMLWindow} element which contains three children elements: respectively another \textit{IFMLWindow} for the Highlighted Categories Carousel, a \textit{Detail View Component} for the Homepage promos CMS Block and a \textit{List View Component} for the New Products sections bound to the Product Entity of the domain model. The HighlightedCategoriesCarousel Window is in \textit{XOR mode} representing three possible scenarios for the category to promote with the highest priority within the carousel mechanism. Each data binding within all these view containers is limited by a \textit{Conditional Expressions} defining the instance of the content to show.
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=7cm]{images/diagrams/before/desktop-homepage.png}
+  \caption{Homepage Desktop Version}
+  \label{fig:desktop-before-homepage}
+\end{figure}
+\vspace{0.5cm}
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=7cm]{images/diagrams/before/ifml-homepage.png}
+  \caption{Homepage IFML Diagram}
+  \label{fig:ifml-before-homepage}
+\end{figure}
+\vspace{0.5cm}
+
+\newpage
+The following snippet of code is an extract from the IFML Model for the first \textit{HighlighedCategoryBanner View Container} element: 
+
+\lstset{language=XML}
+\begin{lstlisting} 
+      <viewElements xsi:type="ext:Details"  name="CategoryDetail">
+        <parameters  name="Highlighted Category #1" direction="inout">
+          <constraints  language="SQL" body="Category.ID=18"/>
+          <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
+        </parameters>
+        <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0">
+          <outInteractionFlows xsi:type="core:NavigationFlow"  targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6">
+            <parameterBindingGroup >
+              <parameterBindings  sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@parameters.0"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </viewElementEvents>
+        <viewComponentParts xsi:type="core:DataBinding"  name="Category" uniformResourceIdentifier="">
+          <subViewComponentParts xsi:type="core:ConditionalExpression"  language="SQL" body="Category.ID=18" name="Eyewear"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.4"/>
+      </viewElements>
+    </viewElements>
+\end{lstlisting}
+
+\newpage
+The above snippet belongs to a more complex IFML model hierarchy as shown in \ref{fig:ifml-before-hierarchy-homepage}.
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=12cm]{images/diagrams/before/ifml-hierarchy-homepage.png}
+  \caption{Interaction Flow Homepage Model eCore representation}
+  \label{fig:ifml-before-hierarchy-homepage}
+\end{figure}
+\vspace{0.5cm}
+
+\subsubsection{Category Page overview}
+
+The Madison Island Interaction Model for the Category Page (Figure \ref{fig:desktop-before-category} and \ref{fig:ifml-before-category}) is composed by a parent \textit{IFMLWindow} element in \textit{XOR mode} which presents information about the current category on the top of the page. Depending on the display mode property for the Category Entity, the user can be presented with two different \textit{View Containers} that are respectively activated using different \textit{Activation Expressions} based on the value of the property itself. Whilst the first scenario presents a \textit{Detail View Component} attached to a linked CMS Block, the second option shows two children view components representing both the filter sidebar and the products listing section with this last one having multiple \textit{Visualization Attribute} children nodes indicating the user is presented with an image used as thumbnail, a name and a price for each product belonging to the category shown.
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+  \subfloat[Display Mode PAGE]{{\includegraphics[width=7cm]{images/diagrams/before/desktop-category1.png} }}%
+  \qquad
+  \subfloat[Display Mode PRODUCTS]{{\includegraphics[width=7cm]{images/diagrams/before/desktop-category2.png} }}%
+  \caption{Category Desktop Versions}%
+  \label{fig:desktop-before-category}%
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-category.png}
+  \caption{Category IFML Diagram}
+  \label{fig:ifml-before-category}
+\end{figure}
+\vspace{0.5cm}
+
+The IFML Model code for the first \textit{Category Products List} element we just described has this form: 
+
+\lstset{language=XML}
+\begin{lstlisting} 
+    <viewElements xsi:type="ext:List"  name="Category Products">
+    <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0">
+      <outInteractionFlows xsi:type="core:NavigationFlow"  targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
+        <parameterBindingGroup >
+          <parameterBindings  sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
+        </parameterBindingGroup>
+      </outInteractionFlows>
+    </viewElementEvents>
+    <viewComponentParts xsi:type="core:DataBinding"  name="Product" domainConcept="//@domainModel/@domainElements.3">
+      <conditionalExpression  language="SQL" body="Category IN Product.Categories" name="Category Products"/>
+    </viewComponentParts>
+    <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+    <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+    <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+  </viewElements>
+  <viewElements xsi:type="core:ViewComponent"  name="Product Filter Sidebar">
+    <viewComponentParts xsi:type="core:DataBinding"  name="Category"/>
+  </viewElements>
+</viewElements>
+\end{lstlisting}
+
+\newpage
+The full expanded model hierarchy for the \textit{IFMLWindow} Category element is shown in Figure \ref{fig:ifml-before-hierarchy-category}.
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=13cm]{images/diagrams/before/ifml-hierarchy-category.png}
+  \caption{Interaction Flow Category Model eCore representation}
+  \label{fig:ifml-before-hierarchy-category}
+\end{figure}
+\vspace{0.5cm}
+
+
+\subsubsection{Product Page overview}
+
+The Madison Island Interaction Model for the Product page (Figure \ref{fig:desktop-before-product} and \ref{fig:ifml-before-product}) is mainly built with a single \textit{IFMLWindow} element containing different types of \textit{View Component} nodes with the main one being a Detail type one bound to the current product data entity. The other two elements are the single \textit{Form View Component} descibing the Add to Cart section and its possible interactions and the \textit{List View Component} holding the information for the Related Product widget.
+
+\newpage
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=10cm]{images/diagrams/before/desktop-product.png}
+  \caption{Product Page Desktop Version}
+  \label{fig:desktop-before-product}
+\end{figure}
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-product.png}
+  \caption{Product Page IFML Diagram}
+  \label{fig:ifml-before-product}
+\end{figure}
+\vspace{0.5cm}
+
+\newpage
+The structure of the model just outlined produces the following IFMLModel code:
+
+\lstset{language=XML}
+\begin{lstlisting} 
+    <interactionFlowModelElements xsi:type="ext:IFMLWindow"  name="Product" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <parameters  name="Product">
+        <type xsi:type="uml:Class" href="model.uml#_nyxiEA9LEeiZ14TmPBeBNA"/>
+      </parameters>
+      <viewElements xsi:type="ext:Details"  name="ProductDetails">
+        <viewComponentParts xsi:type="core:DataBinding"  name="Product" uniformResourceIdentifier="">
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Description" featureConcept="//@domainModel/@domainElements.10"/>
+        </viewComponentParts>
+      </viewElements>
+      <viewElements xsi:type="ext:Form"  name="AddToCartForm">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent"  name="Add To Cart" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1">
+          <outInteractionFlows xsi:type="core:NavigationFlow"  targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.9">
+            <parameterBindingGroup >
+              <parameterBindings  sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewComponentParts.2" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewComponentParts.2"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </viewElementEvents>
+        <viewComponentParts xsi:type="ext:SelectionField"  name="Color">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SelectionField"  name="Size">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SimpleField"  name="Quantity">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_YGTmEJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+      </viewElements>
+      <viewElements xsi:type="ext:List"  name="RelatedProductList">
+        <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
+          <outInteractionFlows xsi:type="core:NavigationFlow"  targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
+            <parameterBindingGroup >
+              <parameterBindings  sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </viewElementEvents>
+        <viewComponentParts xsi:type="core:DataBinding"  name="Product"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+      </viewElements>
+    </interactionFlowModelElements>
+\end{lstlisting}
+
+\newpage
+The model representation of this Product page structure is shown in Figure \ref{fig:ifml-before-hierarchy-product}
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=13cm]{images/diagrams/before/ifml-hierarchy-product.png}
+  \caption{Interaction Flow Product Model eCore representation}
+  \label{fig:ifml-before-hierarchy-product}
+\end{figure}
+\vspace{0.5cm}
+
+\subsubsection{Shopping Cart Page overview}
+
+The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig:desktop-before-shoppingcart} and \ref{fig:ifml-before-shoppingcart}) is  built with a single \textit{IFMLWindow} landmark container (flagging it as accessible from everywhere) including multiple \textit{Form View Component} instances representing the sidebar interactions with the discount codes and shipping estimation widgets. Besides the sidebar, the area with the cart status and the items in the cart is shown with another \textit{Form View Component} controlled by the \textit{Activation Condition} responsible for showing items when cart is not empty only. The area is modeled with a Form component because of the Qty input text fields which allow the user to update the related item quantities or empty the whole cart at any time. Both these interactions are controlled with specific \textit{IFMLAction} elements triggered on these \textit{Events}.
+
+\newpage
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=10cm]{images/diagrams/before/desktop-shoppingcart.png}
+  \caption{Shopping Cart Page Desktop Version}
+  \label{fig:desktop-before-shoppingcart}
+\end{figure}
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-shoppingcart.png}
+  \caption{Shopping Cart Page IFML Diagram}
+  \label{fig:ifml-before-shoppingcart}
+\end{figure}
+\vspace{0.5cm}
+
+\newpage
+As per shown in Figure \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interaction Flow model representing the shopping page has the following form:
+
+\lstset{language=XML}
+\begin{lstlisting} 
+    <interactionFlowModelElements xsi:type="ext:IFMLWindow"  name="Product" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <parameters  name="Product">
+        <type xsi:type="uml:Class" href="model.uml#_nyxiEA9LEeiZ14TmPBeBNA"/>
+      </parameters>
+      <viewElements xsi:type="ext:Details"  name="ProductDetails">
+        <viewComponentParts xsi:type="core:DataBinding"  name="Product" uniformResourceIdentifier="">
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+          <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Description" featureConcept="//@domainModel/@domainElements.10"/>
+        </viewComponentParts>
+      </viewElements>
+      <viewElements xsi:type="ext:Form"  name="AddToCartForm">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent"  name="Add To Cart" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1">
+          <outInteractionFlows xsi:type="core:NavigationFlow"  targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.9">
+            <parameterBindingGroup >
+              <parameterBindings  sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewComponentParts.2" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewComponentParts.2"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </viewElementEvents>
+        <viewComponentParts xsi:type="ext:SelectionField"  name="Color">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SelectionField"  name="Size">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SimpleField"  name="Quantity">
+          <type xsi:type="uml:PrimitiveType" href="model.uml#_YGTmEJ6QEeGdnpRmAZh-dQ"/>
+        </viewComponentParts>
+      </viewElements>
+      <viewElements xsi:type="ext:List"  name="RelatedProductList">
+        <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
+          <outInteractionFlows xsi:type="core:NavigationFlow"  targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1">
+            <parameterBindingGroup >
+              <parameterBindings  sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.1/@parameters.0"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </viewElementEvents>
+        <viewComponentParts xsi:type="core:DataBinding"  name="Product"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+        <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+      </viewElements>
+    </interactionFlowModelElements>
+\end{lstlisting}
+
+\newpage
+The Model representation of the Shopping Cart page structure is shown in Figure \ref{fig:ifml-before-hierarchy-shoppingcart}
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-hierarchy-shoppingcart.png}
+  \caption{Interaction Flow Shopping Cart Model eCore representation}
+  \label{fig:ifml-before-hierarchy-shoppingcart}
+\end{figure}
+\vspace{0.5cm}
+
+\subsubsection{Shared Elements and Interactions}
+
+As per previously mentioned, shared sections of the platform such as the Header and the Footer have been modeled as \textit{IFMLWindow} nodes reachable from any other area of the website, thus their \textit{Landmark} attribute set to true.
+In more detail, the Header section contains a Navigation Menu in the form of a \textit{List View Component} with a children \textit{DataBinding} component correlated to the Category domain model and a simple \textit{Form View Component} for the search mechanism. When the user performs a search submitting a keyword the \textit{SearchKeyword} is triggered and the Search Keyword, based on the parameters held in the associated \textit{ParameterBinding} element, \textit{IFMLAction} is executed.  The resulting Search Results page, which presents a sidebar for filtering and a list of items matching the search, is another \textit{IFMLWindow} which structure resembles the "Product List Mode" for a Category Page described earlier (Figure \ref{fig:ifml-before-header-search}).
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-header-search.png}
+  \caption{Header and Search sections IFML Diagrams}
+  \label{fig:ifml-before-header-search}
+\end{figure}
+\vspace{0.5cm}
+
+The Footer \textit{IFMLWindow} model is quite straightforward, it retains the information about the footer links presented on the bottom of all the pages of the website in the form of a simple \textit{ViewComponent} and a Newsletter subscription \textit{Form View Component} reacting to SubscribeNewsletter submit \textit{Events}. Like for the header case we just described, the email passed as an argument from the \textit{Event} is carried to the \textit{IFMLAction} which, in this specific case, performs the actual Customer subscription and redirects to the current page.(Figure \ref{fig:ifml-before-footer}).
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=12cm]{images/diagrams/before/ifml-footer.png}
+  \caption{Footer section IFML Diagram}
+  \label{fig:ifml-before-footer}
+\end{figure}
+\vspace{0.5cm}
+
+We conclude this chapter with a snippet of the Header \textit{IFMLWindow} element code coming from the \textit{IFMLModel} and an excerpt of the eCore diagram for the areas of the website we described in this subsection (Figure \ref{fig:ifml-before-hierarchy-headersearchfooter}).
+
+\lstset{language=XML}
+\begin{lstlisting} 
+  <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_LvuL0BPREei3TrqMA9Bdvw" name="Header" isLandmark="true">
+  <viewElements xsi:type="ext:List" id="_v0p5YA9BEeiZ14TmPBeBNA" name="NavigationMenu">
+    <viewComponentParts xsi:type="core:DataBinding" id="__mcXIA9BEeiZ14TmPBeBNA" name="Category"/>
+    <viewComponentParts xsi:type="core:VisualizationAttribute" id="_Kbzt3xIZEeijSslFDgCgZA" name="Name" featureConcept="//@domainModel/@domainElements.5"/>
+  </viewElements>
+  <viewElements xsi:type="ext:Form" id="_YWvrMA9GEeiZ14TmPBeBNA" name="SearchForm">
+    <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_ULm7WRIWEeijSslFDgCgZA" name="SearchKeyword" viewElement="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1">
+      <outInteractionFlows xsi:type="core:NavigationFlow" id="_Y6uV1xIWEeijSslFDgCgZA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3">
+        <parameterBindingGroup id="_yCY84hPOEei3TrqMA9Bdvw">
+          <parameterBindings id="_y5vbohPOEei3TrqMA9Bdvw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewComponentParts.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.3/@parameters.0"/>
+        </parameterBindingGroup>
+      </outInteractionFlows>
+    </viewElementEvents>
+    <viewComponentParts xsi:type="ext:SimpleField" id="_lWoCAA9GEeiZ14TmPBeBNA" name="Keyword" direction="out">
+      <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
+    </viewComponentParts>
+  </viewElements>
+  <viewElements xsi:type="core:ViewComponent" id="_aQFfjQ9TEeiZ14TmPBeBNA" name="TopLinks"/>
+  <viewElements xsi:type="core:ViewComponent" id="_ezXdfQ9TEeiZ14TmPBeBNA" name="LanguageSwitch"/>
+</interactionFlowModelElements>
+\end{lstlisting}
+
+
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=10cm]{images/diagrams/before/ifml-hierarchy-headersearchfooter.png}
+  \caption{Interaction Flow eCore representation for the shared elements}
+  \label{fig:ifml-before-hierarchy-headersearchfooter}
+\end{figure}
+\vspace{0.5cm}
