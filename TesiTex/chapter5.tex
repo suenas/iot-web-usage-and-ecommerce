@@ -8,18 +8,68 @@
 
 In the last chapter, after describing both metamodels for the Real Usage Data and the Interaction Flow Modeling Language,  we proceeded to create dynamic instances for both models respectively describing the actual input data available for the personalization process and the initial IFMLModel of the eCommerce Madison Island website. In this chapter, we illustrate a possible model transformation for this model based on the Real Usage instance data with the goal of creating an upgraded version which takes into account the customer preferences and his actions.
 
-\subsection{Homepage Model}
+\subsection{Homepage updates}
 
-Considering the data coming from the Proximity sensors within the actual Madison Island retail store we are aware of a set of regions corresponding to categories the user prefers over the others, this information will be used to change the content, and therefore the IFMLModel, for the Homepage carousel.
+Considering the data coming from the Proximity sensors within the actual Madison Island retail store we are aware of a set of regions corresponding to the categories the user prefers over the others, this information will be used to change the content, and therefore the IFMLModel, for the Homepage carousel.
 
-- L’affinità proveniente dai sensori di prossimità (Proximity Data Session) definisce le ConditionalExpressions per i carousel in homepage nello scenario AFTER
+For example, we know that \textbf{Blazers},\textbf{Tees, Knits and Polos} and \textbf{Shoes} categories are the \textit{sessionRegion} elements where the user spent more time within the store sorting them by \textit{maxSecondsInRegion} and \textit{maxProximity}. In the case of the Blazers category for example, we would have this data in the \textit{RealUsageData:ProximityData} node:
+
+\lstset{language=XML}
+\begin{lstlisting} 
+  <sessionRegions
+  regionId="40"
+  regionLabel="blazers"
+  detectionCount="1"
+  maxSecondsInRegion="195"
+  maxProximity="immediate"
+  firstDetectionTimeStamp="2018-02-21T18:11:01.000+0100"
+  lastDetectionTimeStamp="2018-02-21T18:11:01.000+0100">
+  <beaconData
+    uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+    majorId="25911"
+    minorId="27"/>
+</sessionRegions>
+\end{lstlisting}
+
+Using the above information, we can now potentially transform the \textit{subViewComponentParts} and the \textit{Parameter} nodes of the first HighlightedCategoriesCarousel IFMLWindow from this :  
+
+
+\lstset{language=XML}
+\begin{lstlisting} 
+<parameters  name="Highlighted Category #1" direction="inout">
+  <constraints  language="SQL" body="Category.ID=18"/>
+  <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
+</parameters>
+
+...
+
+<subViewComponentParts xsi:type="core:ConditionalExpression"  language="SQL" body="Category.ID=18" name="Eyewear"/>
+\end{lstlisting}
+
+to :
+
+\lstset{language=XML}
+\begin{lstlisting} 
+  <parameters  name="Highlighted Category #1" direction="inout">
+  <constraints  language="SQL" body="Category.ID=40"/>
+  <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
+</parameters>
+
+...
+
+<subViewComponentParts xsi:type="core:ConditionalExpression"  language="SQL" body="Category.ID=40" name="Blazers"/>
+\end{lstlisting}
+
+Besides this possible change and leveraging the data coming from the
+
+
 - Nello scenario AFTER il viewcomponent dei prodotti più recenti viene rimpiazzato con quello dei prodotti con i quali si è interagito recentemente e ha una conditional expression basata sulle actions ricevute dal RealUsageData.xmi sugli Action Data Session registrati.
 
-\subsection{Header Model}
+\subsection{Header Updates}
 
 - Nello scenario AFTER un ViewComponent che descrive le ultime azioni che hanno generato un reward nel mondo fisico vengono presentate e popolate dai dati provenienti dall’ Action Data Session del RealUsageData. Questo componente non è presente nello scenario BEFORE.
 
-\subsection{Category Page Model}
+\subsection{Category Page Updates}
 
 - Nello scenario AFTER un ViewComponent di tipo Lista è aggiunto alla pagina (indipendentemente dalla tipologia di Categoria) dove vengono presentati i prodotti recentemente visitati, il DataBinding di prodotti ha la condition expression proveniente precisamente dall’istanza dei Web Data AccessLog del modello del RealUsageData
 
