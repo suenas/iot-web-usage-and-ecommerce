@@ -65,31 +65,24 @@ to :
 \end{lstlisting}
 \vspace{0.5cm}
 
-Besides this content update which priorities some categories over the others, the \textit{IFMLModel} can also be transformed to use different IFML elements under certain conditions. For example, the viewComponent which is responsible for displaying the most recent products on the homepage can be swapped with another \textit{List View Component} responsible for presenting the latest products the customer interacted with in the physical retail store. The information about these products is available in the RealUsageData model under the \textit{RealUsageData:ActionData} section and, in our specific example, it carries the data about the products the customer scanned with his smartphone camera to collect reward points.
+Besides this content update which priorities some categories over the others, the \textit{IFMLModel} can also be transformed to use different IFML elements under certain conditions. For example, the viewComponent which is responsible for displaying the most recent products on the homepage can be swapped with another \textit{List View Component} responsible for presenting the latest products the customer interacted with in the physical retail store. The information about these products is available in the RealUsageData model under the \textit{RealUsageData:ActionData} section and, in our specific example, it carries the data about the product SKUs the customer scanned with his smartphone camera to collect reward points.
 
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
-<sessionActions
-    userAgent="iPhone 6S">
-  <scannedItems
-      barcode="042100005264"
-      name="Elizabeth Knit Top-Red-S"
-      sku="wbk012c-Red-S"/>
-  <scannedItems
-      barcode="042100005931"
-      name="Plaid Cotton Shirt-Khaki-L"
-      sku="msj006c-Khaki-L"/>
-  <scannedItems
-      barcode="042100007717"
-      name="Broad St Saddle Shoes"
-      sku="shm00110"/>
+<sessionActions userAgent="iPhone 6S">
+  <scannedItems 
+  barcode="042100005264" name="Elizabeth Knit Top-Red-S" sku="wbk012c-Red-S"/>
+  <scannedItems 
+  barcode="042100005931" name="Plaid Cotton Shirt-Khaki-L" sku="msj006c-Khaki-L"/>
+  <scannedItems 
+  barcode="042100007717" name="Broad St Saddle Shoes" sku="shm00110"/>
 </sessionActions>
 \end{lstlisting}
 \vspace{0.5cm}
 
 
-The model transition in this case would occurr on this specific section of the IFMLModel :
+The model transition in this case would occurr not only replacing the IFML viewComponent with a different type but also adding a \textit{ConditionalExpression} filtering the items by their SKUs as per shown in Figure \ref{fig:ifml-transformation-example}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -100,9 +93,33 @@ The model transition in this case would occurr on this specific section of the I
 \end{figure}
 \vspace{0.5cm}
 
-\subsection{Header Updates}
+\subsection{Header updates}
 
-- Nello scenario AFTER un ViewComponent che descrive le ultime azioni che hanno generato un reward nel mondo fisico vengono presentate e popolate dai dati provenienti dall’ Action Data Session del RealUsageData. Questo componente non è presente nello scenario BEFORE.
+Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of the IFMLModel describing the Madison Island website top area could also be enhanced to show a list of recent actions which generated reward points performed by the customer in the physical stores.  This is achieved appending  an instance of \textit{List View Component} to the \textit{interactionFlowModelElements} parent node called \textit{RecentRewardActions} linked to the Rewards \textit{Data Binding} entity and visualizing the \textit{Action Name} and \textit{Points Attribution} properties to the frontend as per shown in the following snippet of code:
+
+\vspace{0.5cm}
+\lstset{language=XML}
+\begin{lstlisting} 
+  <interactionFlowModelElements xsi:type="ext:IFMLWindow"  name="Header" isLandmark="true">
+  <viewElements xsi:type="ext:List"  name="NavigationMenu">
+   ...
+  </viewElements>
+  <viewElements xsi:type="ext:Form"  name="SearchForm">
+   ...
+  </viewElements>
+  <viewElements xsi:type="core:ViewComponent"  name="TopLinks"/>
+  <viewElements xsi:type="core:ViewComponent"  name="LanguageSwitch"/>
+
+  <!-- ADDED NODE -->
+  <viewElements xsi:type="ext:List"  name="RecentRewardActions">
+    <viewComponentParts xsi:type="core:DataBinding"  name="Rewards" domainConcept="//@domainModel/@domainElements.13"/>
+    <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Action Name" featureConcept="//@domainModel/@domainElements.15"/>
+    <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Points Attribution" featureConcept="//@domainModel/@domainElements.14"/>
+  </viewElements>
+  <!-- ADDED NODE -->
+  </interactionFlowModelElements>
+\end{lstlisting}
+\vspace{0.5cm}
 
 \subsection{Category Page Updates}
 
