@@ -117,15 +117,58 @@ Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of t
     <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Points Attribution" featureConcept="//@domainModel/@domainElements.14"/>
   </viewElements>
   <!-- ADDED NODE -->
+
   </interactionFlowModelElements>
 \end{lstlisting}
 \vspace{0.5cm}
 
 \subsection{Category Page Updates}
 
-In light of the information gathered in the Real Usage Data model about the recently viewed products available in the \textit{RealUsageData:WebData} node, the Category page can be enhanced appending a visual element to the user interface in the form of a \textit{List View Component} bound to the Product \textit{Data Binding} entity.
+In light of the information gathered in the Real Usage Data model about the recently viewed products available in the \textit{RealUsageData:WebData} node, the Category page can be enhanced appending an additional visual element to the user interface to track this information.
 
-This new IFML item would be responsible for presenting the thumbnails, names and prices of these products to the customer filtering them through a specific \textit{ConditionalExpression} which returns the items in the order they were browsed regardless of the display mode property of the Category itself (Figure \ref{fig:recently-viewed-ifml-definition}).
+To do so, we filter out the RealUsageData model fetching the nodes containing a \textit{parameterBindingGroup} property including a Product reference like the following entries :
+
+\vspace{0.5cm}
+\lstset{language=XML}
+\begin{lstlisting} 
+      <data xsi:type="RealUsageData:WebData"
+      ID="3"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-11-29T07:08:40.000+0100"
+      viewContainer="Category #15"
+      viewComponent="ProductList"
+      eventType="click"
+      parameterBindingGroup="Product/404"
+      logEntry="GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
+      
+      <data xsi:type="RealUsageData:WebData"
+      ID="4"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-12-04T06:37:15.000+0100"
+      viewContainer="Product #404"
+      viewComponent="RelatedProductList"
+      eventType="click"
+      parameterBindingGroup="Product/413"
+      logEntry="GET /core-striped-sport-shirt-551.html 200 0 - 29505"/>
+
+      <data xsi:type="RealUsageData:WebData"
+      ID="8"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-12-04T06:38:20.000+0100"
+      viewContainer="Search Results"
+      viewComponent="ProductList"
+      eventType="click"
+      parameterBindingGroup="Product/407"
+      logEntry="GET /stretch-cotton-blazer-587.html 200 0 - 29505"/>
+\end{lstlisting}
+\vspace{0.5cm}
+
+With the above data we can then proceed transforming the intial IFML Model for the Category page appending a \textit{RecentlyViewedProducts} section in the form of a \textit{List View Component} bound to the Product \textit{Data Binding} entity.
+
+This new IFML item would be responsible for presenting the thumbnails, names and prices of these products to the customer separating them through a distinct \textit{ConditionalExpression} which maps the children node of the \textit{RealUsageData:WebData} dataset shown earlier before finally returning the items in the order they were browsed regardless of the display mode property of the Category itself (Figure \ref{fig:recently-viewed-ifml-definition}).
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -138,6 +181,11 @@ This new IFML item would be responsible for presenting the thumbnails, names and
 
 \subsection{Product Page Model}
 
+For what it concerns the possible enhancements on the product page of the Madison Island website we focused on the Related Products widget which is shown just below the Add To Cart section. Assuming an initial setup where the list of the products related to the currently displayed one has no specific logic attached, we can proceed extending the \textit{viewElements} node of the IFMLModel taking into consideration the browsing pattern of the users which have been identified examining the RealUsageData instances entries.
+
+For example, we could have discovered that the product #413 is frequently browsed with the Product #404 in the same sessions examining the values set in the /textit{viewContainer}, /textit{viewComponent} and /textit{parameterBindingGroup} properties for the nodes belonging to the /textit{RealUsageData:WebData} dataset. Consequently, we can take advantage of this information to push a product rather than another on the Related Products section offering a more tailored and customized experience to the user.
+
+With this know we can proceed 
 - Qui, a differenza del modello dello scenario Before, i RelatedProducts sono popolati con i dati dei WebAccessLog computati ed una condizione di getCustomizedRelatedProducts è aggiunta sul DataBinding, c’è anche una Activaction Expression che indica che questa condizione esiste solo qualora esistano effettivamente dei pattern individuati di navigazione per il prodotto corrente.
 
 \subsection{Shopping Cart Model}
