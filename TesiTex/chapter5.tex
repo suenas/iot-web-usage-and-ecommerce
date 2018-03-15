@@ -123,7 +123,18 @@ Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of t
 
 \subsection{Category Page Updates}
 
-- Nello scenario AFTER un ViewComponent di tipo Lista è aggiunto alla pagina (indipendentemente dalla tipologia di Categoria) dove vengono presentati i prodotti recentemente visitati, il DataBinding di prodotti ha la condition expression proveniente precisamente dall’istanza dei Web Data AccessLog del modello del RealUsageData
+In light of the information gathered in the Real Usage Data model about the recently viewed products available in the \textit{RealUsageData:WebData} node, the Category page can be enhanced appending a visual element to the user interface in the form of a \textit{List View Component} bound to the Product \textit{Data Binding} entity.
+
+This new IFML item would be responsible for presenting the thumbnails, names and prices of these products to the customer filtering them through a specific \textit{ConditionalExpression} which returns the items in the order they were browsed regardless of the display mode property of the Category itself (Figure \ref{fig:recently-viewed-ifml-definition}).
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=12cm]{images/madison/ifml-recently-viewed.png}
+  \caption{Recently Viewed IFML definition snippet}
+  \label{fig:recently-viewed-ifml-definition}
+\end{figure}
+\vspace{0.5cm}
 
 \subsection{Product Page Model}
 
