@@ -12,8 +12,9 @@ In the last chapter, after describing both metamodels for the Real Usage Data an
 
 Considering the data coming from the Proximity sensors within the actual Madison Island retail store we are aware of a set of regions corresponding to the categories the user prefers over the others, this information will be used to change the content, and therefore the IFMLModel, for the Homepage carousel.
 
-For example, we know that \textbf{Blazers},\textbf{Tees, Knits and Polos} and \textbf{Shoes} categories are the \textit{sessionRegion} elements where the user spent more time within the store sorting them by \textit{maxSecondsInRegion} and \textit{maxProximity}. In the case of the Blazers category for example, we would have this data in the \textit{RealUsageData:ProximityData} node:
+For instance, we know that \textbf{Blazers},\textbf{Tees, Knits and Polos} and \textbf{Shoes} categories correspond to the \textit{sessionRegion} elements where the user spent more time within the store after sorting the entries by \textit{maxSecondsInRegion} and \textit{maxProximity}. In the case of the Blazers category for example, the data belonging to the \textit{RealUsageData:ProximityData} parent node has this form:
 
+\vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
   <sessionRegions
@@ -30,10 +31,11 @@ For example, we know that \textbf{Blazers},\textbf{Tees, Knits and Polos} and \t
     minorId="27"/>
 </sessionRegions>
 \end{lstlisting}
+\vspace{0.5cm}
 
-Using the above information, we can now potentially transform the \textit{subViewComponentParts} and the \textit{Parameter} nodes of the first HighlightedCategoriesCarousel IFMLWindow from this :  
+Applying this knowledge, the \textit{subBiewComponentParts} and the \textit{parameter} nodes of the first HightlightedCategoriesCarousel IFMLWindow elements from the initial IFMLModel can be modified from this:
 
-
+\vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
 <parameters  name="Highlighted Category #1" direction="inout">
@@ -45,9 +47,11 @@ Using the above information, we can now potentially transform the \textit{subVie
 
 <subViewComponentParts xsi:type="core:ConditionalExpression"  language="SQL" body="Category.ID=18" name="Eyewear"/>
 \end{lstlisting}
+\vspace{0.5cm}
 
 to :
 
+\vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
   <parameters  name="Highlighted Category #1" direction="inout">
@@ -59,11 +63,42 @@ to :
 
 <subViewComponentParts xsi:type="core:ConditionalExpression"  language="SQL" body="Category.ID=40" name="Blazers"/>
 \end{lstlisting}
+\vspace{0.5cm}
 
-Besides this possible change and leveraging the data coming from the
+Besides this content update which priorities some categories over the others, the \textit{IFMLModel} can also be transformed to use different IFML elements under certain conditions. For example, the viewComponent which is responsible for displaying the most recent products on the homepage can be swapped with another \textit{List View Component} responsible for presenting the latest products the customer interacted with in the physical retail store. The information about these products is available in the RealUsageData model under the \textit{RealUsageData:ActionData} section and, in our specific example, it carries the data about the products the customer scanned with his smartphone camera to collect reward points.
+
+\vspace{0.5cm}
+\lstset{language=XML}
+\begin{lstlisting} 
+<sessionActions
+    userAgent="iPhone 6S">
+  <scannedItems
+      barcode="042100005264"
+      name="Elizabeth Knit Top-Red-S"
+      sku="wbk012c-Red-S"/>
+  <scannedItems
+      barcode="042100005931"
+      name="Plaid Cotton Shirt-Khaki-L"
+      sku="msj006c-Khaki-L"/>
+  <scannedItems
+      barcode="042100007717"
+      name="Broad St Saddle Shoes"
+      sku="shm00110"/>
+</sessionActions>
+\end{lstlisting}
+\vspace{0.5cm}
 
 
-- Nello scenario AFTER il viewcomponent dei prodotti più recenti viene rimpiazzato con quello dei prodotti con i quali si è interagito recentemente e ha una conditional expression basata sulle actions ricevute dal RealUsageData.xmi sugli Action Data Session registrati.
+The model transition in this case would occurr on this specific section of the IFMLModel :
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=12cm]{images/madison/ifm-homepage-transformation.png}
+  \caption{IFML Homepage transformation example}
+  \label{fig:ifml-transformation-example}
+\end{figure}
+\vspace{0.5cm}
 
 \subsection{Header Updates}
 
