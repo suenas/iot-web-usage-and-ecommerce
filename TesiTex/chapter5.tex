@@ -237,7 +237,9 @@ Moreover, the \textit{ActivationExpression} defined by the \textit{interactionFl
 \vspace{0.5cm}
 \subsection{Shopping Cart Model}
 
-- Nello scenario AFTER un ViewComponent per l’applicazione dei Reward Points è mostrato nella sidebar e permette di applicare i reward points accumulati tramite le Action Data Sessions sul quote (carrello) corrente.
+As per described in \ref{shopping-cart-page-overview}, the Shopping Cart page model includes two main sections: a \textit{List Product List} component responsible for the interactions with the cart items and a \ref{IFMLWindow} for grouping the actions the customer may trigger through the interface for applying discounts or estimating shipping and taxes on his current quote.
+
+As for the previous cases, applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page adding a brand new \texit{View Component} responsible for showing the Reward points the user accumulated within the Shopping Cart Sidebar. The component not only displays the information by the  \textit{Data Binding} with the Reward entity but it also controls the \textit{Event} associated with the \textbf{"Apply Discount"} button and the \textit{Action} connected to it.
 
 \section{Updated web models}
 
