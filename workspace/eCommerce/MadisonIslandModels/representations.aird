@@ -3,7 +3,6 @@
   <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
   <semanticResources>metamodels/RealUsageData.ecore</semanticResources>
   <semanticResources>models/RealUsageData.xmi</semanticResources>
-  <semanticResources>models/model.uml</semanticResources>
   <semanticResources>models/MadisonIslandAfter.xmi</semanticResources>
   <semanticResources>platform:/resource/org.eclipse.uml2.uml/model/UML.ecore</semanticResources>
   <semanticResources>platform:/plugin/org.eclipse.uml2.types/model/Types.ecore</semanticResources>
