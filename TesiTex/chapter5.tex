@@ -6,10 +6,10 @@
 
 \section{Transformation}
 
-In the last chapter, after describing both metamodels for the Real Usage Data and the Interaction Flow Modeling Language,  we proceeded to create dynamic instances for both models respectively describing the actual input data available for the personalization process and the initial IFMLModel of the eCommerce Madison Island website. In this chapter, we illustrate a possible model transformation for this model based on the Real Usage instance data with the goal of creating an upgraded version which takes into account the customer preferences and his actions.
+In the last chapter, after describing both metamodels for the Real Usage Data and the Interaction Flow Modeling Language,  we proceeded to create dynamic instances for both models respectively describing the actual input data available for the personalization process and the initial IFMLModel of the eCommerce Madison Island website. In this chapter, we illustrate a possible model transformation for this model based on the Real Usage instance data with the goal of creating an upgraded model version which takes into account the customer preferences and his actions.
 
 \subsection{Homepage updates}
-
+\label{homepage-updates}
 Considering the data coming from the Proximity sensors within the actual Madison Island retail store we are aware of a set of regions corresponding to the categories the user prefers over the others, this information will be used to change the content, and therefore the IFMLModel, for the Homepage carousel.
 
 For instance, we know that \textbf{Blazers},\textbf{Tees, Knits and Polos} and \textbf{Shoes} categories correspond to the \textit{sessionRegion} elements where the user spent more time within the store after sorting the entries by \textit{maxSecondsInRegion} and \textit{maxProximity}. In the case of the Blazers category for example, the data belonging to the \textit{RealUsageData:ProximityData} parent node has this form:
@@ -33,7 +33,7 @@ For instance, we know that \textbf{Blazers},\textbf{Tees, Knits and Polos} and \
 \end{lstlisting}
 \vspace{0.5cm}
 
-Applying this knowledge, the \textit{subBiewComponentParts} and the \textit{parameter} nodes of the first HightlightedCategoriesCarousel IFMLWindow elements from the initial IFMLModel can be modified from this:
+Applying this knowledge, the \textit{subBiewComponentParts} and the \textit{parameter} nodes of the first HightlightedCategoriesCarousel \textit{IFMLWindow} elements from the initial \textit{IFMLModel} can be modified from this:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -94,8 +94,8 @@ The model transition in this case would occurr not only replacing the IFML viewC
 \vspace{0.5cm}
 
 \subsection{Header updates}
-
-Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of the IFMLModel describing the Madison Island website top area could also be enhanced to show a list of recent actions which generated reward points performed by the customer in the physical stores.  This is achieved appending  an instance of \textit{List View Component} to the \textit{interactionFlowModelElements} parent node called \textit{RecentRewardActions} linked to the Rewards \textit{Data Binding} entity and visualizing the \textit{Action Name} and \textit{Points Attribution} properties to the frontend as per shown in the following snippet of code:
+\label{header-updates}
+Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of the IFMLModel describing the Madison Island website top area could also be enhanced to show a list of recent actions which generated reward points performed by the customer in the physical stores.  This is achieved appending  an instance of \textit{List View Component} to the \textit{interactionFlowModelElements} parent node called \textit{RecentRewardActions} linked to the Rewards \textit{Data Binding} entity and visualizing the \textit{Action Name} and \textit{Points Attribution} properties to the frontend as per shown in the following snippet of code of the \textit{IFMLModel}:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -123,7 +123,7 @@ Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of t
 \vspace{0.5cm}
 
 \subsection{Category Page Updates}
-
+\label{category-page-updates}
 In light of the information gathered in the Real Usage Data model about the recently viewed products available in the \textit{RealUsageData:WebData} node, the Category page can be enhanced appending an additional visual element to the user interface to track this information.
 
 To do so, we filter out the RealUsageData model fetching the nodes containing a \textit{parameterBindingGroup} property including a Product reference like the following entries :
@@ -179,15 +179,62 @@ This new IFML item would be responsible for presenting the thumbnails, names and
 \end{figure}
 \vspace{0.5cm}
 
-\subsection{Product Page Model}
+\subsection{Product Page Updates}
+\label{product-page-updates}
 
-For what it concerns the possible enhancements on the product page of the Madison Island website we focused on the Related Products widget which is shown just below the Add To Cart section. Assuming an initial setup where the list of the products related to the currently displayed one has no specific logic attached, we can proceed extending the \textit{viewElements} node of the IFMLModel taking into consideration the browsing pattern of the users which have been identified examining the RealUsageData instances entries.
+For what it involves the possible improvements on the product page of the Madison Island website, we concentrated on the Related Products widget shown just below the Add To Cart section. In the first \textit{IFMLModel} the list of the products related to the currently shown one has no particular logic assigned, our potential transformation can extend the \textit{viewElements} node of the \textit{IFMLModel} taking into consideration the browsing pattern of the users which have been identified examining the RealUsageData instances entries.
 
-For example, we could have discovered that the product #413 is frequently browsed with the Product #404 in the same sessions examining the values set in the /textit{viewContainer}, /textit{viewComponent} and /textit{parameterBindingGroup} properties for the nodes belonging to the /textit{RealUsageData:WebData} dataset. Consequently, we can take advantage of this information to push a product rather than another on the Related Products section offering a more tailored and customized experience to the user.
+For example, we could have discovered that the \textbf{Core Striped Sport Shirt} product page is frequently browsed along with the \textbf{Plaid Cotton Shirt} product page during the same recorded sessions analyzing the values set in the \textit{viewContainer}, \textit{viewComponent} and \textit{parameterBindingGroup} properties for the nodes belonging to the \textit{RealUsageData:WebData} dataset. Due to this, we can take advantage of this correlation to push a product rather than another on the Related Products section for those products consequently offering a more tailored and customized experience to the user.
 
-With this know we can proceed 
-- Qui, a differenza del modello dello scenario Before, i RelatedProducts sono popolati con i dati dei WebAccessLog computati ed una condizione di getCustomizedRelatedProducts è aggiunta sul DataBinding, c’è anche una Activaction Expression che indica che questa condizione esiste solo qualora esistano effettivamente dei pattern individuati di navigazione per il prodotto corrente.
+The transformation on the starting \textit{IFMLModel} that would occur in this case restricts the \textit{Data Binding} scope appending a \textit{subViewComponentParts} to it which limits the products collection to the computed set of related products SKUs. This additional \textit{ConditionalExpression} would also be bound to a specific \textit{ActivationExpression} which would enable the above filtering only when a customized collection for the current product is available. 
 
+From a \textit{IFMLModel} code perspective, for the \textit{List View Component} which controls the Related Product widget we would transition from this node configuration :
+
+\vspace{0.5cm}
+\lstset{language=XML}
+\begin{lstlisting} 
+  <viewElements xsi:type="ext:List"  name="RelatedProductList">
+  <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
+    ...
+  </viewElementEvents>
+  <viewComponentParts xsi:type="core:DataBinding"  name="Product"/>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+</viewElements>
+\end{lstlisting}
+\vspace{0.5cm}
+
+to this one :
+
+\vspace{0.5cm}
+\lstset{language=XML}
+\begin{lstlisting} 
+  <viewElements xsi:type="ext:List"  name="RelatedProductList">
+  <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
+      ...
+  </viewElementEvents>
+  <viewComponentParts xsi:type="core:DataBinding"  name="Product">
+    <subViewComponentParts xsi:type="core:ConditionalExpression"  language="SQL" body="Product.ID IN getCustomizedRelatedProducts()" name="Product.ID IN getCustomizedRelatedProducts" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.17"/>
+  </viewComponentParts>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
+</viewElements>
+\end{lstlisting}
+\vspace{0.5cm}
+
+Moreover, the \textit{ActivationExpression} defined by the \textit{interactionFlowModelElements} XPath expression presented in the above snippet  links to a node responsible for the control of the feature with the following content:
+
+\vspace{0.5cm}
+\lstset{language=XML}
+\begin{lstlisting} 
+<interactionFlowModelElements 
+  xsi:type="core:ActivationExpression" id="CurrentProduct.hasCustomizedRelatedProduct" language="SQL" body="CurrentProduct.hasCustomizedRelatedProduct()">
+</interactionFlowModelElements>
+
+\end{lstlisting}
+\vspace{0.5cm}
 \subsection{Shopping Cart Model}
 
 - Nello scenario AFTER un ViewComponent per l’applicazione dei Reward Points è mostrato nella sidebar e permette di applicare i reward points accumulati tramite le Action Data Sessions sul quote (carrello) corrente.
