@@ -237,7 +237,24 @@ Moreover, the \textit{ActivationExpression} defined by the \textit{interactionFl
 
 As per described in \ref{shopping-cart-page-overview}, the Shopping Cart page model includes two main sections: a \textit{List Product List} component responsible for the interactions with the cart items and a \textit{IFMLWindow} for grouping the actions the customer may trigger through the interface for applying discounts or estimating shipping and taxes on his current quote.
 
-As for the previous cases, applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page adding a brand new \textit{View Component} responsible for showing the Reward points the user accumulated within the Shopping Cart Sidebar. The component not only displays the information by the  \textit{Data Binding} with the Reward entity but it also controls the \textit{Event} associated with the \textbf{"Apply Discount"} button and the \textit{Action} connected to it.
+As for the previous cases, applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page adding a brand new \textit{View Component} responsible for showing the Reward points the user accumulated within the Shopping Cart Sidebar. The component not only displays the information by the  \textit{Data Binding} with the Reward entity but it also controls the \textit{Event} associated with the \textbf{"Apply Discount"} button and the \textit{Action} connected to it. The structure of this new node which gets appended to its parent \textit{IFMLMenu} is the following :
+
+\vspace{0.5cm}
+\lstset{language=XML}
+\begin{lstlisting} 
+  <viewElements xsi:type="core:ViewComponent" name="Applicable Reward Points">
+    <viewElementEvents xsi:type="ext:OnSelectEvent" name="Apply Reward Points" viewElement="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.2/@viewElements.3">
+        <outInteractionFlows xsi:type="core:NavigationFlow" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.18/@actionEvents.0"/>
+    </viewElementEvents>
+    <viewComponentParts xsi:type="core:DataBinding" name="Reward"/>
+    <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Available Reward Points" featureConcept="//@domainModel/@domainElements.14"/>
+</viewElements>
+\end{lstlisting}
+\vspace{0.5cm}
+
+
+
+
 
 
 
