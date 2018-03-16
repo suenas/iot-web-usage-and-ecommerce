@@ -346,7 +346,6 @@ The following snippet of code is an extract from the IFML Model for the first \t
       <viewElements xsi:type="ext:Details"  name="CategoryDetail">
         <parameters  name="Highlighted Category #1" direction="inout">
           <constraints  language="SQL" body="Category.ID=18"/>
-          <type xsi:type="uml:Class" href="model.uml#__W1boJ6PEeGdnpRmAZh-dQ"/>
         </parameters>
         <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Details" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0">
           <outInteractionFlows xsi:type="core:NavigationFlow"  targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6">
@@ -463,9 +462,7 @@ The structure of the model just outlined produces the following IFMLModel code:
 \lstset{language=XML}
 \begin{lstlisting} 
     <interactionFlowModelElements xsi:type="ext:IFMLWindow"  name="Product" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
-      <parameters  name="Product">
-        <type xsi:type="uml:Class" href="model.uml#_nyxiEA9LEeiZ14TmPBeBNA"/>
-      </parameters>
+      <parameters  name="Product" />
       <viewElements xsi:type="ext:Details"  name="ProductDetails">
         <viewComponentParts xsi:type="core:DataBinding"  name="Product" uniformResourceIdentifier="">
           <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
@@ -482,15 +479,9 @@ The structure of the model just outlined produces the following IFMLModel code:
             </parameterBindingGroup>
           </outInteractionFlows>
         </viewElementEvents>
-        <viewComponentParts xsi:type="ext:SelectionField"  name="Color">
-          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
-        </viewComponentParts>
-        <viewComponentParts xsi:type="ext:SelectionField"  name="Size">
-          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
-        </viewComponentParts>
-        <viewComponentParts xsi:type="ext:SimpleField"  name="Quantity">
-          <type xsi:type="uml:PrimitiveType" href="model.uml#_YGTmEJ6QEeGdnpRmAZh-dQ"/>
-        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SelectionField"  name="Color" />
+        <viewComponentParts xsi:type="ext:SelectionField"  name="Size" />
+        <viewComponentParts xsi:type="ext:SimpleField"  name="Quantity" />
       </viewElements>
       <viewElements xsi:type="ext:List"  name="RelatedProductList">
         <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
@@ -548,9 +539,7 @@ As per shown in Figure \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interac
 \lstset{language=XML}
 \begin{lstlisting} 
     <interactionFlowModelElements xsi:type="ext:IFMLWindow"  name="Product" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.10/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
-      <parameters  name="Product">
-        <type xsi:type="uml:Class" href="model.uml#_nyxiEA9LEeiZ14TmPBeBNA"/>
-      </parameters>
+      <parameters  name="Product"/>
       <viewElements xsi:type="ext:Details"  name="ProductDetails">
         <viewComponentParts xsi:type="core:DataBinding"  name="Product" uniformResourceIdentifier="">
           <subViewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
@@ -567,15 +556,9 @@ As per shown in Figure \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interac
             </parameterBindingGroup>
           </outInteractionFlows>
         </viewElementEvents>
-        <viewComponentParts xsi:type="ext:SelectionField"  name="Color">
-          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
-        </viewComponentParts>
-        <viewComponentParts xsi:type="ext:SelectionField"  name="Size">
-          <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
-        </viewComponentParts>
-        <viewComponentParts xsi:type="ext:SimpleField"  name="Quantity">
-          <type xsi:type="uml:PrimitiveType" href="model.uml#_YGTmEJ6QEeGdnpRmAZh-dQ"/>
-        </viewComponentParts>
+        <viewComponentParts xsi:type="ext:SelectionField"  name="Color" />
+        <viewComponentParts xsi:type="ext:SelectionField"  name="Size" />
+        <viewComponentParts xsi:type="ext:SimpleField"  name="Quantity" />
       </viewElements>
       <viewElements xsi:type="ext:List"  name="RelatedProductList">
         <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
@@ -648,9 +631,7 @@ We conclude this chapter with a snippet of the Header \textit{IFMLWindow} elemen
         </parameterBindingGroup>
       </outInteractionFlows>
     </viewElementEvents>
-    <viewComponentParts xsi:type="ext:SimpleField" id="_lWoCAA9GEeiZ14TmPBeBNA" name="Keyword" direction="out">
-      <type xsi:type="uml:PrimitiveType" href="model.uml#_VK2hkJ6QEeGdnpRmAZh-dQ"/>
-    </viewComponentParts>
+    <viewComponentParts xsi:type="ext:SimpleField" id="_lWoCAA9GEeiZ14TmPBeBNA" name="Keyword" direction="out" />
   </viewElements>
   <viewElements xsi:type="core:ViewComponent" id="_aQFfjQ9TEeiZ14TmPBeBNA" name="TopLinks"/>
   <viewElements xsi:type="core:ViewComponent" id="_ezXdfQ9TEeiZ14TmPBeBNA" name="LanguageSwitch"/>
