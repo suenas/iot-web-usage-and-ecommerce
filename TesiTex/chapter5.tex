@@ -33,7 +33,7 @@ For instance, we know that \textbf{Blazers},\textbf{Tees, Knits and Polos} and \
 \end{lstlisting}
 \vspace{0.5cm}
 
-Applying this knowledge, the \textit{subBiewComponentParts} and the \textit{parameter} nodes of the first HightlightedCategoriesCarousel \textit{IFMLWindow} elements from the initial \textit{IFMLModel} can be modified from this:
+Applying this knowledge, the \textit{subViewComponentParts} and the \textit{parameter} nodes of the first HightlightedCategoriesCarousel \textit{IFMLWindow} elements from the initial \textit{IFMLModel} can be modified from this:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -262,19 +262,55 @@ The structure of this new node which gets appended to its parent \textit{IFMLMen
 \end{lstlisting}
 \vspace{0.5cm}
 
-\newpage
 \section{Updated web models}
 
+In this section, we give an overview of the updated IFMLModels for the Madison Island website based on the transformations discussed in the last chapter and describing how their IFMLDiagrams and corresponding website frontend screens would look like.
 
+\newpage
+\subsection{Homepage}
 
-\subsubsection{Homepage overview}
+Accordingly to what we described in \ref{homepage-updates}, the enhanced homepage presented to the customer would show a custom banner carousel and a product widget both containing items and categories the user interacted with in the retail store.
 
-\subsubsection{Category Page overview}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=9cm]{images/diagrams/after/ifml-homepage.png}
+  \caption{Updated Homepage IFML Diagram}
+  \label{fig:ifml-after-homepage}
+\end{figure}
 
-\subsubsection{Product Page overview}
+\begin{figure}[H]
+  \centering
+    \includegraphics[height=9cm]{images/diagrams/after/desktop-homepage.png}
+  \caption{Updated Homepage Desktop}
+  \label{fig:desktop-before-homepage}
+\end{figure}
+\vspace{0.5cm}
 
-\subsubsection{Shopping Cart Page overview}
+\newpage
+\subsection{Header}
 
-\subsubsection{Shared Elements and Interactions}
+After transforming its IFMLModel component (\ref{header-updates}), the shared header section on the website reveals new information through a new widget aligned on the right side of the area for advertising the actions the user made in the real world with the corresponding earned reward points.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{images/diagrams/after/ifml-header.png}
+  \caption{Updated Header IFML Diagram}
+  \label{fig:ifml-after-homepage}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{images/diagrams/after/desktop-header.png}
+  \caption{Updated Header Desktop Version}
+  \label{fig:desktop-after-header}
+\end{figure}
+\vspace{0.5cm}
+
+\newpage
+\subsection{Category Page}
+
+\subsection{Product Page}
+
+\subsection{Shopping Cart}
 
 %\addcontentsline{toc}{chapter}{}
