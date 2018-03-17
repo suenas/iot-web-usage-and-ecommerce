@@ -234,7 +234,7 @@ Moreover, the \textit{ActivationExpression} defined by the \textit{interactionFl
 \end{lstlisting}
 \vspace{0.5cm}
 \subsection{Shopping Cart}
-
+\label{shopping-cart-updates}
 As per described in \ref{shopping-cart-page-overview}, the Shopping Cart page model includes two main sections: a \textit{List Product List} component responsible for the interactions with the cart items and a \textit{IFMLWindow} for grouping the actions the customer may trigger through the interface for applying discounts or estimating shipping and taxes on his current quote.
 
 \vspace{0.5cm}
@@ -262,11 +262,11 @@ The structure of this new node which gets appended to its parent \textit{IFMLMen
 \end{lstlisting}
 \vspace{0.5cm}
 
+\newpage
 \section{Updated web models}
 
-In this section, we give an overview of the updated IFMLModels for the Madison Island website based on the transformations discussed in the last chapter and describing how their IFMLDiagrams and corresponding website frontend screens would look like.
+In this section, we give an overview of the updated IFMLModels for the Madison Island website based on the transformations discussed in the last chapter describing how their IFMLDiagrams and corresponding website frontend screens would look like.
 
-\newpage
 \subsection{Homepage}
 
 Accordingly to what we described in \ref{homepage-updates}, the enhanced homepage presented to the customer would show a custom banner carousel and a product widget both containing items and categories the user interacted with in the retail store.
@@ -290,7 +290,7 @@ Accordingly to what we described in \ref{homepage-updates}, the enhanced homepag
 \newpage
 \subsection{Header}
 
-After transforming its IFMLModel component (\ref{header-updates}), the shared header section on the website reveals new information through a new widget aligned on the right side of the area for advertising the actions the user made in the real world with the corresponding earned reward points.
+After transforming its IFMLModel component (\ref{header-updates}), the shared header section on the website reveals new information through a new widget aligned on the right side of the area for advertising the actions the user made in the retail store with the corresponding earned reward points.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -311,7 +311,7 @@ After transforming its IFMLModel component (\ref{header-updates}), the shared he
 \newpage
 \subsection{Category Page}
 
-Regardless of the DisplayMode property set for each Category Page, the updated web model presents a vertical section on the right sidebar which maps the recently browsed URLs recorded in the same user session which have been identified during the model transformation phase (\ref{category-page-updates}).
+Regardless of the DisplayMode property set for each Category Page on the eCommerce platform, the updated web model presents a vertical section on the right sidebar which maps the recently browsed URLs recorded in the same user session which have been identified during the model transformation phase (\ref{category-page-updates}).
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -332,12 +332,12 @@ Regardless of the DisplayMode property set for each Category Page, the updated w
 \newpage
 \subsection{Product Page}
 
-Differently from the other page enhancements presented until now, the modified web model for the Product Page does not offer any additional visual segments to the page compared with its starting IFMLModel. As per illustrated in \ref{product-page-updates} the transformation centered on improving the logic behind the related products selection filtering out the items on top of which a browsing correlation was detected. In Figure \ref{fig:desktop-after-product}, we can see an example of this behavior with the \textbf{Plaid Cotton Shirt} product pushed as first in the Related Products region on the \textbf{Core Striped Sport Shirt} product page.
+Differently from the other page enhancements presented until now, the modified web model for the Product Page does not offer any additional visual segments to the page compared with its starting IFMLModel. As per detailed in \ref{product-page-updates} the transformation centered on improving the logic behind the related products selection filtering out the items on top of which a browsing correlation was detected. In Figure \ref{fig:desktop-after-product}, we can see an example of this behavior with the \textbf{Plaid Cotton Shirt} product pushed as first in the Related Products region on the \textbf{Core Striped Sport Shirt} product page.
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[height=12cm]{images/diagrams/after/ifml-product.png}
+    \includegraphics[width=13cm]{images/diagrams/after/ifml-product.png}
   \caption{Updated Product Page IFML Diagram}
   \label{fig:ifml-after-product}
 \end{figure}
@@ -350,6 +350,25 @@ Differently from the other page enhancements presented until now, the modified w
 \end{figure}
 \vspace{0.5cm}
 
+\newpage
 \subsection{Shopping Cart}
+
+In \ref{shopping-cart-updates} we outlined how the visual aspect of the shopping cart sidebar would mutate through an \ref{IFMLModel} transformation producing a new form element within the sidebar responsible for controlling the application of the accumulated reward points available to the customer until that point. Those reward points, generated through actions recorded as part of the real usage data profiling, convert into a discount amount for the current quote that the customer is free to use at any time. As per shown by the attached action in the IFMLDiagram, the customer is redirected to the shopping cart page after the discount is applied.
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{images/diagrams/after/ifml-shopping-cart.png}
+  \caption{Updated Shopping Cart Page IFML Diagram}
+  \label{fig:ifml-after-shopping-cart}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{images/diagrams/after/desktop-shopping-cart.png}
+  \caption{Updated Shopping Cart Page Desktop Version}
+  \label{fig:desktop-after-shopping-cart}
+\end{figure}
+\vspace{0.5cm}
 
 %\addcontentsline{toc}{chapter}{}
