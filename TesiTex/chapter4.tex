@@ -256,7 +256,7 @@ The IFML metamodel is organized into three packages: the Core, the Extension, an
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=14cm]{images/diagrams/ifml-ecore.png}
+    \includegraphics[width=16cm]{images/diagrams/ifml-ecore.png}
   \caption{IFML metamodel in EMF}
   \label{fig:ifml-ecore-representation}
 \end{figure}
@@ -264,6 +264,7 @@ The IFML metamodel is organized into three packages: the Core, the Extension, an
 
 By using the primitive data types from the UML metamodel and a UML representation for the IFML Domain Model, the IFML metamodel specifies a set of UML metaclasses as the foundation for the IFML metaclasses.
 
+\newpage
 The following structure is a high-level representation of the IFML metamodel and its areas of concern:
 
 \begin{itemize}
@@ -278,12 +279,12 @@ The following structure is a high-level representation of the IFML metamodel and
   \item ContentBinding
 \end{itemize}
 
-Figure \ref{fig:simple-ifml-core-model} shows an excerpt of the IFML metamodel. The IFMLModel is the top-level container of all the model elements and represents an IFML model. It contains an \textit{InteractionFlowModel} that is the user view of an application, a \textit{DomainModel} represented in UML, and optional ViewPoints. The concepts extending \textit{ViewContainer}, \textit{ViewComponents}, \textit{ViewComponentPart}, and \textit{ViewElementEvent} represent the visual elements of an \textit{IFMLModel}.
+Figure \ref{fig:simple-ifml-core-model} shows an excerpt of the IFML metamodel. The IFMLModel is the top-level container of all the model elements and represents an \textit{IFMLModel}. It contains an \textit{InteractionFlowModel} that is the user view of an application, a \textit{DomainModel} represented in UML, and optional ViewPoints. The concepts extending \textit{ViewContainer}, \textit{ViewComponents}, \textit{ViewComponentPart}, and \textit{ViewElementEvent} represent the visual elements of an \textit{IFMLModel}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=12cm]{images/diagrams/ifml-metamodel.png}
+    \includegraphics[width=15cm]{images/diagrams/ifml-metamodel.png}
   \caption{Class diagram of an IFML subset.}
   \label{fig:simple-ifml-core-model}
 \end{figure}
@@ -310,13 +311,14 @@ Although some partial \textit{IFMLModel} representations for the Madison Island 
 
 The Madison Island Interaction Model is formed by a different combination of \textit{IFMLWindow} elements connected through \textit{IFMLAction}s reacting to distinct \textit{Events} with different \textit{ParameterBindings}. The detail of the modeling is contextual to the purpose of this work. Consequently, we have limited the inclusion of the possible interactions and elements presented on the website to the IFMLModel. In so doing, we keep the model design lightweight and reduce its complexity. Overall, the main \textit{IFMLWindow} standalone nodes have been described with more detail when compared to other shared \textit{ViewContainer} elements, such as the Header and the Footer. In Figure \ref{fig:ifml-before-global}, a visual representation of the IFMLDiagram corresponding to the main \textit{IFMLModel} for the Madison Island eCommerce platform is presented.
 
+\vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[height=10cm,angle=-90] {images/diagrams/before/ifml-global.png}
-  \caption{Main Madison Island IFML Diagram}
+    \includegraphics[height=6.5cm] {images/diagrams/before/ifml-global.png}
+  \caption{Main Madison Island IFML Diagram overview}
   \label{fig:ifml-before-global}
 \end{figure}
-
+\vspace{0.5cm}
 \newpage
 \subsubsection{Homepage}
 
@@ -367,7 +369,7 @@ The above snippet belongs to a more complex \textit{IFMLModel} hierarchy, as sho
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[height=12cm]{images/diagrams/before/ifml-hierarchy-homepage.png}
+    \includegraphics[width=10cm]{images/diagrams/before/ifml-hierarchy-homepage.png}
   \caption{Interaction Flow Homepage Model in EMF}
   \label{fig:ifml-before-hierarchy-homepage}
 \end{figure}
@@ -381,9 +383,9 @@ The Madison Island Interaction Model for the Category Page (Figure \ref{fig:desk
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-  \subfloat[Display Mode PAGE]{{\includegraphics[width=7cm]{images/diagrams/before/desktop-category1.png} }}%
+  \subfloat[Category Page with Display Mode PAGE]{{\includegraphics[width=8cm]{images/diagrams/before/desktop-category1.png} }}%
   \qquad
-  \subfloat[Display Mode PRODUCTS]{{\includegraphics[width=7cm]{images/diagrams/before/desktop-category2.png} }}%
+  \subfloat[Category Page with Display Mode PRODUCTS]{{\includegraphics[width=8cm]{images/diagrams/before/desktop-category2.png} }}%
   \caption{Category Desktop Versions}%
   \label{fig:desktop-before-category}%
 \end{figure}
@@ -521,14 +523,12 @@ The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig
   \label{fig:desktop-before-shoppingcart}
 \end{figure}
 
-\vspace{0.5cm}
 \begin{figure}[H]
   \centering
     \includegraphics[width=14cm]{images/diagrams/before/ifml-shoppingcart.png}
   \caption{Shopping Cart Page IFML Diagram}
   \label{fig:ifml-before-shoppingcart}
 \end{figure}
-\vspace{0.5cm}
 
 As shown in Figure \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interaction Flow model representing the shopping page has the following form:
 \vspace{0.5cm}
@@ -577,7 +577,7 @@ The \textit{IFMLModel} representation of the Shopping Cart page structure is pre
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=13cm]{images/diagrams/before/ifml-hierarchy-shoppingcart.png}
+    \includegraphics[width=12cm]{images/diagrams/before/ifml-hierarchy-shoppingcart.png}
   \caption{Interaction Flow Shopping Cart Model in EMF}
   \label{fig:ifml-before-hierarchy-shoppingcart}
 \end{figure}
@@ -607,6 +607,7 @@ The Footer \textit{IFMLWindow} model is quite straightforward. It retains the in
 \end{figure}
 \vspace{0.5cm}
 
+\newpage
 We conclude this chapter with both a snippet of the Header \textit{IFMLWindow} element code coming from the \textit{IFMLModel}, and an excerpt of the eCore diagram for the areas of the website we described in this subsection (Figure \ref{fig:ifml-before-hierarchy-headersearchfooter}).
 
 \vspace{0.5cm}
@@ -637,7 +638,7 @@ We conclude this chapter with both a snippet of the Header \textit{IFMLWindow} e
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=13cm]{images/diagrams/before/ifml-hierarchy-headersearchfooter.png}
+    \includegraphics[width=12cm]{images/diagrams/before/ifml-hierarchy-headersearchfooter.png}
   \caption{Interaction Flow for the shared elements in EMF}
   \label{fig:ifml-before-hierarchy-headersearchfooter}
 \end{figure}

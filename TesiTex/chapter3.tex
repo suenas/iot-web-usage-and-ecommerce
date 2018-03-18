@@ -118,20 +118,20 @@ The end-to-end interaction from the homepage to the product detail page can be r
 \end{figure}
 \vspace{0.5cm}
 
-The same sequence of actions can be expressed as a stream of records in the access logs on the application server. Such logs track all the requests processed by the web platform. The following table presents how the above mentioned user journey is logged on the server.
+The same sequence of actions can be expressed as a stream of records in the access logs on the application server. Such logs track all the requests processed by the web platform. The following table presents how the above mentioned user journey is logged on the server :
 
 \vspace{0.5cm}
 \begin{center}
-  \begin{tabular}{|c|p{3cm}|c|p{6cm}|}
+  \begin{tabular}{|c|p{3cm}|p{10cm}|}
   \hline
-  \multicolumn{4}{|c|}{Application Server Access Log}\\ \hline
-  \textbf{ID}&\textbf{Page}&\textbf{IFML}&\textbf{Log Entry}   \\ \hline
-  1&Home Page&Home&\em[29/Nov/2017:06:30:45 +0000] "GET /" 200 0 - 29505 \\ \hline
-  2&\textit{"View All Men"} Category Page &Category&\em[29/Nov/2017:06:49:38 +0000] "GET /men.html /" 200 0 - 29505 
+  \multicolumn{3}{|c|}{Application Server Access Log}\\ \hline
+  \textbf{ID}&\textbf{Page}&\textbf{Log Entry}   \\ \hline
+  1&Home Page&\em[29/Nov/2017:06:30:45 +0000] "GET /" 200 0 - 29505 \\ \hline
+  2&\textit{"View All Men"} Category Page &\em[29/Nov/2017:06:49:38 +0000] "GET /men.html /" 200 0 - 29505 
   \\ \hline
-  3&\textit{"Shirts"} Category Page &Category&\em[29/Nov/2017:07:04:15 +0000] "GET /men/shirts.html" 200 0 - 29505
+  3&\textit{"Shirts"} Category Page &\em[29/Nov/2017:07:04:15 +0000] "GET /men/shirts.html" 200 0 - 29505
   \\ \hline
-  4&\textit{"Plaid Cotton Shirt"} Product Page &Product&\em[29/Nov/2017:07:08:40 +0000] "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
+  4&\textit{"Plaid Cotton Shirt"} Product Page &\em[29/Nov/2017:07:08:40 +0000] "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
   \\ \hline
   \end{tabular}
   \end{center}
@@ -167,14 +167,12 @@ By clicking either on the product name or on its thumbnail, the user is directed
 \vspace{0.5cm}
 
 Besides using the simple navigational shortcut available on the related products section, the user can reach a product page in several other ways. For instance, users can click on the "back" button in their browser to quickly go to the previous category page and to choose a different item. They can also reach the navigation menu to browse another category, or use the search function on the top bar to perform a global product search.
-Consequently, the tracking of all these possible user interactions can help in establishing a correlation pattern among different products on the website.
-
-Figure \ref{fig:product-search} illustrates the result of the search by the term "blazer" on the search bar within a given product page.
+Consequently, the tracking of all these possible user interactions can help in establishing a correlation pattern among different products on the website. Figure \ref{fig:product-search} illustrates the result of the search by the term "blazer" on the search bar within a given product page.
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[height=8cm]{images/madison/search.png}
+    \includegraphics[height=7cm]{images/madison/search.png}
   \caption{Product search bar}
   \label{fig:product-search}
 \end{figure}
@@ -196,7 +194,7 @@ At this point, we can update and extend the IFML model shown in Figure \ref{fig:
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=16cm]{images/madison/ifml2.png}
+    \includegraphics[width=14cm]{images/madison/ifml2.png}
   \caption{Updated IFML representation of the navigational behavious}
   \label{fig:ifml2}
 \end{figure}
@@ -206,22 +204,22 @@ These new navigational paths are represented in the application server access lo
 
 \vspace{0.5cm}
 \begin{center}
-  \begin{tabular}{|c|p{3cm}|c|p{6cm}|}
+  \begin{tabular}{|c|p{3cm}|p{10cm}|}
   \hline
-  \multicolumn{4}{|c|}{Application Server Access Log}\\ \hline
-  \textbf{ID}&\textbf{Page}&\textbf{IFML}&\textbf{Log Entry}   \\ \hline
-  1&\textit{"Plaid Cotton Shirt"} Product Page&Product&\em[04/Dec/2017:06:37:06 +0000] 
+  \multicolumn{3}{|c|}{Application Server Access Log}\\ \hline
+  \textbf{ID}&\textbf{Page}&\textbf{Log Entry}   \\ \hline
+  1&\textit{"Plaid Cotton Shirt"} Product Page&\em[04/Dec/2017:06:37:06 +0000] 
   "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
   \\ \hline
-  2&\textit{"Core Striped Sport Shirt"} Product Page &Product&\em [04/Dec/2017:06:37:15 +0000] "GET /core-striped-sport-shirt-551.html" 200 0 - 29505
+  2&\textit{"Core Striped Sport Shirt"} Product Page &\em [04/Dec/2017:06:37:15 +0000] "GET /core-striped-sport-shirt-551.html" 200 0 - 29505
   \\ \hline
-  3&\textit{"Plaid Cotton Shirt"} Product Page &Product&\em[04/Dec/2017:06:37:21 +0000] "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
+  3&\textit{"Plaid Cotton Shirt"} Product Page &\em[04/Dec/2017:06:37:21 +0000] "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
   \\ \hline
-  5&\textit{"Tees Knits And Polos"} Category Page &Category&\em[04/Dec/2017:06:38:06 +0000] "GET /men/tees-knits-and-polos.html" 200 0 - 29505
+  5&\textit{"Tees Knits And Polos"} Category Page &\em[04/Dec/2017:06:38:06 +0000] "GET /men/tees-knits-and-polos.html" 200 0 - 29505
   \\ \hline
-  6&\textit{"Blazer"} Search By Term&Search Results&\em[04/Dec/2017:06:38:20 +0000] "GET /catalogsearch/result/?q=blazer" 200 0 - 29505
+  6&\textit{"Blazer"} Search By Term&\em[04/Dec/2017:06:38:20 +0000] "GET /catalogsearch/result/?q=blazer" 200 0 - 29505
   \\ \hline
-  7&\textit{"Stretch Cotton Blazer"} Product Page &Product&\em[04/Dec/2017:06:38:43 +0000] "GET /stretch-cotton-blazer-587.html" 200 0 - 29505
+  7&\textit{"Stretch Cotton Blazer"} Product Page &\em[04/Dec/2017:06:38:43 +0000] "GET /stretch-cotton-blazer-587.html" 200 0 - 29505
   \\ \hline
   \end{tabular}
   \end{center}
@@ -263,7 +261,7 @@ Unlike QR and NFC communication, the customer needs to have an app installed on 
 In other words, the phone OS will keep listening for beacons even if the app is not running, and even if the phone is locked or rebooted. Once either an “enter” or and “exit” event happens, the OS will launch the app into the background (if needed) and let it execute, for a few seconds, some code to handle the event.
 
 \subsection{Proximity Marketing}
-\label{ssection:proximity-marketing}
+\label{section:proximity-marketing}
 
 Proximity Marketing is an efficient tool not only for discovering and engaging potential customers, but also fro better targgeting existing ones. This marketing technique operates in a given physical location by leveraging the IoT ecosystem to promote products and services.  This communication channel acts on a clear target: all the customers close to or within an area covered by the diffusion devices.
 
@@ -298,7 +296,7 @@ In this scenario, the following image illustrates what would be a suitable Estim
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=16cm]{images/madison/retail-map-beacon.jpg}
+    \includegraphics[width=14cm]{images/madison/retail-map-beacon.jpg}
   \caption{Madison Island brick-and-mortar store with Estimote beacons allocation}
   \label{fig:beacons-map}
 \end{figure}
@@ -475,14 +473,5 @@ The JSON payload sent to the server (e.g. \textbf{POST /users/3045678/scans}) af
 \vspace{0.5cm}
 
 
-\vspace{0.5cm}
-\begin{figure}[H]
-  \centering
-    \includegraphics[width=12cm]{images/loyalty-reward-points.png}
-  \caption{Madison Island loyalty program usage during checkout}
-  \label{fig:loyalty-points}
-\end{figure}
-\vspace{0.5cm}
-
-Similarly to the process outlined in \ref{ssection:proximity-marketing}, the product data collected when customers scan codes during their visits to the physical store will potentially be converted into reward points to be used by the same customer on the website.  
+Similarly to the process outlined in \ref{section:proximity-marketing}, the product data collected when customers scan codes during their visits to the physical store will potentially be converted into reward points to be used by the same customer on the website.  
 
