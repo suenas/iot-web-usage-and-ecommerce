@@ -6,13 +6,13 @@
 
 \section{Transformation}
 
-In the last chapter, after describing both metamodels for the Real Usage Data and the Interaction Flow Modeling Language,  we proceeded to create dynamic instances for both models respectively describing the actual input data available for the personalization process and the initial IFMLModel of the eCommerce Madison Island website. In this chapter, we illustrate a possible model transformation for this model based on the Real Usage instance data with the goal of creating an upgraded model version which takes into account the customer preferences and his actions.
+In the last chapter, after describing both metamodels for the Real Usage Data and the Interaction Flow Modeling Language, we proceeded with creating dynamic instances for both models, respectively describing the actual input data available for the customisation process and the initial IFMLModel of the eCommerce Madison Island website. In this chapter, we illustrate a possible transformation for this model, based on the Real Usage instance data. Our goal is to upgrade the model version, taking into account customers preferences and their actions.
 
 \subsection{Homepage}
 \label{homepage-updates}
-Considering the data coming from the Proximity sensors within the actual Madison Island retail store we are aware of a set of regions corresponding to the categories the user prefers over the others, this information will be used to change the content, and therefore the IFMLModel, for the Homepage carousel.
+Considering the data coming from the Proximity sensors within the actual Madison Island retail store, we are aware of a set of regions corresponding to the customer preferred categories. That information will be used to change the content and, therefore, the IFMLModel for the Homepage carousel.
 
-For instance, we know that \textbf{Blazers},\textbf{Tees, Knits and Polos} and \textbf{Shoes} categories correspond to the \textit{sessionRegion} elements where the user spent more time within the store after sorting the entries by \textit{maxSecondsInRegion} and \textit{maxProximity}. In the case of the Blazers category for example, the data belonging to the \textit{RealUsageData:ProximityData} parent node has this form:
+For instance, we know that the \textbf{Blazers}, \textbf{Tees, Knits and Polos} and \textbf{Shoes} categories correspond to the \textit{sessionRegion} elements within the store in which the user spent more time after sorting the entries by \textit{maxSecondsInRegion} and \textit{maxProximity} attributes. In the case of the Blazers category for example, the data belonging to the \textit{RealUsageData:ProximityData} parent node takes this form:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -33,7 +33,7 @@ For instance, we know that \textbf{Blazers},\textbf{Tees, Knits and Polos} and \
 \end{lstlisting}
 \vspace{0.5cm}
 
-Applying this knowledge, the \textit{subViewComponentParts} and the \textit{parameter} nodes of the first HightlightedCategoriesCarousel \textit{IFMLWindow} elements from the initial \textit{IFMLModel} can be modified from this:
+By applying this knowledge, we can say that the \textit{subViewComponentParts} and the \textit{parameter} nodes of the first HightlightedCategoriesCarousel \textit{IFMLWindow} elements from the initial \textit{IFMLModel} can be modified from this:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -48,7 +48,7 @@ Applying this knowledge, the \textit{subViewComponentParts} and the \textit{para
 \end{lstlisting}
 \vspace{0.5cm}
 
-to :
+to:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -63,7 +63,7 @@ to :
 \end{lstlisting}
 \vspace{0.5cm}
 
-Besides this content update which priorities some categories over the others, the \textit{IFMLModel} can also be transformed to use different IFML elements under certain conditions. For example, the viewComponent which is responsible for displaying the most recent products on the homepage can be swapped with another \textit{List View Component} responsible for presenting the latest products the customer interacted with in the physical retail store. The information about these products is available in the RealUsageData model under the \textit{RealUsageData:ActionData} section and, in our specific example, it carries the data about the product SKUs the customer scanned with his smartphone camera to collect reward points.
+Besides updating the content by prioritising some categories, the \textit{IFMLModel} can also be changed to use different IFML elements under certain conditions. For example, the \textit{List View Component}, which is responsible for displaying the most recent products on the homepage, can be replaced by another \textit{List View Component}, responsible for presenting the latest products with which customers interacted in the physical store. Information about these products is available in the RealUsageData model under the \textit{RealUsageData:ActionData} section. In our specific example, \textit{RealUsageData:ActionData} contains the data about the product SKUs that the customer had scanned for collecting reward points.
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -80,7 +80,7 @@ Besides this content update which priorities some categories over the others, th
 \vspace{0.5cm}
 
 
-The model transition in this case would occurr not only replacing the IFML viewComponent with a different type but also adding a \textit{ConditionalExpression} filtering the items by their SKUs as per shown in Figure \ref{fig:ifml-transformation-example}.
+The model transition in this case would occur not only replacing the IFML \textit{View Component} with a different type, but also adding a \textit{ConditionalExpression} that filters the items by their SKUs, as shown in Figure \ref{fig:ifml-transformation-example}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -93,7 +93,8 @@ The model transition in this case would occurr not only replacing the IFML viewC
 
 \subsection{Header}
 \label{header-updates}
-Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of the IFMLModel describing the Madison Island website top area could also be enhanced to show a list of recent actions which generated reward points performed by the customer in the physical stores.  This is achieved appending  an instance of \textit{List View Component} to the \textit{interactionFlowModelElements} parent node called \textit{RecentRewardActions} linked to the Rewards \textit{Data Binding} entity and visualizing the \textit{Action Name} and \textit{Points Attribution} properties to the frontend as per shown in the following snippet of code of the \textit{IFMLModel}:
+
+Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of the \textit{IFMLModel} describing the top area in the Madison Island website could also be enhanced to show a list of recent actions performed by customers in the physical stores that generated reward points.  This can be achieved by appending an instance of \textit{List View Component} to the \textit{interactionFlowModelElements} parent node, called \textit{RecentRewardActions}. This instance is then linked to the Rewards \textit{Data Binding} entity, which allows the visualization of the \textit{Action Name} and \textit{Points Attribution} properties to the front-end, as shown in the following snippet of \textit{IFMLModel} code:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -122,9 +123,10 @@ Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of t
 
 \subsection{Category Page}
 \label{category-page-updates}
-In light of the information gathered in the Real Usage Data model about the recently viewed products available in the \textit{RealUsageData:WebData} node, the Category page can be enhanced appending an additional visual element to the user interface to track this information.
 
-To do so, we filter out the RealUsageData model fetching the nodes containing a \textit{parameterBindingGroup} property including a Product reference like the following entries :
+In light of the information gathered in the Real Usage Data model about the recently viewed products available in the \textit{RealUsageData:WebData} node, the Category page can be enhanced by appending an additional visual element to the user interface for tracking that information.
+
+To do so, we filter out the RealUsageData model, fetching the nodes containing a \textit{parameterBindingGroup} property and including a Product reference like the following entries:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -164,9 +166,9 @@ To do so, we filter out the RealUsageData model fetching the nodes containing a 
 \end{lstlisting}
 \vspace{0.5cm}
 
-With the above data we can then proceed transforming the intial IFML Model for the Category page appending a \textit{RecentlyViewedProducts} section in the form of a \textit{List View Component} bound to the Product \textit{Data Binding} entity.
+With the data described above, we can then proceed with transforming the initial \textit{IFMLModel} for the Category page, appending to it a \textit{RecentlyViewedProducts} section in the form of a \textit{List View Component} bound to the Product \textit{Data Binding} entity.
 
-This new IFML item would be responsible for presenting the thumbnails, names and prices of these products to the customer separating them through a distinct \textit{ConditionalExpression} which maps the children node of the \textit{RealUsageData:WebData} dataset shown earlier before finally returning the items in the order they were browsed regardless of the display mode property of the Category itself (Figure \ref{fig:recently-viewed-ifml-definition}).
+This new IFML item would be responsible for presenting customers with the thumbnails, names, and prices of these products, separating them through a distinct \textit{ConditionalExpression}. That expression maps the children node of the \textit{RealUsageData:WebData} dataset shown previously, before finally returning the items in the order they were browsed, and regardless of the display mode property of the Category itself (Figure \ref{fig:recently-viewed-ifml-definition}).
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -180,13 +182,13 @@ This new IFML item would be responsible for presenting the thumbnails, names and
 \subsection{Product Page}
 \label{product-page-updates}
 
-For what it involves the possible improvements on the product page of the Madison Island website, we concentrated on the Related Products widget shown just below the Add To Cart section. In the first \textit{IFMLModel} the list of the products related to the currently shown one has no particular logic assigned, our potential transformation can extend the \textit{viewElements} node of the \textit{IFMLModel} taking into consideration the browsing pattern of the users which have been identified examining the RealUsageData instances entries.
+As far as the possible improvements on the product page of the Madison Island website are concerned, we concentrated on the Related Products widget shown below the Add To Cart section. In the first \textit{IFMLModel}, the list of products related to the currently shown item has no particular assigned logic. Our potential transformation is to extend the \textit{viewElements} node of the \textit{IFMLModel}, taking into account users browsing patterns that have been identified by examining the RealUsageData instances entries.
 
-For example, we could have discovered that the \textbf{Core Striped Sport Shirt} product page is frequently browsed along with the \textbf{Plaid Cotton Shirt} product page during the same recorded sessions analyzing the values set in the \textit{viewContainer}, \textit{viewComponent} and \textit{parameterBindingGroup} properties for the nodes belonging to the \textit{RealUsageData:WebData} dataset. Due to this, we can take advantage of this correlation to push a product rather than another on the Related Products section for those products consequently offering a more tailored and customized experience to the user.
+For example, we could have discovered that, during a same recorded sessions, the \textbf{Core Striped Sport Shirt} and the \textbf{Plaid Cotton Shirt} product pages are frequently browsed together. That could be done by analysing the values set in the \textit{viewContainer}, \textit{viewComponent}, and \textit{parameterBindingGroup} properties for the nodes belonging to the \textit{RealUsageData:WebData} dataset. Such change allows us to take advantage of this correlation, pushing specific products on the Related Products section and consequently offering a more tailored user experience.
 
-The transformation on the starting \textit{IFMLModel} that would occur in this case restricts the \textit{Data Binding} scope appending a \textit{subViewComponentParts} to it which limits the products collection to the computed set of related products SKUs. This additional \textit{ConditionalExpression} would also be bound to a specific \textit{ActivationExpression} which would enable the above filtering only when a customized collection for the current product is available. 
+The change on the starting \textit{IFMLModel} that would occur in that case restricts the \textit{Data Binding} scope, appending a \textit{subViewComponentParts} to it. That change limits the products collection to the computed set of related products SKUs. The additional \textit{ConditionalExpression} would also be bound to a specific \textit{ActivationExpression}, which would enable the above mentioned filtering only when a customised collection is available for the current product. 
 
-From a \textit{IFMLModel} code perspective, for the \textit{List View Component} which controls the Related Product widget we would transition from this node configuration :
+From a \textit{IFMLModel} code perspective, we would transition from the following node configuration for the \textit{List View Component} that controls the Related Product widget:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -203,7 +205,7 @@ From a \textit{IFMLModel} code perspective, for the \textit{List View Component}
 \end{lstlisting}
 \vspace{0.5cm}
 
-to this one :
+to this one:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -222,7 +224,7 @@ to this one :
 \end{lstlisting}
 \vspace{0.5cm}
 
-Moreover, the \textit{ActivationExpression} defined by the \textit{interactionFlowModelElements} XPath expression presented in the above snippet  links to a node responsible for the control of the feature with the following content:
+Moreover, the \textit{ActivationExpression} defined by the \textit{interactionFlowModelElements} XPath expression presented above links to a node responsible for controlling the feature with the following content:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -235,7 +237,8 @@ Moreover, the \textit{ActivationExpression} defined by the \textit{interactionFl
 \vspace{0.5cm}
 \subsection{Shopping Cart}
 \label{shopping-cart-updates}
-As per described in \ref{shopping-cart-page-overview}, the Shopping Cart page model includes two main sections: a \textit{List Product List} component responsible for the interactions with the cart items and a \textit{IFMLWindow} for grouping the actions the customer may trigger through the interface for applying discounts or estimating shipping and taxes on his current quote.
+
+As described in \ref{shopping-cart-page-overview}, the Shopping Cart page model includes two main sections. The first is a \textit{List Product List} component, responsible for the interactions with the cart items. The second is the \textit{IFMLWindow}, used for grouping the actions triggered by customers when they apply discounts or estimate shipping and taxes for their current quote.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -246,8 +249,8 @@ As per described in \ref{shopping-cart-page-overview}, the Shopping Cart page mo
 \end{figure}
 \vspace{0.5cm}
 
-Along with the previous analysed cases, applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page adding a brand new \textit{View Component} responsible for showing the Reward points the user accumulated within the Shopping Cart Sidebar (Figure \ref{fig:shopping-cart-sidebar-ifml-definition}). The component not only displays the information by the  \textit{Data Binding} with the Reward entity but it also controls the \textit{Event} associated with the \textbf{"Apply Discount"} button and the \textit{Action} connected to it. 
-The structure of this new node which gets appended to its parent \textit{IFMLMenu} is the following :
+Along with the cases analysed previously and by applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page by adding a new \textit{View Component}. That component shows the Reward points accumulated by the user in the Shopping Cart Sidebar (Figure \ref{fig:shopping-cart-sidebar-ifml-definition}). The component not only displays the information by the \textit{Data Binding} with the Reward entity, but also controls the \textit{Event} associated with the \textbf{"Apply Discount"} button and the \textit{Action} connected to it. 
+The structure of this new node, which gets appended to its parent \textit{IFMLMenu} is as follows:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -265,11 +268,11 @@ The structure of this new node which gets appended to its parent \textit{IFMLMen
 \newpage
 \section{Updated web models}
 
-In this section, we give an overview of the updated IFMLModels for the Madison Island website based on the transformations discussed in the last chapter describing how their IFMLDiagrams and corresponding website frontend screens would look like.
+In this section, we present an overview of the updated IFMLModels for the Madison Island website based on the transformations discussed in the last chapter. We also describe how their IFMLDiagrams and corresponding website front-end screens would look like.
 
 \subsection{Homepage}
 
-Accordingly to what we described in \ref{homepage-updates}, the enhanced homepage presented to the customer would show a custom banner carousel and a product widget both containing items and categories the user interacted with in the retail store.
+According to what we described in \ref{homepage-updates}, the enhanced homepage presented to the customer would show a custom banner carousel and a product widget, both containing items and categories with which the user interacted in the retail store.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -290,7 +293,7 @@ Accordingly to what we described in \ref{homepage-updates}, the enhanced homepag
 \newpage
 \subsection{Header}
 
-After transforming its IFMLModel component (\ref{header-updates}), the shared header section on the website reveals new information through a new widget aligned on the right side of the area for advertising the actions the user made in the retail store with the corresponding earned reward points.
+After transforming its IFMLModel component (\ref{header-updates}), the shared header section on the website reveals new information through a new widget. This widget is aligned on the right side of the area used for advertising the actions taken by the user in the retail store and their respective rewarded points.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -311,7 +314,7 @@ After transforming its IFMLModel component (\ref{header-updates}), the shared he
 \newpage
 \subsection{Category Page}
 
-Regardless of the DisplayMode property set for each Category Page on the eCommerce platform, the updated web model presents a vertical section on the right sidebar which maps the recently browsed URLs recorded in the same user session which have been identified during the model transformation phase (\ref{category-page-updates}).
+Regardless of the DisplayMode property set for each Category Page on the eCommerce platform, the updated web model presents a vertical section on the right sidebar. That section maps the URLs browsed recently in a same user session that have been identified during the model transformation phase (\ref{category-page-updates}).
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -332,7 +335,7 @@ Regardless of the DisplayMode property set for each Category Page on the eCommer
 \newpage
 \subsection{Product Page}
 
-Differently from the other page enhancements presented until now, the modified web model for the Product Page does not offer any additional visual segments to the page compared with its starting IFMLModel. As per detailed in \ref{product-page-updates} the transformation centered on improving the logic behind the related products selection filtering out the items on top of which a browsing correlation was detected. In Figure \ref{fig:desktop-after-product}, we can see an example of this behavior with the \textbf{Plaid Cotton Shirt} product pushed as first in the Related Products region on the \textbf{Core Striped Sport Shirt} product page.
+Differently from the other page enhancements presented so far, the modified web model for the Product Page does not offer any additional visual segments to the page when compared to its starting IFMLModel. As discussed in \ref{product-page-updates}, the change focused on improving the logic behind the related products selection by filtering the items on top of which a browsing correlation was detected. In Figure \ref{fig:desktop-after-product}, we can see an example of this behaviour, where the \textbf{Plaid Cotton Shirt} product is placed as the first one in the Related Products region on the \textbf{Core Striped Sport Shirt} product page.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -353,7 +356,7 @@ Differently from the other page enhancements presented until now, the modified w
 \newpage
 \subsection{Shopping Cart}
 
-In \ref{shopping-cart-updates} we outlined how the visual aspect of the shopping cart sidebar would mutate through an \ref{IFMLModel} transformation producing a new form element within the sidebar responsible for controlling the application of the accumulated reward points available to the customer until that point. Those reward points, generated through actions recorded as part of the real usage data profiling, convert into a discount amount for the current quote that the customer is free to use at any time. As per shown by the attached action in the IFMLDiagram, the customer is redirected to the shopping cart page after the discount is applied.
+In \ref{shopping-cart-updates}, we outlined how the visual aspects of the shopping cart sidebar would be transformed through an \textit{IFMLModel} change. This change would result in a new form element within the sidebar, which would be responsible for controlling the application of the reward points available to the customer at that point. Those reward points - generated through actions recorded as part of the real usage data profiling - would be converted into discounts that the customer could apply to their current quote at any time. As shown by the attached action in the IFML Diagram, the customer is redirected to the shopping cart page after the discount is applied.
 
 \vspace{0.5cm}
 \begin{figure}[H]
