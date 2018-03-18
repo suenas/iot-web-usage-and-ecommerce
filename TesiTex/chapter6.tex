@@ -120,6 +120,10 @@ In summary, each page of the website can be thought as a composition of Magento 
 
 \section{Code generation}
 
+The main idea behind the code generation method is to use the updated \textit{IFMLModel} processed in the previous stage and make it the input of an additional alteration which results in code understandable by the target platform, in this case, Magento. This generated code would have the form of Layout Update XML instructions that can be interpreted and treated from the platform as any other layout update XML file.
+
+Since XMI is XML-based, we decided to use XSLT to transform the XMI representation of the enhanced \textit{IFMLModel}. 
+
 
 
 
