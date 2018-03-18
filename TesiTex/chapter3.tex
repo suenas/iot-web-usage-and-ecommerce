@@ -2,14 +2,14 @@
 \chead{}
 \chapter{Data acquisition}
 
-The evolution of the Internet and the amount of data available from web usage mining and IoT devices have led to an enormous proliferation of the accessible information as per described in the previous sections.  In this chapter, we focus on describing the possible channels of adquisition of customer behavioral data in both the virtual and the physical world. This valuable information represents the milestone of the journey towards the enhancement of the eCommerce experience for its users, and aims at addressing some of the weaknesses of the standard approaches for web personalization.
+The evolution of the Internet and the amount of data available from web usage mining and IoT devices have led to an enormous proliferation of the accessible information as per described in the previous sections.  In this chapter, we focus on describing the possible channels of acquisition of customer behavioural data in both the virtual and the physical world. This valuable information represents the milestone of the journey towards the enhancement of the eCommerce experience for its users, and aims at addressing some of the weaknesses of the standard approaches for web personalisation.
 
-Before we can efficiently represent content visualized on user interfaces, navigation paths and user-triggered events on a web application, we need to take a little detour briefly introudicing a standard modeling language able to shape such interactions. This language will be analysed in detail in the following sections.
+Before we can efficiently represent content visualised on user interfaces, navigation paths and user-triggered events on a web application, we need to take a little detour briefly introducing a standard modeling language able to shape such interactions. This language will be analysed in detail in the following sections.
 
 \section{The IFML language}
 \label{the-ifml-language}
 
-The Interaction Flow Modeling Language (IFML)\cite{IFML-1, IFML-2} is designed for describing and controlling the behavior of front-end software applications. IFML brings several advantages to the development process, such as promoting the separation of concerns between roles and increasing the overall understanding of the product for non-technical stakeholders. That can be achieved because IFML supports formal specification for interface composition, user interaction and event management independently of the implementation platform. This language was adopted as a standard by the Object Management Group (OMG) in March 2013.
+The Interaction Flow Modeling Language (IFML)\cite{IFML-1, IFML-2} is designed for describing and controlling the behaviour of front-end software applications. IFML brings several advantages to the development process, such as promoting the separation of concerns between roles and increasing the overall understanding of the product for non-technical stakeholders. That can be achieved because IFML supports formal specification for interface composition, user interaction, and event management independently of the implementation platform. This language was adopted as a standard by the Object Management Group (OMG) in March 2013.
 
 IFML supports the following concepts: 
 
@@ -18,7 +18,7 @@ IFML supports the following concepts:
     
   \item \textbf{The view content} manages \textit{ViewComponents}, i.e., content and data entry elements contained within ViewContainers.
   
-  \item \textbf{The events} defines the \textit{Events} that may affect the state of the user interface. \textit{Events} can be produced by the user interaction, by the application, or by an external system.
+  \item \textbf{The events} defines the \textit{Events} that may affect the state of the user interface. \textit{Events} can be produced by the user interaction, by the application, and by an external system.
 
   \item \textbf{The actions} triggered by user events. The effect of an \textit{Event} is represented by an \textit{InteractionFlow} connection, which connects the event to the \textit{ViewContainer} or \textit{ViewComponent} affected by the \textit{Event}. The \textit{InteractionFlow} expresses a change of state of the user interface: the occurrence of the event triggers a change in the state that produces a transition in the user interface.
   
@@ -44,13 +44,13 @@ IFML supports the following concepts:
 
 \section{Web navigation profiling}
 \label{navigational-modeling-for-the-web}
-The front-end of eCommerce websites is usually built using shared and reusable components (forms, list views, detail views, etc.), which have a specific and expected behavior.
-For example, product lists and grids show users record details and create possibilities for interaction. Similarly, "add to cart" buttons are placed on strategic points within product pages to trigger a specific user action.
+The front-end of eCommerce websites is usually built using shared and reusable components (forms, list views, detail views, etc.), which have a specific and expected behaviour.
+For example, product lists and grids show users record details and create possibilities for interaction. Similarly, ``add to cart" buttons are placed on strategic points within product pages to trigger a specific user action.
 These interactions and any other user action withing the website can be represented using the IFML notation.
 
-To demonstrate the versatility and adaptability of this modeling language, we introduce a real-life example which will serve as reference from this chapter forward: an online boutique website called \textit{"Madison Island"} and specialized in fashion items running on an eCommerce platform.
+To demonstrate the versatility and adaptability of this modeling language, we introduce a real-life example which will serve as reference from this chapter forward: an online boutique website called \textit{``Madison Island"} and specialised in fashion items running on an eCommerce platform.
 
-Madison Island presents all the features of a typical digital store including catalog navigation, product searching, customer account, shopping cart, and order processing. 
+Madison Island presents all the features of a typical digital store including catalogue navigation, product searching, customer account, shopping cart, and order processing. 
 
 \vspace{0.5cm}
 \begin{figure}[htbp]
@@ -64,7 +64,7 @@ Madison Island presents all the features of a typical digital store including ca
 
 Figure \ref{fig:home} shows the home page of the website. In this section, the user can select one of the product categories, access his customer area, switch the language of the website, search for an item or go directly to the shopping cart. 
 
-In the following subsections, we analyse some scenarios related to users navigational behaviors, exposing both their representation in IFML notation as well as the log entries in the application server associated with those representations.
+In the following subsections, we analyse some scenarios related to users navigational behaviours, exposing both their representation in IFML notation as well as the log entries in the application server associated with those representations.
 
 \newpage
 \subsection{The product page journey}
@@ -81,7 +81,7 @@ Starting from the homepage, the user can interact with the navigation menu by ch
 \end{figure}
 \vspace{0.5cm}
 
-Depending on the category display mode, a category page can show users either a list of links to children categories or a set of products. The the former case, children categories work as transitional pages that help further filtering products (Figure \ref{fig:category-display-modes}).
+Depending on the category display mode, a category page can show users either a list of links to children categories or a set of products. In the former case, children categories work as transitional pages that help further filtering products (Figure \ref{fig:category-display-modes}).
 
 
 \vspace{0.5cm}
@@ -95,7 +95,7 @@ Depending on the category display mode, a category page can show users either a 
 \end{figure}
 \vspace{0.5cm}
 
-Finally, from the product listing screen, the user can access any of the product detail pages by clicking on the \textit{"View Details"} button placed below the selected product thumbnail. The following image illustrates the product page seen when the user clicks on \textit{"View Details"} of \textit{"Plaid Cotton Shirt"} (Figure \ref{fig:product-detail}).
+Finally, from the product listing screen, the user can access any of the product detail pages by clicking on the \textit{``View Details"} button placed below the selected product thumbnail. The following image illustrates the product page seen when the user clicks on \textit{``View Details"} of \textit{``Plaid Cotton Shirt"} (Figure \ref{fig:product-detail}).
 
 
 \vspace{0.5cm}
@@ -118,7 +118,7 @@ The end-to-end interaction from the homepage to the product detail page can be r
 \end{figure}
 \vspace{0.5cm}
 
-The same sequence of actions can be expressed as a stream of records in the access logs on the application server. Such logs track all the requests processed by the web platform. The following table presents how the above mentioned user journey is logged on the server :
+The same sequence of actions can be expressed as a stream of records in the access logs on the application server. Such logs track all the requests processed by the web platform. The following table presents how the above mentioned user journey is logged on the server:
 
 \vspace{0.5cm}
 \begin{center}
@@ -126,25 +126,25 @@ The same sequence of actions can be expressed as a stream of records in the acce
   \hline
   \multicolumn{3}{|c|}{Application Server Access Log}\\ \hline
   \textbf{ID}&\textbf{Page}&\textbf{Log Entry}   \\ \hline
-  1&Home Page&\em[29/Nov/2017:06:30:45 +0000] "GET /" 200 0 - 29505 \\ \hline
-  2&\textit{"View All Men"} Category Page &\em[29/Nov/2017:06:49:38 +0000] "GET /men.html /" 200 0 - 29505 
+  1&Home Page&\em[29/Nov/2017:06:30:45 +0000] ``GET /" 200 0 - 29505 \\ \hline
+  2&\textit{``View All Men"} Category Page &\em[29/Nov/2017:06:49:38 +0000] ``GET /men.html /" 200 0 - 29505 
   \\ \hline
-  3&\textit{"Shirts"} Category Page &\em[29/Nov/2017:07:04:15 +0000] "GET /men/shirts.html" 200 0 - 29505
+  3&\textit{``Shirts"} Category Page &\em[29/Nov/2017:07:04:15 +0000] ``GET /men/shirts.html" 200 0 - 29505
   \\ \hline
-  4&\textit{"Plaid Cotton Shirt"} Product Page &\em[29/Nov/2017:07:08:40 +0000] "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
+  4&\textit{``Plaid Cotton Shirt"} Product Page &\em[29/Nov/2017:07:08:40 +0000] ``GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
   \\ \hline
   \end{tabular}
   \end{center}
   \vspace{0.5cm}
 
-  It is important to notice that both entries 2 and 3 record a \textit{"Category Page"} pageview action by logging their related URLs. The entry 4, on its turn, tracks a \textit{"Product Page"} visit happened after visiting a category page by logging a specific URL that concatenates the product URL key and the category path. 
+  It is important to notice that both entries 2 and 3 record a \textit{``Category Page"} pageview action by logging their related URLs. The entry 4, on its turn, tracks a \textit{``Product Page"} visit that happened after visiting a category page, logging a specific URL that concatenates the product URL key and the category path. 
 
 
 \subsection{Products association and correlation}
 
-In this section, we analyze the set of actions that can generate pageviews among different product pages on the Madison Island website. 
+In this section, we analyse the set of actions that can generate pageviews among different product pages on the Madison Island website. 
 
-For doing so, we consider a \textit{"Related Products"} widget presented to customers just below the \textit{"Add to Cart"} button on the \textit{"Plaid Cotton Shirt"} page discussed on \ref{the-product-page-journey}.
+For doing so, we consider a \textit{``Related Products"} widget presented to customers just below the \textit{``Add to Cart"} button on the \textit{``Plaid Cotton Shirt"} page discussed on \ref{the-product-page-journey}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -155,7 +155,7 @@ For doing so, we consider a \textit{"Related Products"} widget presented to cust
 \end{figure}
 \vspace{0.5cm}
 
-By clicking either on the product name or on its thumbnail, the user is directed to the related product page. In this case, we simulate an interest on the listed \textit{"Core Striped Sport Shirt"} (Figure \ref{fig:product-detail2}).
+By clicking either on the product name or on its thumbnail, the user is directed to the related product page. In this case, we simulate an interest on the listed \textit{``Core Striped Sport Shirt"} (Figure \ref{fig:product-detail2}).
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -166,8 +166,8 @@ By clicking either on the product name or on its thumbnail, the user is directed
 \end{figure}
 \vspace{0.5cm}
 
-Besides using the simple navigational shortcut available on the related products section, the user can reach a product page in several other ways. For instance, users can click on the "back" button in their browser to quickly go to the previous category page and to choose a different item. They can also reach the navigation menu to browse another category, or use the search function on the top bar to perform a global product search.
-Consequently, the tracking of all these possible user interactions can help in establishing a correlation pattern among different products on the website. Figure \ref{fig:product-search} illustrates the result of the search by the term "blazer" on the search bar within a given product page.
+Besides using the simple navigational shortcut available on the related products section, the user can reach a product page in several other ways. For instance, users can click on the ``back" button in their browser to quickly go to the previous category page and to choose a different item. They can also reach the navigation menu to browse another category, or use the search function on the top bar to perform a global product search.
+Consequently, the tracking of all these possible user interactions can help in establishing a correlation pattern among different products on the website. Figure \ref{fig:product-search} illustrates the result of the search by the term ``blazer" on the search bar within a given product page.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -178,7 +178,7 @@ Consequently, the tracking of all these possible user interactions can help in e
 \end{figure}
 \vspace{0.5cm}
 
-When the search is performed, the user is taken to the search result page, which lists the products matching the searched term. From there, the user can freely browse to any of the available product pages, similarly to the navigation process described for the category listing page. (Figure \ref{fig:search-results})
+When the search is performed, the user is taken to the search result page, which lists the products matching the searched term. From there, the user can freely browse to any of the available product pages, similarly to the navigation process described for the category listing page (Figure \ref{fig:search-results}).
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -195,7 +195,7 @@ At this point, we can update and extend the IFML model shown in Figure \ref{fig:
 \begin{figure}[H]
   \centering
     \includegraphics[width=14cm]{images/madison/ifml2.png}
-  \caption{Updated IFML representation of the navigational behavious}
+  \caption{Updated IFML representation of the navigational behaviours}
   \label{fig:ifml2}
 \end{figure}
 \vspace{0.5cm}
@@ -208,33 +208,33 @@ These new navigational paths are represented in the application server access lo
   \hline
   \multicolumn{3}{|c|}{Application Server Access Log}\\ \hline
   \textbf{ID}&\textbf{Page}&\textbf{Log Entry}   \\ \hline
-  1&\textit{"Plaid Cotton Shirt"} Product Page&\em[04/Dec/2017:06:37:06 +0000] 
-  "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
+  1&\textit{``Plaid Cotton Shirt"} Product Page&\em[04/Dec/2017:06:37:06 +0000] 
+  ``GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
   \\ \hline
-  2&\textit{"Core Striped Sport Shirt"} Product Page &\em [04/Dec/2017:06:37:15 +0000] "GET /core-striped-sport-shirt-551.html" 200 0 - 29505
+  2&\textit{``Core Striped Sport Shirt"} Product Page &\em [04/Dec/2017:06:37:15 +0000] ``GET /core-striped-sport-shirt-551.html" 200 0 - 29505
   \\ \hline
-  3&\textit{"Plaid Cotton Shirt"} Product Page &\em[04/Dec/2017:06:37:21 +0000] "GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
+  3&\textit{``Plaid Cotton Shirt"} Product Page &\em[04/Dec/2017:06:37:21 +0000] ``GET /men/shirts/plaid-cotton-shirt-476.html" 200 0 - 29505
   \\ \hline
-  5&\textit{"Tees Knits And Polos"} Category Page &\em[04/Dec/2017:06:38:06 +0000] "GET /men/tees-knits-and-polos.html" 200 0 - 29505
+  5&\textit{``Tees Knits And Polos"} Category Page &\em[04/Dec/2017:06:38:06 +0000] ``GET /men/tees-knits-and-polos.html" 200 0 - 29505
   \\ \hline
-  6&\textit{"Blazer"} Search By Term&\em[04/Dec/2017:06:38:20 +0000] "GET /catalogsearch/result/?q=blazer" 200 0 - 29505
+  6&\textit{``Blazer"} Search By Term&\em[04/Dec/2017:06:38:20 +0000] ``GET /catalogsearch/result/?q=blazer" 200 0 - 29505
   \\ \hline
-  7&\textit{"Stretch Cotton Blazer"} Product Page &\em[04/Dec/2017:06:38:43 +0000] "GET /stretch-cotton-blazer-587.html" 200 0 - 29505
+  7&\textit{``Stretch Cotton Blazer"} Product Page &\em[04/Dec/2017:06:38:43 +0000] ``GET /stretch-cotton-blazer-587.html" 200 0 - 29505
   \\ \hline
   \end{tabular}
   \end{center}
 \vspace{0.5cm}
 
-The sequence of actions as seen in this log reveals that the user browsed from one product to another, taking advantage of the related product links (ID 2). In fact, the target URL does not include any category path beside the URL key related to the product, which indicates a direct access. The entries 3 and 4 illustrate the journey of an user who has clicked on the browser back button and has performed the same actions again. The last three recorded actions show, respectively, a direct access to a category page through the navigational menu, a search by the \textit{"blazer"} term as per the previous example, and the related redirection to the product page.
+The sequence of actions as seen in this log reveals that the user browsed from one product to another, taking advantage of the related product links (ID 2). In fact, the target URL does not include any category path beside the URL key related to the product, which indicates a direct access. The entries 3 and 4 illustrate the journey of an user who has clicked on the browser back button and has performed the same actions again. The last three recorded actions show, respectively, a direct access to a category page through the navigational menu, a search by the \textit{``blazer"} term as per the previous example, and the related redirection to the product page.
 
 \newpage
-\section{IoT behavior profiling}
+\section{IoT behaviour profiling}
 
-As mobile devices surpass desktop computers in driving purchases and in enriching behaviour data, location and proximity tracking becomes a valuable tool for brands and stores. In the following subsections, we analyse two possible scenarios of customer interaction in the physical world based on the recording and reporting capabilities of IoT devices. Such data would then be collected together with other web-based information \ref{beacons} to form a comprehensive behavioral data stream that could leverage for generating tailored customizations of the Madison eCommerce portal.
+As mobile devices surpass desktop computers in driving purchases and in enriching behaviour data, location and proximity tracking becomes a valuable tool for brands and stores. In the following subsections, we analyse two possible scenarios of customer interaction in the physical world based on the recording and reporting capabilities of IoT devices. Such data would then be collected together with other web-based information (\ref{beacons}) to form a comprehensive behavioural data stream that could leverage for generating tailored customisations of the Madison eCommerce portal.
 
 \subsection{Apple iBeacon technology and Estimote Beacons overview}
 
-The IoT device chosen to illustrate the scenarios related to the behavioral modeling would be the Estimote Beacons, which use Apple iBeacon technology and are compatible with iBeacon-enabled Apple products and applications.
+The IoT device chosen to illustrate the scenarios related to the behavioural modeling would be the Estimote Beacons, which use Apple iBeacon technology and are compatible with iBeacon-enabled Apple products and applications.
 
 The company from Cupertino jumped first on the beacon bandwagon by publishing in 2013 a detailed specification (IDs, transmission intervals, etc.) for developing the iBeacon protocol, which in turn allowed vendors, such as Estimote, to ship iBeacon-compatible hardware transmitters worldwide.
 
@@ -256,20 +256,20 @@ As described in Section \ref{beacons}, a beacon can simply be seen as a lighthou
   \item The Minor ID, which reports the exact location or object (in our case, the spot): e.g. 23369
 \end{itemize}
 
-Unlike QR and NFC communication, the customer needs to have an app installed on his phone to receive this one-way data stream. Technically, the app obeys only to iBeacons with UUID, Major and Minor IDs matching to predefined values. When that happens, the app can react accordingly. Such mechanism ensures that only the installed app can track users as they passively walk around the transmitters. 
+Unlike QR and NFC communication, the customer needs to have an app installed on their phone to receive this one-way data stream. Technically, the app obeys only to iBeacons with UUID, Major and Minor IDs matching to predefined values. When that happens, the app can react accordingly. Such mechanism ensures that only the installed app can track users as they walk around the transmitters. 
 
 In other words, the phone OS will keep listening for beacons even if the app is not running, and even if the phone is locked or rebooted. Once either an “enter” or and “exit” event happens, the OS will launch the app into the background (if needed) and let it execute, for a few seconds, some code to handle the event.
 
 \subsection{Proximity Marketing}
 \label{section:proximity-marketing}
 
-Proximity Marketing is an efficient tool not only for discovering and engaging potential customers, but also fro better targgeting existing ones. This marketing technique operates in a given physical location by leveraging the IoT ecosystem to promote products and services.  This communication channel acts on a clear target: all the customers close to or within an area covered by the diffusion devices.
+Proximity Marketing is an efficient tool not only for discovering and engaging new customers, but also for better targgeting existing ones. This marketing technique operates in a given physical location by leveraging the IoT ecosystem to promote products and services.  This communication channel acts on a clear target: all the customers close to, or within, an area covered by the diffusion devices.
 
 Such innovative form of relationship marketing aims to activate and involve users by drawing their attention at the right time and in the right place, creating more intense and stimulating shopping experiences.
 
 In this work, we will focus on a basic scenario where the recognition of proximity in the physical world does not directly trigger an immediate action to grab customer attention, but instead is limited to the silent tracking of the event as well as the automatic recording of data on a specific web server.
 
-We start by defining a possible allocation of items for a "Madison Island" retail store which, resembles the catalog presented on its website.
+We start by defining a possible allocation of items for a ``Madison Island" retail store, which resembles the catalogue presented on its website.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -280,7 +280,7 @@ We start by defining a possible allocation of items for a "Madison Island" retai
 \end{figure}
 \vspace{0.5cm}
 
-Each label described in Figure~\ref{fig:retail-map} represents a specific category of the website whereas the color of the label indicates the parent category to which the products belong. More specifically:
+Each label described in Figure~\ref{fig:retail-map} represents a specific category of the website, whereas the color of the label indicates the parent category to which the products belong. More specifically:
 
 \begin{itemize}
   \item Red represents the \textbf{Women} category, which maps the content available at \textbf{/women.html}. 
@@ -302,9 +302,9 @@ In this scenario, the following image illustrates what would be a suitable Estim
 \end{figure}
 \vspace{0.5cm}
 
-Depending on the business use case, the mobile app can either send an event to the listening server whenever the user crosses a region boundary, or submit a single event with a full list of regions and their minimum proximities detected during the visit. 
+Depending on the business use case, the mobile app can either send an event to the listening server whenever the user crosses a region boundary, or submit a single event with a full list of regions and their minimum proximities detected during the customer visit. 
 
-Due to the behavioral profiling nature of this activity, we assume that the app does the latter, detecting all the entering and leaving of each virtual fence and activating a \textit{ranging} procedure that detects proximity information based on the strenght of the Bluetooth signal. \cite{region-monitoring-apple}.
+Due to the behavioural profiling nature of this activity, we assume that the app does the latter, detecting all the entering and leaving of each virtual fence and activating a \textit{ranging} procedure that detects proximity information based on the strength of the Bluetooth signal. \cite{region-monitoring-apple}.
 
 Once the shoppers leaves the physical store, the app performs a single data push to a REST API endpoint with all the tracked data.
 
@@ -414,15 +414,15 @@ As an example, the JSON payload sent from the app to the REST endpoint for an hy
 \vspace{0.5cm}
 
 
-The above example session shows an evident preference for "Blazer" items, and a slight interest in "Shoes" items. More precisely, the "Blazer" region registered a session that lasted over 3 minutes and that was the closest to a beacon.  
+The above example session shows an evident preference for ``Blazer" items, and a slight interest in ``Shoes" items. More precisely, the ``Blazer" region registered a session that lasted over 3 minutes and that was the closest to a beacon.  
 
 \subsection{Customer Rewards}
 
-Besides allowing proximity based marketing, beacon technology can also be used to reward customers for particular actions based on geolocalization data. Such rewards could increase brand engagement, enhancing customer loyalty and fostering lasting customer relationships. 
+Besides allowing proximity based marketing, beacon technology can also be used to reward customers for particular actions based on geolocalisation data. Such rewards could increase brand engagement, enhancing customer loyalty and fostering lasting customer relationships. 
 
 Achieving such results is possible by extending the set of actions that enable customers to earn bonuses and discounts on the website (newsletter subscriptions, minimum order amount, etc..) to activities performed in the physical world, including the simple act of visiting and walking around the brick-and-mortar store.
 
-For example, the brand can rank customers by the amount of time spent at each Madison Retail shop, rewarding them with monthly offers tailored according to their purchases. The brand can also focus on offering special offers on the website to the customers that visited a retail store in a specific time span such as Christmas.
+For example, the brand can rank customers by the amount of time spent at each Madison Retail shop, rewarding them with monthly offers tailored according to their purchases. The brand can also focus on offering special offers on the website to the customers that visited a retail store in a specific time span, such as Christmas.
 
 For our Madison Island example, we are considering a scenario where customers are rewarded with a fixed amount of points on their online account if they scan three QR codes from in-store products. Specifically, when the beacon detects their entrance into the store, the mobile app pushes a CheckPoints notification to the customer, inviting them to scan codes of items available in the shop. Once the scans are correctly performed within a session, the mobile app pushes the information to the same REST API presented in the previous chapter, which then stores the data.
 
@@ -436,7 +436,7 @@ For our Madison Island example, we are considering a scenario where customers ar
 \vspace{0.5cm}
 
 
-The JSON payload sent to the server (e.g. \textbf{POST /users/3045678/scans}) after each succesful scan would then have a structure similar to the following one:
+The JSON payload sent to the server (e.g. \textbf{POST /users/3045678/scans}) after each successful scan would then have a structure similar to the following one:
  
 \vspace{0.5cm}
 \begin{lstlisting}[language=json,firstnumber=1]
