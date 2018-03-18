@@ -2,8 +2,8 @@
 \chead{}
 \chapter{Our approach to modeling}
 
-While in the last chapter we introduced three different streams of real usage data obtained both from the physical and the virtual world, we now focus on expanding those representations in a more detailed way with the help of the Model Driven Engineering techniques briefly described in \ref{model-driven-techniques}. 
-Concretely, the goal of the first two section is to illustrate the defining languages (metamodels) for both the real usage data and the eCommerce platform interactions used in the previous examples. Besides, we will generate actual models based upon those metamodels that represent the very same information.
+While in the last chapter we introduced three different streams of real usage data obtained both from the physical and the virtual world, we now focus on expanding those representations in a more detailed way with the help of the Model-Driven Engineering techniques briefly described in \ref{model-driven-techniques}. 
+Concretely, the goal of the first two sections is to illustrate the defining languages (metamodels) for both the real usage data and the eCommerce platform interactions described in the previous examples. Besides, we will generate actual models based upon those metamodels, which represent the very same information.
 Finally, in the last section, we will use the same model generation for updating the models instantiated previously, leveraging model transformation techniques based upon usage pattern detection resulting from the Big Data analysis.
 
 \section{Real usage data modeling}
@@ -27,7 +27,7 @@ Figure in \ref{fig:real-usage-data-metamodel-diagram} describes the processed me
 \subsection{Model}
 \label{real-usage-data-model}
 
-The RealUsageData metamodel defined above allows us to create dynamic instances that precisely map the real usage data collected both from web mining process and from IoT devices tracking. Figure \ref{fig:real-usage-data-model} illustrates this processed model in its ecore representation form in Eclipse Modeling Tools (EMF). The figure is followed by the corrisponding XMI file content.
+The RealUsageData metamodel defined above allows us to create dynamic instances that precisely map the real usage data collected both from web mining process and from IoT devices tracking. Figure \ref{fig:real-usage-data-model} illustrates this processed model in its ecore representation form in Eclipse Modeling Tools (EMF). The figure is followed by the corresponding XMI file content.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -245,13 +245,13 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
 \vspace{0.5cm}
 \section{eCommerce application modeling}
 
-As we have briefly introduced in \ref{the-ifml-language}, IFML is used to design platform independent-level models that can be used to define the interactions between the users of an application and the application itself. At its core, IFML is meant to be flexible and straightforward, but perhaps more importantly, the language is intended to be abstract enough to allow the definition of the main traits of an application front-end making as few visual commitments as possible. Furthermore, its extendibility  allows modelers and designers to specialize specific components, enriching the semantics of their models and making the diagrams more readable.
+As we have briefly introduced in \ref{the-ifml-language}, IFML is used to design platform independent-level models that can be used to define the interactions between the users of an application and the application itself. At its core, IFML is meant to be flexible and straightforward, but perhaps more importantly, the language is intended to be abstract enough to allow the definition of the main traits of an application front-end making as few visual commitments as possible. Furthermore, its extendibility  allows modelers and designers to specialise specific components, enriching the semantics of their models and making the diagrams more readable.
 
 In fact, the models generated using IFML describe the user-interface components required at the front-end of the application, without specifying layout details of these elements. Such approach enhances the separation of concerns among developers and UX designers, in which the latter builds the user interface according to an interaction flow model. Besides defining components of the User Interface, these models explain how data flows among different sections of the application upon triggering events, and introduces the business logic carried out using that data.
 
 \subsection{IFML Metamodel}
 
-The IFML metamodel is organized into three packages: the Core, the Extension, and the DataTypes. The Core package contains the concepts that build up the interaction infrastructure of the language concerning InteractionFlowElements, InteractionFlows and Parameters. The Extension package extends the Core package components with more complex behaviors. The DataTypes package, in its turn, contains the custom data types defined by IFML.
+The IFML metamodel is organised into three packages: the Core, the Extension, and the DataTypes. The Core package contains the concepts that build up the interaction infrastructure of the language concerning InteractionFlowElements, InteractionFlows and Parameters. The Extension package extends the Core package components with more complex behaviours. The DataTypes package, in its turn, contains the custom data types defined by IFML.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -294,7 +294,7 @@ Figure \ref{fig:simple-ifml-core-model} shows an excerpt of the IFML metamodel. 
 
 As mentioned previously, interaction flow models are described using the Interaction Flow Modelling Language and, together with the domain model and optionally viewpoints, they form the core of the \textit{IFMLModel}.
 
-Essentially, the goal of the domain model is to offer to the interaction flow references about the available content. An example of a domain model for an e-commerce website is given in Figure~\ref{fig:domain-model-uml-ecommerce}   
+Essentially, the goal of the domain model is to offer to the interaction flow references about the available content. An example of a domain model for an e-commerce website is given in Figure~\ref{fig:domain-model-uml-ecommerce}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -305,7 +305,7 @@ Essentially, the goal of the domain model is to offer to the interaction flow re
 \end{figure}
 \vspace{0.5cm}
 
-Although some partial \textit{IFMLModel} representations for the Madison Island eCommerce platform have been already introduced in \ref{navigational-modeling-for-the-web}, in this subsection we explore the most important ones in more detail and with a broader approach that is not strictly related to the navigational modeling. Our final goal is to build an \textit{IFMLModel} which would represent the main pages and website interactions, taking advantage of the IFML metamodel described just above.
+Although some partial \textit{IFMLModel} representations for the Madison Island eCommerce platform have already been introduced in \ref{navigational-modeling-for-the-web}, in this subsection we explore the most important ones in more detail and with a broader approach that is not strictly related to the navigational modeling. Our final goal is to build an \textit{IFMLModel} which would represent the main pages and website interactions, taking advantage of the IFML metamodel described just above.
 
 \subsubsection{Global overview}
 
@@ -322,7 +322,7 @@ The Madison Island Interaction Model is formed by a different combination of \te
 \newpage
 \subsubsection{Homepage}
 
-The Madison Island Interaction Model for the Homepage (Figure \ref{fig:desktop-before-homepage} and \ref{fig:ifml-before-homepage}) is composed by a parent \textit{IFMLWindow} element, which contains three children elements: another \textit{IFMLWindow} for the Highlighted Categories Carousel, a \textit{Detail View Component} for the Homepage promos CMS Block, and a \textit{List View Component} for the New Products sections that is bound to the Product Entity of the \textit{Domain Model} . The parent HighlightedCategoriesCarousel \textit{IFMLWindow} has the \textit{isXOR} property set to true representing three exclusive main configurations for the initial screen within the carousel mechanism. Each \textit{Data Binding} within all these banner components is limited by a \textit{Conditional Expressions} defining the instance of the content to show.
+The Madison Island Interaction Model for the Homepage (Figure \ref{fig:desktop-before-homepage} and \ref{fig:ifml-before-homepage}) is composed by a parent \textit{IFMLWindow} element, which contains three children elements: another \textit{IFMLWindow} for the Highlighted Categories Carousel, a \textit{Detail View Component} for the Homepage promos CMS Block, and a \textit{List View Component} for the New Products sections that is bound to the Product Entity of the \textit{Domain Model} . The parent HighlightedCategoriesCarousel \textit{IFMLWindow} has the \textit{isXOR} property set to true, representing three exclusive main configurations for the initial screen within the carousel mechanism. Each \textit{Data Binding} within all these banner components is limited by a \textit{Conditional Expressions} defining the instance of the content to show.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -342,7 +342,6 @@ The Madison Island Interaction Model for the Homepage (Figure \ref{fig:desktop-b
 \vspace{0.5cm}
 
 The following snippet of code is an extract from the \textit{IFMLModel} for the first HighlighedCategoryBanner \textit{View Container} element: 
-
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
@@ -438,7 +437,7 @@ The full expanded model hierarchy for the \textit{IFMLWindow} Category element i
 \newpage
 \subsubsection{Product Page}
 
-The Madison Island Interaction Model for the Product page (Figure \ref{fig:desktop-before-product} and \ref{fig:ifml-before-product}) is mainly built with a single \textit{IFMLWindow} element that contains different types of \textit{View Component} nodes, the main one being a \textit{Detail View Component} instance bound to the current product data entity. The other two elements are the single \textit{Form View Component} descibing the Add to Cart section and its possible interactions, and the \textit{List View Component} holding the information for the Related Product widget.
+The Madison Island Interaction Model for the Product page (Figure \ref{fig:desktop-before-product} and \ref{fig:ifml-before-product}) is mainly built with a single \textit{IFMLWindow} element that contains different types of \textit{View Component} nodes, the main one being a \textit{Detail View Component} instance bound to the current product data entity. The other two elements are the single \textit{Form View Component} describing the Add to Cart section and its possible interactions, and the \textit{List View Component} holding the information for the Related Product widget.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -514,7 +513,7 @@ The model representation of this product page structure is shown in Figure \ref{
 \newpage
 \subsubsection{Shopping Cart Page}
 \label{shopping-cart-page-overview}
-The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig:desktop-before-shoppingcart} and \ref{fig:ifml-before-shoppingcart}) is  built with a single \textit{IFMLWindow} container with a true-ish \textit{isLandmark} property (flagging the window as accessible from everywhere) including multiple \textit{Form View Component} instances representing the sidebar interactions with the discount codes and shipping estimation widgets. Besides the sidebar, the area holding the cart status and the items in the cart information is displayed with an additional \textit{Form View Component} controlled by the \textit{Activation Condition} responsible for showing items only when the cart is not empty. The section is modeled with a \textit{Form View Component} because of the Qty \textit{SimpleInput} text fields, which allow the user to update the related item quantities or empty the whole cart at any time. Both interactions are controlled with specific \textit{IFMLAction} elements triggered on these \textit{Events}.
+The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig:desktop-before-shoppingcart} and \ref{fig:ifml-before-shoppingcart}) is  built with a single \textit{IFMLWindow} container with a true-ish \textit{isLandmark} property (flagging the window as accessible from everywhere) including multiple \textit{Form View Component} instances representing the sidebar interactions with the discount codes and shipping estimation widgets. Besides the sidebar, the area holding the cart status and the items in the cart information is displayed with an additional \textit{Form View Component} controlled by the \textit{Activation Condition} responsible for showing items only when the cart is not empty. The section is modelled with a \textit{Form View Component} because of the Qty \textit{SimpleInput} text fields, which allow the user to update the related item quantities or empty the whole cart at any time. Both interactions are controlled with specific \textit{IFMLAction} elements triggered on these \textit{Events}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -586,7 +585,7 @@ The \textit{IFMLModel} representation of the Shopping Cart page structure is pre
 
 \subsubsection{Shared Elements and Interactions}
 
-As mentioned previously, shared sections of the platform such as the Header and the Footer have been modeled as \textit{IFMLWindow} nodes reachable from any other area of the website, thus their \textit{isLandmark} attribute set to true. In more detail, the Header section contains a Navigation Menu in the form of a \textit{List View Component} with a children \textit{DataBinding} component correlated to the Category \textit{Domain Model} and a simple \textit{Form View Component} for the search mechanism. When the user performs a search submitting a keyword, the \textit{SearchKeyword} is triggered and the Search Keyword \textit{IFMLAction} is executed based on the parameters held in the associated \textit{ParameterBinding} element.  The resulting Search Results page, which presents a sidebar for filtering and a list of items matching the search, is another \textit{IFMLWindow}, whose structure resembles the "Product List Mode" for a Category Page described earlier (Figure \ref{fig:ifml-before-header-search}).
+As mentioned previously, shared sections of the platform such as the Header and the Footer have been modelled as \textit{IFMLWindow} nodes reachable from any other area of the website, thus their \textit{isLandmark} attribute set to true. In more detail, the Header section contains a Navigation Menu in the form of a \textit{List View Component} with a children \textit{DataBinding} component correlated to the Category \textit{Domain Model} and a simple \textit{Form View Component} for the search mechanism. When the user performs a search submitting a keyword, the \textit{SearchKeyword} is triggered and the Search Keyword \textit{IFMLAction} is executed based on the parameters held in the associated \textit{ParameterBinding} element.  The resulting Search Results page, which presents a sidebar for filtering and a list of items matching the search, is another \textit{IFMLWindow}, whose structure resembles the "Product List Mode" for a Category Page described earlier (Figure \ref{fig:ifml-before-header-search}).
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -597,7 +596,7 @@ As mentioned previously, shared sections of the platform such as the Header and 
 \end{figure}
 \vspace{0.5cm}
 
-The Footer \textit{IFMLWindow} model is quite straightforward. It retains the information about the footer links presented on the bottom of all the pages of the website in the form of a simple \textit{ViewComponent} and a Newsletter subscription \textit{Form View Component} reacting to SubscribeNewsletter submit \textit{Events}. Similarly to the header case we have just described, the email passed as an argument from the \textit{Event} is carried to the \textit{IFMLAction} which, in this specific case, performs the actual Customer subscription and redirects to the current page.(Figure \ref{fig:ifml-before-footer}).
+The Footer \textit{IFMLWindow} model is quite straightforward. It retains the information about the footer links presented on the bottom of all the pages of the website in the form of a simple \textit{ViewComponent} and a Newsletter subscription \textit{Form View Component} reacting to SubscribeNewsletter submit \textit{Events}. Similarly to the header case we have just described, the email passed as an argument from the \textit{Event} is carried to the \textit{IFMLAction} which, in this specific case, performs the actual Customer subscription and redirects them to the current page.(Figure \ref{fig:ifml-before-footer}).
 
 \vspace{0.5cm}
 \begin{figure}[H]

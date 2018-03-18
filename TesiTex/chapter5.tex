@@ -6,7 +6,7 @@
 
 \section{Transformation}
 
-In the last chapter, after describing both metamodels for the Real Usage Data and the Interaction Flow Modeling Language, we proceeded with creating dynamic instances for both models, respectively describing the actual input data available for the customisation process and the initial IFMLModel of the eCommerce Madison Island website. In this chapter, we illustrate a possible transformation for this model, based on the Real Usage instance data. Our goal is to upgrade the model version, taking into account customers preferences and their actions.
+In the previous chapter, after describing both metamodels for the Real Usage Data and the Interaction Flow Modeling Language, we proceeded with creating dynamic instances for both models, respectively describing the actual input data available for the customisation process and the initial IFMLModel of the eCommerce Madison Island website. In this chapter, we illustrate a possible transformation for this model, based on the Real Usage instance data. Our goal is to upgrade the model version, taking into account customers preferences and their actions.
 
 \subsection{Homepage}
 \label{homepage-updates}
@@ -249,8 +249,8 @@ As described in \ref{shopping-cart-page-overview}, the Shopping Cart page model 
 \end{figure}
 \vspace{0.5cm}
 
-Along with the cases analysed previously and by applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page by adding a new \textit{View Component}. That component shows the Reward points accumulated by the user in the Shopping Cart Sidebar (Figure \ref{fig:shopping-cart-sidebar-ifml-definition}). The component not only displays the information by the \textit{Data Binding} with the Reward entity, but also controls the \textit{Event} associated with the \textbf{"Apply Discount"} button and the \textit{Action} connected to it. 
-The structure of this new node, which gets appended to its parent \textit{IFMLMenu} is as follows:
+Along with the cases analysed previously and by applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page by adding a new \textit{View Component}. That component shows the Reward points accumulated by the user in the Shopping Cart Sidebar (Figure \ref{fig:shopping-cart-sidebar-ifml-definition}). The component not only displays the information by the \textit{Data Binding} with the Reward entity, but also controls the \textit{Event} associated with the \textbf{``Apply Discount"} button and the \textit{Action} connected to it. 
+The structure of this new node, which gets appended to its parent \textit{IFMLMenu}, is as follows:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -356,7 +356,7 @@ Differently from the other page enhancements presented so far, the modified web 
 \newpage
 \subsection{Shopping Cart}
 
-In \ref{shopping-cart-updates}, we outlined how the visual aspects of the shopping cart sidebar would be transformed through an \textit{IFMLModel} change. This change would result in a new form element within the sidebar, which would be responsible for controlling the application of the reward points available to the customer at that point. Those reward points - generated through actions recorded as part of the real usage data profiling - would be converted into discounts that the customer could apply to their current quote at any time. As shown by the attached action in the IFML Diagram, the customer is redirected to the shopping cart page after the discount is applied.
+In \ref{shopping-cart-updates}, we outlined how the visual aspects of the shopping cart sidebar would be transformed through an \textit{IFMLModel} change. This change would result in a new form element within the sidebar, which would be responsible for controlling the application of the reward points available to the customer at that point. Those reward points --- generated through actions recorded as part of the real usage data profiling --- would be converted into discounts that the customer could apply to their current quote at any time. As shown by the attached action in the IFML Diagram, the customer is redirected to the shopping cart page after the discount is applied.
 
 \vspace{0.5cm}
 \begin{figure}[H]
