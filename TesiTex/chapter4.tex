@@ -308,7 +308,7 @@ Although some partial IFML model representations for the Madison Island eCommerc
 
 \subsubsection{Global overview}
 
-The Madison Island Interaction Model is formed by a different combination of \textit{IFMLWindow} elements connected through \textit{IFMLAction}s reacting to distinct \textit{Events} with different \textit{ParameterBindings}. The detail of the modeling is contextual to the purpose of this work. Consequently, we have limited the inclusion to the IFMLModel the possible interactions and elements presented on the website. In so doing, we keep the model design lightweight and reduce its complexity. Overall, the main \textit{IFMLWindow} standalone nodes have been described with more detail when compared to other shared \textit{ViewContainer} elements, such as the Header and the Footer. In Figure \ref{fig:ifml-before-global}, a visual representation of the IFMLDiagram corresponding to the main \textit{IFMLModel} for the Madison Island eCommerce platform is presented.
+The Madison Island Interaction Model is formed by a different combination of \textit{IFMLWindow} elements connected through \textit{IFMLAction}s reacting to distinct \textit{Events} with different \textit{ParameterBindings}. The detail of the modeling is contextual to the purpose of this work. Consequently, we have limited the inclusion of the possible interactions and elements presented on the website to the IFMLModel. In so doing, we keep the model design lightweight and reduce its complexity. Overall, the main \textit{IFMLWindow} standalone nodes have been described with more detail when compared to other shared \textit{ViewContainer} elements, such as the Header and the Footer. In Figure \ref{fig:ifml-before-global}, a visual representation of the IFMLDiagram corresponding to the main \textit{IFMLModel} for the Madison Island eCommerce platform is presented.
 
 \begin{figure}[H]
   \centering
@@ -317,9 +317,9 @@ The Madison Island Interaction Model is formed by a different combination of \te
   \label{fig:ifml-before-global}
 \end{figure}
 
-\subsubsection{Homepage overview}
+\subsubsection{Homepage}
 
-The Madison Island Interaction Model for the Homepage (Figure \ref{fig:desktop-before-homepage} and \ref{fig:ifml-before-homepage}) is composed by a parent \textit{IFMLWindow} element, which contains three children elements: another \textit{IFMLWindow} for the Highlighted Categories Carousel, a \textit{Detail View Component} for the Homepage promos CMS Block, and a \textit{List View Component} for the New Products sections that is bound to the Product Entity of the domain model. The HighlightedCategoriesCarousel Window is in \textit{XOR mode} representing three possible scenarios for the category to promote with the highest priority within the carousel mechanism. Each data binding within all these view containers is limited by a \textit{Conditional Expressions} defining the instance of the content to show.
+The Madison Island Interaction Model for the Homepage (Figure \ref{fig:desktop-before-homepage} and \ref{fig:ifml-before-homepage}) is composed by a parent \textit{IFMLWindow} element, which contains three children elements: another \textit{IFMLWindow} for the Highlighted Categories Carousel, a \textit{Detail View Component} for the Homepage promos CMS Block, and a \textit{List View Component} for the New Products sections that is bound to the Product Entity of the \textit{Domain Model} . The parent HighlightedCategoriesCarousel \textit{IFMLWindow} has the \textit{isXOR} property set to true representing three exclusive main configurations for the initial screen within the carousel mechanism. Each \textit{Data Binding} within all these banner components is limited by a \textit{Conditional Expressions} defining the instance of the content to show.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -339,7 +339,7 @@ The Madison Island Interaction Model for the Homepage (Figure \ref{fig:desktop-b
 \vspace{0.5cm}
 
 \newpage
-The following snippet of code is an extract from the IFML Model for the first \textit{HighlighedCategoryBanner View Container} element: 
+The following snippet of code is an extract from the \textit{IFMLModel} for the first HighlighedCategoryBanner \textit{View Container} element: 
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
@@ -363,7 +363,7 @@ The following snippet of code is an extract from the IFML Model for the first \t
 \end{lstlisting}
 
 \newpage
-The above snippet belongs to a more complex IFML model hierarchy, as shown in \ref{fig:ifml-before-hierarchy-homepage}.
+The above snippet belongs to a more complex \textit{IFMLModel} hierarchy, as shown in \ref{fig:ifml-before-hierarchy-homepage}.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -374,9 +374,9 @@ The above snippet belongs to a more complex IFML model hierarchy, as shown in \r
 \end{figure}
 \vspace{0.5cm}
 
-\subsubsection{Category Page overview}
+\subsubsection{Category Page}
 
-The Madison Island Interaction Model for the Category Page (Figure \ref{fig:desktop-before-category} and \ref{fig:ifml-before-category}) is composed by a parent \textit{IFMLWindow} element in \textit{XOR mode}, which presents information about the current category on the top of the page. Depending on the display mode property for the Category Entity, the user can be presented with two different \textit{View Containers} that are respectively activated using different \textit{Activation Expressions} based on the value of the property itself. Whilst the first scenario presents a \textit{Detail View Component} attached to a linked CMS Block, the second option shows two children view components representing both the filter sidebar and the products listing section with this last one having multiple \textit{Visualization Attribute} children nodes. These nodes indicate that the user is presented with an image used as thumbnail, a name and a price for each product belonging to the category shown.
+The Madison Island Interaction Model for the Category Page (Figure \ref{fig:desktop-before-category} and \ref{fig:ifml-before-category}) is composed by a parent \textit{IFMLWindow} element with a true-ish \textit{isXOR} property, which presents information about the current category on the top of the page. Depending on the display mode property for the Category Entity, the user can be presented with two different \textit{View Containers} that are respectively activated using different \textit{Activation Expressions} based on the value of the property itself. Whilst the first scenario presents a \textit{Detail View Component} attached to a linked CMS Block, the second option shows two children view components representing both the filter sidebar and the products listing section with this last one having multiple \textit{Visualization Attribute} children nodes. These nodes indicate that the user is presented with an image used as thumbnail, a name and a price for each product belonging to the category shown.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -396,7 +396,7 @@ The Madison Island Interaction Model for the Category Page (Figure \ref{fig:desk
 \end{figure}
 \vspace{0.5cm}
 
-The IFML Model code for the first \textit{Category Products List} element we have just described takes this form: 
+The \textit{IFMLModel} code for the first Category Products List element we have just described takes this form: 
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
@@ -434,9 +434,9 @@ The full expanded model hierarchy for the \textit{IFMLWindow} Category element i
 \vspace{0.5cm}
 
 
-\subsubsection{Product Page overview}
+\subsubsection{Product Page}
 
-The Madison Island Interaction Model for the Product page (Figure \ref{fig:desktop-before-product} and \ref{fig:ifml-before-product}) is mainly built with a single \textit{IFMLWindow} element that contains different types of \textit{View Component} nodes, the main one being a Detail type bound to the current product data entity. The other two elements are the single \textit{Form View Component} descibing the Add to Cart section and its possible interactions, and the \textit{List View Component} holding the information for the Related Product widget.
+The Madison Island Interaction Model for the Product page (Figure \ref{fig:desktop-before-product} and \ref{fig:ifml-before-product}) is mainly built with a single \textit{IFMLWindow} element that contains different types of \textit{View Component} nodes, the main one being a \textit{Detail View Component} instance bound to the current product data entity. The other two elements are the single \textit{Form View Component} descibing the Add to Cart section and its possible interactions, and the \textit{List View Component} holding the information for the Related Product widget.
 
 \newpage
 \vspace{0.5cm}
@@ -457,7 +457,7 @@ The Madison Island Interaction Model for the Product page (Figure \ref{fig:deskt
 \vspace{0.5cm}
 
 \newpage
-The structure of the model just outlined produces the following IFMLModel code:
+The structure of the model just outlined produces the following \textit{IFMLModel} code:
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
@@ -500,7 +500,7 @@ The structure of the model just outlined produces the following IFMLModel code:
 \end{lstlisting}
 
 \newpage
-The model representation of this Product page structure is shown in Figure \ref{fig:ifml-before-hierarchy-product}
+The model representation of this product page structure is shown in Figure \ref{fig:ifml-before-hierarchy-product}
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -511,9 +511,9 @@ The model representation of this Product page structure is shown in Figure \ref{
 \end{figure}
 \vspace{0.5cm}
 
-\subsubsection{Shopping Cart Page overview}
+\subsubsection{Shopping Cart Page}
 \label{shopping-cart-page-overview}
-The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig:desktop-before-shoppingcart} and \ref{fig:ifml-before-shoppingcart}) is  built with a single \textit{IFMLWindow} landmark container (flagging it as accessible from everywhere) including multiple \textit{Form View Component} instances representing the sidebar interactions with the discount codes and shipping estimation widgets. Besides the sidebar, the area with the cart status and the items in the cart is shown with another \textit{Form View Component} controlled by the \textit{Activation Condition} responsible for showing items when the cart is not empty. The area is modeled with a Form component because of the Qty input text fields, which allows the user to update the related item quantities or empty the whole cart at any time. Both interactions are controlled with specific \textit{IFMLAction} elements triggered on these \textit{Events}.
+The Madison Island Interaction Model for the Shopping Cart page (Figure \ref{fig:desktop-before-shoppingcart} and \ref{fig:ifml-before-shoppingcart}) is  built with a single \textit{IFMLWindow} container with a true-ish \textit{isLandmark} property (flagging the window as accessible from everywhere) including multiple \textit{Form View Component} instances representing the sidebar interactions with the discount codes and shipping estimation widgets. Besides the sidebar, the area holding the cart status and the items in the cart information is displayed with an additional \textit{Form View Component} controlled by the \textit{Activation Condition} responsible for showing items only when the cart is not empty. The section is modeled with a \textit{Form View Component} because of the Qty \textit{SimpleInput} text fields, which allow the user to update the related item quantities or empty the whole cart at any time. Both interactions are controlled with specific \textit{IFMLAction} elements triggered on these \textit{Events}.
 
 \newpage
 \vspace{0.5cm}
@@ -577,7 +577,7 @@ As shown in Figure \ref{fig:ifml-before-hierarchy-shoppingcart}, the Interaction
 \end{lstlisting}
 
 \newpage
-The Model representation of the Shopping Cart page structure is presented in Figure \ref{fig:ifml-before-hierarchy-shoppingcart}
+The \textit{IFMLModel} representation of the Shopping Cart page structure is presented in Figure \ref{fig:ifml-before-hierarchy-shoppingcart}
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -590,7 +590,7 @@ The Model representation of the Shopping Cart page structure is presented in Fig
 
 \subsubsection{Shared Elements and Interactions}
 
-As mentioned previously, shared sections of the platform such as the Header and the Footer have been modeled as \textit{IFMLWindow} nodes reachable from any other area of the website, thus their \textit{Landmark} attribute set to true. In more detail, the Header section contains a Navigation Menu in the form of a \textit{List View Component} with a children \textit{DataBinding} component correlated to the Category domain model and a simple \textit{Form View Component} for the search mechanism. When the user performs a search submitting a keyword, the \textit{SearchKeyword} is triggered and the Search Keyword \textit{IFMLAction} is executed based on the parameters held in the associated \textit{ParameterBinding} element.  The resulting Search Results page, which presents a sidebar for filtering and a list of items matching the search, is another \textit{IFMLWindow}, whose structure resembles the "Product List Mode" for a Category Page described earlier (Figure \ref{fig:ifml-before-header-search}).
+As mentioned previously, shared sections of the platform such as the Header and the Footer have been modeled as \textit{IFMLWindow} nodes reachable from any other area of the website, thus their \textit{isLandmark} attribute set to true. In more detail, the Header section contains a Navigation Menu in the form of a \textit{List View Component} with a children \textit{DataBinding} component correlated to the Category \textit{Domain Model} and a simple \textit{Form View Component} for the search mechanism. When the user performs a search submitting a keyword, the \textit{SearchKeyword} is triggered and the Search Keyword \textit{IFMLAction} is executed based on the parameters held in the associated \textit{ParameterBinding} element.  The resulting Search Results page, which presents a sidebar for filtering and a list of items matching the search, is another \textit{IFMLWindow}, whose structure resembles the "Product List Mode" for a Category Page described earlier (Figure \ref{fig:ifml-before-header-search}).
 
 \vspace{0.5cm}
 \begin{figure}[H]
