@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <default/>
+    <!--Set proper data for main banner carousel and replace recent products with interaction products-->
+    <cms_index_index>
+        <reference name="highlighted-categories-carousel">
+            <block type="MagentoEnhanced/Category_Enhanced" template="enhanced/category/highlighted.phtml"
+                   categoryId="40"/>
+            <block type="MagentoEnhanced/Category_Enhanced" template="enhanced/category/highlighted.phtml"
+                   categoryId="16"/>
+            <block type="MagentoEnhanced/Category_Enhanced" template="enhanced/category/highlighted.phtml"
+                   categoryId="20"/>
+        </reference>
+    </cms_index_index>
+    <catalog_product_index/>
+    <catalog_category_view/>
+    <checkout_cart_index/>
+</layout>
