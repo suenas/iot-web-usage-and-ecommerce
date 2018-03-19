@@ -56,7 +56,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewContainer=``Homepage"
       viewComponent=``TopMenu"
       eventType=``click"
-      parameterBindingGroup="Category/5"
+      parameterBindingGroup=``Category/5"
       logEntry="GET /men.html / 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``2"
@@ -66,7 +66,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewContainer="Category #5"
       viewComponent=``CategoryList"
       eventType=``click"
-      parameterBindingGroup="Category/15"
+      parameterBindingGroup=``Category/15"
       logEntry="GET /men/shirts.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``3"
@@ -76,7 +76,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewContainer="Category #15"
       viewComponent=``ProductList"
       eventType=``click"
-      parameterBindingGroup="Product/404"
+      parameterBindingGroup=``Product/404"
       logEntry="GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``4"
@@ -86,7 +86,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewContainer="Product #404"
       viewComponent=``RelatedProductList"
       eventType=``click"
-      parameterBindingGroup="Product/413"
+      parameterBindingGroup=``Product/413"
       logEntry="GET /core-striped-sport-shirt-551.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``5"
@@ -106,7 +106,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewContainer="Product #404"
       viewComponent=``TopMenu"
       eventType=``click"
-      parameterBindingGroup="Category/16"
+      parameterBindingGroup=``Category/16"
       logEntry="GET /men/tees-knits-and-polos.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``7"
@@ -116,7 +116,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewContainer="Category #16"
       viewComponent=``TopSearch"
       eventType=``submit"
-      parameterBindingGroup="SearchText/blazer"
+      parameterBindingGroup=``SearchText/blazer"
       logEntry="GET /catalogsearch/result/?q=blazer 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``8"
@@ -126,7 +126,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewContainer=``Search Results"
       viewComponent=``ProductList"
       eventType=``click"
-      parameterBindingGroup="Product/407"
+      parameterBindingGroup=``Product/407"
       logEntry="GET /stretch-cotton-blazer-587.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:ProximityData"
       ID=``9"
@@ -613,23 +613,23 @@ We conclude this chapter with both a snippet of the Header \textit{IFMLWindow} e
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
-  <interactionFlowModelElements xsi:type="ext:IFMLWindow" id="_LvuL0BPREei3TrqMA9Bdvw" name=``Header" isLandmark=``true">
-  <viewElements xsi:type="ext:List" id="_v0p5YA9BEeiZ14TmPBeBNA" name=``NavigationMenu">
-    <viewComponentParts xsi:type="core:DataBinding" id="__mcXIA9BEeiZ14TmPBeBNA" name=``Category"/>
-    <viewComponentParts xsi:type="core:VisualizationAttribute" id="_Kbzt3xIZEeijSslFDgCgZA" name=``Name" featureConcept="//@domainModel/@domainElements.5"/>
+  <interactionFlowModelElements xsi:type="ext:IFMLWindow" id=``_LvuL0BPREei3TrqMA9Bdvw" name=``Header" isLandmark=``true">
+  <viewElements xsi:type="ext:List" id=``_v0p5YA9BEeiZ14TmPBeBNA" name=``NavigationMenu">
+    <viewComponentParts xsi:type="core:DataBinding" id=``__mcXIA9BEeiZ14TmPBeBNA" name=``Category"/>
+    <viewComponentParts xsi:type="core:VisualizationAttribute" id=``_Kbzt3xIZEeijSslFDgCgZA" name=``Name" featureConcept="//@domainModel/@domainElements.5"/>
   </viewElements>
-  <viewElements xsi:type="ext:Form" id="_YWvrMA9GEeiZ14TmPBeBNA" name=``SearchForm">
-    <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_ULm7WRIWEeijSslFDgCgZA" name=``SearchKeyword" viewElement="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1">
-      <outInteractionFlows xsi:type="core:NavigationFlow" id="_Y6uV1xIWEeijSslFDgCgZA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3">
-        <parameterBindingGroup id="_yCY84hPOEei3TrqMA9Bdvw">
-          <parameterBindings id="_y5vbohPOEei3TrqMA9Bdvw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewComponentParts.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.3/@parameters.0"/>
+  <viewElements xsi:type="ext:Form" id=``_YWvrMA9GEeiZ14TmPBeBNA" name=``SearchForm">
+    <viewElementEvents xsi:type="ext:OnSubmitEvent" id=``_ULm7WRIWEeijSslFDgCgZA" name=``SearchKeyword" viewElement="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1">
+      <outInteractionFlows xsi:type="core:NavigationFlow" id=``_Y6uV1xIWEeijSslFDgCgZA" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3">
+        <parameterBindingGroup id=``_yCY84hPOEei3TrqMA9Bdvw">
+          <parameterBindings id=``_y5vbohPOEei3TrqMA9Bdvw" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewComponentParts.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.3/@parameters.0"/>
         </parameterBindingGroup>
       </outInteractionFlows>
     </viewElementEvents>
-    <viewComponentParts xsi:type="ext:SimpleField" id="_lWoCAA9GEeiZ14TmPBeBNA" name=``Keyword" direction=``out" />
+    <viewComponentParts xsi:type="ext:SimpleField" id=``_lWoCAA9GEeiZ14TmPBeBNA" name=``Keyword" direction=``out" />
   </viewElements>
-  <viewElements xsi:type="core:ViewComponent" id="_aQFfjQ9TEeiZ14TmPBeBNA" name=``TopLinks"/>
-  <viewElements xsi:type="core:ViewComponent" id="_ezXdfQ9TEeiZ14TmPBeBNA" name=``LanguageSwitch"/>
+  <viewElements xsi:type="core:ViewComponent" id=``_aQFfjQ9TEeiZ14TmPBeBNA" name=``TopLinks"/>
+  <viewElements xsi:type="core:ViewComponent" id=``_ezXdfQ9TEeiZ14TmPBeBNA" name=``LanguageSwitch"/>
 </interactionFlowModelElements>
 \end{lstlisting}
 \vspace{0.5cm}
