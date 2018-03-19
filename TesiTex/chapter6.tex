@@ -96,16 +96,20 @@ For example, the handle \textit{catalog\_product\_view} is used to add content t
 As shown above, child nodes are created inside these \textit{layout handle}s to determine which content should appear on any distinct page where these layout handles gets added to an XML structure called \textit{page tree}.
 
 These child nodes are called \textit{block}s, which may, in turn, contain child \textit{block}s of their own. 
-Finally, each leaf \textit{block} would contain a template associated to it which would be responsible for displaying some specific content.
+Magento blocks can be structural or content blocks depending on whether they have a template associated with them or not.
+Usually, structural blocks, as shown in Figure \ref{fig:magento-term-blocks}, define the primary structure of the page and they do not explicitly render anything to the screen mostly acting as wrappers for their children blocks.
+Finally, each non-structural \textit{block} would contain a template associated to it which would be responsible for displaying some specific content.
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=14cm]{images/magento/term-blocks-content.png}
-  \caption{Magento content blocks example}
-  \label{fig:magento-term-blocks-content}
+  \subfloat[Structural Blocks]{{\includegraphics[width=11cm]{images/magento/term-blocks-structural.png} }}%
+  \qquad
+  \subfloat[Content Blocks]{{\includegraphics[width=11cm]{images/magento/term-blocks-content.png} }}%
+  \caption{Magento Blocks Page Structure}%
+  \label{fig:magento-term-blocks}%
 \end{figure}
-\vspace{0.5cm}
+
 
 In summary, each page of the website can be thought as a composition of Magento \textit{block}s representing a specific page tree configuration. As shown in \ref{fig:magento-madison-island-theme} for the Madison Island theme example, each one of these blocks holds its associated rendering template that gets assembled and internally rendered before being returned to the user browser in the HTTP response.
 
