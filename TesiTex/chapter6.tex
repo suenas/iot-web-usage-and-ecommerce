@@ -160,7 +160,7 @@ Since XMI is XML-based, we decided to employ XSLT to transformat the XMI represe
 
 \subsection{Applying XSL Transformations}
 
-XSL Transformations (XSLT 2.0) is a language for transforming XML documents into other XML documents, text documents or HTML documents\cite{xslt} whose detailed language specifications are beyond the scope of this work.
+XSL Transformations (XSLT 3.0) is a language for transforming XML documents into other XML documents, text documents or HTML documents\cite{xslt} whose detailed language specifications are beyond the scope of this work.
 
 Still, in our journey towards code generation, we considered XSLT a suitable tool because we are effectively looking for a valid XMI-XML transformation. Specifically, our proposed approach limits itself to this XML documents conversion only, leaving the Magento rendering engine to implement the rest of the operations as usual. In fact, Magento would still be the authority for building up the final HTML response after merging all the layout updates collected and recursively rendering all the associated block templates.
 
