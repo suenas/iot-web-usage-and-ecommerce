@@ -127,7 +127,7 @@ The versatility offered by the Magento rendering engine through the layout updat
 In fact, we are in a position now to generate and forward customized XML updates to Magento to reflect those requested changes and efficiently see them implemented on the website.
 
 \newpage
-\section{Code generation}
+\section{An approach for code generation}
 
 The main idea behind the code generation method is to use the updated \textit{IFMLModel} processed in the previous stage and use it as the input document of an additional transformation capable of generating code understandable by the target platform, in this case, Magento. This generated code would have the form of the Layout Update XML instructions described in the previous section. Finally, these automatically generated XML update snippets will be interpreted and treated from the Magento rendering engine as any other layout update XML file.
 
@@ -135,12 +135,12 @@ The main idea behind the code generation method is to use the updated \textit{IF
 \begin{figure}[H]
   \centering
     \includegraphics[width=14cm]{images/code-generation.png}
-  \caption{Code generation approach}
+  \caption{Code generation overview}
   \label{fig:code-generation}
 \end{figure}
 \vspace{0.5cm}
 
-\subsection{XML Metadata Interchange}
+\subsection{XML Metadata Interchange overview}
 
 XMI (XML Metadata Interchange) is a proposed use of the Extensible Markup Language (XML) that is intended to provide a standard way for programmers and other users to exchange information about metadata (essentially, information about what a set of data consists of and how it is organized)\cite{xmi}. 
 
@@ -156,16 +156,33 @@ Both the \textit{RealDataUsage} and \textit{IFML} models and metamodels definiti
 \vspace{0.5cm}
 
 
-Since XMI is XML-based, we decided to employ XSLT to transform the XMI representation of the enhanced \textit{IFMLModel} for code generation of the target documents. 
+Since XMI is XML-based, we decided to employ XSLT to transformat the XMI representation of the enhanced \textit{IFMLModel} for code generation of the target documents. 
+
+\subsection{Applying XSL Transformations}
+
+XSL Transformations (XSLT 2.0) is a language for transforming XML documents into other XML documents, text documents or HTML documents\cite{xslt} whose detailed language specifications are beyond the scope of this work.
+
+Still, in our journey towards code generation, we considered XSLT a suitable tool because we are effectively looking for a valid XMI-XML transformation. Specifically, our proposed approach limits itself to this XML documents conversion only, leaving the Magento rendering engine to implement the rest of the operations as usual. In fact, Magento would still be the authority for building up the final HTML response after merging all the layout updates collected and recursively rendering all the associated block templates.
+
+The goal described above is achievable thanks to XSLT functionalities for adding nodes and attributes to or from the target file, rearranging and sorting elements and making decisions about which items to hide and display.In fact, XSLT is capable of efficiently transforming an XML source-tree (our \textit{IFMLModel} XMI in our case) into an XML result-tree (Magento layout update XML in our case).
+
+Because XSLT uses \textit{XPath} to define parts of the source document that should match some predefined templates to be converted into some others (\ref{xslt-processing}), our objective is to identify those templates from the source XMI document and propose a possible transformation definition resulting in a valid layout update XML instruction Magento will take care of.
+
+ 
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=10cm]{images/xslt-processing.jpg}
+  \caption{XSLT output processing}
+  \label{fig:xslt-processing}
+\end{figure}
+\vspace{0.5cm}
 
 
+\subsection{Generated Magento Layout Update XML code}
 
 
-\subsection{XSL Transformations}
-
-XSL Transformations (XSLT 2.0) is a language for transforming XML documents into other XML documents, text documents or HTML documents\cite{xslt}.
-
-\subsection{Transformation output}
 
 
 %\addcontentsline{toc}{chapter}{}
