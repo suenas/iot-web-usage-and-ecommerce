@@ -40,13 +40,13 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
 
 \lstset{language=XML}
 \begin{lstlisting} 
-<?xml version="1.0" encoding=``UTF-8"?>
+<?xml version=``1.0" encoding=``UTF-8"?>
 <RealUsageData:Dataset
-    xmi:version="2.0"
+    xmi:version=``2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:RealUsageData=``RealUsageData"
-    xsi:schemaLocation="RealUsageData ../metamodels/RealUsageData.ecore"
+    xsi:schemaLocation=``RealUsageData ../metamodels/RealUsageData.ecore"
     ID=``1" name=``Main">
   <data xsi:type="RealUsageData:WebData"
       ID=``1"
@@ -57,7 +57,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewComponent=``TopMenu"
       eventType=``click"
       parameterBindingGroup=``Category/5"
-      logEntry="GET /men.html / 200 0 - 29505"/>
+      logEntry=``GET /men.html / 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``2"
       name=``AccessLog"
@@ -67,7 +67,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewComponent=``CategoryList"
       eventType=``click"
       parameterBindingGroup=``Category/15"
-      logEntry="GET /men/shirts.html 200 0 - 29505"/>
+      logEntry=``GET /men/shirts.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``3"
       name=``AccessLog"
@@ -77,7 +77,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewComponent=``ProductList"
       eventType=``click"
       parameterBindingGroup=``Product/404"
-      logEntry="GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
+      logEntry=``GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``4"
       name=``AccessLog"
@@ -87,7 +87,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewComponent=``RelatedProductList"
       eventType=``click"
       parameterBindingGroup=``Product/413"
-      logEntry="GET /core-striped-sport-shirt-551.html 200 0 - 29505"/>
+      logEntry=``GET /core-striped-sport-shirt-551.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``5"
       name=``AccessLog"
@@ -97,7 +97,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewComponent=``"
       eventType=``backButton"
       parameterBindingGroup=``"
-      logEntry="GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
+      logEntry=``GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``6"
       name=``AccessLog"
@@ -107,7 +107,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewComponent=``TopMenu"
       eventType=``click"
       parameterBindingGroup=``Category/16"
-      logEntry="GET /men/tees-knits-and-polos.html 200 0 - 29505"/>
+      logEntry=``GET /men/tees-knits-and-polos.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:WebData"
       ID=``7"
       name=``AccessLog"
@@ -127,7 +127,7 @@ The RealUsageData metamodel defined above allows us to create dynamic instances 
       viewComponent=``ProductList"
       eventType=``click"
       parameterBindingGroup=``Product/407"
-      logEntry="GET /stretch-cotton-blazer-587.html 200 0 - 29505"/>
+      logEntry=``GET /stretch-cotton-blazer-587.html 200 0 - 29505"/>
   <data xsi:type="RealUsageData:ProximityData"
       ID=``9"
       name=``Session"
@@ -411,7 +411,7 @@ The \textit{IFMLModel} code for the first Category Products List element we have
       </outInteractionFlows>
     </viewElementEvents>
     <viewComponentParts xsi:type="core:DataBinding"  name=``Product" domainConcept="//@domainModel/@domainElements.3">
-      <conditionalExpression  language=``SQL" body="Category IN Product.Categories" name=``Category Products"/>
+      <conditionalExpression  language=``SQL" body=``Category IN Product.Categories" name=``Category Products"/>
     </viewComponentParts>
     <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Image" featureConcept="//@domainModel/@domainElements.7"/>
     <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Name" featureConcept="//@domainModel/@domainElements.8"/>

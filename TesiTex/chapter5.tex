@@ -118,8 +118,21 @@ Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of t
   <!-- ADDED NODE -->
 
   </interactionFlowModelElements>
+
+  <domainModel name="MadisonIsland">
+   ....
+   <!-- ADDED NODES -->
+    <domainElements xsi:type="core:UMLDomainConcept" name="Rewards" dataBinding="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.4/@viewComponentParts.0"/>
+    <domainElements xsi:type="core:UMLStructuralFeature"  name="RewardPoints" visualizationAttribute="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.4/@viewComponentParts.2"></domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature"  name="RewardName">
+    </domainElements>
+   <!-- ADDED NODES -->
+   ...
+ </domainModel>
 \end{lstlisting}
 \vspace{0.5cm}
+
+Additionally, since we are introducing references to new \textit{domainElements} nodes linked to the added \textit{viewComponentParts} children nodes, they must be appended to the \textit{domainModel} node as part of the transformation.
 
 \subsection{Category Page}
 \label{category-page-updates}
@@ -140,7 +153,7 @@ To do so, we filter out the RealUsageData model, fetching the nodes containing a
       viewComponent=``ProductList"
       eventType=``click"
       parameterBindingGroup=``Product/404"
-      logEntry="GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
+      logEntry=``GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
       
       <data xsi:type="RealUsageData:WebData"
       ID=``4"
@@ -151,7 +164,7 @@ To do so, we filter out the RealUsageData model, fetching the nodes containing a
       viewComponent=``RelatedProductList"
       eventType=``click"
       parameterBindingGroup=``Product/413"
-      logEntry="GET /core-striped-sport-shirt-551.html 200 0 - 29505"/>
+      logEntry=``GET /core-striped-sport-shirt-551.html 200 0 - 29505"/>
 
       <data xsi:type="RealUsageData:WebData"
       ID=``8"
@@ -162,7 +175,7 @@ To do so, we filter out the RealUsageData model, fetching the nodes containing a
       viewComponent=``ProductList"
       eventType=``click"
       parameterBindingGroup=``Product/407"
-      logEntry="GET /stretch-cotton-blazer-587.html 200 0 - 29505"/>
+      logEntry=``GET /stretch-cotton-blazer-587.html 200 0 - 29505"/>
 \end{lstlisting}
 \vspace{0.5cm}
 
@@ -215,7 +228,7 @@ to this one:
       ...
   </viewElementEvents>
   <viewComponentParts xsi:type="core:DataBinding"  name=``Product">
-    <subViewComponentParts xsi:type="core:ConditionalExpression"  language=``SQL" body="Product.ID IN getCustomizedRelatedProducts()" name="Product.ID IN getCustomizedRelatedProducts" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.17"/>
+    <subViewComponentParts xsi:type="core:ConditionalExpression"  language=``SQL" body="Product.ID IN getCustomizedRelatedProducts()" name=``Product.ID IN getCustomizedRelatedProducts" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.17"/>
   </viewComponentParts>
   <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Image" featureConcept="//@domainModel/@domainElements.7"/>
   <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Name" featureConcept="//@domainModel/@domainElements.8"/>
@@ -230,7 +243,7 @@ Moreover, the \textit{ActivationExpression} defined by the \textit{interactionFl
 \lstset{language=XML}
 \begin{lstlisting} 
 <interactionFlowModelElements 
-  xsi:type="core:ActivationExpression" id="CurrentProduct.hasCustomizedRelatedProduct" language=``SQL" body="CurrentProduct.hasCustomizedRelatedProduct()">
+  xsi:type="core:ActivationExpression" id=``CurrentProduct.hasCustomizedRelatedProduct" language=``SQL" body="CurrentProduct.hasCustomizedRelatedProduct()">
 </interactionFlowModelElements>
 
 \end{lstlisting}
