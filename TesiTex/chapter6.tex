@@ -107,7 +107,7 @@ Finally, each leaf \textit{block} would contain a template associated to it whic
 \end{figure}
 \vspace{0.5cm}
 
-In summary, each page of the website can be thought as a composition of Magento \textit{block}s representing a specific page tree configuration. As shown in \ref{fig:magento-madison-island-theme} for the Madison Island theme example, each one of these blocks holds its associated rendering template that gets assembled and internally rendered before being returned to the user in the HTTP response.
+In summary, each page of the website can be thought as a composition of Magento \textit{block}s representing a specific page tree configuration. As shown in \ref{fig:magento-madison-island-theme} for the Madison Island theme example, each one of these blocks holds its associated rendering template that gets assembled and internally rendered before being returned to the user browser in the HTTP response.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -118,16 +118,50 @@ In summary, each page of the website can be thought as a composition of Magento 
 \end{figure}
 \vspace{0.5cm}
 
+The versatility offered by the Magento rendering engine through the layout update XML mechanism allows us to dynamically append block children under certain conditions or pass parameters to the existing blocks that would affect their rendering behavior. This behavior is beneficial to map the changes we identified through the personalization process integrated within the updated \textit{IFMLModel} describing the enhanced interface offered to the customers on the platform.
+
+In fact, we are in a position now to generate and forward customized XML updates to Magento to reflect those requested changes and efficiently see them implemented on the website.
+
+\newpage
 \section{Code generation}
 
-The main idea behind the code generation method is to use the updated \textit{IFMLModel} processed in the previous stage and make it the input of an additional alteration which results in code understandable by the target platform, in this case, Magento. This generated code would have the form of Layout Update XML instructions that can be interpreted and treated from the platform as any other layout update XML file.
+The main idea behind the code generation method is to use the updated \textit{IFMLModel} processed in the previous stage and use it as the input document of an additional transformation capable of generating code understandable by the target platform, in this case, Magento. This generated code would have the form of the Layout Update XML instructions described in the previous section. Finally, these automatically generated XML update snippets will be interpreted and treated from the Magento rendering engine as any other layout update XML file.
 
-Since XMI is XML-based, we decided to use XSLT to transform the XMI representation of the enhanced \textit{IFMLModel}. 
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{images/code-generation.png}
+  \caption{Code generation approach}
+  \label{fig:code-generation}
+\end{figure}
+\vspace{0.5cm}
+
+\subsection{XML Metadata Interchange}
+
+XMI (XML Metadata Interchange) is a proposed use of the Extensible Markup Language (XML) that is intended to provide a standard way for programmers and other users to exchange information about metadata (essentially, information about what a set of data consists of and how it is organized)\cite{xmi}. 
+
+Both the \textit{RealDataUsage} and \textit{IFML} models and metamodels definition presented in the previous chapters have been using and persisted throught the XMI specification.
+
+\vspace{0.5cm}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=15cm]{images/xmi-header.png}
+  \caption{XMI definition for the updated IFMLModel}
+  \label{fig:xmi-header}
+\end{figure}
+\vspace{0.5cm}
+
+
+Since XMI is XML-based, we decided to employ XSLT to transform the XMI representation of the enhanced \textit{IFMLModel} for code generation of the target documents. 
 
 
 
 
-\section{Magento extension}
+\subsection{XSL Transformations}
+
+XSL Transformations (XSLT 2.0) is a language for transforming XML documents into other XML documents, text documents or HTML documents\cite{xslt}.
+
+\subsection{Transformation output}
 
 
 %\addcontentsline{toc}{chapter}{}

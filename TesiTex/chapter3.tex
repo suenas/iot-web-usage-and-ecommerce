@@ -304,11 +304,11 @@ In this scenario, the following image illustrates what would be a suitable Estim
 
 Depending on the business use case, the mobile app can either send an event to the listening server whenever the user crosses a region boundary, or submit a single event with a full list of regions and their minimum proximities detected during the customer visit. 
 
-Due to the behavioural profiling nature of this activity, we assume that the app does the latter, detecting all the entering and leaving of each virtual fence and activating a \textit{ranging} procedure that detects proximity information based on the strength of the Bluetooth signal. \cite{region-monitoring-apple}.
+Due to the behavioural profiling nature of this activity, we assume that the app does the latter, detecting all the entering and leaving of each virtual fence and activating a \textit{ranging} procedure that detects proximity information based on the strength of the Bluetooth signal.\cite{region-monitoring-apple}.
 
 Once the shoppers leaves the physical store, the app performs a single data push to a REST API endpoint with all the tracked data.
 
-From a technical perspective, all these operations are accomplished leveraging the Estimote iOS-SDK \cite{estimote-ios-sdk}, which allows the developer to quickly define regions and ranges for each beacon and facilitates the tracking of the actual proximity to beacon through the ranging process.
+From a technical perspective, all these operations are accomplished leveraging the Estimote iOS-SDK\cite{estimote-ios-sdk}, which allows the developer to quickly define regions and ranges for each beacon and facilitates the tracking of the actual proximity to beacon through the ranging process.
 
 As an example, the JSON payload sent from the app to the REST endpoint for an hypothetical customer 3045678 (e.g. \textbf{POST /users/3045678/sessions}) would have the following structure:
 
