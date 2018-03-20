@@ -3,11 +3,11 @@
 
 \chapter{From models to code, a case study.}
 
-This chapter covers a case study in which we apply the concepts and ideas previously discussed. For doing so, we describe the Magento platform in which he Madison Island eCommerce website would run. We alse suggest a possible automation for code generation that is compatible with the platform ecosystem and architecture.
+This chapter covers a case study in which we apply the concepts and ideas previously discussed. For doing so, we describe the Magento platform on which he Madison Island eCommerce website would run. We alse suggest a possible automation for code generation that is compatible with the platform ecosystem and architecture.
 
 \section{Magento overview}
 
-Magento is one of the most powerful and feature-rich online eCommerce platforms currently available. Launched on March 2008, the platform ensures dealers a full flexibility and control over the look, content, and functionality of their online store. Thanks to its intuitive administration interface for content management as well as its robust marketing and merchandising tools, Magento makes it possible to create sites that fully fit unique business needs, putting no constraints on business processes and flows.
+Magento is one of the most powerful and feature-rich online eCommerce platforms currently available. Launched on March 2008, the platform ensures dealers a full flexibility and control over the look, content, and functionality of their online stores. Thanks to its intuitive administration interface for content management as well as its robust marketing and merchandising tools, Magento makes it possible to create sites that fully fit unique business needs, putting no constraints on business processes and flows.
 
 From a technical perspective, the platform incorporates the core architectural principles of an object-oriented, PHP-based application that can be easily used to customise and expand an already broad and innovative set of features. In fact, central to the Magento model of software development is the strategy of replacing and extending core code, rather than editing it to support maintainability and flexibility. 
 
@@ -32,7 +32,7 @@ In our case study, the Madison Island frontend is built around a Magento theme t
 
 \subsection{Layout Updates XML}
 
-Magento offers great flexibility and re-usability of design by layouts defined in XML files. In fact, each Magento module may define its own layout XML file and participate in the process of building the page output. This result is accomplished through a set of instructions contained in these XML files, and grouped in \textit{layout handles}. These directions play a fundamental role in determining the final look and feel of the page displayed to the user.
+Magento offers great flexibility and re-usability of design by layouts defined in XML files. In fact, each Magento module may define its own layout XML file and participate in the process of building the page output. This result is accomplished through a set of instructions contained in these XML files, and grouped in \textit{layout handle}s. These directions play a fundamental role in determining the final look and feel of the page displayed to the user.
 
 For example, the handle \textit{catalog\_product\_view} is used to add content to the product detail page, and \textit{checkout\_cart\_index} to the shopping cart page. The following is an excerpt of the \textit{catalog\_category\_default} and \textit{catalog\_product\_gallery} layout handle instructions that are contained in the layout XML file and linked to the module used by Magento for all the catalogue-related functionalities (Mage\_Catalog):
 
@@ -89,12 +89,12 @@ For example, the handle \textit{catalog\_product\_view} is used to add content t
 \end{lstlisting}
 \vspace{0.5cm}
 
-As shown above, child nodes are created inside these \textit{layout handle}s to determine which content should appear on any distinct page where these layout handles gets added to an XML structure called \textit{page tree}.
+As shown above, child nodes are created inside these \textit{layout handle}s to determine which content should appear on any distinct page where these handles are added to an XML structure called \textit{page tree}.
 
-These child nodes are called \textit{block}s, which may, in turn, contain child \textit{block}s of their own. 
-Magento blocks can be structural or content blocks, depending on whether or not they have a template associated with them.
+These child nodes are called \textit{block}s and may, in turn, contain child \textit{block}s of their own. 
+Magento blocks can be either structural or content, depending on whether or not they have a template associated with them.
 Usually, structural blocks, as shown in Figure \ref{fig:magento-term-blocks}, define the primary structure of the page. These blocks do not explicitly render anything to the screen, and mostly act as wrappers for their children blocks.
-Finally, each non-structural \textit{block} would contain a template associated to it, which would be responsible for displaying some specific content.
+Finally, each non-structural \textit{block} would be associated to a template, which would be responsible for displaying some specific content.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -118,14 +118,14 @@ In summary, each page of the website can be thought as a composition of Magento 
 \end{figure}
 \vspace{0.5cm}
 
-The versatility offered by the Magento rendering engine through the layout update XML mechanism allows us to dynamically append block children under certain conditions or pass parameters to the existing blocks that would affect their rendering behavior. This behavior is beneficial to map the changes we identified through the personalization process integrated within the updated \textit{IFMLModel} describing the enhanced interface offered to the customers on the platform.
+The flexibilty offered by the Magento rendering engine through the layout update XML mechanism allows us to dynamically append block children under certain conditions or pass parameters to the existing blocks that would affect their rendering behavior. This behavior aids in mapping the changes we identified through the customisation process integrated within the updated \textit{IFMLModel}, describing the enhanced interface presented to the customers.
 
-In fact, we are in a position now to generate and forward customized XML updates to Magento to reflect those requested changes and efficiently see them implemented on the website.
+In fact, we are now in a position to generate and forward customized XML updates to Magento, to reflect those requested changes and to  see them efficiently implemented on the website.
 
 \newpage
 \section{An approach for code generation}
 
-The main idea behind the code generation method is to use the updated \textit{IFMLModel} processed in the previous stage and use it as the input document of an additional transformation capable of generating code understandable by the target platform, in this case, Magento. This generated code would have the form of the Layout Update XML instructions described in the previous section. Finally, these automatically generated XML update snippets will be interpreted and treated from the Magento rendering engine as any other layout update XML file when the profiled user is logged in on the website.
+The main idea behind the code generation method is to use the updated \textit{IFMLModel} processed in the previous stage and to take it as the input document of an additional transformation, able of generating code understandable by Magento. This generated code would have the form of the Layout Update XML instructions described in the previous section. Finally, these automatically generated XML update snippets will be interpreted and treated from the Magento rendering engine as any other layout update XML file when the profiled user is logged in on the website.
 
 \vspace{0.5cm}
 \begin{figure}[H]
