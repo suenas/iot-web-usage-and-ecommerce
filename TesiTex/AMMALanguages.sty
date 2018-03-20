@@ -1,0 +1,146 @@
+\def\filedate{2006/05/16}
+\def\fileversion{1.02}
+\ProvidesPackage{AMMALanguages}
+             [\filedate\space\fileversion\space(Davide Di Ruscio and Frederic Jouault)]
+\typeout{}
+\typeout{----------------------}
+\typeout{AMMA Languages Formatting Package}
+\typeout{----------------------}
+\typeout{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{listings}
+\usepackage{color}
+%\usepackage{times}
+
+\newcommand{\KeywordsATL}{\lstset{keywords={}}}
+
+
+
+\definecolor{gray}{rgb}{0.94,0.94,0.94}
+\definecolor{blue}{rgb}{0,0,0.5}
+
+\definecolor{gray2}{rgb}{0.97,0.97,0.97}
+
+ \lstset{
+%   backgroundcolor=\color{gray},
+%   breaklines=true,
+%   frame=single,
+   framerule=0pt,
+%   language=,
+   numbers=right,
+%   numbersep=5pt,
+%   showspaces=false,
+%   showtabs=false,
+%   tabsize=4,
+%   basicstyle=\ttfamily\scriptsize,
+%   commentstyle=\ttfamily\itshape,
+%   identifierstyle=\ttfamily\scriptsize\bfseries,
+%   numberstyle=\ttfamily\tiny,
+ }
+
+
+\definecolor{keywordColor}{rgb}{.5, 0, .33}
+%\definecolor{keywordColor}{rgb}{0, 0, 0}
+\definecolor{commentColor}{rgb}{0, .7, 0}
+\definecolor{emphColor}{rgb}{0, 0, 0}
+\definecolor{numberColor}{rgb}{0, 0, 0}
+  %[breaklines,mathescape,rulesepcolor=\color{black}]
+\lstdefinestyle{AMMA}{
+    backgroundcolor=\color{gray2},
+    breaklines=true,
+    frame=single,
+    framerule=0pt,
+    numbers=left,
+    numbersep=1pt,
+    showspaces=false,
+    showtabs=false,
+    basicstyle=\footnotesize\ttfamily,
+    commentstyle=\itshape,
+    identifierstyle=\scriptsize,
+    numberstyle=\tiny,
+    keywordstyle=\color{keywordColor}\bfseries,
+    stringstyle=\color{blue}\ttfamily,
+        commentstyle=\color{commentColor}\ttfamily,
+        emphstyle=\ttfamily\color{emphColor},
+        numberstyle=\color{blue}\ttfamily,
+        tabsize=2,
+        frame=,
+        breaklines=true,
+%       postbreak={(*@$\hookrightarrow$@*)},
+%       postbreak={(*@$\nearrow$@*)},
+%       postbreak=\mbox{{\color{red}\tiny$\rightarrow$}},
+   %     postbreak=\mbox{{\color{red}\tiny$\hookrightarrow$}},
+}
+
+\lstdefinelanguage{TCS}{
+        morekeywords={main,template,isDefined,addToContext,primitiveTemplate,for,default,using,context},
+        morekeywords={operators,priority,operatorTemplate,source,storeOpTo,storeRightTo},
+        morekeywords={symbols,leftSpace,rightSpace,leftNone,rightNone},
+        morekeywords={nbNL,indentIncr},
+        morekeywords={as,refersTo,separator},
+        sensitive=true,
+        morecomment=[l]{--},
+        morestring=[b]",
+}
+
+\lstdefinelanguage{KM3}{
+        morekeywords={package,class,oppositeOf,container,ordered,abstract,extends,reference,attribute,enumeration,literal,datatype},
+        emph={Boolean,Integer,String},
+        sensitive=true,
+        morecomment=[l]{--},
+        morestring=[b]",
+}
+
+\lstdefinelanguage{ATL}{
+        morekeywords={query,rule,module,from,to,create,uses, , module,create,from,rule,to,and,not,if,then,helper,endif,else,context,def,using,do},
+        emph={Boolean,Integer,String,Sequence},
+        sensitive=true,
+        morecomment=[l]{--},
+        morestring=[b]',
+}
+
+\lstdefinelanguage{OCL2}{
+        morekeywords={context,inv},
+        emph={Boolean,Integer,String,Sequence},
+        sensitive=true,
+        morecomment=[l]{--},
+        morestring=[b]',
+}
+
+\lstdefinelanguage{ANTLR}{
+        morekeywords={},
+% we use emph for (some) terminals
+        emph={LCURLY,RCURLY,NAME},
+        sensitive=true,
+        morecomment=[l]{//},
+        morestring=[b]",
+}
+
+\lstdefinelanguage{SPL}{
+        morekeywords={service,processing,registration,return,forward,incoming},
+        emph={uri,response},
+        sensitive=true,
+        morecomment=[l]{//},
+        morestring=[b]',
+}
+
+\lstdefinelanguage{XASM}{
+        morekeywords={asm,endasm,is,choose,in,do,forall,and,or,then,endchoose,enddo,if,endif,then,else,universes,universe,function,exists,not,extend,endextend,with,init,endinit},
+        emph={Boolean,Integer,String,Sequence},
+        sensitive=true,
+        morecomment=[l]{--},
+        morestring=[b]',
+}
+
+\lstdefinelanguage{DIASPEC}{
+		morekeywords={as,on,action,source,controller,context,device},
+        emph={Boolean,Integer,String,Sequence},
+        sensitive=true,
+        morecomment=[l]{//},
+        morestring=[b]',
+}
+
+
+\endinput

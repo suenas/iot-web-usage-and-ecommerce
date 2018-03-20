@@ -4,12 +4,16 @@
 \chapter{Enhancing web models via model transformations}
 \label{enhancing-web-models-via-model-transformations}
 
-\section{Transformation}
-
 In the previous chapter, after describing both metamodels for the Real Usage Data and the Interaction Flow Modeling Language, we proceeded with creating dynamic instances for both models, respectively describing the actual input data available for the customisation process and the initial IFMLModel of the eCommerce Madison Island website. In this chapter, we illustrate a possible transformation for this model, based on the Real Usage instance data. Our goal is to upgrade the model version, taking into account customers preferences and their actions.
+
+
+\section{Refactoring Actions}
+
+In this section, we explain how each \textit{IFMLWindow} container of the starting website \textit{IFMLModel} can be potentially upgraded accordingly to the Real Usage Data model described in the previous chapter.
 
 \subsection{Homepage}
 \label{homepage-updates}
+
 Considering the data coming from the Proximity sensors within the actual Madison Island retail store, we are aware of a set of regions corresponding to the customer preferred categories. That information will be used to change the content and, therefore, the IFMLModel for the Homepage carousel.
 
 For instance, we know that the \textbf{Blazers}, \textbf{Tees, Knits and Polos} and \textbf{Shoes} categories correspond to the \textit{sessionRegion} elements within the store in which the user spent more time after sorting the entries by \textit{maxSecondsInRegion} and \textit{maxProximity} attributes. In the case of the Blazers category for example, the data belonging to the \textit{RealUsageData:ProximityData} parent node takes this form:
@@ -262,7 +266,7 @@ As described in \ref{shopping-cart-page-overview}, the Shopping Cart page model 
 \end{figure}
 \vspace{0.5cm}
 
-Along with the cases analysed previously and by applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page by adding a new \textit{View Component}. That component shows the Reward points accumulated by the user in the Shopping Cart Sidebar (Figure \ref{fig:shopping-cart-sidebar-ifml-definition}). The component not only displays the information by the \textit{Data Binding} with the Reward entity, but also controls the \textit{Event} associated with the \textbf{``Apply Discount"} button and the \textit{Action} connected to it. 
+Along with the cases analysed previously and by applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page by adding a new \textit{View Component}. That component shows the Reward points accumulated by the user in the Shopping Cart Sidebar (Figure \ref{fig:shopping-cart-sidebar-ifml-definition}). The component not only displays the information by the \textit{Data Binding} with the Reward entity, but also controls the \textit{Event} associated with the \textbf{"Apply Discount"} button and the \textit{Action} connected to it. 
 The structure of this new node, which gets appended to its parent \textit{IFMLMenu}, is as follows:
 
 \vspace{0.5cm}
@@ -277,6 +281,159 @@ The structure of this new node, which gets appended to its parent \textit{IFMLMe
 </viewElements>
 \end{lstlisting}
 \vspace{0.5cm}
+
+\newpage
+\section{The \textit{IFMLRUD2IFML} Model Transformation}
+
+In this section, we illustrate the model-to-model transformation that allows to updates web models according to the above described refactoring actions. A fragment of the \textit{IFMLRUD2IFML} transformation implemented in ATL~\cite{ATL} is depicted in Listing~\ref{lst:IFMLRUD2IFML}. It takes as input two models, \textit{IN}
+conforms to the IFML metamodel and  \textit{IN2} conforms to the Real Usage Data (RUD) metamodel, and generate an \textit{OUT} model conforms to the IFML metamodel. The listing contains the following rules: 
+%@ARTICLE{ATL,
+%	author = {F. Jouault and F. Allilaire and J. B{\'e}zivin and I. Kurtev},
+%	title = {{ATL: a Model Transformation Tool}},
+%	journal = {Science of Computer Programming},
+%	year = {2008},
+%	volume = {72},
+%	pages = {31-39},
+%	number = {1-2}
+%}
+\begin{itemize}
+	\item[-] The rule \textit{ConditionalExpressionUpdated} matches the element of type \textit{ConditionalExpression} named \textit{``HighlightedCategoryBanner \#1"} and modifies its name and category. To this end, the helper \textit{getMaxSecondsInRegion()} is used to get the element of type \textit{SessionRegion} belonging to the RUD model that has the higher value of seconds in region among the ones having \textit{maxSecondsInRegion} greater than 100.
+
+	\item[-] The rule \textit{IFMLWindow} matches the element of type \textit{IFMLWindow} and modifies it as follows: 
+\begin{itemize}
+	\item[-] if the element is named \textit{``Header"} and the helper \textit{hasSectionActions()} (that verify if the element of type \textit{SectionAction} contains at least one element of type \textit{ScannedItems}) is true, then the new elements defined in the rule \textit{RecentRewardActions()} are added; 
+	\item[-] if the element is named \textit{``Category"} and the helper \textit{hasWebData()} (that verify if the element of type \textit{WebData} contains a  \textit{parameterBindingGroup}) is true, then the new elements defined in the rule \textit{RecentViewedProducts()} are added; 
+\end{itemize} 
+\end{itemize}
+
+Such rules implement the refactoring actions illustrated in Sections \ref{homepage-updates}, \ref{header-updates} and \ref{category-page-updates}.
+\vspace{0.5cm}
+
+\begin{lstlisting}[breaklines,style=AMMA,language=ATL,mathescape,rulesepcolor=\color{black},caption={ A fragment of the transformation},captionpos=b, aboveskip=0.2cm, belowskip=0cm, label={lst:IFMLRUD2IFML}]
+module IFMLRUD2IFML;
+
+create OUT : IFML from IN : IFML, IN2: RUD;
+
+helper def : inElements : Set(IFML!"ecore::EObject") = 		
+	IFML!"ecore::EObject".allInstancesFrom('IN');
+
+-- getMaxSecondsInRegion()
+helper def : getMaxSecondsInRegion() : RUD!SessionRegion = 
+	RUD!SessionRegion.allInstancesFrom('IN2')->select(e|e.maxSecondsInRegion > 100).first();
+
+-- hasSectionActions()
+helper def : hasSectionActions() : Boolean = 
+	RUD!SessionAction.allInstancesFrom('IN2')->select(e|e.scannedItems->notEmpty())->notEmpty();
+
+-- hasWebData()
+helper def : hasWebData() : Boolean = 
+	RUD!WebData.allInstancesFrom('IN2')->select(e| not e.parameterBindingGroup->oclIsUndefined())->notEmpty();
+...
+-- Homepage Refactoring
+rule ConditionalExpressionUpdated {
+	from s : IFML!"IFML::Core::ConditionalExpression" 		
+		(thisModule.inElements->includes(s) 
+		and s->refImmediateComposite()->refImmediateComposite()->refImmediateComposite().name = 'HighlightedCategoryBanner #1')
+	to t : IFML!"IFML::Core::ConditionalExpression" (
+		__xmiID__ <- s.__xmiID__,
+		id <- s.id,
+		language <- s.language,
+		body <- s.body,
+		constraints <- s.constraints,
+		annotations <- s.annotations,
+		parameters <- s.parameters,
+		outInteractionFlows <- s.outInteractionFlows,
+		inInteractionFlows <- s.inInteractionFlows,
+		viewElementEvents <- s.viewElementEvents,
+		activationExpression <- s.activationExpression,
+		subViewComponentParts <- s.subViewComponentParts)
+	do {
+		t.name <- thisModule.getMaxSecondsInRegion().regionLabel;
+		t.body <- 'Category.ID=' + thisModule.getMaxSecondsInRegion().regionId;
+	}
+}
+....
+-- Header Refactoring + Category Page Refactoring
+rule IFMLWindow {
+	from s : IFML!"IFML::Extensions::IFMLWindow" 	
+		(thisModule.inElements->includes(s))
+	to t : IFML!"IFML::Extensions::IFMLWindow" (
+		__xmiID__ <- s.__xmiID__,
+		id <- s.id,
+		name <- s.name,
+		isLandmark <- s.isLandmark,
+		isDefault <- s.isDefault,
+		isXOR <- s.isXOR,
+		isModal <- s.isModal,
+		isNewWindow <- s.isNewWindow,
+		constraints <- s.constraints,
+		annotations <- s.annotations,
+		parameters <- s.parameters,
+		outInteractionFlows <- s.outInteractionFlows,
+		inInteractionFlows <- s.inInteractionFlows,
+		viewElementEvents <- s.viewElementEvents,
+		activationExpression <- s.activationExpression,
+		viewElements <- s.viewElements,
+		actions <- s.actions)
+	do {
+		if (s.name = 'Header' and thisModule.hasSectionActions()) {
+			t.viewElements <- thisModule.RecentRewardActions();
+		} 
+		if (s.name = 'Category' and thisModule.hasWebData()){
+			t.viewElements <- thisModule.RecentViewedProducts();
+		}
+	}		
+}
+
+-- create an additional node to header
+rule RecentRewardActions() {
+	to v : IFML!"IFML::Extensions::List" (
+		name <- 'RecentRewardActions',
+		viewComponentParts <- Sequence{w,y,z}
+	),
+	w : IFML!"IFML::Core::DataBinding" (
+		name <- 'Rewards'
+	),
+	y : IFML!"IFML::Core::VisualizationAttribute" (
+		name <- 'Action Name'
+	),
+	z : IFML!"IFML::Core::VisualizationAttribute" (
+		name <- 'Points Attribution'
+	)
+	do {
+		v;
+	}
+}
+
+-- create an additional node to category page
+rule RecentViewedProducts() {
+	to v : IFML!"IFML::Extensions::List" (
+		name <- 'RecentlyViewedProducts',
+		viewComponentParts <- Sequence{w,y,z1,z2,z3}
+	),
+	w : IFML!"IFML::Extensions::OnSelectEvent" (
+		name <- 'Product Selected'
+	),
+	y : IFML!"IFML::Core::DataBinding" (
+		name <- 'Product'
+	),
+	z1 : IFML!"IFML::Core::VisualizationAttribute" (
+		name <- 'Image'
+	),
+	z2 : IFML!"IFML::Core::VisualizationAttribute" (
+		name <- 'Name'
+	),
+	z3 : IFML!"IFML::Core::VisualizationAttribute" (
+		name <- 'Price'
+	)
+	do {
+		v;
+	}
+}
+.....
+\end{lstlisting}
+\vspace{0.5cm}
+
 
 \newpage
 \section{Updated web models}
@@ -386,5 +543,9 @@ In \ref{shopping-cart-updates}, we outlined how the visual aspects of the shoppi
   \label{fig:desktop-after-shopping-cart}
 \end{figure}
 \vspace{0.5cm}
+
+
+
+
 
 %\addcontentsline{toc}{chapter}{}
