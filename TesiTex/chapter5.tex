@@ -18,17 +18,17 @@ For instance, we know that the \textbf{Blazers}, \textbf{Tees, Knits and Polos} 
 \lstset{language=XML}
 \begin{lstlisting} 
   <sessionRegions
-  regionId=``40"
-  regionLabel=``blazers"
-  detectionCount=``1"
-  maxSecondsInRegion=``195"
-  maxProximity=``immediate"
+  regionId="40"
+  regionLabel="blazers"
+  detectionCount="1"
+  maxSecondsInRegion="195"
+  maxProximity="immediate"
   firstDetectionTimeStamp="2018-02-21T18:11:01.000+0100"
   lastDetectionTimeStamp="2018-02-21T18:11:01.000+0100">
   <beaconData
-    uuid=``0686a88e-fed6-11e7-8be5-0ed5f89f718b"
-    majorId=``25911"
-    minorId=``27"/>
+    uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+    majorId="25911"
+    minorId="27"/>
 </sessionRegions>
 \end{lstlisting}
 \vspace{0.5cm}
@@ -38,13 +38,13 @@ By applying this knowledge, we can say that the \textit{subViewComponentParts} a
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
-<parameters  name="Highlighted Category #1" direction=``inout">
-  <constraints  language=``SQL" body="Category.ID=18"/>
+<parameters  name="Highlighted Category #1" direction="inout">
+  <constraints  language="SQL" body="Category.ID=18"/>
 </parameters>
 
 ...
 
-<subViewComponentParts xsi:type="core:ConditionalExpression"  language=``SQL" body="Category.ID=18" name=``Eyewear"/>
+<subViewComponentParts xsi:type="core:ConditionalExpression"  language="SQL" body="Category.ID=18" name="Eyewear"/>
 \end{lstlisting}
 \vspace{0.5cm}
 
@@ -53,13 +53,13 @@ to:
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
-  <parameters  name="Highlighted Category #1" direction=``inout">
-  <constraints  language=``SQL" body="Category.ID=40"/>
+  <parameters  name="Highlighted Category #1" direction="inout">
+  <constraints  language="SQL" body="Category.ID=40"/>
 </parameters>
 
 ...
 
-<subViewComponentParts xsi:type="core:ConditionalExpression"  language=``SQL" body="Category.ID=40" name=``Blazers"/>
+<subViewComponentParts xsi:type="core:ConditionalExpression"  language="SQL" body="Category.ID=40" name="Blazers"/>
 \end{lstlisting}
 \vspace{0.5cm}
 
@@ -68,13 +68,13 @@ Besides updating the content by prioritising some categories, the \textit{IFMLMo
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
-<sessionActions userAgent=``iPhone 6S">
+<sessionActions userAgent="iPhone 6S">
   <scannedItems 
-  barcode=``042100005264" name=``Elizabeth Knit Top-Red-S" sku=``wbk012c-Red-S"/>
+  barcode="042100005264" name="Elizabeth Knit Top-Red-S" sku="wbk012c-Red-S"/>
   <scannedItems 
-  barcode=``042100005931" name=``Plaid Cotton Shirt-Khaki-L" sku=``msj006c-Khaki-L"/>
+  barcode="042100005931" name="Plaid Cotton Shirt-Khaki-L" sku="msj006c-Khaki-L"/>
   <scannedItems 
-  barcode=``042100007717" name=``Broad St Saddle Shoes" sku=``shm00110"/>
+  barcode="042100007717" name="Broad St Saddle Shoes" sku="shm00110"/>
 </sessionActions>
 \end{lstlisting}
 \vspace{0.5cm}
@@ -99,21 +99,21 @@ Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of t
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
-  <interactionFlowModelElements xsi:type="ext:IFMLWindow"  name=``Header" isLandmark=``true">
-  <viewElements xsi:type="ext:List"  name=``NavigationMenu">
+  <interactionFlowModelElements xsi:type="ext:IFMLWindow"  name="Header" isLandmark="true">
+  <viewElements xsi:type="ext:List"  name="NavigationMenu">
    ...
   </viewElements>
-  <viewElements xsi:type="ext:Form"  name=``SearchForm">
+  <viewElements xsi:type="ext:Form"  name="SearchForm">
    ...
   </viewElements>
-  <viewElements xsi:type="core:ViewComponent"  name=``TopLinks"/>
-  <viewElements xsi:type="core:ViewComponent"  name=``LanguageSwitch"/>
+  <viewElements xsi:type="core:ViewComponent"  name="TopLinks"/>
+  <viewElements xsi:type="core:ViewComponent"  name="LanguageSwitch"/>
 
   <!-- ADDED NODE -->
-  <viewElements xsi:type="ext:List"  name=``RecentRewardActions">
-    <viewComponentParts xsi:type="core:DataBinding"  name=``Rewards" domainConcept="//@domainModel/@domainElements.13"/>
-    <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Action Name" featureConcept="//@domainModel/@domainElements.15"/>
-    <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Points Attribution" featureConcept="//@domainModel/@domainElements.14"/>
+  <viewElements xsi:type="ext:List"  name="RecentRewardActions">
+    <viewComponentParts xsi:type="core:DataBinding"  name="Rewards" domainConcept="//@domainModel/@domainElements.13"/>
+    <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Action Name" featureConcept="//@domainModel/@domainElements.15"/>
+    <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Points Attribution" featureConcept="//@domainModel/@domainElements.14"/>
   </viewElements>
   <!-- ADDED NODE -->
 
@@ -145,37 +145,37 @@ To do so, we filter out the RealUsageData model, fetching the nodes containing a
 \lstset{language=XML}
 \begin{lstlisting} 
       <data xsi:type="RealUsageData:WebData"
-      ID=``3"
-      name=``AccessLog"
-      userID=``3045678"
+      ID="3"
+      name="AccessLog"
+      userID="3045678"
       date="2017-11-29T07:08:40.000+0100"
       viewContainer="Category #15"
-      viewComponent=``ProductList"
-      eventType=``click"
-      parameterBindingGroup=``Product/404"
-      logEntry=``GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
+      viewComponent="ProductList"
+      eventType="click"
+      parameterBindingGroup="Product/404"
+      logEntry="GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
       
       <data xsi:type="RealUsageData:WebData"
-      ID=``4"
-      name=``AccessLog"
-      userID=``3045678"
+      ID="4"
+      name="AccessLog"
+      userID="3045678"
       date="2017-12-04T06:37:15.000+0100"
       viewContainer="Product #404"
-      viewComponent=``RelatedProductList"
-      eventType=``click"
-      parameterBindingGroup=``Product/413"
-      logEntry=``GET /core-striped-sport-shirt-551.html 200 0 - 29505"/>
+      viewComponent="RelatedProductList"
+      eventType="click"
+      parameterBindingGroup="Product/413"
+      logEntry="GET /core-striped-sport-shirt-551.html 200 0 - 29505"/>
 
       <data xsi:type="RealUsageData:WebData"
-      ID=``8"
-      name=``AccessLog"
-      userID=``3045678"
+      ID="8"
+      name="AccessLog"
+      userID="3045678"
       date="2017-12-04T06:38:20.000+0100"
-      viewContainer=``Search Results"
-      viewComponent=``ProductList"
-      eventType=``click"
-      parameterBindingGroup=``Product/407"
-      logEntry=``GET /stretch-cotton-blazer-587.html 200 0 - 29505"/>
+      viewContainer="Search Results"
+      viewComponent="ProductList"
+      eventType="click"
+      parameterBindingGroup="Product/407"
+      logEntry="GET /stretch-cotton-blazer-587.html 200 0 - 29505"/>
 \end{lstlisting}
 \vspace{0.5cm}
 
@@ -206,14 +206,14 @@ From a \textit{IFMLModel} code perspective, we would transition from the followi
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
-  <viewElements xsi:type="ext:List"  name=``RelatedProductList">
-  <viewElementEvents xsi:type="ext:OnSelectEvent"  name=``Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
+  <viewElements xsi:type="ext:List"  name="RelatedProductList">
+  <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
     ...
   </viewElementEvents>
-  <viewComponentParts xsi:type="core:DataBinding"  name=``Product"/>
-  <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Image" featureConcept="//@domainModel/@domainElements.7"/>
-  <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Name" featureConcept="//@domainModel/@domainElements.8"/>
-  <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Price" featureConcept="//@domainModel/@domainElements.9"/>
+  <viewComponentParts xsi:type="core:DataBinding"  name="Product"/>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
 </viewElements>
 \end{lstlisting}
 \vspace{0.5cm}
@@ -223,16 +223,16 @@ to this one:
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
-  <viewElements xsi:type="ext:List"  name=``RelatedProductList">
-  <viewElementEvents xsi:type="ext:OnSelectEvent"  name=``Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
+  <viewElements xsi:type="ext:List"  name="RelatedProductList">
+  <viewElementEvents xsi:type="ext:OnSelectEvent"  name="Product Selected" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.2">
       ...
   </viewElementEvents>
-  <viewComponentParts xsi:type="core:DataBinding"  name=``Product">
-    <subViewComponentParts xsi:type="core:ConditionalExpression"  language=``SQL" body="Product.ID IN getCustomizedRelatedProducts()" name=``Product.ID IN getCustomizedRelatedProducts" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.17"/>
+  <viewComponentParts xsi:type="core:DataBinding"  name="Product">
+    <subViewComponentParts xsi:type="core:ConditionalExpression"  language="SQL" body="Product.ID IN getCustomizedRelatedProducts()" name="Product.ID IN getCustomizedRelatedProducts" activationExpression="//@interactionFlowModel/@interactionFlowModelElements.17"/>
   </viewComponentParts>
-  <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Image" featureConcept="//@domainModel/@domainElements.7"/>
-  <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Name" featureConcept="//@domainModel/@domainElements.8"/>
-  <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Price" featureConcept="//@domainModel/@domainElements.9"/>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Image" featureConcept="//@domainModel/@domainElements.7"/>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Name" featureConcept="//@domainModel/@domainElements.8"/>
+  <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Price" featureConcept="//@domainModel/@domainElements.9"/>
 </viewElements>
 \end{lstlisting}
 \vspace{0.5cm}
@@ -243,7 +243,7 @@ Moreover, the \textit{ActivationExpression} defined by the \textit{interactionFl
 \lstset{language=XML}
 \begin{lstlisting} 
 <interactionFlowModelElements 
-  xsi:type="core:ActivationExpression" id=``CurrentProduct.hasCustomizedRelatedProduct" language=``SQL" body="CurrentProduct.hasCustomizedRelatedProduct()">
+  xsi:type="core:ActivationExpression" id="CurrentProduct.hasCustomizedRelatedProduct" language="SQL" body="CurrentProduct.hasCustomizedRelatedProduct()">
 </interactionFlowModelElements>
 
 \end{lstlisting}
@@ -268,12 +268,12 @@ The structure of this new node, which gets appended to its parent \textit{IFMLMe
 \vspace{0.5cm}
 \lstset{language=XML}
 \begin{lstlisting} 
-  <viewElements xsi:type="core:ViewComponent" name=``Applicable Reward Points">
-    <viewElementEvents xsi:type="ext:OnSelectEvent" name=``Apply Reward Points" viewElement="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.2/@viewElements.3">
+  <viewElements xsi:type="core:ViewComponent" name="Applicable Reward Points">
+    <viewElementEvents xsi:type="ext:OnSelectEvent" name="Apply Reward Points" viewElement="//@interactionFlowModel/@interactionFlowModelElements.11/@viewElements.2/@viewElements.3">
         <outInteractionFlows xsi:type="core:NavigationFlow" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.18/@actionEvents.0"/>
     </viewElementEvents>
-    <viewComponentParts xsi:type="core:DataBinding" name=``Reward"/>
-    <viewComponentParts xsi:type="core:VisualizationAttribute"  name=``Available Reward Points" featureConcept="//@domainModel/@domainElements.14"/>
+    <viewComponentParts xsi:type="core:DataBinding" name="Reward"/>
+    <viewComponentParts xsi:type="core:VisualizationAttribute"  name="Available Reward Points" featureConcept="//@domainModel/@domainElements.14"/>
 </viewElements>
 \end{lstlisting}
 \vspace{0.5cm}

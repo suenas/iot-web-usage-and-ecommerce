@@ -258,7 +258,7 @@ As described in Section \ref{beacons}, a beacon can simply be seen as a lighthou
 
 Unlike QR and NFC communication, the customer needs to have an app installed on their phone to receive this one-way data stream. Technically, the app obeys only to iBeacons with UUID, Major and Minor IDs matching to predefined values. When that happens, the app can react accordingly. Such mechanism ensures that only the installed app can track users as they walk around the transmitters. 
 
-In other words, the phone OS will keep listening for beacons even if the app is not running, and even if the phone is locked or rebooted. Once either an “enter” or and “exit” event happens, the OS will launch the app into the background (if needed) and let it execute, for a few seconds, some code to handle the event.
+In other words, the phone OS will keep listening for beacons even if the app is not running, and even if the phone is locked or rebooted. Once either an ``enter" or and ``exit" event happens, the OS will launch the app into the background (if needed) and let it execute, for a few seconds, some code to handle the event.
 
 \subsection{Proximity Marketing}
 \label{section:proximity-marketing}
@@ -316,95 +316,95 @@ As an example, the JSON payload sent from the app to the REST endpoint for an hy
 \vspace{0.5cm}
 \begin{lstlisting}[language=json,firstnumber=1]
   {
-    ``data":{
-       ``customerId":3045678,
-       ``storeId":8784,
-       ``storeLabel" : ``Madison1",
-       ``sessionId" : ``89376f84-065b-11e8-ba89-0ed5f89f718b"
+    "data":{
+       "customerId":3045678,
+       "storeId":8784,
+       "storeLabel" : "Madison1",
+       "sessionId" : "89376f84-065b-11e8-ba89-0ed5f89f718b"
 
-       ``sessionRegions":[
+       "sessionRegions":[
              {
-                "regionId: : 156,
-                ``regionLabel":``store-entrance",
-                ``detectionCount":2,
-                ``maxSecondsInRegion": 5,
-                ``maxProximity":``unknown",
-                ``firstDetectionTimestamp":"2018-02-21T18:09:07Z",
-                ``lastDetectionTimestamp":"2018-02-21T18:16:02Z",
-                ``beaconData" : {
-                  ``uuid":``0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                  ``majorId":2553,
-                  ``minorId":79
+                "regionId": : 156,
+                "regionLabel":"store-entrance",
+                "detectionCount":2,
+                "maxSecondsInRegion": 5,
+                "maxProximity":"unknown",
+                "firstDetectionTimestamp":"2018-02-21T18:09:07Z",
+                "lastDetectionTimestamp":"2018-02-21T18:16:02Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":2553,
+                  "minorId":79
                 }
              },
              {
                 "regionId: : 645,
-                ``regionLabel":``shoes",
-                ``detectionCount":1,
-                ``maxSecondsInRegion": 24,
-                ``maxProximity":``near",
-                ``firstDetectionTimestamp":"2018-02-21T18:09:20Z",
-                ``lastDetectionTimestamp":"2018-02-21T18:09:20Z",
-                ``beaconData" : {
-                  ``uuid":``0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                  ``majorId":19029,
-                  ``minorId":49
+                "regionLabel":"shoes",
+                "detectionCount":1,
+                "maxSecondsInRegion": 24,
+                "maxProximity":"near",
+                "firstDetectionTimestamp":"2018-02-21T18:09:20Z",
+                "lastDetectionTimestamp":"2018-02-21T18:09:20Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":19029,
+                  "minorId":49
                 }
              },
              {
-                ``regionId" : 6875,
-                ``regionLabel":``jewelry",
-                ``detectionCount":1,
-                ``maxSecondsInRegion": 15,
-                ``maxProximity":``far",
-                ``firstDetectionTimestamp":"2018-02-21T18:10:15Z",
-                ``lastDetectionTimestamp":"2018-02-21T18:10:15Z",
-                ``beaconData" : {
-                  ``uuid":``0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                  ``majorId":38415,
-                  ``minorId":59
+                "regionId" : 6875,
+                "regionLabel":"jewelry",
+                "detectionCount":1,
+                "maxSecondsInRegion": 15,
+                "maxProximity":"far",
+                "firstDetectionTimestamp":"2018-02-21T18:10:15Z",
+                "lastDetectionTimestamp":"2018-02-21T18:10:15Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":38415,
+                  "minorId":59
                 }
              },
              {
-                ``regionId" : 2563,
-                ``regionLabel":``blazers",
-                ``detectionCount":1,
-                ``maxSecondsInRegion": 195,
-                ``maxProximity":``immediate",
-                ``firstDetectionTimestamp":"2018-02-21T18:11:01Z",
-                ``lastDetectionTimestamp":"2018-02-21T18:11:01Z",
-                ``beaconData" : {
-                  ``uuid":``0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                  ``majorId":25911,
-                  ``minorId":27
+                "regionId" : 2563,
+                "regionLabel":"blazers",
+                "detectionCount":1,
+                "maxSecondsInRegion": 195,
+                "maxProximity":"immediate",
+                "firstDetectionTimestamp":"2018-02-21T18:11:01Z",
+                "lastDetectionTimestamp":"2018-02-21T18:11:01Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":25911,
+                  "minorId":27
                 }
              },
              {
-                ``regionId" : 456,
-                ``regionLabel":``tees-knits-polos",
-                ``detectionCount":1,
-                ``maxSecondsInRegion": 10,
-                ``maxProximity":``far",
-                ``firstDetectionTimestamp":"2018-02-21T18:14:56Z",
-                ``lastDetectionTimestamp":"2018-02-21T18:14:56Z",
-                ``beaconData" : {
-                  ``uuid":``0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                  ``majorId":42037,
-                  ``minorId":36
+                "regionId" : 456,
+                "regionLabel":"tees-knits-polos",
+                "detectionCount":1,
+                "maxSecondsInRegion": 10,
+                "maxProximity":"far",
+                "firstDetectionTimestamp":"2018-02-21T18:14:56Z",
+                "lastDetectionTimestamp":"2018-02-21T18:14:56Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":42037,
+                  "minorId":36
                 }
              },
              {
-                ``regionId" : 998,
-                ``regionLabel":``bags-and-luggage",
-                ``detectionCount":1,
-                ``maxSecondsInRegion": 7,
-                ``maxProximity":``far",
-                ``firstDetectionTimestamp":"2018-02-21T18:15:12Z",
-                ``lastDetectionTimestamp":"2018-02-21T18:15:12Z",
-                ``beaconData" : {
-                  ``uuid":``0686a88e-fed6-11e7-8be5-0ed5f89f718b",
-                  ``majorId":37931,
-                  ``minorId": 85
+                "regionId" : 998,
+                "regionLabel":"bags-and-luggage",
+                "detectionCount":1,
+                "maxSecondsInRegion": 7,
+                "maxProximity":"far",
+                "firstDetectionTimestamp":"2018-02-21T18:15:12Z",
+                "lastDetectionTimestamp":"2018-02-21T18:15:12Z",
+                "beaconData" : {
+                  "uuid":"0686a88e-fed6-11e7-8be5-0ed5f89f718b",
+                  "majorId":37931,
+                  "minorId": 85
                 }
              }
           ]
@@ -441,35 +441,35 @@ The JSON payload sent to the server (e.g. \textbf{POST /users/3045678/scans}) af
 \vspace{0.5cm}
 \begin{lstlisting}[language=json,firstnumber=1]
   {
-    ``data":{
-       ``customerId":3045678,
-       ``storeId":8784,
-       ``storeLabel" : ``Madison1",
-       ``sessionId" : ``89376f84-065b-11e8-ba89-0ed5f89f718b"
-       ``sessionDuration" : 456,
-       ``sessionActions": [{
-          ``userAgent" : ``Iphone 6s",
-          ``scannedItems":
+    "data":{
+       "customerId":3045678,
+       "storeId":8784,
+       "storeLabel" : "Madison1",
+       "sessionId" : "89376f84-065b-11e8-ba89-0ed5f89f718b"
+       "sessionDuration" : 456,
+       "sessionActions": [{
+          "userAgent" : "Iphone 6s",
+          "scannedItems":
             [{
-              ``barcode":``042100005264",
-              ``name" : ``Elizabeth Knit Top-Red-S"
-              ``sku": ``wbk012c-Red-S"    
+              "barcode":"042100005264",
+              "name" : "Elizabeth Knit Top-Red-S"
+              "sku": "wbk012c-Red-S"    
             },
             {
-              ``barcode":``042100005931",
-              ``name" : ``Plaid Cotton Shirt-Khaki-L"
-              ``sku": ``msj006c-Khaki-L"    
+              "barcode":"042100005931",
+              "name" : "Plaid Cotton Shirt-Khaki-L"
+              "sku": "msj006c-Khaki-L"    
             },
             {
-              ``barcode":``042100007717",
-              ``name" : ``Broad St Saddle Shoes"
-              ``sku": ``shm00110"    
+              "barcode":"042100007717",
+              "name" : "Broad St Saddle Shoes"
+              "sku": "shm00110"    
             }
             ]
       }]
     }
  }
-  \end{lstlisting}
+\end{lstlisting}
 \vspace{0.5cm}
 
 
