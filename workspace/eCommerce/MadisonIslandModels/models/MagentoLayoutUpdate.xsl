@@ -7,28 +7,50 @@
             <default>
             </default>
             <xsl:text>&#xa;</xsl:text>
-            <xsl:comment>Set proper data for main banner carousel and replace recent products with interaction products</xsl:comment>
             <cms_index_index>
+                <xsl:text>&#xa;</xsl:text>
+                <xsl:text>&#xa;</xsl:text>
+                <xsl:comment>Set proper data for main banner carousel</xsl:comment>
                 <reference name="highlighted-categories-carousel">
                     <xsl:for-each
                             select="//interactionFlowModelElements[@name='Homepage']/viewElements[@name='HighlightedCategoriesCarousel']//parameters/constraints">
                         <block
-                                type="MagentoEnhanced/Category_Enhanced"
-                                template="enhanced/category/highlighted.phtml">
+                                type="MagentoEnhanced/Homepage_CategoryHighlighted"
+                                template="enhanced/homepage/category/highlighted.phtml">
                             <xsl:attribute name="categoryId">
                                 <xsl:value-of select="substring-after(@body,'Category.ID=')"/>
                             </xsl:attribute>
                         </block>
                     </xsl:for-each>
                 </reference>
+                <xsl:text>&#xa;</xsl:text>
+                <xsl:text>&#xa;</xsl:text>
+                <xsl:comment>Replace recent products with interaction products</xsl:comment>
+
+                <xsl:template match="//interactionFlowModelElements[@name='Homepage']/viewElements[@name='RecentlyInteractedProducts']">
+                    <remove name="homepage.new-products"></remove>
+                    <reference name="content">
+                        <block name="homepage.interacted-products" type="MagentoEnhanced/Catalog_ProducstInteracted" template="enhanced/catalog/products-interacted.phtml">
+                            <action method="setData">
+                                <skuList>
+                                    <xsl:value-of  select="."/>
+                                </skuList>
+                            </action>
+                        </block>
+                    </reference>
+                </xsl:template>
+
             </cms_index_index>
-            <!--Add Related Product customization to Product Page-->
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:comment>Add Related Product customization to Product Page</xsl:comment>
             <catalog_product_index>
             </catalog_product_index>
-            <!-- Add Recently Viewed widget to Category page.-->
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:comment>Add Recently Viewed widget to Category page</xsl:comment>
             <catalog_category_view>
             </catalog_category_view>
-            <!-- Update the Shopping Cart with the Apply Reward section-->
+            <xsl:text>&#xa;</xsl:text>
+            <xsl:comment>Update the Shopping Cart appending the Apply Reward section</xsl:comment>
             <checkout_cart_index>
             </checkout_cart_index>
         </layout>

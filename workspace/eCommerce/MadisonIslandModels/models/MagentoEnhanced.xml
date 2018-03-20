@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
     <default/>
-    <!--Set proper data for main banner carousel and replace recent products with interaction products-->
     <cms_index_index>
+        <!--Set proper data for main banner carousel-->
         <reference name="highlighted-categories-carousel">
-            <block type="MagentoEnhanced/Category_Enhanced" template="enhanced/category/highlighted.phtml"
-                   categoryId="40"/>
-            <block type="MagentoEnhanced/Category_Enhanced" template="enhanced/category/highlighted.phtml"
-                   categoryId="16"/>
-            <block type="MagentoEnhanced/Category_Enhanced" template="enhanced/category/highlighted.phtml"
-                   categoryId="20"/>
+            <block type="MagentoEnhanced/Homepage_CategoryHighlighted"
+                   template="enhanced/homepage/category/highlighted.phtml" categoryId="40"/>
+            <block type="MagentoEnhanced/Homepage_CategoryHighlighted"
+                   template="enhanced/homepage/category/highlighted.phtml" categoryId="16"/>
+            <block type="MagentoEnhanced/Homepage_CategoryHighlighted"
+                   template="enhanced/homepage/category/highlighted.phtml" categoryId="20"/>
+        </reference>
+        <!--Replace recent products with interaction products-->
+        <remove name="homepage.new-products"/>
+        <reference name="content">
+            <block name="homepage.interacted-products" type="MagentoEnhanced/Catalog_ProducstInteracted"
+                   template="enhanced/catalog/products-interacted.phtml">
+                <action method="setData">
+                    <skuList>
+                    </skuList>
+                </action>
+            </block>
         </reference>
     </cms_index_index>
+    <!--Add Related Product customization to Product Page-->
     <catalog_product_index/>
+    <!--Add Recently Viewed widget to Category page-->
     <catalog_category_view/>
+    <!--Update the Shopping Cart appending the Apply Reward section-->
     <checkout_cart_index/>
 </layout>
