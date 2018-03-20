@@ -37,9 +37,25 @@
         </reference>
     </cms_index_index>
     <!--Add Related Product customization to Product Page-->
-    <catalog_product_index/>
+    <catalog_product_index>
+        <reference name="product.related-product-list">
+            <action method="setData">
+                <isCustom>true</isCustom>
+            </action>
+        </reference>
+    </catalog_product_index>
     <!--Add Recently Viewed widget to Category page-->
-    <catalog_category_view/>
+    <catalog_category_view>
+        <reference name="content">
+            <block before="category.main-content" name="homepage.recently-viwed-products"
+                   type="MagentoEnhanced/Catalog_ProductsViewed" template="enhanced/catalog/products-viewed.phtml">
+                <label>Magento Enhanced Recently Viewed Products</label>
+                <action method="setData">
+                    <idList>407,413,404</idList>
+                </action>
+            </block>
+        </reference>
+    </catalog_category_view>
     <!--Update the Shopping Cart appending the Apply Reward section-->
     <checkout_cart_index>
         <reference name="cart.shopping-cart-sidebar">
