@@ -29,7 +29,7 @@ The Magento frontend is designed to optimize storefront customization, with high
 
 Interacting with the product and its appearance on a Magento web interface means interacting with presentation layer code composed by both view elements (layouts, blocks, templates) and controllers, which process commands to and from the user interface. 
 
-We can extensively customize this user interface by extending Magento themes capabilities personalizing its content modifying this presentational layer accordingly to the requirements because the theme is responsible for organizing both the visual aspect of the interface and the product behavior.
+We can extensively customize this user interface by extending Magento themes capabilities personalizing its content modifying this presentational layer accordingly to the requirements because the theme is responsible for organizing both the visual aspect of the interface and the product behaviour.
 
 Each Magento theme resides in a specific directory and includes custom page layouts, templates, skins, and language files that work together to create a distinct user experience.
 
@@ -38,7 +38,7 @@ In our case study example, the Madison Island frontend is built around the techn
 \subsection{Layout Updates XML}
 
 Magento offers great flexibility and re-usability of design by layouts defined in XML files. In fact, each Magento module may define its own layout XML file and participate in the process of building the page output. This result is accomplished through a set of instructions contained in these XML files and grouped in \textit{layout handle}s. These directions play a fundamental role to determine the final look and feel of the page returned back to the user.
-For example, the handle \textit{catalog\_product\_view} is used to add content to the product detail page, and \textit{checkout\_cart\_index} to the shopping cart page. The following is an excerpt of the \textit{catalog\_category\_default} and  \textit{catalog\_product\_gallery} layout handle instructions contained in the layout XML file liked to the module Magento uses for all the catalog related functionalities (Mage\_Catalog):
+For example, the handle \textit{catalog\_product\_view} is used to add content to the product detail page, and \textit{checkout\_cart\_index} to the shopping cart page. The following is an excerpt of the \textit{catalog\_category\_default} and  \textit{catalog\_product\_gallery} layout handle instructions contained in the layout XML file liked to the module Magento uses for all the catalog-related functionalities (Mage\_Catalog):
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -122,7 +122,7 @@ In summary, each page of the website can be thought as a composition of Magento 
 \end{figure}
 \vspace{0.5cm}
 
-The versatility offered by the Magento rendering engine through the layout update XML mechanism allows us to dynamically append block children under certain conditions or pass parameters to the existing blocks that would affect their rendering behavior. This behavior is beneficial to map the changes we identified through the personalization process integrated within the updated \textit{IFMLModel} describing the enhanced interface offered to the customers on the platform.
+The versatility offered by the Magento rendering engine through the layout update XML mechanism allows us to dynamically append block children under certain conditions or pass parameters to the existing blocks that would affect their rendering behaviour. This behaviour is beneficial to map the changes we identified through the personalization process integrated within the updated \textit{IFMLModel} describing the enhanced interface offered to the customers on the platform.
 
 In fact, we are in a position now to generate and forward customized XML updates to Magento to reflect those requested changes and efficiently see them implemented on the website.
 
@@ -142,9 +142,9 @@ The main idea behind the code generation method is to use the updated \textit{IF
 
 \subsection{XML Metadata Interchange overview}
 
-XMI (XML Metadata Interchange) is a proposed use of the Extensible Markup Language (XML) that is intended to provide a standard way for programmers and other users to exchange information about metadata (essentially, information about what a set of data consists of and how it is organized)\cite{xmi}. 
+XMI (XML Metadata Interchange) is a proposed use of the Extensible Markup Language (XML), intended to provide a standard way for programmers and other users to exchange information about metadata (essentially, information about what a set of data consists of and how it is organized) \cite{xmi}. 
 
-Both the \textit{RealDataUsage} and \textit{IFML} models and metamodels definition presented in the previous chapters have been using and persisted throught the XMI specification.
+Both the \textit{RealDataUsage} and \textit{IFML} models and metamodels definition presented in the previous chapters have been used and persisted throughout the XMI specification.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -156,17 +156,17 @@ Both the \textit{RealDataUsage} and \textit{IFML} models and metamodels definiti
 \vspace{0.5cm}
 
 
-Since XMI is XML-based, we decided to employ XSLT to transformat the XMI representation of the enhanced \textit{IFMLModel} for code generation of the target documents. 
+Since XMI is XML-based, we decided to employ XSLT to change the XMI representation of the enhanced \textit{IFMLModel} for generating the code of the target documents. 
 
 \subsection{Applying XSL Transformations}
 
 XSL Transformations (XSLT 3.0) is a language for transforming XML documents into other XML documents, text documents or HTML documents\cite{xslt} whose detailed language specifications are beyond the scope of this work.
 
-Still, in our journey towards code generation, we considered XSLT a suitable tool because we are effectively looking for a valid XMI-XML transformation. Specifically, our proposed approach limits itself to this XML documents conversion only, leaving the Magento rendering engine to implement the rest of the operations as usual. In fact, Magento would still be the authority for building up the final HTML response after merging all the layout updates collected and recursively rendering all the associated block templates.
+In our journey towards code generation, we considered XSLT a suitable tool because we are effectively looking for a valid XMI-XML transformation. Specifically, our proposed approach is limited to such XML documents conversion, leaving the rest of the operations to be done by the Magento rendering engine. In fact, Magento would still be the authority for building up the final HTML response once all collected layout updates are merged, recursively rendering all the associated block templates.
 
-The goal described above is achievable thanks to XSLT functionalities for adding nodes and attributes to or from the target file, rearranging and sorting elements and making decisions about which items to hide and display.In fact, XSLT is capable of efficiently transforming an XML source-tree (our \textit{IFMLModel} XMI in our case) into an XML result-tree (Magento layout update XML in our case).
+That goal can be achieved thanks to XSLT functionalities for adding nodes and attributes to or from the target file, not only rearranging and sorting elements, but also deciding which items to hide and which ones to display. In fact, XSLT is able of efficiently transforming an XML source-tree (our \textit{IFMLModel} XMI, in our case) into an XML result-tree (Magento layout update XML, in our case).
 
-Because XSLT uses \textit{XPath} to define parts of the source document that should match some predefined templates to be converted into some others (\ref{xslt-processing}), our objective is to identify those templates from the source XMI document and propose a possible transformation definition resulting in a valid layout update XML instruction Magento will take care of.
+Because XSLT uses \textit{XPath} to define parts of the source document that should match some predefined templates to be converted into some others (\ref{xslt-processing}), our aim is to identify those templates from the source XMI document, and to propose a  transformation definition that would result in a valid XML instruction for layout update. Such XML instruction would then be handled by Magento.
 
  
 
