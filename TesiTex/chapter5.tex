@@ -98,7 +98,7 @@ The model transition in this case would occur not only replacing the IFML \texti
 \subsection{Header}
 \label{header-updates}
 
-Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of the \textit{IFMLModel} describing the top area in the Madison Island website could also be enhanced to show a list of recent actions performed by customers in the physical stores that generated reward points.  This can be achieved by appending an instance of \textit{List View Component} to the \textit{interactionFlowModelElements} parent node, called \textit{RecentRewardActions}. This instance is then linked to the Rewards \textit{Data Binding} entity, which allows the visualization of the \textit{Action Name} and \textit{Points Attribution} properties to the front-end, as shown in the following snippet of \textit{IFMLModel} code:
+Leveraging once more the \textit{RealUsageData:ActionData}, the Header node of the \textit{IFMLModel} describing the top area in the Madison Island website could also be enhanced to show a list of recent actions performed by customers in the physical stores that generated reward points. This can be achieved by appending an instance of \textit{List View Component} to the \textit{interactionFlowModelElements} parent node, called \textit{RecentRewardActions}. This instance is then linked to the Rewards \textit{Data Binding} entity, which allows the visualization of the \textit{Action Name} and \textit{Points Attribution} properties to the front-end, as shown in the following snippet of \textit{IFMLModel} code:
 
 \vspace{0.5cm}
 \lstset{language=XML}
@@ -269,6 +269,7 @@ As described in \ref{shopping-cart-page-overview}, the Shopping Cart page model 
 \vspace{0.5cm}
 
 Along with the cases analysed previously and by applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page by adding a new \textit{View Component}. That component shows the Reward points accumulated by the user in the Shopping Cart Sidebar (Figure \ref{fig:shopping-cart-sidebar-ifml-definition}). The component not only displays the information by the \textit{Data Binding} with the Reward entity, but also controls the \textit{Event} associated with the \textbf{``Apply Discount"} button and the \textit{Action} connected to it. 
+
 The structure of this new node, which gets appended to its parent \textit{IFMLMenu}, is as follows:
 
 \vspace{0.5cm}
@@ -436,7 +437,7 @@ In this section, we present an overview of the updated \textit{IFMLModel}s for t
 
 \subsection{Homepage}
 
-According to what we described in \ref{homepage-updates}, the enhanced homepage presented to the customer would show a custom banner carousel and a product widget, both containing items and categories with which the user interacted in the retail store.
+As described in \ref{homepage-updates}, the enhanced homepage presented to the customer would show a custom banner carousel and a product widget, both containing items and categories with which the user interacted in the retail store.
 
 \vspace{0.5cm}
 \begin{figure}[H]
