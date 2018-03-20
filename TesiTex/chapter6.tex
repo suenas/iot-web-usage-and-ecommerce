@@ -303,4 +303,92 @@ The content of the XSLT responsible for generating a set of usable layout update
 \end{lstlisting}
 \vspace{0.5cm}
 
+\newpage
+
+Applying the above transformation to the source XMI document would generate a resulting XML with the following form :
+
+\vspace{0.5cm}
+\lstset{language=XML}
+\begin{lstlisting} 
+    <?xml version="1.0" encoding="UTF-8"?>
+    <layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <!--Append Header_RewardActions block to the Header-->
+        <default>
+            <refrerence name="header">
+                <block type="MagentoEnhanced/Header_RewardActions" template="enhanced/header/reward-actions.phtml">
+                    <label>Magento Enhanced Header Reward Actions</label>
+                </block>
+            </refrerence>
+        </default>
+        <cms_index_index>
+            <!--Set proper data for main banner carousel-->
+            <reference name="highlighted-categories-carousel">
+                <block type="MagentoEnhanced/Homepage_CategoryHighlighted"
+                       template="enhanced/homepage/category/highlighted.phtml" categoryId="40">
+                    <label>Magento Enhanced Highlighted Cateogry #1</label>
+                </block>
+                <block type="MagentoEnhanced/Homepage_CategoryHighlighted"
+                       template="enhanced/homepage/category/highlighted.phtml" categoryId="16">
+                    <label>Magento Enhanced Highlighted Cateogry #2</label>
+                </block>
+                <block type="MagentoEnhanced/Homepage_CategoryHighlighted"
+                       template="enhanced/homepage/category/highlighted.phtml" categoryId="20">
+                    <label>Magento Enhanced Highlighted Cateogry #3</label>
+                </block>
+            </reference>
+            <!--Replace recent products with interaction products-->
+            <remove name="homepage.new-products"/>
+            <reference name="content">
+                <block name="homepage.interacted-products" type="MagentoEnhanced/Catalog_ProducstInteracted"
+                       template="enhanced/catalog/products-interacted.phtml">
+                    <label>Magento Enhanced Interacted Products</label>
+                    <action method="setData">
+                        <skuList>'wbk012c-Red-S','msj006c-Khaki-L','shm00110'</skuList>
+                    </action>
+                </block>
+            </reference>
+        </cms_index_index>
+        <!--Add Related Product customization to Product Page-->
+        <catalog_product_index>
+            <reference name="product.related-product-list">
+                <action method="setData">
+                    <isCustom>true</isCustom>
+                </action>
+            </reference>
+        </catalog_product_index>
+        <!--Add Recently Viewed widget to Category page-->
+        <catalog_category_view>
+            <reference name="content">
+                <block before="category.main-content" name="homepage.recently-viwed-products"
+                       type="MagentoEnhanced/Catalog_ProductsViewed" template="enhanced/catalog/products-viewed.phtml">
+                    <label>Magento Enhanced Recently Viewed Products</label>
+                    <action method="setData">
+                        <idList>407,413,404</idList>
+                    </action>
+                </block>
+            </reference>
+        </catalog_category_view>
+        <!--Update the Shopping Cart appending the Apply Reward section-->
+        <checkout_cart_index>
+            <reference name="cart.shopping-cart-sidebar">
+                <block type="MagentoEnhanced/Checkout_RewardPoints" template="enhanced/checkout/reward-points.phtml">
+                    <label>Magento Enhanced Checkout Reward Points</label>
+                    <action method="addItemRender">
+                        <type>simple</type>
+                        <name>Available Reward Points</name>
+                    </action>
+                </block>
+            </reference>
+        </checkout_cart_index>
+    </layout>
+    
+\end{lstlisting}
+\vspace{0.5cm}
+
+The above snippet of code is a valid XML Layout Update that Magento is indeed capable of dynamically applying when the profiled user is logged in.
+
+Taking advantage of the layout handle mechanism of its rendering engine, we were able to address all the proposed changes tracked throughout this paper work and transform them into valid instructions that would reflect the Interaction Flow designed in the source XMI document. 
+
+For example, new instances of Magento blocks with a specific set of attributes mapping the \textit{IFMLModel} element attributes were appended to existing parent blocks in the layout tree. 
+
 %\addcontentsline{toc}{chapter}{}

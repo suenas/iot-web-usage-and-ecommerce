@@ -4,7 +4,7 @@
 \chapter{Enhancing web models via model transformations}
 \label{enhancing-web-models-via-model-transformations}
 
-In the previous chapter, after describing both metamodels for the Real Usage Data and the Interaction Flow Modeling Language, we proceeded with creating dynamic instances for both models, respectively describing the actual input data available for the customisation process and the initial IFMLModel of the eCommerce Madison Island website. In this chapter, we illustrate a possible transformation for this model, based on the Real Usage instance data. Our goal is to upgrade the model version, taking into account customers preferences and their actions.
+In the previous chapter, after describing both metamodels for the Real Usage Data and the Interaction Flow Modeling Language, we proceeded with creating dynamic instances for both models, respectively describing the actual input data available for the customisation process and the initial \textit{IFMLModel} of the eCommerce Madison Island website. In this chapter, we illustrate a possible transformation for this model, based on the Real Usage instance data. Our goal is to upgrade the model version, taking into account customers preferences and their actions.
 
 
 \section{Refactoring Actions}
@@ -14,7 +14,7 @@ In this section, we explain how each \textit{IFMLWindow} container of the starti
 \subsection{Homepage}
 \label{homepage-updates}
 
-Considering the data coming from the Proximity sensors within the actual Madison Island retail store, we are aware of a set of regions corresponding to the customer preferred categories. That information will be used to change the content and, therefore, the IFMLModel for the Homepage carousel.
+Considering the data coming from the Proximity sensors within the actual Madison Island retail store, we are aware of a set of regions corresponding to the customer preferred categories. That information will be used to change the content and, therefore, the \textit{IFMLModel} for the Homepage carousel.
 
 For instance, we know that the \textbf{Blazers}, \textbf{Tees, Knits and Polos} and \textbf{Shoes} categories correspond to the \textit{sessionRegion} elements within the store in which the user spent more time after sorting the entries by \textit{maxSecondsInRegion} and \textit{maxProximity} attributes. In the case of the Blazers category for example, the data belonging to the \textit{RealUsageData:ProximityData} parent node takes this form:
 
@@ -89,7 +89,7 @@ The model transition in this case would occur not only replacing the IFML \texti
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[height=12cm]{images/madison/ifm-homepage-transformation.png}
+    \includegraphics[height=10cm]{images/madison/ifm-homepage-transformation.png}
   \caption{IFML Homepage transformation example}
   \label{fig:ifml-transformation-example}
 \end{figure}
@@ -190,7 +190,7 @@ This new IFML item would be responsible for presenting customers with the thumbn
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[height=12cm]{images/madison/ifml-recently-viewed.png}
+    \includegraphics[height=10cm]{images/madison/ifml-recently-viewed.png}
   \caption{Recently Viewed IFML definition snippet}
   \label{fig:recently-viewed-ifml-definition}
 \end{figure}
@@ -222,6 +222,7 @@ From a \textit{IFMLModel} code perspective, we would transition from the followi
 \end{lstlisting}
 \vspace{0.5cm}
 
+\newpage
 to this one:
 
 \vspace{0.5cm}
@@ -251,6 +252,7 @@ Moreover, the \textit{ActivationExpression} defined by the \textit{interactionFl
 </interactionFlowModelElements>
 
 \end{lstlisting}
+\newpage
 \vspace{0.5cm}
 \subsection{Shopping Cart}
 \label{shopping-cart-updates}
@@ -266,7 +268,7 @@ As described in \ref{shopping-cart-page-overview}, the Shopping Cart page model 
 \end{figure}
 \vspace{0.5cm}
 
-Along with the cases analysed previously and by applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page by adding a new \textit{View Component}. That component shows the Reward points accumulated by the user in the Shopping Cart Sidebar (Figure \ref{fig:shopping-cart-sidebar-ifml-definition}). The component not only displays the information by the \textit{Data Binding} with the Reward entity, but also controls the \textit{Event} associated with the \textbf{"Apply Discount"} button and the \textit{Action} connected to it. 
+Along with the cases analysed previously and by applying the data from the Real Data Usage model, we can modify and extend the interaction flow of this page by adding a new \textit{View Component}. That component shows the Reward points accumulated by the user in the Shopping Cart Sidebar (Figure \ref{fig:shopping-cart-sidebar-ifml-definition}). The component not only displays the information by the \textit{Data Binding} with the Reward entity, but also controls the \textit{Event} associated with the \textbf{``Apply Discount"} button and the \textit{Action} connected to it. 
 The structure of this new node, which gets appended to its parent \textit{IFMLMenu}, is as follows:
 
 \vspace{0.5cm}
@@ -285,17 +287,9 @@ The structure of this new node, which gets appended to its parent \textit{IFMLMe
 \newpage
 \section{The \textit{IFMLRUD2IFML} Model Transformation}
 
-In this section, we illustrate the model-to-model transformation that allows to updates web models according to the above described refactoring actions. A fragment of the \textit{IFMLRUD2IFML} transformation implemented in ATL~\cite{ATL} is depicted in Listing~\ref{lst:IFMLRUD2IFML}. It takes as input two models, \textit{IN}
+In this section, we illustrate the model-to-model transformation that allows to update web models according to the above described refactoring actions. A fragment of the \textit{IFMLRUD2IFML} transformation implemented in ATL\cite{ATL} is depicted in Listing~\ref{lst:IFMLRUD2IFML}. It takes as input two models, \textit{IN}
 conforms to the IFML metamodel and  \textit{IN2} conforms to the Real Usage Data (RUD) metamodel, and generate an \textit{OUT} model conforms to the IFML metamodel. The listing contains the following rules: 
-%@ARTICLE{ATL,
-%	author = {F. Jouault and F. Allilaire and J. B{\'e}zivin and I. Kurtev},
-%	title = {{ATL: a Model Transformation Tool}},
-%	journal = {Science of Computer Programming},
-%	year = {2008},
-%	volume = {72},
-%	pages = {31-39},
-%	number = {1-2}
-%}
+
 \begin{itemize}
 	\item[-] The rule \textit{ConditionalExpressionUpdated} matches the element of type \textit{ConditionalExpression} named \textit{``HighlightedCategoryBanner \#1"} and modifies its name and category. To this end, the helper \textit{getMaxSecondsInRegion()} is used to get the element of type \textit{SessionRegion} belonging to the RUD model that has the higher value of seconds in region among the ones having \textit{maxSecondsInRegion} greater than 100.
 
@@ -438,7 +432,7 @@ rule RecentViewedProducts() {
 \newpage
 \section{Updated web models}
 
-In this section, we present an overview of the updated IFMLModels for the Madison Island website based on the transformations discussed in the last chapter. We also describe how their IFMLDiagrams and corresponding website front-end screens would look like.
+In this section, we present an overview of the updated \textit{IFMLModel}s for the Madison Island website based on the transformations discussed in the last chapter. We also describe how their IFMLDiagrams and corresponding website front-end screens would look like.
 
 \subsection{Homepage}
 
@@ -447,14 +441,14 @@ According to what we described in \ref{homepage-updates}, the enhanced homepage 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[height=9cm]{images/diagrams/after/ifml-homepage.png}
+    \includegraphics[width=16cm]{images/diagrams/after/ifml-homepage.png}
   \caption{Updated Homepage IFML Diagram}
   \label{fig:ifml-after-homepage}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-    \includegraphics[height=9cm]{images/diagrams/after/desktop-homepage.png}
+    \includegraphics[width=16cm]{images/diagrams/after/desktop-homepage.png}
   \caption{Updated Homepage Desktop}
   \label{fig:desktop-after-homepage}
 \end{figure}
@@ -463,7 +457,7 @@ According to what we described in \ref{homepage-updates}, the enhanced homepage 
 \newpage
 \subsection{Header}
 
-After transforming its IFMLModel component (\ref{header-updates}), the shared header section on the website reveals new information through a new widget. This widget is aligned on the right side of the area used for advertising the actions taken by the user in the retail store and their respective rewarded points.
+After transforming its \textit{IFMLModel} component (\ref{header-updates}), the shared header section on the website reveals new information through a new widget. This widget is aligned on the right side of the area used for advertising the actions taken by the user in the retail store and their respective rewarded points.
 
 \vspace{0.5cm}
 \begin{figure}[H]
@@ -489,14 +483,14 @@ Regardless of the DisplayMode property set for each Category Page on the eCommer
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[height=12cm]{images/diagrams/after/ifml-category.png}
+    \includegraphics[width=14cm]{images/diagrams/after/ifml-category.png}
   \caption{Updated Category Page IFML Diagram}
   \label{fig:ifml-after-category}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-    \includegraphics[height=12cm]{images/diagrams/after/desktop-category.png}
+    \includegraphics[width=14cm]{images/diagrams/after/desktop-category.png}
   \caption{Updated Category Page Desktop Version}
   \label{fig:desktop-after-category}
 \end{figure}
@@ -505,19 +499,19 @@ Regardless of the DisplayMode property set for each Category Page on the eCommer
 \newpage
 \subsection{Product Page}
 
-Differently from the other page enhancements presented so far, the modified web model for the Product Page does not offer any additional visual segments to the page when compared to its starting IFMLModel. As discussed in \ref{product-page-updates}, the change focused on improving the logic behind the related products selection by filtering the items on top of which a browsing correlation was detected. In Figure \ref{fig:desktop-after-product}, we can see an example of this behaviour, where the \textbf{Plaid Cotton Shirt} product is placed as the first one in the Related Products region on the \textbf{Core Striped Sport Shirt} product page.
+Differently from the other page enhancements presented so far, the modified web model for the Product Page does not offer any additional visual segments to the page when compared to its starting \textit{IFMLModel}. As discussed in \ref{product-page-updates}, the change focused on improving the logic behind the related products selection by filtering the items on top of which a browsing correlation was detected. In Figure \ref{fig:desktop-after-product}, we can see an example of this behaviour, where the \textbf{Plaid Cotton Shirt} product is placed as the first one in the Related Products region on the \textbf{Core Striped Sport Shirt} product page.
 
 \vspace{0.5cm}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=13cm]{images/diagrams/after/ifml-product.png}
+    \includegraphics[width=14cm]{images/diagrams/after/ifml-product.png}
   \caption{Updated Product Page IFML Diagram}
   \label{fig:ifml-after-product}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-    \includegraphics[height=12cm]{images/diagrams/after/desktop-product.png}
+    \includegraphics[width=14cm]{images/diagrams/after/desktop-product.png}
   \caption{Updated Product Page Desktop Version}
   \label{fig:desktop-after-product}
 \end{figure}

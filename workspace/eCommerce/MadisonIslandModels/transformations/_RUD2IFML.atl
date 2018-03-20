@@ -1,0 +1,21 @@
+module RUD2IFML;
+
+create OUTIFML: IFML from INIFML: IFML, INRUD: RUD;
+
+rule SessionRegion2ViewComponentParts {
+	from		
+		s: IFML!ViewComponentPart,
+		r: RUD!SessionRegion (s.maxSecondsInRegion > 100)	
+				
+	to 	
+		t: IFML!ViewComponentPart (
+				name <- s.regionLabel
+		)	
+}
+
+
+
+
+
+
+
