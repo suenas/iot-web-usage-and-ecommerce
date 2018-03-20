@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RealUsageData:Dataset
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:RealUsageData="RealUsageData"
+    xsi:schemaLocation="RealUsageData ../metamodels/RealUsageData.ecore"
+    ID="1" name="Main">
+  <data xsi:type="RealUsageData:WebData"
+      ID="1"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-11-29T17:06:49.000+0100"
+      viewContainer="Homepage"
+      viewComponent="TopMenu"
+      eventType="click"
+      parameterBindingGroup="Category/5"
+      logEntry="GET /men.html / 200 0 - 29505"/>
+  <data xsi:type="RealUsageData:WebData"
+      ID="2"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-11-29T17:07:04.000+0100"
+      viewContainer="Category #5"
+      viewComponent="CategoryList"
+      eventType="click"
+      parameterBindingGroup="Category/15"
+      logEntry="GET /men/shirts.html 200 0 - 29505"/>
+  <data xsi:type="RealUsageData:WebData"
+      ID="3"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-11-29T07:08:40.000+0100"
+      viewContainer="Category #15"
+      viewComponent="ProductList"
+      eventType="click"
+      parameterBindingGroup="Product/404"
+      logEntry="GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
+  <data xsi:type="RealUsageData:WebData"
+      ID="4"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-12-04T06:37:15.000+0100"
+      viewContainer="Product #404"
+      viewComponent="RelatedProductList"
+      eventType="click"
+      parameterBindingGroup="Product/413"
+      logEntry="GET /core-striped-sport-shirt-551.html 200 0 - 29505"/>
+  <data xsi:type="RealUsageData:WebData"
+      ID="5"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-12-04T06:37:21.000+0100"
+      viewContainer=""
+      viewComponent=""
+      eventType="backButton"
+      parameterBindingGroup=""
+      logEntry="GET /men/shirts/plaid-cotton-shirt-476.html 200 0 - 29505"/>
+  <data xsi:type="RealUsageData:WebData"
+      ID="6"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-12-04T06:38:06.000+0100"
+      viewContainer="Product #404"
+      viewComponent="TopMenu"
+      eventType="click"
+      parameterBindingGroup="Category/16"
+      logEntry="GET /men/tees-knits-and-polos.html 200 0 - 29505"/>
+  <data xsi:type="RealUsageData:WebData"
+      ID="7"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-12-04T06:38:20.000+0100"
+      viewContainer="Category #16"
+      viewComponent="TopSearch"
+      eventType="submit"
+      parameterBindingGroup="SearchText/blazer"
+      logEntry="GET /catalogsearch/result/?q=blazer 200 0 - 29505"/>
+  <data xsi:type="RealUsageData:WebData"
+      ID="8"
+      name="AccessLog"
+      userID="3045678"
+      date="2017-12-04T06:38:20.000+0100"
+      viewContainer="Search Results"
+      viewComponent="ProductList"
+      eventType="click"
+      parameterBindingGroup="Product/407"
+      logEntry="GET /stretch-cotton-blazer-587.html 200 0 - 29505"/>
+  <data xsi:type="RealUsageData:ProximityData"
+      ID="9"
+      name="Session"
+      userID="3045678"
+      date="2018-02-21T18:16:07.000+0100"
+      storeId="8784"
+      storeLabel="Madison1"
+      sessionId="89376f84-065b -11e8- ba89-0ed5f89f718b"
+      sessionDuration="345">
+    <sessionRegions
+        regionId="0"
+        regionLabel="store-entrance"
+        detectionCount="2"
+        maxSecondsInRegion="5"
+        firstDetectionTimeStamp="2018-02-21T18:09:07.000+0100"
+        lastDetectionTimeStamp="2018-02-21T18:16:02.000+0100">
+      <beaconData
+          uuid="0686a88e - fed6-11e7-8be5-0ed5f89f718b"
+          majorId="2553"
+          minorId="79"/>
+    </sessionRegions>
+    <sessionRegions
+        regionId="20"
+        regionLabel="shoes"
+        detectionCount="1"
+        maxSecondsInRegion="24"
+        maxProximity="near"
+        firstDetectionTimeStamp="2018-02-21T18:09:20.000+0100"
+        lastDetectionTimeStamp="2018-02-21T18:09:20.000+0100">
+      <beaconData
+          uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+          majorId="19029"
+          minorId="49"/>
+    </sessionRegions>
+    <sessionRegions
+        regionId="19"
+        regionLabel="jewelry"
+        detectionCount="1"
+        maxSecondsInRegion="15"
+        maxProximity="far"
+        firstDetectionTimeStamp="2018-02-21T18:10:15.000+0100"
+        lastDetectionTimeStamp="2018-02-21T18:10:15.000+0100">
+      <beaconData
+          uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+          majorId="38415"
+          minorId="59"/>
+    </sessionRegions>
+    <sessionRegions
+        regionId="40"
+        regionLabel="blazers"
+        detectionCount="1"
+        maxSecondsInRegion="195"
+        maxProximity="immediate"
+        firstDetectionTimeStamp="2018-02-21T18:11:01.000+0100"
+        lastDetectionTimeStamp="2018-02-21T18:11:01.000+0100">
+      <beaconData
+          uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+          majorId="25911"
+          minorId="27"/>
+    </sessionRegions>
+    <sessionRegions
+        regionId="16"
+        regionLabel="tees-knits-polos"
+        detectionCount="1"
+        maxSecondsInRegion="10"
+        maxProximity="immediate"
+        firstDetectionTimeStamp="2018-02-21T18:14:56.000+0100"
+        lastDetectionTimeStamp="2018-02-21T18:14:56.000+0100">
+      <beaconData
+          uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+          majorId="42037"
+          minorId="36"/>
+    </sessionRegions>
+    <sessionRegions
+        regionId="21"
+        regionLabel="bags-and-luggage"
+        detectionCount="1"
+        maxSecondsInRegion="7"
+        maxProximity="far"
+        firstDetectionTimeStamp="2018-02-21T18:15:12.000+0100"
+        lastDetectionTimeStamp="2018-02-21T18:15:12.000+0100">
+      <beaconData
+          uuid="0686a88e-fed6-11e7-8be5-0ed5f89f718b"
+          majorId="37931"
+          minorId="85"/>
+    </sessionRegions>
+  </data>
+  <data xsi:type="RealUsageData:ActionData"
+      ID="10"
+      name="Session"
+      userID="3045678"
+      date="2018-02-22T15:27:09.000+0100"
+      storeId="8784"
+      storeLabel="Madison1"
+      sessionId="89376f84-065b-11e8-ba89-0ed5f89f718b"
+      sessionDuration="456">
+    <sessionActions
+        userAgent="iPhone 6S">
+      <scannedItems
+          barcode="042100005264"
+          name="Elizabeth Knit Top-Red-S"
+          sku="wbk012c-Red-S"/>
+      <scannedItems
+          barcode="042100005931"
+          name="Plaid Cotton Shirt-Khaki-L"
+          sku="msj006c-Khaki-L"/>
+      <scannedItems
+          barcode="042100007717"
+          name="Broad St Saddle Shoes"
+          sku="shm00110"/>
+    </sessionActions>
+  </data>
+</RealUsageData:Dataset>
+
+
