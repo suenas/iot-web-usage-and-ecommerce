@@ -3,7 +3,7 @@
 
 \chapter{From models to code, a case study.}
 
-This chapter covers a case study in which we apply the concepts and ideas previously discussed. For doing so, we describe the Magento platform in which he Madison Island eCommerce website would run. We alse suggest a possible automation for code generation that is compatible with the platform ecosystem and architecture.
+This chapter covers a case study in which we apply the concepts and ideas previously discussed. For doing so, we describe the Magento platform in which he Madison Island eCommerce website would run. We also suggest a possible automation for code generation that is compatible with the platform ecosystem and architecture.
 
 \section{Magento overview}
 
@@ -89,10 +89,9 @@ For example, the handle \textit{catalog\_product\_view} is used to add content t
 \end{lstlisting}
 \vspace{0.5cm}
 
-As shown above, child nodes are created inside these \textit{layout handle}s to determine which content should appear on any distinct page where these layout handles gets added to an XML structure called \textit{page tree}.
+As shown above, child nodes are created inside these \textit{layout handle}s to determine which content should appear on any distinct page where these layout handles are added to an XML structure called \textit{page tree}. These child nodes are called \textit{block}s taht may, in turn, contain child \textit{block}s of their own. 
 
-These child nodes are called \textit{block}s, which may, in turn, contain child \textit{block}s of their own. 
-Magento blocks can be structural or content blocks, depending on whether or not they have a template associated with them.
+Magento blocks can be either structural or content blocks, depending on whether or not they have a template associated with them.
 Usually, structural blocks, as shown in Figure \ref{fig:magento-term-blocks}, define the primary structure of the page. These blocks do not explicitly render anything to the screen, and mostly act as wrappers for their children blocks.
 Finally, each non-structural \textit{block} would contain a template associated to it, which would be responsible for displaying some specific content.
 
@@ -387,7 +386,7 @@ Applying the above transformation to the source XMI document would generate a re
 
 The above snippet of code is a valid XML Layout Update that Magento is indeed capable of dynamically applying when the profiled customer is logged on the website.
 
-In most of the cases, new instances of Magento blocks with a specific set of attributes mapping the corresponding \textit{IFMLModel} element attributes were appended by referencing existing parent blocks in the layout tree. 
+In most cases, new instances of Magento blocks with a specific set of attributes mapping the corresponding \textit{IFMLModel} element attributes were appended by referencing existing parent blocks in the layout tree. 
 
 Taking advantage of the layout handle mechanism of its rendering engine, we were able to address all the proposed changes tracked throughout this paperwork and transform them into valid instructions that would reflect the Interaction Flow designed in the source XMI document. 
 
