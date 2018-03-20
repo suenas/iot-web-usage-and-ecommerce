@@ -385,10 +385,10 @@ Applying the above transformation to the source XMI document would generate a re
 \end{lstlisting}
 \vspace{0.5cm}
 
-The above snippet of code is a valid XML Layout Update that Magento is indeed capable of dynamically applying when the profiled user is logged in.
+The above snippet of code is a valid XML Layout Update that Magento is indeed capable of dynamically applying when the profiled customer is logged on the website.
 
-Taking advantage of the layout handle mechanism of its rendering engine, we were able to address all the proposed changes tracked throughout this paper work and transform them into valid instructions that would reflect the Interaction Flow designed in the source XMI document. 
+In most of the cases, new instances of Magento blocks with a specific set of attributes mapping the corresponding \textit{IFMLModel} element attributes were appended by referencing existing parent blocks in the layout tree. 
 
-For example, new instances of Magento blocks with a specific set of attributes mapping the \textit{IFMLModel} element attributes were appended to existing parent blocks in the layout tree. 
+Taking advantage of the layout handle mechanism of its rendering engine, we were able to address all the proposed changes tracked throughout this paperwork and transform them into valid instructions that would reflect the Interaction Flow designed in the source XMI document. 
 
 %\addcontentsline{toc}{chapter}{}
